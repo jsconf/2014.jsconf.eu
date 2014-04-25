@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'jsconfeu';
+  src: url("/fonts/jsconfeu.eot");
+  src: url("/fonts/jsconfeu.eot?#iefix") format("embedded-opentype"), url("/fonts/jsconfeu.woff") format("woff"), url("/fonts/jsconfeu.ttf") format("truetype"), url("/fonts/jsconfeu.svg#jsconfeu") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 13, ../../sass/imports/icons.scss */
+[data-icon]:before {
+  font-family: 'jsconfeu';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="ico-"] {
+*/
+/* line 30, ../../sass/imports/icons.scss */
+.ico-arrow-left, .ico-arrow-right, .ico-twitter, .ico-facebook, .ico-feed, .ico-google-plus, .ico-github-alt, .ico-youtube, .ico-circle, .ico-logo, .ico-ticket {
+  font-family: 'jsconfeu';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 40, ../../sass/imports/icons.scss */
+.ico-arrow-left:before {
+  content: "\2190";
+}
+
+/* line 43, ../../sass/imports/icons.scss */
+.ico-arrow-right:before {
+  content: "\2192";
+}
+
+/* line 46, ../../sass/imports/icons.scss */
+.ico-twitter:before {
+  content: "\74";
+}
+
+/* line 49, ../../sass/imports/icons.scss */
+.ico-facebook:before {
+  content: "\66";
+}
+
+/* line 52, ../../sass/imports/icons.scss */
+.ico-feed:before {
+  content: "\72";
+}
+
+/* line 55, ../../sass/imports/icons.scss */
+.ico-google-plus:before {
+  content: "\2b";
+}
+
+/* line 58, ../../sass/imports/icons.scss */
+.ico-github-alt:before {
+  content: "\67";
+}
+
+/* line 61, ../../sass/imports/icons.scss */
+.ico-youtube:before {
+  content: "\79";
+}
+
+/* line 64, ../../sass/imports/icons.scss */
+.ico-circle:before {
+  content: "\78";
+}
+
+/* line 67, ../../sass/imports/icons.scss */
+.ico-logo:before {
+  content: "\6c";
+}
+
+/* line 70, ../../sass/imports/icons.scss */
+.ico-ticket:before {
+  content: "\73";
+}

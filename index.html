@@ -1,0 +1,29 @@
+---
+  layout: default
+  title: JSConf EU 2013
+  background: background4
+  tags: homepage
+---
+
+  <section class="news">
+    <h2>News</h2>
+    {% for post in site.tags.news limit: 3 %}
+      <article>
+        {{ post.content }}
+      </article>
+    {% endfor %}
+  </section>
+
+
+  <!-- <section class="schedule" id="schedule">
+    <h2>Rough Schedule</h2>
+    {% capture schedule %}{% include schedule.md %}{% endcapture %}
+    {{ schedule | markdownify }}
+  </section>
+
+  <section class="location" id="location">
+    <h2>Location</h2>
+    {% include location.md %}
+  </section> -->
+
+

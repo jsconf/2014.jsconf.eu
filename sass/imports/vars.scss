@@ -1,0 +1,15 @@
+/* Colors */
+$color_pink: #E10079;  /* main jsconfeu pink */
+$color_pink_hover: #fe006b;
+$color_dark: #012019; /* almost black */
+$color_beige: #f5e8d7;
+$color_l_beige: #fbf6ef;
+$color_d_red: #4c0025;
+$color_mint: #c6e3d9;
+$color_d_mint: #74b4b0;
+
+
+@mixin uppercase {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}

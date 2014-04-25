@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}{% if page.video %} [Video]{% endif %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="http://2013.jsconf.eu{{ page.url | replace:'index.html','' }}" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="google-site-verification" content="H6VZ353SM0CfTqymvhQPM0eLyWffpeRfyRjFlXLwNn0" />
+    <!--[if IE]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jsconfeu">
+    {% if page.video %}
+    <meta property="og:video" content="http://www.youtube.com/v/{{ page.video }}">
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image" content="http://2013.jsconf.eu{{ page.image.filename }}">
+    <meta property="og:image" content="http://2013.jsconf.eu{{ page.image.filename }}"/>
+    {% endif %}
+    {% if page.twitter %}<meta name="twitter:creator" content="@{{ page.twitter | split:'/' | last }}">{% endif %}
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta property="og:title" content="{{ page.title }}" />
+    {% if page.description %}
+    <meta name="twitter:description" content="{{page.description | truncatewords:50}}">
+    <meta property="og:description" content="{{page.description | truncatewords:50}}">
+    {% endif %}
+
+    <style>
+      article, aside, dialog, figure, footer, header,
+      hgroup, menu, nav, section { display: block; }
+    </style>
+    <link rel="stylesheet" href="/stylesheets/screen.css?12345678" type="text/css" media="screen, projection" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/xnk7rre.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body class="{% if page.background %}{{ page.background }}{%endif%} tags_{{ page.tags }}">
+
+
+    <div class="top">
+
+
+      <header class="header">
+        <div class="container">
+          <ul class="social_nav">
+            <li>
+              <span class="ico-twitter" aria-hidden="true"></span> <a href="https://twitter.com/jsconfeu" rel="me">@jsconfeu</a>
+            </li>
+            <li>
+              <span class="ico-google-plus" aria-hidden="true"></span> <a href="https://google.com/+JSConfEU"
+                  rel="publisher me">+jsconfeu</a>
+            </li>
+            <li>
+              <span class="ico-youtube" aria-hidden="true"></span> <a href="https://www.youtube.com/jsconfeu" rel="me">YouTube</a>
+            </li>
+          </ul>
+
+          {% comment %}
+          <div class="tickets tickets_off">
+            <a class="button" href="#"><span class="ico-ticket" aria-hidden="true"></span> Tickets: Soon</a>
+            <p class="ticket_info">
+              {%comment%}Late tickets on sale! <a href="#">&raquo; FAQ</a>{%endcomment%}
+            </p>
+          </div>
+          {% endcomment %}
+
+          <!-- <div class="tickets tickets_on">
+            <a class="button" href="/speakers/videos.html"><span class="ico-youtube" aria-hidden="true"></span>Videos</a>
+            <p class="ticket_info">
+              {%comment%}<a href="/news/2013/08/26/cssconf-combo-ticket.html">Late sale starts Wednesday!</a>{%endcomment%}
+            </p>
+          </div> -->
+
+        </div>
+      </header>
+
+      <div class="stage">
+        <div class="container">
+
+          <a href="/">
+            <h1 class="logo">
+              <span class="ico-logo" aria-hidden="true"></span>
+              <span class="ico-circle" aria-hidden="true"></span>
+              {% comment %}
+              Make sure to have at least one image on every page,
+              to make sharing services like G+ and FB happy.
+              {% endcomment %}
+              <img style="display:none" src="/img/js.eu.png" alt="JSConf EU Logo">
+            </h1>
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="main">
+
+      <nav>
+        <div class="container">
+         <ul>
+            <!-- <li>
+              <a href="/speakers/videos.html">Videos</a>
+            </li> -->
+            <li>
+              <a href="/news.html">News</a>
+            </li>
+            <li>
+              <a href="/location/">Location</a>
+            </li>
+            <!-- <li>
+              <a href="/sponsors/">Sponsors</a>
+            </li> -->
+            <li>
+              <a href="/about/">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="main_column">
+         {{content}}
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="sponsors">
+      <div class="container">
+        {% assign sponsors=site.tags.sponsor %}
+        <div class="level">
+          {% for post in sponsors %}
+            {% if.post.level == "sponsor-special" %}
+            <div class="sponsor">
+              {% if.post.link %}
+                <a href="{{ post.link }}" target="_blank" rel="nofollow">
+              {% endif %}
+                <img data-src="{{ post.image }}" width="200" />
+              {% if post.link %}
+                </a>
+              {% endif %}
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="level">
+          {% for post in sponsors %}
+            {% if.post.level == "sponsor-main" %}
+              {% if.post.link %}
+                <a href="{{ post.link }}" target="_blank" rel="nofollow">
+              {% endif %}
+                <img data-src="{{ post.image }}" width="150" />
+              {% if post.link %}
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="level">
+          {% for post in sponsors %}
+            {% if.post.level == "sponsor-support" %}
+              {% if.post.link %}
+                <a href="{{ post.link }}" target="_blank" rel="nofollow">
+              {% endif %}
+                <img data-src="{{ post.image }}" width="100" />
+              {% if post.link %}
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% comment %}
+        <div class="level">
+          {% for post in sponsors %}
+            {% if.post.level == "sponsor-custom" %}
+              {% if.post.link %}
+                <a href="{{ post.link }}" target="_blank" rel="nofollow">
+              {% endif %}
+                <img data-src="{{ post.image }}" width="80" />
+              {% if post.link %}
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endcomment %}
+      </div>
+    </div> -->
+
+    <footer>
+      <div class="container">
+        <p><a href="http://jsconf.com/" rel="me">JSConf</a> EU welcomes everyone, and defends you from harassment with our strict <a href="/code-of-conduct.html">anti-jerk policy</a></p>
+      </div>
+    </footer>
+  <script src="/js/make-the-website-load-slower.js" async></script>
+  {% comment %} For youtube subscribe button {% endcomment %}
+  <script src="https://apis.google.com/js/plusone.js" async></script>
+  <script>
+    var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-4656061-2']);
+    _gaq.push(['_setDomainName', 'jsconf.eu']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '50570251f5a1f57282000003');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  </body>
+</html>

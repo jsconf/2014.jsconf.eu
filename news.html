@@ -1,0 +1,12 @@
+---
+  layout: default
+  title: News about JSConf EU 2013
+---
+
+
+<h1>News</h1>
+{% for post in site.tags.news %}
+  <article>
+    {{ post.content }}
+  </article>
+{% endfor %}

@@ -1,0 +1,7 @@
+exclude: [config.rb, sass]
+name: JSconf.eu
+url:  http://2013.jsconf.eu
+speaker_map_base_url: "http://maps.googleapis.com/maps/api/staticmap?size=640x163&amp;scale=2&amp;sensor=false&amp;zoom=5&amp;visual_refresh=1&amp;markers=color:"
+speaker_index_base_url: "http://maps.googleapis.com/maps/api/staticmap?size=514x324&amp;sensor=false&amp;visual_refresh=1&amp;markers=color:"
+news_map_base_url: "http://maps.googleapis.com/maps/api/staticmap?size=640x390&amp;sensor=false&amp;visual_refresh=1&amp;markers=color:"
+schedule_url: "https://docs.google.com/spreadsheet/pub?key=0AoIOxKkr6fGqdGtHdWJqZFBJUnF1bEt3RVBsQUxINVE&amp;single=true&amp;gid=1&amp;output=html"

@@ -1,0 +1,72 @@
+/* line 1, ../../sass/imports/reset.scss */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 2, ../../sass/imports/reset.scss */
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 3, ../../sass/imports/reset.scss */
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 4, ../../sass/imports/reset.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 5, ../../sass/imports/reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  float: none !important;
+}
+
+/* line 6, ../../sass/imports/reset.scss */
+table, th, td {
+  vertical-align: top;
+}
+
+/* line 7, ../../sass/imports/reset.scss */
+a img {
+  border: none;
+}
+
+/* line 8, ../../sass/imports/reset.scss */
+input:focus {
+  outline: 0;
+}
+
+/* line 10, ../../sass/imports/reset.scss */
+strong, b, dfn {
+  font-weight: bold;
+}
+
+/* line 11, ../../sass/imports/reset.scss */
+em, i, dfn {
+  font-style: italic;
+}
+
+/* line 12, ../../sass/imports/reset.scss */
+sup, sub {
+  line-height: 0;
+}
+
+/* line 13, ../../sass/imports/reset.scss */
+pre, code, tt {
+  font: 1em Menlo,'andale mono','lucida console',monospace;
+  line-height: 1.5;
+}

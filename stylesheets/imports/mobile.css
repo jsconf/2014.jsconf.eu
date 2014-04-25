@@ -1,0 +1,57 @@
+/* --------------- Screens bigger than 580px ----------- */
+@media only screen and (min-width: 580px) {
+  /* line 3, ../../sass/imports/mobile.scss */
+  body {
+    font-size: 100%;
+  }
+
+  /* line 6, ../../sass/imports/mobile.scss */
+  .social_nav {
+    float: left;
+    clear: both;
+    margin-bottom: 0;
+  }
+  /* line 10, ../../sass/imports/mobile.scss */
+  .social_nav li {
+    display: block;
+    margin: 0;
+  }
+
+  /* line 16, ../../sass/imports/mobile.scss */
+  nav li {
+    padding: .2em 1em;
+  }
+
+  /* line 22, ../../sass/imports/mobile.scss */
+  .button,
+  .button:link,
+  .button:visited {
+    display: block;
+  }
+
+  /* line 25, ../../sass/imports/mobile.scss */
+  .tickets {
+    float: right;
+    overflow: hidden;
+  }
+
+  /* line 29, ../../sass/imports/mobile.scss */
+  .social_nav, .ticket_info {
+    font-size: .875em;
+  }
+
+  /* line 34, ../../sass/imports/mobile.scss */
+  .speaker_avatar {
+    float: left;
+    margin-right: 2em;
+  }
+}
+/* --------------- Screens bigger than 768px ----------- */
+@media only screen and (min-width: 768px) {
+  /* line 44, ../../sass/imports/mobile.scss */
+  .main_column {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.5em 4%;
+  }
+}
