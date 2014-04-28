@@ -1,5 +1,5 @@
 ---
-title: JSConf EU 2013 Code of Conduct
+title: JSConf EU 2014 Code of Conduct
 layout: default
 background: background6
 ---
