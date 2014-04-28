@@ -9,7 +9,7 @@
 
 > “JSConf EU — This is your conference.”
 
-We are inviting the JavaScript community to submit talks for the upcoming JSConf EU (September 14th-15th, Berlin). This Call for Presentation **closes on June 20th**.
+We are inviting the JavaScript community to submit talks for the upcoming JSConf EU (September 13th-14th, Berlin). This Call for Presentation **closes on May 30th**.
 
 This is what we call a “Hybrid CFP”: If you think you have something great to talk about, tell us all about it and we consider your entry. If you know someone who has something great to talk about, nominate them. And if you are interested in hearing about a particular topic, nominate the topic, and we can try and find a match.
 
