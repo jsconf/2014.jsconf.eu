@@ -5,9 +5,7 @@
 ---
 
 
-# The Call for Speakers has ended…
-
-<a href="/speakers/">…and speakers have been announced!</a>
+# Call for Speakers
 
 > “JSConf EU — This is your conference.”
 
@@ -18,7 +16,7 @@ This is what we call a “Hybrid CFP”: If you think you have something great t
 
 ## Topics
 
-To get a feel for what we are interested in hearing about, here is the programme for the past years ([2009](http://jsconf.eu/2009/speakers.html), [2010](http://jsconf.eu/2010/speakers.html), [2011](http://jsconf.eu/2011/speakers.html), [2012](http://2012.jsconf.eu/speakers.html)).
+To get a feel for what we are interested in hearing about, here is the programme for the past years ([2009](http://jsconf.eu/2009/speakers.html), [2010](http://jsconf.eu/2010/speakers.html), [2011](http://jsconf.eu/2011/speakers.html), [2012](http://2012.jsconf.eu/speakers.html), [2013](http://2013.jsconf.eu/speakers/)).
 
 We like to see anything that squarely fits into the spectrum of:
 
@@ -52,7 +50,7 @@ If you need more encouragement, check out co-organiser Tiffany’s site [We Are 
 
 #### Previous Speaker’s Experiences
 
-If you still need convincing, here are a few select quotes from previous year’s speakers:
+If you still need convincing, here are a few select quotes from previous speakers:
 
 > “As a speaker, I was treated like royalty.” — [@ireneros][]
 
@@ -104,7 +102,8 @@ If you get selected as a speaker at JSConf EU, here’s what you get:
  * **Entrance to the conference.** We won’t be done with the speaker selections by the end of the ticket sales, so if you want to make sure you can attend, you may want to purchase a ticket regardless. If you get selected to speak and if you need to, we can refund your ticket, but if we don’t, we can spend more money on making the conference more awesome.
 
  * **We cover your stay in Berlin** in a fancy hotel near the venue (including free Wifi) for the days of the conference and a day before and after (i.e. September 13th-16th). If you want to stay longer, we can arrange things, just let us know. You will have to cover extra nights, though. Note: Pay attention to the [JSConf EU Week Calendar](/schedule/) for satellite events you don’t want to miss.
-    <small>If your employer can cover your travel and hotel, we are happy to list them as an awesome company sponsor. The money we save will be used to make the conference more awesome. (You might see a pattern …)</small>
+    <small>If your employer can cover your travel and hotel, we are happy to list them as an awesome company sponsor. The money we save will be used to make the conference more awesome. (You might see a pattern …)
+</small>
 
 If you have any special requirements, non-return trips (say you are coming from NodeDublin), just let us know, we can usually work these things out. Just note that every minute we spend on this, we don't spend on making the conference more awesome ;)
 
@@ -125,7 +124,7 @@ Here’s roughly how we pick our talks:
 
 We expect 100-200 excellent submissions for 30-40 speaking slots. The process helps us to select the right ones.
 
-[Read all about how this went down last year and how we arrived at an amazing number of 25% women speakers](http://2012.jsconf.eu/2012/09/17/beating-the-odds-how-we-got-25-percent-women-speakers.html).
+[Read all about how this went down in 2012 and how we arrived at an amazing number of 25% women speakers](http://2012.jsconf.eu/2012/09/17/beating-the-odds-how-we-got-25-percent-women-speakers.html).
 
 
 ## Example Submission
@@ -140,7 +139,7 @@ Here’s a proposal that we accepted in 2012:
 
 ## Guidelines
 
-Submit your proposal by **June 20th 2013, 23:59:59 CEST**. No excuses.
+Submit your proposal by **May 30th 2014, 23:59:59 CEST**. No excuses.
 
 All talks are **in English**.
 
@@ -166,4 +165,4 @@ Finally, since you retain full ownership of your slides and recording, we’d li
 
 ## Submit Your Talk
 
-<iframe src="https://docs.google.com/a/jsconf.eu/spreadsheet/embeddedform?formkey=dFNSRHlRaENGUW1hNkZMOGdlR3gxR1E6MA" width="580" height="2140" frameborder="0" marginheight="0" marginwidth="0" style="margin-left:-10px">Loading&hellip;</iframe>
+<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dG5yeFMwVE1lWlpacG9oZll0ajlaYUE6MA" width="580" height="2140" frameborder="0" marginheight="0" marginwidth="0" style="margin-left:-10px">Loading&hellip;</iframe>
