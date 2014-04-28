@@ -236,7 +236,7 @@ h4 {
   width: 18.3em;
 }
 /* line 142, ../sass/imports/main.scss */
-.logo .ico-logo, .logo .ico-circle {
+.logo .ico-logo, .logo .ico-circle_2014 {
   position: absolute;
 }
 /* line 145, ../sass/imports/main.scss */
@@ -246,7 +246,7 @@ h4 {
   bottom: 0;
 }
 /* line 150, ../sass/imports/main.scss */
-.logo .ico-circle {
+.logo .ico-circle_2014 {
   color: #FFF;
   font-size: 12em;
   top: 0;
@@ -254,7 +254,7 @@ h4 {
 }
 
 /* line 158, ../sass/imports/main.scss */
-.logo:hover .ico-circle {
+.logo:hover .ico-circle_2014 {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 500ms;
   -webkit-animation-iteration-count: 1;
@@ -705,33 +705,14 @@ img.sponsor-no-text {
 
 @font-face {
   font-family: 'jsconfeu';
-  src: url("/fonts/jsconfeu.eot");
-  src: url("/fonts/jsconfeu.eot?#iefix") format("embedded-opentype"), url("/fonts/jsconfeu.woff") format("woff"), url("/fonts/jsconfeu.ttf") format("truetype"), url("/fonts/jsconfeu.svg#jsconfeu") format("svg");
+  src: url("/fonts/jsconfeu.eot?lddv9h");
+  src: url("/fonts/jsconfeu.eot?#iefixlddv9h") format("embedded-opentype"), url("/fonts/jsconfeu.woff?lddv9h") format("woff"), url("/fonts/jsconfeu.ttf?lddv9h") format("truetype"), url("/fonts/jsconfeu.svg?lddv9h#jsconfeu") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 13, ../sass/imports/icons.scss */
-[data-icon]:before {
-  font-family: 'jsconfeu';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="ico-"] {
-*/
-/* line 30, ../sass/imports/icons.scss */
-.ico-arrow-left, .ico-arrow-right, .ico-twitter, .ico-facebook, .ico-feed, .ico-google-plus, .ico-github-alt, .ico-youtube, .ico-circle, .ico-logo, .ico-ticket {
+/* line 12, ../sass/imports/icons.scss */
+[class^="ico-"], [class*=" ico-"] {
   font-family: 'jsconfeu';
   speak: none;
   font-style: normal;
@@ -739,60 +720,67 @@ you can use the generic selector below, but it's slower:
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 40, ../sass/imports/icons.scss */
+/* line 26, ../sass/imports/icons.scss */
+.ico-circle_2014:before {
+  content: "\6f";
+}
+
+/* line 29, ../sass/imports/icons.scss */
 .ico-arrow-left:before {
   content: "\2190";
 }
 
-/* line 43, ../sass/imports/icons.scss */
+/* line 32, ../sass/imports/icons.scss */
 .ico-arrow-right:before {
   content: "\2192";
 }
 
-/* line 46, ../sass/imports/icons.scss */
+/* line 35, ../sass/imports/icons.scss */
 .ico-twitter:before {
   content: "\74";
 }
 
-/* line 49, ../sass/imports/icons.scss */
+/* line 38, ../sass/imports/icons.scss */
 .ico-facebook:before {
   content: "\66";
 }
 
-/* line 52, ../sass/imports/icons.scss */
+/* line 41, ../sass/imports/icons.scss */
 .ico-feed:before {
   content: "\72";
 }
 
-/* line 55, ../sass/imports/icons.scss */
+/* line 44, ../sass/imports/icons.scss */
 .ico-google-plus:before {
   content: "\2b";
 }
 
-/* line 58, ../sass/imports/icons.scss */
+/* line 47, ../sass/imports/icons.scss */
 .ico-github-alt:before {
   content: "\67";
 }
 
-/* line 61, ../sass/imports/icons.scss */
+/* line 50, ../sass/imports/icons.scss */
 .ico-youtube:before {
   content: "\79";
 }
 
-/* line 64, ../sass/imports/icons.scss */
+/* line 53, ../sass/imports/icons.scss */
 .ico-circle:before {
   content: "\78";
 }
 
-/* line 67, ../sass/imports/icons.scss */
+/* line 56, ../sass/imports/icons.scss */
 .ico-logo:before {
   content: "\6c";
 }
 
-/* line 70, ../sass/imports/icons.scss */
+/* line 59, ../sass/imports/icons.scss */
 .ico-ticket:before {
   content: "\73";
 }
