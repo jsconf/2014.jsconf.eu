@@ -101,7 +101,7 @@ If you get selected as a speaker at JSConf EU, here’s what you get:
 
  * **Entrance to the conference.** We won’t be done with the speaker selections by the end of the ticket sales, so if you want to make sure you can attend, you may want to purchase a ticket regardless. If you get selected to speak and if you need to, we can refund your ticket, but if we don’t, we can spend more money on making the conference more awesome.
 
- * **We cover your stay in Berlin** in a fancy hotel near the venue (including free Wifi) for the days of the conference and a day before and after (i.e. September 13th-16th). If you want to stay longer, we can arrange things, just let us know. You will have to cover extra nights, though. Note: Pay attention to the [JSConf EU Week Calendar](/schedule/) for satellite events you don’t want to miss.
+ * **We cover your stay in Berlin** in a fancy hotel near the venue (including free Wifi) for the days of the conference and a day before and after (i.e. September 12th-15th). If you want to stay longer, we can arrange things, just let us know. You will have to cover extra nights, though. Note: Pay attention to the [JSConf EU Week Calendar](/schedule/) for satellite events you don’t want to miss.
     <small>If your employer can cover your travel and hotel, we are happy to list them as an awesome company sponsor. The money we save will be used to make the conference more awesome. (You might see a pattern …)
 </small>
 
