@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Blog">
   <head>
     <title>{{ page.title }}{% if page.video %} [Video]{% endif %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="canonical" href="http://2013.jsconf.eu{{ page.url | replace:'index.html','' }}" />
+    <link rel="canonical" href="http://2014.jsconf.eu{{ page.url | replace:'index.html','' }}" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="google-site-verification" content="H6VZ353SM0CfTqymvhQPM0eLyWffpeRfyRjFlXLwNn0" />
     <!--[if IE]>
@@ -16,13 +16,16 @@
     <meta property="og:video" content="http://www.youtube.com/v/{{ page.video }}">
     {% endif %}
     {% if page.image %}
-    <meta name="twitter:image" content="http://2013.jsconf.eu{{ page.image.filename }}">
-    <meta property="og:image" content="http://2013.jsconf.eu{{ page.image.filename }}"/>
+    <meta itemprop="image" content="http://2014.jsconf.eu{{ page.image.filename }}">
+    <meta name="twitter:image" content="http://2014.jsconf.eu{{ page.image.filename }}">
+    <meta property="og:image" content="http://2014.jsconf.eu{{ page.image.filename }}"/>
     {% endif %}
     {% if page.twitter %}<meta name="twitter:creator" content="@{{ page.twitter | split:'/' | last }}">{% endif %}
+    <meta itemprop="name" content="{{ page.title }}">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta property="og:title" content="{{ page.title }}" />
     {% if page.description %}
+    <meta itemprop="description" content="{{page.description | truncatewords:50}}">
     <meta name="twitter:description" content="{{page.description | truncatewords:50}}">
     <meta property="og:description" content="{{page.description | truncatewords:50}}">
     {% endif %}
@@ -57,21 +60,9 @@
             </li>
           </ul>
 
-          {% comment %}
           <div class="tickets tickets_off">
             <a class="button" href="#"><span class="ico-ticket" aria-hidden="true"></span> Tickets: Soon</a>
-            <p class="ticket_info">
-              {%comment%}Late tickets on sale! <a href="#">&raquo; FAQ</a>{%endcomment%}
-            </p>
           </div>
-          {% endcomment %}
-
-          <!-- <div class="tickets tickets_on">
-            <a class="button" href="/speakers/videos.html"><span class="ico-youtube" aria-hidden="true"></span>Videos</a>
-            <p class="ticket_info">
-              {%comment%}<a href="/news/2013/08/26/cssconf-combo-ticket.html">Late sale starts Wednesday!</a>{%endcomment%}
-            </p>
-          </div> -->
 
         </div>
       </header>
