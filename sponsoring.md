@@ -2,6 +2,7 @@
 title: JSConf EU Sponsoring
 layout: default
 background: background7
+image: /img/stickers.jpg
 ---
 
 # Sponsoring
