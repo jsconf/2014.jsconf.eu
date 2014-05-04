@@ -11,13 +11,17 @@ JSConf EU, the labour-of-love conference for the JS community in Europe.
 
 Let the moving images speak for themselves:
 
-### 2012 Keynote Medley
-{% assign video_id="o7OE1uas2yg" %}
+### 2013 Opening
+{% assign video_id="vZ-e8r3h5yA" %}
 {% include youtube.md %}
 
 ### 2012 Summary
 {% assign video_id="52140932" %}
 {% include vimeo.md %}
+
+### 2012 Keynote Medley
+{% assign video_id="o7OE1uas2yg" %}
+{% include youtube.md %}
 
 ### 2011 Summary
 {% assign video_id="30988223" %}
