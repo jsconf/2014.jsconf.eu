@@ -13,7 +13,3 @@
 {% assign image_url="/img/radialsystem-outside.jpg" %}
 {% assign image_alt="Yes, it is by the water :)" %}
 {% include image.md %}
-
-## Hotel
-
-<a href="/news/2013/07/05/hotel-recommendation.html">More info</a>

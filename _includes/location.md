@@ -11,5 +11,3 @@
 </a>
 {% assign map_center="52.51057,13.42873" %}
 {% include map_image.md %}
-
-See also our <a href="/news/2013/07/05/hotel-recommendation.html">hotel recommendation.</a>
