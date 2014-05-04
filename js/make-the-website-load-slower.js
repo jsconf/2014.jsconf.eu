@@ -30,7 +30,7 @@ $(function() {
     return;
   }
   var numberOfBackgrounds = 0;
-  var rules = document.styleSheets[1].cssRules;
+  var rules = document.styleSheets[0].cssRules;
   for (var i = 0; i < rules.length; i++) {
     if (/\.background\d+/.test(rules[i].cssText)) {
       numberOfBackgrounds++;
