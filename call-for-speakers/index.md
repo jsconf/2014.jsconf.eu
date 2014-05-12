@@ -27,7 +27,7 @@ We like to see anything that squarely fits into the spectrum of:
  * Embedded JS.
  * Hardware JS.
  * Fundamentals, in a modern light.
- * The JavaScript community, history, past, present & future.
+ * The JavaScript community, culture, history, past, present & future, the why the who and the what of what we’re all doing.
  * And finally: Whatever the hell you want; this is your conference.
 
 
