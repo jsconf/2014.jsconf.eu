@@ -11,6 +11,10 @@ JSConf EU, the labour-of-love conference for the JS community in Europe.
 
 Let the moving images speak for themselves:
 
+### 2013 Summary
+{% assign video_id="96055758" %}
+{% include vimeo.md %}
+
 ### 2013 Opening
 {% assign video_id="vZ-e8r3h5yA" %}
 {% include youtube.md %}
