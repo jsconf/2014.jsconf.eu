@@ -38,6 +38,8 @@
     <meta name="description" itemprop="description" content="{{page.description | truncatewords:50}}">
     <meta name="twitter:description" content="{{page.description | truncatewords:50}}">
     <meta property="og:description" content="{{page.description | truncatewords:50}}">
+    {% else %}
+    <meta name="twitter:description" content="{{page.excerpt | strip_html | strip_newlines | truncatewords:50}}">
     {% endif %}
 
     <style>
