@@ -12,17 +12,25 @@
 
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="google-site-verification" content="H6VZ353SM0CfTqymvhQPM0eLyWffpeRfyRjFlXLwNn0" />
+    {% if page.image %}
     <meta name="twitter:card" content="summary_large_image">
+    {% else %}
+    <meta name="twitter:card" content="summary">
+    {% endif %}
     <meta name="twitter:site" content="@jsconfeu">
     {% if page.video %}
     <meta property="og:video" content="http://www.youtube.com/v/{{ page.video }}">
     {% endif %}
     {% if page.image %}
-    <meta itemprop="image" content="http://2014.jsconf.eu{{ page.image.filename }}">
-    <meta name="twitter:image" content="http://2014.jsconf.eu{{ page.image.filename }}">
-    <meta property="og:image" content="http://2014.jsconf.eu{{ page.image.filename }}"/>
+    <meta itemprop="image" content="http://2014.jsconf.eu{{ page.image }}">
+    <meta name="twitter:image" content="http://2014.jsconf.eu{{ page.image }}">
+    <meta property="og:image" content="http://2014.jsconf.eu{{ page.image }}"/>
     {% endif %}
-    {% if page.twitter %}<meta name="twitter:creator" content="@{{ page.twitter | split:'/' | last }}">{% endif %}
+    {% if page.twitter %}
+    <meta name="twitter:creator" content="@{{ page.twitter | split:'/' | last }}">
+    {% else %}
+    <meta name="twitter:creator" content="@jsconfeu">
+    {% endif %}
     <meta itemprop="name" content="{{ page.title }}">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta property="og:title" content="{{ page.title }}" />
