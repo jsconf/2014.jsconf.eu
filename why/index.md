@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VAT
+title: Why JSConf EU
 background: background3
 ---
 
