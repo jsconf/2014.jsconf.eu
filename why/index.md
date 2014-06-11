@@ -2,6 +2,7 @@
 layout: default
 title: Why JSConf EU
 background: background3
+image: /img/group-2013.jpg
 ---
 
 # Why JSConf EU
@@ -9,6 +10,12 @@ background: background3
 > Our biggest reward as conference organisers is people doing great things with something they learned at or with someone they met at the conference.
 
 We are inviting the JavaScript community to attend the upcoming JSConf EU (September 13th-14th, Berlin). Tickets will be [available soon](http://2014.jsconf.eu/news/2014/06/11/ticket-schedule.html), and [announced on our Twitter account](https://twitter.com/jsconfeu).
+
+<div class="embed_container">
+  <img width="560" height="420"
+    src="/img/group-2013.jpg"
+    alt="Group picture JSConf EU 2013" />
+</div>
 
 JSConf EU is a professional, not-for-profit, labour-of-love conference for the JavaScript community. It’s a two day affair, with many related side events in the days surrounding it and is an invitation for the community to come together and for new people to get to know and join the community.
 
@@ -70,6 +77,9 @@ If you have any questions, please get in touch: [curators@jsconf.eu](mailto:&#x6
 
 > “I most enjoyed the fact that I felt completely included and taken care of by the conference and my peers.”
 
+{% assign video_id="96055758" %}
+{% include vimeo.md %}
+
 ## Schedule-ish
 
 Pre Events:
@@ -87,4 +97,8 @@ Main Event
 
 Post Events:
 - Monday 11:00-15:00: Relax.js, a full brunch open to all, on us.
+
+## Tickets
+
+Tickets will be [available soon](http://2014.jsconf.eu/news/2014/06/11/ticket-schedule.html)
 
