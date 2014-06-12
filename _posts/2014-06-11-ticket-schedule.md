@@ -22,7 +22,7 @@ Set your alarms now :)
 
 - Price: 575€ + VAT + Fees **699€**.
 - Ticket sales will be done through [Tito](https://tito.io/jsconfeu/jsconf-eu-2014).
-- You won't need a Paypal account, but you can use one!
+- You won't need a Paypal account, but you can use one! (The other option is Stripe.)
 - You will be able to buy one ticket per order.
 - We will sell Combo Tickets with CSSConf EU as well.
 - [How we spend your money](http://2013.jsconf.eu/news/2013/06/15/how-we-spend-your-money.html).
