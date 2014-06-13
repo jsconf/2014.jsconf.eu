@@ -7,7 +7,7 @@ tags: news
 
 {% include header.md %}
 
-**Read up on the [JSConf EU experience and what a ticket buys you](http://2014.jsconf.eu/why/ "WHY JSConf EU").**
+**Read up on the [JSConf EU experience and what a ticket buys you](/why/ "WHY JSConf EU").**
 
 We will be opening ticket sales in multiple batches:
 
@@ -17,6 +17,8 @@ We will be opening ticket sales in multiple batches:
 - Fourth round: Sunday, **July 6th**, 18:00 CEST
 
 Set your alarms now :)
+
+[Available here on the dates above.](https://tito.io/jsconfeu/jsconf-eu-2014)
 
 ### Info
 

@@ -9,7 +9,7 @@ image: /img/group-2013.jpg
 
 > Our biggest reward as conference organisers is people doing great things with something they learned at or with someone they met at the conference.
 
-We are inviting the JavaScript community to attend the upcoming JSConf EU (September 13th-14th, Berlin). Tickets will be [available soon](http://2014.jsconf.eu/news/2014/06/11/ticket-schedule.html), and [announced on our Twitter account](https://twitter.com/jsconfeu).
+We are inviting the JavaScript community to attend the upcoming JSConf EU (September 13th-14th, Berlin). Tickets will be [sold based on this schedule](/news/2014/06/11/ticket-schedule.html), and [announced on our Twitter account](https://twitter.com/jsconfeu).
 
 <div class="embed_container">
   <img width="560" height="420"
@@ -98,7 +98,7 @@ Main Event
 Post Events:
 - Monday 11:00-15:00: Relax.js, a full brunch open to all, on us.
 
-## Tickets
+## Buy a ticket
 
-Tickets will be [available soon](http://2014.jsconf.eu/news/2014/06/11/ticket-schedule.html)
+See [our ticket schedule](/news/2014/06/11/ticket-schedule.html) for when tickets will be available.
 
