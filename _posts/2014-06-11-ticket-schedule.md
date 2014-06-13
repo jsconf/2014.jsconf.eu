@@ -3,6 +3,8 @@ layout: default
 title: Ticket Schedule
 category: news
 tags: news
+background: background0
+image: /img/group-2013.jpg
 ---
 
 {% include header.md %}
