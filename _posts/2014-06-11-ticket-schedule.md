@@ -14,7 +14,7 @@ image: /img/group-2013.jpg
 We will be opening ticket sales in multiple batches:
 
 - <s>First round: Sunday, **June 15th**, 18:00 CEST</s>
-- Second round: Sunday, **June 22nd**, 18:00 CEST
+- <s>Second round: Sunday, **June 22nd**, 18:00 CEST</s>
 - Third round: Sunday, **June 29th**, 18:00 CEST
 - Fourth round: Sunday, **July 6th**, 18:00 CEST
 
