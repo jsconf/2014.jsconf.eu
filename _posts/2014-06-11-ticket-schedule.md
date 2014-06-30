@@ -15,7 +15,7 @@ We will be opening ticket sales in multiple batches:
 
 - <s>First round: Sunday, **June 15th**, 18:00 CEST</s>
 - <s>Second round: Sunday, **June 22nd**, 18:00 CEST</s>
-- Third round: Sunday, **June 29th**, 18:00 CEST
+- <s>Third round: Sunday, **June 29th**, 18:00 CEST</s>
 - Fourth round: Sunday, **July 6th**, 18:00 CEST
 
 Set your alarms now :)
