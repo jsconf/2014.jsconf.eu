@@ -9,6 +9,9 @@ image: /img/group-2013.jpg
 
 {% include header.md %}
 
+**UPDATE: SOLD OUT**<br>
+We may find a few more seats here and there as we do the final planning of the event, so keep checking.
+
 **Read up on the [JSConf EU experience and what a ticket buys you](/why/ "WHY JSConf EU").**
 
 We will be opening ticket sales in multiple batches:
@@ -16,7 +19,7 @@ We will be opening ticket sales in multiple batches:
 - <s>First round: Sunday, **June 15th**, 18:00 CEST</s>
 - <s>Second round: Sunday, **June 22nd**, 18:00 CEST</s>
 - <s>Third round: Sunday, **June 29th**, 18:00 CEST</s>
-- Fourth round: Sunday, **July 6th**, 18:00 CEST
+- <s>Fourth round: Sunday, **July 6th**, 18:00 CEST</s>
 
 Set your alarms now :)
 
