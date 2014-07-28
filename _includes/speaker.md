@@ -24,7 +24,7 @@
 <div itemscope="" itemtype="http://schema.org/Person">
 {% endif %}
 {% endif %}
-  <header class="scrollTarget">
+  <header class="scrollTarget" style="clear: both;">
     <h3>{{post.overview}}<a href="{{ page.url }}"><span itemprop="name">{{ page.speaker }}: {{ page.talk }}</span></a></h3>
   </header>
 
