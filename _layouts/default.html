@@ -21,11 +21,6 @@
     {% if page.video %}
     <meta property="og:video" content="http://www.youtube.com/v/{{ page.video }}">
     {% endif %}
-    {% if page.image %}
-    <meta itemprop="image" content="http://2014.jsconf.eu{{ page.image }}">
-    <meta name="twitter:image" content="http://2014.jsconf.eu{{ page.image }}">
-    <meta property="og:image" content="http://2014.jsconf.eu{{ page.image }}"/>
-    {% endif %}
     {% if page.twitter %}
     <meta name="twitter:creator" content="@{{ page.twitter | split:'/' | last }}">
     {% else %}
