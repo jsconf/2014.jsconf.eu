@@ -9,9 +9,9 @@ website: "http://www.p01.org/"
 twitter: "https://twitter.com/p01"
 github: "https://github.com/p01"
 gplus: ""
-from: ""
+from: Norway / Oslo
 description: "Whole new worlds come into life when the creative coding and technical madness of the Demoscene meet the breadth of optimization techniques of the web platform.\n\nIn this talk we will step back from our day job, twist best practices, abuse JavaScript and web browsers, use good old smoke and mirrors to create a monster Audio-Visual demo in a handful of bytes.\n\nWhy go to such length? Because it's damn rewarding to create these small pieces of art! Try."
-image: 
+image:
   width: 227
   height: 227
   type: jpg

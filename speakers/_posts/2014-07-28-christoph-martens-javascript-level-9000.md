@@ -9,7 +9,7 @@ website: ""
 twitter: "https://twitter.com/martensms"
 github: "https://github.com/martensms"
 gplus: ""
-from: ""
+from: Heidelberg (Germany)
 description: "Low Level JavaScript insights from the JIT compiler perspective. From Garbage Collection and Tracing algorithms to callsite analysis, native data types (Array, Object, Function, Function templates) and their implementations, unboxing and hash optimizations, fake operator overloads, ASM branches, branch prediction on the CPU and Hidden Classes in V8 to highlevel usage examples inside game engines and how these can be optimized."
 image:
   width: 333

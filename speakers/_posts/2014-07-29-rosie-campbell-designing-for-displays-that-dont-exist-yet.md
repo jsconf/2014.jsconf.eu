@@ -9,9 +9,9 @@ website: "http://microchicks.co.uk/"
 twitter: "https://twitter.com/RosieCampbell"
 github: "https://github.com/RosieCampbell"
 gplus: "https://plus.google.com/+RosieCampbell"
-from: ""
+from: "Manchester, UK"
 description: "You thought cross-browser design was tricky? What if you had to develop for ten or twenty years in the future, when we can no longer assume displays will be rectangular, flat or even completely unobstructed? Our screens are changing, and BBC R&D are anticipating and prototyping user experiences for technology that hasn't even been invented yet. From wearable tech to electronic wallpaper, this is the ultimate evolution of responsive design. Find out how we're using JavaScript to push it to its limits.\n"
-image: 
+image:
   width: 600
   height: 400
   type: png
