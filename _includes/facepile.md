@@ -10,7 +10,7 @@
     {% endif %}
     {% if post.image2 %}
     <img src="{{ post.image2.filename }}" alt="{{ post.speaker }}" height="80"
-    {% if post.image.width > 0 %}{% if post.image.height > 0 %}width="{{ post.image.width | times:80 | divided_by:post.image.height  }}"{%endif%}{%endif%}
+    {% if post.image.width > 0 %}{% if post.image.height > 0 %}width="{{ (0 + post.image.width) | times:80 | divided_by:(0 + post.image.height)  }}"{%endif%}{%endif%}
     />
     {% endif %}
   </a>

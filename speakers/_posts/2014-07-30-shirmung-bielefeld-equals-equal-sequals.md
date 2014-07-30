@@ -12,8 +12,8 @@ gplus: ""
 from: "Brooklyn, NY"
 description: "What is type coercion? When can it be useful? What happens when we choose to use == over ===? \n\nJavaScript is a polarizing language, said to be full of \"good parts\" and \"bad parts\". JavaScript's type coercion is often bemoaned—one of the common \"gotchas\" for newcomers to the language. In this talk, we'll unravel the complexity of type coercion and define a set of simple rules to make our lives easier. No more #@^%'s."
 image:
-  width: 501
-  height: 332
+  width: 500
+  height: 333
   type: jpeg
   heightSite: 133.20000000000002
   filename: "/speakers/images/shirmung-bielefeld.jpeg"
