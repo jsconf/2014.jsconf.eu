@@ -11,11 +11,11 @@ github: "https://github.com/sheley"
 gplus: ""
 from: Germany/Berlin
 description: "In two parts, I'll share the story of how I transformed into a hirable web developer in just under one year while highlighting the ways people helped me to get to that point. I hope you'll come away with ideas how you can make a difference in your own community. As Tal Ben-Shahar says, there is no more selfish act than a generous one, so this talk is really for your own good."
-image: 
-  width: 100
-  height: 100
+image:
+  width: 200
+  height: 300
   type: jpg
-  heightSite: 200
+  heightSite: 300
   filename: "/speakers/images/michele-guido.jpg"
 ---
 
