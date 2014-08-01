@@ -4,9 +4,11 @@
   <address itemprop="address" itemscope="" itemtype="http://schema.org/EventVenue">
     <strong itemprop="name"><a href="{{ map_url }}">Radialsystem V</a></strong>,
     <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-      <span itemprop="streetAddress">Holzmarktstraße 33</span>,
-      <span itemprop="postalCode">10243</span> <span itemprop="addressLocality">Berlin</span>,
-      <span itemprop="addressCountry">Germany</span>
+      <a href="{{ map_url }}">
+        <span itemprop="streetAddress">Holzmarktstraße 33</span>,
+        <span itemprop="postalCode">10243</span> <span itemprop="addressLocality">Berlin</span>,
+        <span itemprop="addressCountry">Germany</span>
+      </a>
     </span>
   </address>
 
