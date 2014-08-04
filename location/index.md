@@ -2,6 +2,7 @@
   layout: default
   title: Location
   background: background16
+  image: /img/radialsystem.jpg
 ---
 
 # Location

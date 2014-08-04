@@ -3,6 +3,7 @@
   title: Speakers of JSConf EU 2014
   background: background_speakers
   tags: foo
+  image: /img/speakers.png
 ---
 
 {% assign speakers=site.tags.speaker %}
