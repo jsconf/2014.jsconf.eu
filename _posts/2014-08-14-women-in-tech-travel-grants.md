@@ -3,14 +3,14 @@ layout: default
 title: Google EMEA Women in Tech Conference and Travel grants for female computer scientists
 category: news
 tags: news
-image: /img/group-2013.jpg
+image: /img/Google_Women_in_Tech_logo.jpeg
 ---
 
 {% include header.md %}
-   
+
 As part of Google's ongoing commitment to encourage women to excel in computing and technology, we are pleased to offer Women in Tech Travel and Conference Grants to attend the JSConf EU 2014 conference.
 
-We are offering **5 grants**, which include: 
+We are offering **5 grants**, which include:
 - Free registration for the conference
 - Up to **1000 EUR** towards travel costs (to be paid after the conference)
 
