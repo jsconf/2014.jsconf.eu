@@ -9,9 +9,9 @@ website: "http://rckbt.me"
 twitter: "https://twitter.com/rockbot"
 github: "https://github.com/rockbot"
 gplus: ""
-from: USA / East Bay
+from: "Oakland, USA"
 description: "The road to JavaScript expertise is hard, but easy to forget. Let's go back to the beginning and work our way to the top, reminding ourselves of the struggle (but ultimate triumph!) of how we become the incredible developers we know we are. We'll talk about individual journeys, shared experiences, and the community that has brought us all together."
-image: 
+image:
   width: 160
   height: 160
   type: jpg
