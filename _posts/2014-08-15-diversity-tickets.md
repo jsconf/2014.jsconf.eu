@@ -8,7 +8,7 @@ image: /img/top_mandy_jed.jpg
 
 {% include header.md %}
 
-At JSConf EU, we’ve been working tirelssly on increasing the diveristy of our speakers and attendees alike.
+At JSConf EU, we’ve been working tirelssly on increasing the diveristy of our speakers and attendees.
 
 One of our new initiatives this year was ot reserve a contingent of tickets for groups and organisations that work on diversity in tech and offer them to buy a ticket outside of the regular and hectic ticket release schedule.
 
@@ -26,9 +26,10 @@ The deal includes:
 
 - 1 JSConf EU ticket for yourself to keep.
 - 1 JSConf EU ticket for someone in the community who couldn’t afford to come otherwise
-- 1x 500€ stipend for travel and accommodation for the person.
 
-We will be selecting the people from a list of sbumissions, but if you are buying the ticket, you are also welcome to suggest a ticket that allows someone to attend JSConf EU when they previosly couldn’t. We’ll have final say, just so you don’t sneak in your work colleague, who wasn’t lucky in the regular ticket sales.
+You will pay for both tickets plus a 500€ travel stipend for the other person.
 
-We belive that a more diverse crowd makes for a better event. If you agree, we invite you to become a Super Golden Diversity Supporter by [buying a ticket](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=7fszx8vpdxs).
+We will be selecting the people from a list of submissions, which we will open once we have sold the tickets.
+
+We belive that a more diverse crowd makes for a better event. If you agree, we invite you to become a Super Golden Diversity Supporter by [buying one of the **five** tickets](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=7fszx8vpdxs).
 
