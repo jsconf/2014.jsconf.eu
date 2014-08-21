@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diversity Tickets
+title: Diversity Support Tickets
 category: news
 tags: news
 image: /img/top_mandy_jed.jpg
@@ -31,5 +31,5 @@ You will pay for both tickets plus a 500€ travel stipend for the other person.
 
 We will be selecting the people from a list of submissions, which we will open once we have sold the tickets.
 
-We believe that a more diverse crowd makes for a better event. If you agree, we invite you to become a Super Golden Diversity Supporter by [buying one of the **five** tickets](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=7fszx8vpdxs).
+We believe that a more diverse crowd makes for a better event. If you agree, we invite you to become a Super Golden Diversity Supporter by [buying one of the <strike>five</strike> **four** (Thank you Travis CI!) tickets](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=7fszx8vpdxs).
 
