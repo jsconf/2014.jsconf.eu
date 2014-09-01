@@ -21,7 +21,7 @@
     <p>Talk schedule: TBA</p>
     <p>Dinner: 07:00pm</p>
     <i>Sept 13, Saturday night</i>
-    <h4>Main Party: 09:00pm</h4>
+    <h4><a href="/news/2014/09/01/saturday-night-party.html">Main Party: 09:00pm</a></h4>
     <p>Radialsystem V (Same as conference venue – no need to leave) | Holzmarktstraße 33 | 10243 Berlin | <a href='https://www.google.com/maps/preview#!q=radialsystem&amp;data=!4m10!1m9!4m8!1m3!1d4136!2d13.457964!3d52.50936!3m2!1i1278!2i1308!4f13.1'>Map</a></p>
   </li>
   <li>
