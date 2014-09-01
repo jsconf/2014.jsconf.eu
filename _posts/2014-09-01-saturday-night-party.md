@@ -18,7 +18,7 @@ The end of the talk will transition smoothly into our first DJ set and then we'r
 {% assign video_id="0F2_b58tz6w" %}
 {% include youtube.md %}
 
-We'll float through the night with 3 awesome DJ sets. The party together with dinner and all drinks is included in your JSConf ticket and if you don't have one, we'd still love it if you'd join us for the celebrations on Saturday night, so you get a chance to meet all the awesome people who made it to Berlin – and you, the Berlin developer community, get to meet them. Party-only tickets are [20 Euros](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=08znzuddg0s) with entry to the [venue](/location/) at 9pm.
+We'll float through the night with 3 awesome DJ sets. The party together with dinner and all drinks is included in your JSConf ticket and if you don't have one, we'd still love it if you'd join us for the for the party on Saturday night, so you get a chance to meet all the awesome people who made it to Berlin – and you, the Berlin developer community, get to meet them. Party-only tickets are [20 Euros](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=08znzuddg0s) with entry to the [venue](/location/) at 9pm.
 
 [1] You can store laptops and other items at our wardrobe, so no need to bring anything back to your home or hotel after the regular conference ends.
 
