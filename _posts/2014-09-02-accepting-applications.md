@@ -8,7 +8,7 @@ image: /img/top_mandy_jed.jpg
 
 {% include header.md %}
 
-We have now opened our application for our Diverity Attendee Tickets. **If you would like to apply**, fill out our [three question application](https://docs.google.com/forms/d/1DW0Fudmcnw5Swr-CX1Kipm7qhsIrQieIxZLWt6SKREU/viewform).
+We have now opened our application for our Diversity Attendee Tickets. **If you would like to apply**, fill out our [three question application](https://docs.google.com/forms/d/1DW0Fudmcnw5Swr-CX1Kipm7qhsIrQieIxZLWt6SKREU/viewform).
 
 As previously announced, this year we are offering five **Super Golden Diversity Supporter** tickets for sale. We talked about the motivation for this inititive in [a post a couple weeks ago](http://2014.jsconf.eu/news/2014/08/15/diversity-tickets.html).
 
