@@ -14,7 +14,7 @@ As previously announced, this year we are offering five **Super Golden Diversity
 
 So far, we have sold two such tickets. Huge thank yous to:
 
-- [Travis CI](https://travis-ci.org/), our hometown friends behind everyone’s favourite continuous intergration service
+- [Travis CI](https://travis-ci.org/), our hometown friends behind everyone’s favourite continuous integration service
 - [Mike West](https://twitter.com/mikewest), who bought a stand-alone Diversity Support-Only Ticket. Thank you, Mike!
 
 We will notify recipients of the tickets as soon as possible, and others will remain on a waiting list in case we sell the three remaining Diversity Supporter tickets.
