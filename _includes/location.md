@@ -12,5 +12,7 @@
     </span>
   </address>
 
+  The recommended hotel is next door. Full details [here](/news/2014/08/02/hotel.html).
+
 {% assign map_center="52.51057,13.42873" %}
 {% include map_image.md %}
