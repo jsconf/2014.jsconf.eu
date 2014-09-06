@@ -317,6 +317,7 @@ nav {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
+    vertical-align: middle;
   }
   img:hover {
     -webkit-filter: grayscale(0%);
@@ -562,8 +563,8 @@ img.sponsor {
 
 img.sponsor-main,
 img.sponsor-no-text {
-  width: 90%;
-  margin: 0 5%;
+  width: 100%;
+  margin: 0;
   margin-bottom: 2.5em;
 }
 

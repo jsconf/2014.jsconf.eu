@@ -7,6 +7,8 @@
 {% assign sponsors=site.tags.sponsor %}
 {% assign overview=true %}
 
+<br>
+
 {% for post in sponsors %}
   {% if.post.level == "sponsor-special" %}
   <div class="post">

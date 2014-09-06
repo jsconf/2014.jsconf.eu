@@ -479,6 +479,7 @@ nav {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
+  vertical-align: middle;
 }
 /* line 321, ../sass/imports/main.scss */
 .sponsors img:hover {
@@ -754,8 +755,8 @@ img.sponsor {
 /* line 564, ../sass/imports/main.scss */
 img.sponsor-main,
 img.sponsor-no-text {
-  width: 90%;
-  margin: 0 5%;
+  width: 100%;
+  margin: 0;
   margin-bottom: 2.5em;
 }
 
