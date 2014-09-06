@@ -465,7 +465,7 @@ nav {
 }
 /* line 307, ../sass/imports/main.scss */
 .sponsors .level:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   border-bottom: 1px solid #012019;
 }
 /* line 311, ../sass/imports/main.scss */
@@ -475,10 +475,11 @@ nav {
 /* line 314, ../sass/imports/main.scss */
 .sponsors img {
   margin-right: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
+  vertical-align: middle;
 }
 /* line 321, ../sass/imports/main.scss */
 .sponsors img:hover {
@@ -628,6 +629,7 @@ nav li {
   margin: 0 auto;
   background: #FFF;
   overflow: hidden;
+  padding: 1.5em 4%;
 }
 
 /* line 457, ../sass/imports/main.scss */
@@ -754,8 +756,8 @@ img.sponsor {
 /* line 564, ../sass/imports/main.scss */
 img.sponsor-main,
 img.sponsor-no-text {
-  width: 90%;
-  margin: 0 5%;
+  width: 100%;
+  margin: 0;
   margin-bottom: 2.5em;
 }
 
