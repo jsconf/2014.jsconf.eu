@@ -15,7 +15,8 @@
 <p>
   {% include facepile.md %}
 </p>
-{% for post in speakers %}
+{% assign speaker_list = speakers | reverse %}
+{% for post in speaker_list %}
   <article id="{{ post.id }}" class="speaker_list">
     {% assign page = post %}
     {% include speaker.md %}
