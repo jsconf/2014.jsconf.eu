@@ -23,3 +23,5 @@ Also, this year, we'll do a ***pre-checkin*** for JSConf at the party entrance. 
 
 {% assign map_center="52.5025592,13.4470423" %}
 {% include map_image.md %}
+
+PS: In case you missed it, here is all the [info about our big Saturday party](http://2014.jsconf.eu/news/2014/09/01/saturday-night-party.html).

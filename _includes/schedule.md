@@ -10,8 +10,8 @@
 <ul class="schedule_list">
   <li>
     <i>Sept 12, Friday</i>
-    <h4>Opening Party: 08:00pm</h4>
-    <p>Location: TBA</p>
+    <h4><a href="/news/2014/09/09/friday-night-party.html">Opening Party</a>: 08:30pm</h4>
+    <p>Location: <a href="https://www.google.com/maps/dir/Radialsystem+V,+Holzmarktstra%C3%9Fe+33,+10243+Berlin,+Germany/Stralauer+Allee+1,+10245+Berlin,+Germany/@52.5058187,13.4308888,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47a84e3900263f87:0xf3893f5141a5c0fc!2m2!1d13.428635!2d52.510387!1m5!1m1!1s0x416523a2b6eb3025:0x1d1d6f66f67791ca!2m2!1d13.447214!2d52.502298!3e2">Universal Osthafen</a></p>
   </li>
   <li>
     <i>Sept 13, Saturday</i>
