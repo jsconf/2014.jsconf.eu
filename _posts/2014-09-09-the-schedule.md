@@ -11,7 +11,7 @@ image: /img/top_bollocks.jpg
 
 The event is coming closer (we can't wait!!!) and it is time to release our [time table](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html)
 
-- ___[HTML version](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html)___
+- ___[HTML version](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html)___ (always up to date)
 - [Mobile web](http://labs.outsystems.net/JSConfTimeTable/Home.aspx)
 - [Android app](https://play.google.com/store/apps/details?id=com.outsystems.jsconftimetable)
 - Lanyrd version: Coming soon
