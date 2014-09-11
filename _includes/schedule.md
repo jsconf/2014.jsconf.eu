@@ -18,7 +18,7 @@
     <h4>Conference Day 1</h4>
     <p>Breakfast: 08:30am</p>
     <p>"Keynote": 09:30am</p>
-    <p><a href="https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE">Talks day 1</a></p>
+    <p><a href="/news/2014/09/09/the-schedule.html">Talks day 1</a></p>
     <p>Dinner: 07:00pm</p>
     <i>Sept 13, Saturday night</i>
     <h4><a href="/news/2014/09/01/saturday-night-party.html">Main Party: 09:00pm</a></h4>
@@ -28,7 +28,7 @@
     <i>Sept 14, Sunday</i>
     <h4>Conference Day 2</h4>
     <p>Breakfast: 09:00am</p>
-    <p><a href="https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE">Talk day 2</a>: 09:30</p>
+    <p><a href="/news/2014/09/09/the-schedule.html">Talk day 2</a>: 09:30</p>
     <p>Closing the conference and group photo: 06:30pm</p>
     <i>Sept 14, Sunday night</i>
     <h4>Closing Party: 08:00pm</h4>
