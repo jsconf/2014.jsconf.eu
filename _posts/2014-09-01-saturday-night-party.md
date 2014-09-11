@@ -9,7 +9,7 @@ image: /img/top_disco.jpg
 
 {% include header.md %}
 
-<img src="/img/joe-mccann-wants-techno.jpg" align="left" alt="Joe McCann wants techno." style="width:200px;padding:10px"> (Pssst: As every year we're inviting the entire Berlin tech community to our JSConf main party. We're [selling low price tickets over on ti.to](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=08znzuddg0s))
+<img src="/img/joe-mccann-wants-techno.jpg" align="left" alt="Joe McCann wants techno." style="width:200px;padding:10px"> [Google](http://www.google.com/about/careers/teams/engineering/index.html) and [SinnerSchrader](http://www.sinnerschrader.com/) are inviting us again to our main party. (Pssst: As every year we're inviting the entire Berlin tech community as well. We're [selling low price tickets over on ti.to](https://ti.to/jsconfeu/jsconf-eu-2014?release_id=08znzuddg0s))
 
 This year we'll try something new! Since we're a conference and you all want to learn something the JSConf party will start with an actual serious talk. At 9pm, after you had a nice dinner at the venue, we'll convene back into one of our tracks and Tim Pietrusky will present his talk ["Nerd Disco"](http://2014.jsconf.eu/speakers/tim-pietrusky-nerd-disco.html). Sorry, no laptops allowed for this :) [1]
 

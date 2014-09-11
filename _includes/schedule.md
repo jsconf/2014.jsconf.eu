@@ -28,11 +28,11 @@
     <i>Sept 14, Sunday</i>
     <h4>Conference Day 2</h4>
     <p>Breakfast: 09:00am</p>
-    <p><a href="/news/2014/09/09/the-schedule.html">Talk day 2</a>: 09:30</p>
+    <p><a href="/news/2014/09/09/the-schedule.html">Talks day 2</a>: 09:30</p>
     <p>Closing the conference and group photo: 06:30pm</p>
     <i>Sept 14, Sunday night</i>
-    <h4>Closing Party: 08:00pm</h4>
-    <p>Location: TBA</p>
+    <h4><a href="/news/2014/09/11/sunday-night-party.html">Closing Party: 08:00pm</a></h4>
+    <p>Location: <a href="https://www.google.com/maps/place/Hoppetosse/@52.497528,13.454715,17z/data=!3m1!4b1!4m2!3m1!1s0x47a84e5573a0df1d:0xfa102535b24107b5">Boat Hoppetosse, Eichenstrasse 4, 12435 Berlin</a></p>
   </li>
   <li>
     <i>Sept 15, Monday</i>
