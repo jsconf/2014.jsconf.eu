@@ -24,7 +24,8 @@ We’ve teamed up with [Bite Club](http://biteclub.de/) to offer a mini on-boat 
 
 <img width="100%" src="/img/bite-club-teaser.png" alt="">
 
-The password at the door is “I love JavaScript”, or a JSConf EU badge. ps: **The boat is docked the WHOLE time.**
+The password at the door is “I love JavaScript”, or a JSConf EU badge.  
+**ps: The boat is docked the WHOLE time.**
 
 - Time: 19:30
 - Location: <a href="{{ map_url }}">Eichenstrasse 4, 12435 Berlin</a> (A [pleasant walk](https://www.google.com/maps/dir/Radialsystem+V,+Holzmarktstra%C3%9Fe+33,+10243+Berlin,+Germany/52.4973386,13.4552222/@52.503115,13.433292,15z/data=!4m9!4m8!1m5!1m1!1s0x47a84e3900263f87:0xf3893f5141a5c0fc!2m2!1d13.428635!2d52.510387!1m0!3e2) away from the JSConf venue)
