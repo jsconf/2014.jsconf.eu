@@ -1,6 +1,6 @@
 ---
   layout: default
-  title: Rough schedule
+  title: Overview Schedule
   background: background0
   image: /img/group-2013.jpg
 ---
