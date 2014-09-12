@@ -13,10 +13,10 @@ from: ""
 description: "Linino.IO is an ecosystem including open hardware and open software enabling the interaction between cyber world (the hacker's space) and the physical world (the maker's  space). The speech will cover details on how to program sensors and actuators and integrate them into a cloud-based holistic framework based on Javascript and Node.js."
 image:
   width: 200
-  height: 200
-  type: jpg
-  heightSite: 200
-  filename: "/speakers/images/federico-musto.jpg"
+  height: 224
+  type: png
+  heightSite: 224
+  filename: "/speakers/images/federico-musto.png"
 ---
 
 {% include speaker.md %}
