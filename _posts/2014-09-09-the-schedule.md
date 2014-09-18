@@ -9,14 +9,13 @@ image: /img/top_bollocks.jpg
 
 {% include header.md %}
 
-The event is coming closer (we can't wait!!!) and it is time to release our [time table](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html)
+Choose your favourite version of ou [time table](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html), or make your own :)
 
 - ___[HTML version](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html)___ (always up to date)
 - [Mobile web](http://labs.outsystems.net/JSConfTimeTable/Home.aspx)
 - [Mobile web 2, app-cached](http://jsconf.philnash.co.uk/)
 - [Android app](https://play.google.com/store/apps/details?id=com.outsystems.jsconftimetable)
-- Lanyrd version: Coming soon
-
+- [Lanyrd version](http://lanyrd.com/2014/jsconfeu/schedule/)
 
 - We'd appreciate prettier, mobile friendly, offline capable versions. Here is the raw data:
   - [Crappy XML-identity-crisis JSON](https://spreadsheets.google.com/feeds/cells/0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE/od4/public/basic?alt=json)

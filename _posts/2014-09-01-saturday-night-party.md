@@ -23,3 +23,8 @@ We'll float through the night with 3 awesome DJ sets. The party together with di
 [1] You can store laptops and other items at our wardrobe, so no need to bring anything back to your home or hotel after the regular conference ends.
 
 [1.1] Just making sure everybody knows: There will be a full dinner after conference day one and everyone will be fed and there will be drinks and then also the party is in the same place, so no need to make your own dinner plans or head back to your accommodation.
+
+##  Thank you,
+
+<img width="100%" src="/sponsors/images/google.png" alt="">
+<img width="100%" src="/sponsors/images/sinnerschrader.png" alt="">

@@ -24,7 +24,7 @@ We’ve teamed up with [Bite Club](http://biteclub.de/) to offer a mini on-boat 
 
 <img width="100%" src="/img/bite-club-teaser.png" alt="">
 
-The password at the door is “I love JavaScript”, or a JSConf EU badge.  
+The password at the door is “I love JavaScript”, or a JSConf EU badge.
 **ps: The boat is docked the WHOLE time.**
 
 - Time: 19:30
@@ -32,3 +32,10 @@ The password at the door is “I love JavaScript”, or a JSConf EU badge.
 
 {% assign map_center="52.497528,13.454715" %}
 {% include map_image.md %}
+
+##  Thank you,
+
+<p style="text-align: center">
+<img width="100%" src="/sponsors/images/hoodie.png" alt="">
+<img width="75%" src="/sponsors/images/soundcloud.png" alt="">
+</p>
