@@ -466,6 +466,11 @@ section.video {
   margin: 0 0 0 0;
 }
 
+blockquote.transcript {
+  margin-top: 0;
+  white-space: pre-line;
+}
+
 .talk_video {
   .embed_container {
     margin-bottom: 0.5em;

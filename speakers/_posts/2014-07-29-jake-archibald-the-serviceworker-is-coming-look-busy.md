@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/jake-archibald.jpg"
+slides: "https://speakerdeck.com/jaffathecake/the-serviceworker-is-coming-look-busy"
+video: SmZ9XcTpMS4
+transcript: transcripts/jake-archibald.txt
 ---
 
 {% include speaker.md %}

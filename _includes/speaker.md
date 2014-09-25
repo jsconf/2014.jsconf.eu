@@ -46,6 +46,7 @@
        {% else %}
          <span>Ping us if you have a link to the slides.</span>
        {% endif %}
+        {% if page.transcript %}<a href="#transcript">Transcript</a>{% endif %}
         <div class="subscribe"><span>Subscribe:</span> <div class="g-ytsubscribe" data-channel="jsconfeu"></div></div>
         </div>
      </section>
@@ -97,4 +98,13 @@
 
     {% endunless %}
   </section>
+
+{% unless overview %}
+  {% if page.transcript %}
+    <h4 id="transcript">Transcript</h4>
+    <blockquote class="transcript">
+    {% include {{page.transcript}} %}
+    </blockquote>
+  {% endif %}
+{% endunless %}
 </div>
