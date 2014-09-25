@@ -104,7 +104,9 @@
     <h4 id="transcript">Transcript</h4>
     <blockquote class="transcript">
     {% include {{page.transcript}} %}
+    Edit transcript via <a href="https://github.com/jsconf/2014.jsconf.eu/blob/gh-pages/_includes/{{page.transcript}}" rel="nofollow">pull request.</a>
     </blockquote>
+
   {% endif %}
 {% endunless %}
 </div>
