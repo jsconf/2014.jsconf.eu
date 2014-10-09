@@ -1,0 +1,495 @@
+- So, welcome everyone. I'm going to talk about using the web for music productions and live performance.
+
+I'm Jan. Of Thedeftone.
+
+Frontend Developer from Berlin.
+
+I don't have a musical background, but I'm very passionate about music. Ic is wrong.
+
+Hin 2004 I had this band. We had this website. We didn't have songs.
+
+We were geeks. We wanted to have an awesome website.
+
+We had the best name. We didn't know what Png alpha was.
+
+That's my musical background. Not fancy zozer But audio on the web has a dark history.
+
+If you look at Bgsound. Who here knows it? We have all been there.
+
+You could use it for background of your page.
+
+The possibility to use flash or Java. To replay songs on your website.
+
+It doesn't feel nice. It is not the web technology.
+
+It is just Java and Flash. Finally we had the audio tag.
+
+We could stream and analyse audio.
+
+Everything was good.
+
+Until the point where we wanted to do more. Than just listening to music.
+
+Because, we also want to create filters. Create music. And so, Mozilla came up with the Audio Data Api.
+
+Which allowed you to create music. But, in a nice way. It had some flaws.
+
+Chris Rogers came up with Web Audio Api.
+
+It is an awesome Api.
+
+When I looked at this, it looked like the history of layouting.
+
+We had frames. Nobody uses it anymore, I hope.
+
+And then we advances to table layout.
+
+We know table layouts work. So does object.
+
+It nas ot the nicest thing to use.
+
+Then we advanced to float layout. Everything was nice zozer You still had to use some hacks like clear fixes zozer You had Flexbox version 1.
+
+Which we then dropped. And we had Flexbox.
+
+That's the history of audio on the web.
+
+The Web Audio api gives you a low level access to all things audio.
+
+You can create sounds. From scratch.
+
+You can manipulate sounds with filters. Time sounds precisely.
+
+It is very precise. Tons of other cool stuff that I will not mention. Spatial audio. For 3D games. An audio source from that direction. You can use it.
+
+So, there are many demo's with the web audio api.
+
+I want to make a real software with the web audio Api.
+
+I had a professor at the uni. I had a nice title for the thetis.
+
+Building a collaborative music production environment using emerging web standards.
+
+ I wanted to create music production software that runs in your browser.
+
+We are on the web. So we could use web technology. To make bands interact. If they work remotely.
+
+The first thing I did. I was an academia. As you analyse things. I had to look at the audio editors.
+
+Years of development and best practices.
+
+They have common interface patterns.
+
+I wanted to get a minimum feature set.
+
+I had 6 months of time. I needed to define what to do to make people use it.
+
+I looked at garageband.
+
+You have the controls over here, tracks. Previews of the songs.
+
+It looks easy to use. If you look at Ableton. More professional.
+
+You have some controls over here. The tracks, also.
+
+And some previews. And the same image is in all the others. Reason. So, analysing audio editors. Timeline. Previews and depending on content, they are different. If you have drums it is not a waveform.
+
+You have tracks as rows.
+
+And what you need is a way to record stuff. You need to be able to import stuff.
+
+Also you need a drum. People can come up with awesomesongs. And synthesizer for nice melodies.
+
+That's what I needed to do.
+
+This is what it looks like in the end.
+
+You can see the pattern, the controls, tracks, previews. This is synthesizer, drum track.
+
+As I said before, there is one more thing.
+
+Because all the other editors were missing collaboration.
+
+This has collaboration built in.
+
+This is what I want to demo now.
+
+No. Before I want to talk about why we need it? Collaboration.
+
+It is awesome for remote band brainstorming. A band, a guy from London and Berlin and you can jam.
+
+You want to have auto save and auto backup.
+
+There is one problem. It is sadly not offline. Sorry, team Hoodie.
+
+Well, offline first.
+
+Demo time.
+
+Let's show this.
+
+I will just... Go into the editor.
+
+Quickly.
+
+Open this one.
+
+Open the communication panel.
+
+Oh, hey guys!
+
+So, I want to introduce you to...
+
+My brother. Say hi.
+
+I hope you can hear me.
+
+Do something?
+
+It is good!
+
+Perfect.
+
+(applause)
+
+in my hometown in the west of Germany. And Will from Berlin.
+
+How are you doing?
+
+Say something? Do something?
+
+So beautiful!
+
+So...
+
+(applause)
+
+normally you can see my face here. I don't know why it is not working zozer Ready to jam?
+
+You can't hear the voices. You will only hear the instruments.
+
+Go for it, guys! Awesome.
+
+We see you later.
+
+I will not show you how they jam.
+
+I want to show you the editor.
+
+I want to show it is really working.
+
+I have the editor here.
+
+Synthesizer track, drum track and audio track.
+
+Synthesizer, if I doubleclick here, I can add the nodes. Make them longer.
+
+You have a lot of settings.
+
+It is made up of oscillators that create the sound.
+
+You can define the type. A lot of settings.
+
+I will try to play something.
+
+Not really awesome.
+
+So you have an idea what it sounds like.
+
+You have some filters that change the sound.
+
+You have an oscillator which is not playing at the moment.
+
+This is the built in synthesizer.
+
+Then we have the drum machine. You can edit.
+
+You can see the updates in here.
+
+Let's just play the drums.
+
+, this is, the interface is set timeout and interval.
+
+Is it too loud? Sorry.
+
+Perfect.
+
+But the sound is timed in the web audio.
+
+If you have a drummer timed with a set timeout, your band is going nowhere.
+
+It will add up to the end.
+
+It will be horrible.
+
+You can do that in the editor.
+
+You can have different patterns. Like this one.
+
+That's cool.
+
+And, you can also just play audio. Or you can record stuff.
+
+This is what I am doing now.
+
+This is done with Getusermedia.
+
+The microphone input.
+
+Perfect. There is a signal coming.
+
+I will just say, hello JSconf. I can upload the recording.
+
+In the file browser I will drag it in.
+
+And I can arrange it a bit.
+
+And then I can just...
+
+The play button. I solo's this one. The play button will trigger the global playback.
+
+Yeah...
+
+It works.
+
+(applause)
+
+okay.
+
+But this is not showing the collaboration feature.
+
+The collaboration works like this.
+
+So I have another instance here.
+
+And I can just add an new track.
+
+The layout is broken.
+
+It is immediately over here.
+
+I can edit here and it will show here.
+
+Hello, J Sconf.
+
+Everything I do is synced in realtime.
+
+It is kind of complicated.
+
+Everything is synced all the time.
+
+This is what the friends are doing.
+
+We can go back and check how far they are.
+
+Hope it works.
+
+Well...
+
+No...
+
+Let me just talk to them.
+
+My brother is gone!
+
+It is not working?
+
+We can't hear him.
+
+He is gone as well.
+
+Well...
+
+Let's see if they have recorded something.
+
+That's cool.
+
+We obviously agreed on a song.
+
+ No, something is happening.
+
+Okay.
+
+This is Will editing the stuff.
+
+Faster, Will!
+
+Perfect. That's easy.
+
+So, this will be the guitar.
+
+I guess.
+
+Because I know.
+
+I will turn it up a bit.
+
+Drums down a bit.
+
+Move it a bit here.
+
+Let's see if it works.
+
+Maybe you remember the song.
+
+Awesome. They just made that.
+
+(applause)
+
+let's say bye.
+
+It worked. Awesome. Awesome.
+
+See you later. You have a beer for free at the party.
+
+My brother is coming back. Too late!
+
+Perfect.
+
+Okay.
+
+That worked very well.
+
+That was the end result of my thesis.
+
+I think you can already kinda use it.
+
+I want to talk about live music performance. How you can do it in the werb audio Api.
+
+You can use the instrument.
+
+Use it for amplification.
+
+We have seen it yesterday.
+
+On top of that, Jan did the the live code of the track.
+
+With his livecoder.
+
+I want to focus on using Midi devices to control your application.
+
+To control my editor.
+
+And I want to introduce you to the Glitch Mob.
+
+One of the bands I like.
+
+Everything you see. They are an electronic music band.
+
+They do songs only with Midi devices.
+
+It sounds like this.
+
+You can hear, you have drum parts, vocals.
+
+That are invoced.
+
+I thought, I want to do that as well.
+
+So, the setup looks like this.
+
+The 3 guys. They talk midi to your software.
+
+The problem is, neither do I have people of dinger that including that.
+
+Nor do I have the midi instruments and software.
+
+Turns out, you can do that on your own.
+
+This is one of the dj's from Japan. Broken Haze.
+
+It is only him performing.
+
+And that inspired me a lot.
+
+It sounds something like this.
+
+And he is doing that alone on stage with drums and his iPad. It is amazing.
+
+If he can do that alone, maybe I can do that.
+
+And what I needed for that is the web midi Api.
+
+Again, if we talk about Midi it is not midi background stuff.
+
+It is the protocol for digital instruments that sends data to your application.
+
+The midi api is in an early stage. It works in Chrome only. Firefox people...
+
+No, you have seen nothing!
+
+The webmidi api is developed in Japan. They are freaky and I love that.
+
+They love the webmedia api and do tons of shit with it.
+
+They have a mascotte. Midiappy.
+
+It has 2 midi outputs here. It is all over the world. In the web.
+
+That's not enough.
+
+They made an animation.
+
+Well, enough about that.
+
+I need to use that.
+
+So, let's talk about Js live performances.
+
+Last year I did a live performance.
+
+I was using the game controller Api. That was cool.
+
+If you have been there to the Reject Js. The worldpremiere of the semicolons.
+
+They were using. I'm part of the band. We are using the Web audio Api as well.
+
+You have seen the introduction yesterday. It was all done in Web audio. Amazing.
+
+I hope that you are ready for another demo.
+
+That I will do right now.
+
+And I need to plug in my iPad.
+
+S just bear with me a bit.
+
+And... Need to put this on.
+
+
+
+Here we go.
+
+I hope this works. Enjoy this.
+
+I hope I am not being sued afterwards.
+
+(applause)
+
+You can dance along if you want.
+
+(applause)
+
+that was basically it.
+
+But wait.
+
+O no...
+
+Well...
+
+Yeah. Yeah...
+
+So...
+
+Sorry, sorry.
+
+So, thanks.
+
+If you want to check the Semicolons, go to the slide.
+
+My brothers band, and the Glitch Mob and Broken Haze.
+
+Thank you!
+
+(applause)
