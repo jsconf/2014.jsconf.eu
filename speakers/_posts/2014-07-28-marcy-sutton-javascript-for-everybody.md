@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 266.6666666666667
   filename: "/speakers/images/marcy-sutton.jpeg"
+slides: "http://marcysutton.github.io/accessibility-of-mvcs/"
+video: "04DOp1F9Od4"
+transcript: "transcripts/marcy-sutton.txt"
 ---
 
 {% include speaker.md %}
