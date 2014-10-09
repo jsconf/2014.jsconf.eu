@@ -17,6 +17,8 @@ image:
   type: jpeg
   heightSite: 200
   filename: "/speakers/images/philip-roberts.jpeg"
+video: "8aGhZQkoFbQ"
+transcript: "transcripts/philip-roberts.txt"
 ---
 
 {% include speaker.md %}
