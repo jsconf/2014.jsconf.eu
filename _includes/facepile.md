@@ -1,5 +1,6 @@
 
-{% for post in site.tags.speaker %}
+{% assign speaker_list = speakers | reverse %}
+{% for post in speaker_list %}
   <a href="/speakers/#{{ post.id }}" title="{{ post.speaker }}">
     {% if post.image %}
     <img src="{{ post.image.filename }}" alt="{{ post.speaker }}" height="80"
