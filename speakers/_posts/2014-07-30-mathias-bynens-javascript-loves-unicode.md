@@ -20,6 +20,7 @@ image:
 video: "zi0w7J7MCrk"
 slides: "https://mathiasbynens.be/notes/javascript-unicode"
 transcript: "transcripts/mathias-bynens.txt"
+slides_text: "Blog post"
 ---
 
 {% include speaker.md %}
