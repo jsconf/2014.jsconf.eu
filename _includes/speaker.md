@@ -66,7 +66,7 @@
       {% if overview %}
         {% if page.video %}
           <a href="{{ page.url }}"><b>Video</b><br />
-            <img width="160" height="90"
+            <img height="90"
               src="http://img.youtube.com/vi/{{ page.video }}/maxresdefault.jpg"
               alt="Video" />
           </a>
@@ -78,11 +78,11 @@
     {% unless overview %}
     {% if page.video %}
       <p class="video_images">
-        <img width="213" height="120"
+        <img height="120"
               src="http://img.youtube.com/vi/{{ page.video }}/maxresdefault.jpg" alt="Video" />
-        <img width="160" height="120"
+        <img height="120"
               src="http://img.youtube.com/vi/{{ page.video }}/2.jpg" alt="Video" />
-        <img width="160" height="120"
+        <img height="120"
               src="http://img.youtube.com/vi/{{ page.video }}/3.jpg" alt="Video" />
       </p>
     {% endif %}
