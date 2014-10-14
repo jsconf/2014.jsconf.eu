@@ -17,6 +17,8 @@ image:
   type: jpeg
   heightSite: 133.20000000000002
   filename: "/speakers/images/shirmung-bielefeld.jpeg"
+video: "qGyqzN0bjhc"
+transcript: "transcripts/shirmung-bielefeld.txt"
 ---
 
 {% include speaker.md %}
