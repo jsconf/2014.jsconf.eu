@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/mathieu-p01-henri.jpg"
+video: "8aYVH2j0kAU"
+transcript: "transcripts/mathieu-henri.txt"
 ---
 
 {% include speaker.md %}
