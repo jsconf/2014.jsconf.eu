@@ -1,0 +1,453 @@
+I am going to talk about Gifs. That is important.
+
+I'm going to start myself introducing.
+
+The other half is about webcomponents.
+
+I am not like a web component developer.
+
+Nobody is paying me for it. I'm a freelancer.
+
+I have come to the matter of passion.
+
+This is a basic story of how I came to know anything about webcomponents.
+
+I have Gifs to thank for it.
+
+Most important to know about me is that I like Gifs.
+
+So...
+
+Gifs I find as being indecribly good way of conveying emotion.
+
+This Gif would convey the emotion of disturbing levels of enthousiasm. It exists in 80 movies from America.
+
+Thanks to Ben I have another gif.
+
+The Topgun high five.
+
+That's shorter. Conveys the same thing.
+
+Basically I'm a big fan of Gif. It is an incredible file format. I pronounce the hard G. Gif.
+
+You would be from Europe, also pronounce it Gif.
+
+It is the only way anyone pronounces it.
+
+Here is another Gif.
+
+Someone makes interesting mashups of photography and computer graphics zozer These gifs are trying to convey they are not just about funny animal pictures.
+
+They still can be.
+
+I think there is something interesting about a format that can have artistic work and deal with gifs.
+
+Anyway.
+
+My story about webcomponents and gifs started with an idea.
+
+When I was looking from more gifs. Vastimage.
+
+It was a fullscreen Gif. It had a significant problem.
+
+The Gifs that I show you would be from an unmoderated set of gifs zozer We know where that leads.
+
+Me and some friends and including Ben.
+
+We built something GifCity.
+
+Tumblr was full with interesting people.
+
+I have the internet. I'll demonstrate a few.
+
+This is a static program that scrapes that person's tumbler. Looks for the gifs.
+
+And shows one after another.
+
+Every 10 seconds.
+
+What is cool is that Tumblr. For anything there is a Tumblr full of gifs. This is one I have like.
+
+Somebody's collection of thousands of tricks.
+
+I encourage you to check it out.
+
+It was a project zozer when we got it ready, we were excited about it.
+
+This is me for like a year.
+
+I kept finding new gifs. New Tumblr's. While the other guys were satisfied.
+
+I got a bit more obsessed about the Gifs.
+
+I started to get a bit intense.
+
+A little bit of JS. What is the next thing?
+
+It took a while. I came across something that astonished me.
+
+It was the idea of synchronising Gifs to music.
+
+It would be the same kind of mood.
+
+They would sync up and that was awesome.
+
+Djgif that will launch at one point.
+
+That's a separate talk.
+
+The idea was to automatically synchronise Gifs to music. I had to do some things.
+
+Getting the beats out of music.
+
+I'm going to talk about speeding up and slowing down Gifs that you need to do to synchronize Gifs and music.
+
+Because this is all I knew about Gifs. You can use the Js. And you can put the cats in the page.
+
+Maybe there was some way of doing different playback. But there isn't.
+
+I looked for a long time.
+
+Surprisingly long time. An animation is a series of frames.
+
+If I get the frames out of the Gif, I know enough Css to play them back.
+
+That's where the project took me.
+
+I started to look into what Gifs are.
+
+I read this specification. This is actually not the original specification. It is a good summary.
+
+I don't want to go into it.
+
+The key thing in a Gif thast this diagram, the architecture.
+
+Which I have reproduced with my Html framework. This is what I call a diagram.
+
+Series of frames by a footer.
+
+If you wrap it around each frame you get a series. Animated.
+
+They are all valid gifs.
+
+You can do that efficiently in J Js. I was surprised when I finished.
+
+Just how small the code was.
+
+This is the entire program. If you try to decode the Gif it would be huge.
+
+ I didn't need to. All I needed to do was rearrange the pieces of the Gif and then I could have the frames.
+
+That's up there as well.
+
+And once you have the frames you put them in the Dom.
+
+Next to eachother in a parent frame. Use Css to stack them.
+
+And depending on the data, the frame you hide and show.
+
+And then, to play back the Gif is show the next frame at a particular time.
+
+I used requestanimationframe. I can play it back as fast as possible.
+
+At the native speed. Backwards.
+
+Only thing to change is calculate frame at any moment of time. That was cool.
+
+It was like the realisation that all of this work and complexity was hidden.
+
+All the strategies I wanted to use, synchronize. Could come under one entrypoint.
+
+That's why I thought I should release the component.
+
+I want to take a very brief side and talk about Dreamcode. The way the Hootie project started.
+
+Their philosophy is to start with the best possible representation of your idea. Even though you don't know how to implement it. Come up with the best, in my case, the best possible gif tag I could come up with was the replication of the image tag. I didn't know how to build it.
+
+I didn't know if it was possible.
+
+But, creepy history guy. He said it was.
+
+That's all right.
+
+So, I got on a plane.
+
+I loaded up the documentation.
+
+And I tried to extract it.
+
+Which was a huge success. I'll show you.
+
+What it looks like now.
+
+So, this is a Gif.
+
+Particularly good one.
+
+Of the Nope octopus. Noping itself.
+
+This is an ex gif.
+
+If I inspect it. Each of the frames are actually blobs that I have extracted myself.
+
+That is small.
+
+There is a wrapper or frame. Counting through. It is playing it back. It sits into shadowroot.
+
+And then it was a matter of what I want to do with this flexible component now. I can't sadly make it change to yes, yes, yes.
+
+As it comes back. Just reversing back and forward. I use it a fair bit in presentations.
+
+ To play a gif once and stop.
+
+It can be distracting. Actually Gifs in general are distracting. Otherwise I would not fill up 25 minutes.
+
+The speed. Is another thingd you can change.
+
+It gets quick.
+
+And then you can slow him dov as well.
+
+The stuff more interested is beats per minute.
+
+Here we have 2 gifs on a page.
+
+Synchronized to the same Bpm. If you have a page full of Gifs, this will synchronize them to the beat. It is not as chaotic. I did 1 more thing. As you speed things up, the bottom one is blindly following this beat. No matter how fast it goes. The top one is looking at the speed of the gif and beat, it is spanning several beats.
+
+It is a longer gif.
+
+That I am happy with. If you put this in your page. I want every gif to be at Btm 60 or 20, they find their natural rhythm.
+
+The thing I wanted to do which I will demonstrate.
+
+I'll use a different Gif.
+
+I like it.
+
+Is synchronising to audio.
+
+The top one there is spanning every second beat.
+
+The bottom one is hitting every beat.
+
+I am going to do it in a console.
+
+If I change the speed of the audio, the beat still sylchronize. And the gif will, no matter what audio and gif. It will stick to the beat.
+
+(applause)
+
+that's why I built it.
+
+The story is, here is the kind of full spec. To think about what would be the best thing.
+
+But, I launched this in March. It was pretty successful.
+
+The rest of the presentation is what happened after.
+
+I got a lot of attention at the beginning.
+
+ This is pretty cool. I'm pretty cool.
+
+But, I wasn't happy with, it got attention. Not a lot of people put it in their page.
+
+I looked at what I released.
+
+First time I did polymer stuff.
+
+I had 7 files.
+
+It was 91K of data.
+
+I know Gifs are 5,5 M.
+
+It is too far.
+
+The multifar problem can be used by Vulcanize. Named after Gladiators.
+
+I'm glad they did it.
+
+Vulcanize will if you want, inline this dependencies for webcomponent zozer And build it into a single payload.
+
+I got it down to 2 requests.
+
+It didn't save much space. Still 84K.
+
+It got rid of the first one.
+
+I wasn't really satisfied with what I released. It didn't fit for what I have done.
+
+It is a framework.
+
+Has opinions about building applications. I'm building so much more important.
+
+So, all of its work and very smart ideas.
+
+Weren't really applicable I thought.
+
+And the other thing was, people, I wanted it to work with whatever framework they were using.
+
+A project. Why would you put polymer in your page as well?
+
+They provide common functionality.
+
+Why wouldn't I use them?
+
+Why wouldn't I take the core of Xgif. And adapt it to all of the frameworks that are out there.
+
+Keep the component in Api. I was proud of.
+
+And do the blumbing.
+
+It looks like it should work.
+
+I thought my talk would be, this is how you do it.
+
+This is how you adapt it to all of them.
+
+But it doesn't work. Didn't work for me.
+
+And there are a few problems.
+
+These frameworks which are written cleverly are concentrating on solving application development.
+
+Not interoperability.
+
+Nor should they be.
+
+It is just not part of their concern.
+
+For example, when I came to doing playback.
+
+Inside the actual element itself. I have to change a dot.
+
+60 times a second.
+
+And so, I grabbed the element itself. Keep a reference. Change the data attribute.
+
+React doesn't want me to do it. I have to substract this out.
+
+It will give me a state that I can update. I'm using polymer, I can update it correctly zozer It was okay. This is what I would do if I would be paid.
+
+It felt premature generalisation.
+
+I have been a Java developer zozer this is a side project. I wanted to follow it where the interest led me.
+
+I stopped for the project for a bit.
+
+I released the polymer version and it was fine.
+
+I wasn't really motivated to release other versions.
+
+It took a long time to realise what was different.
+
+It is the Shadow dom. It thies one thing that the other ones didn't have.
+
+I could convert it. Missing the shadow dom. It gives you a place to work.
+
+Having a space free from anything else, it allows you to take shortcuts.
+
+I wanted to take all the shortcuts.
+
+Anyway, I stopped working on the project.
+
+For a lniter while. I wasn't sure.
+
+I could only see one solution, release it for every framework.
+
+But, thankfully after a while I found another solution.
+
+So, acouple of months ago chrome 36 came out. I'm not a big chrome fan. It was important. A lot of people talked about.
+
+ People have not talked about it since.
+
+It had full, not behind a flag. Support for web components zozer For the major specs.
+
+That's kind of cool.
+
+Because it meant that the promise web components is at least possible in 1 browser.
+
+In a major browser.
+
+I looked into it a bit more.
+
+I was ashamed to admit.
+
+I didn't know Polymer and webcomponents is not the same.
+
+The webcomponent spec is different.
+
+So, I started look at what it would look like and feel like.
+
+A lot of the changes are superficial. I'm using the class.
+
+Some of the changes are a bit more annoying. Polymer gives you callbacks.
+
+Somebody changed the source of this gif.
+
+I have to demand dispatch. If I'm doing native webcomponent.
+
+You get this polymer element tag. There is a lot of documentation how to do it.
+
+Not as much as doing it vanilla. They are very similar.
+
+When you do your own. You have to throw that stuff in.
+
+I just copy pasted it.
+
+I didn't have to change this much from the other examples I was seeing.
+
+But after all that, the thing you can do. Is import X-gif, 1 file. Inline the js and Css.
+
+And it is a real tag.
+
+It works like the others, except it is better.
+
+Polymer has single platform.Js.
+
+A shim for the web components.
+
+And so I read a little thing. If you have component support.
+
+And inject platform itself.
+
+And so I realised, this kind of feels different to releasing a polymer component.
+
+At a different level.
+
+And you might be thinking it is the same code. And it is the same Api.
+
+What is the difference?
+
+The key thing for me is now I'm extending someone elses browser.
+
+I don't care if they use react.
+
+I have my own shadow Dom.
+
+If they use Amber. I don't care what they use. I'm changing their browser. That's kind of fun.
+
+Because everything has to talk Html. If you want to talk to X-gif you talk Html.
+
+That's kind of my web component story.
+
+I thought I'd end with some remarks.
+
+Which is, this is one component that is much more an image tag than anything else.
+
+You will be writing components integrated in your application.
+
+You want a framework.
+
+If you want to get a nice Html api. To support it natively.
+
+You are actually doing something different than before.
+
+You are actually now being able to customize the runtime you have been builing on top of.
+
+That's pretty exciting.
+
+This has all changed in the last few months.
+
+If Carl says it is awesome, it must be.
+
+That's all I've got. Thanks.
