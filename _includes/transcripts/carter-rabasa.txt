@@ -1,0 +1,267 @@
+Hi everybody. My name is Carter. Can you raise your hand if you ever organised a conference, anything about developers together. Cool! Maybe 1/3-1/4 of the people here. Fantastic. The title is: A community of people not projects. I have 2 modest goals. For those who didn't raise your hand. I hope this encourages you to get more involved in the developer community where you live. Or talk to people who do. For those who raised your hand. I want to raise a few things I learned.
+
+My name is Carter. I am a developer. For send in receive text messages and voice over Ip phone calls. This is a photo of my shortly after I joined the company. People told me I have grown up a lot. This is not me. This is a photo of my daughter Catherine. At JSConf US. I was lucky to bring her down there. Show her around and what her father thoes.
+
+I have been married for 5 years. We have 2 daughters. Catherine and Emily on the bottom left. The 4 of us live in Seattle Washington. I'm from Washington DC. I got a job at Microsoft. I worked at it for a few years. The last years at the Internet Explorer team.
+
+The first cascade JS. I founded it in 2012. It is a conference for developers in the Northwest. You might be asking yourself how I got in organizing a conference. In my case the answer is straightforward. When I joined in 2012, I had never been a developer. I had a rough idea of what the job entailed. It was explained a big component was going to support the local developer community. Frankly that seemed like an open ened thing. It was terrifying. But also very exciting.
+
+I figured out for me what it meant to support the Seattle developmer community.
+
+I have been JS developer since the 90's. Seattle JS is the largest meeting. It has been around for a long time. I just started going. Getting to know the community. Started helping out with the community. During January-June I had the same conversation. Everybody was frustrated that they got on a plane and fly to Scottsdale or Berlin or Emilia Island. There was nothing in the Seattle area. I totally agreed.
+
+I talked to community organisers in Portland and Vancouver BC.
+
+We really wanted something for us. That's where CascadiaJs came from. It was inspired by JSConf. Node Conf. All of the conferences you think of being the best of what it can be.
+
+We put it on in November 2012. It was a huge success. We pulled together 200 amazing people for 2 days of fun. It was one of the most rewarding experiences I had.
+
+The feedback was very very positive.
+
+People liked a lot of different things. The coffee, the food.
+
+But the reoccurrent theme was that people were so delighted to meet other people. Not just within the city they lived in. People in Seattle were happy to meet interesting people in Portland or Vancouver.
+
+We had succeeded in connecting developers in the Northwest.
+
+I left. And I was on this high cloud. I don't know about you. But I had a fever.
+
+I had a fever. The only prescription was going to be more events, conferences, opportunities to create experiences for my fellow developers.
+
+I started to think ahead to 2013.
+
+2013 was a really busy year. I started in February.
+
+I launched Sports Hac day. A hackathon. For sports related applications. I'm a huge sports fan. I don't know how many of you.
+
+It is really great to connect with other people in the area.
+
+We helped this event during Super Bowl weekend. 2 days of hacking. Had beer, pizza.
+
+In April a community resource Seattle Hacks.com. For developers.
+
+It was powered. You could give a request and participate in this online event.
+
+There was another Cascade JS. This time in Vancouver BC. A logistical challenge for me. I live in Seattle, in America.
+
+I had to think about organizing a conference in another country. I worked with organizers in Vancouver. We had Vancouver Dev Week. A series of great events for developers.
+
+And to cap off a busy 2013, me and my friend opened a co-working space for developers in Seattle. We wanted to take that people love. We wanted to create a space where developers could have that experience every day.
+
+So, this was a really busy year. I was very proud of everything I worked on. I was feeling great.
+
+I couldn't wait for 2014. I thought 2013 kicked ass.
+
+And I will show you. What the first 4 months looked like.
+
+Yeah... Grumpy cat.
+
+And this caught me off guard. I thought, I figured everything out. And I couldn't understand why I was having such rough few months. There was no follow-up to Sports hack day. People were emailing. When is Sports hack day? The answer was, it wasn't going to happen. Because I was too busy. And I couldn't even imagine who else could run it.
+
+There wouldn't be another Sports hack day. That was the first sign.
+
+It wasn't just sports hack day. I was dropping the ball a lot. With the co-working space. At work.
+
+And this is very unlike me. But at the time, in the middle of it, I really didn't have a lot of insight why it was happening.
+
+Things are tough and challenging.
+
+Things came to a head in April. I started working with Tracy Heins. People in Portland know her.
+
+She doesn't live there anymore. She was one of the most active organisers. I started working on the next Cascade Js.
+
+By the time of April we weren't communicating well.
+
+She was frustrated with me. And I was frustraged in general. I couldn't understand well.
+
+Things were going so easy in 2013 and poorly in 2013. I was flying home from a conference.
+
+I wanted to read a book. This is one of my favourite authors, Chuck Klosterman. He writes about music, sports. For Spin Magazine. He is great.
+
+And I wanted my mind off of the stuff.
+
+I read one of his books. I'm on Amazon. I found the book Killing yourself to live. The title is misleading. About Chuck going on a roadtrip in the US. There was a review where there was an excerpt from the book.
+
+I want to read it to you.
+
+Art and love are the same thing. The process of seeing yourself in things that are not you.
+
+I'm not kidding. At that moment in that plane, this is what happened to me.
+
+And honestly, the people sittings next to me thought I had a seizure. Many don't get it in the audience.
+
+Let's go back and revisit.
+
+Let's look at art. Let's say art is the process of seeing yourself in things that aren't you. If I'm an artist, writing a book, creating a painting, maybe part of what is driving me as an artist is to see myself manifested in these objects that are not me.
+
+Maybe that is a part of the creative process.
+
+And that really resonated with me. It resonated with me specifically in reference to all the things I work on.
+
+I started to think back to the first CascadiaJs. What were the things I cared about? Spent time doing?
+
+What captured all of the energy an focus?
+
+It was stuff like this. For those who love coffee. That is one of the finest ways you can enjoy coffee.
+
+I spent weeks looking for the best coffee for CascadiaJs. It didn't stop there.
+
+What vendor to use for the hoodies. And what food trucks for the lunch.
+
+This was true for all the things I worked on.
+
+You might be thinking, so what? Since when is it news that people work on things that they are passionate about?
+
+You are right. This is not news. But what was news to me was that I completely focused on all those things and details. I had completely just forgotten about all the people that I worked with to make these things happen.
+
+Not a single thing that would have happened without all of the people on the monitor, plus many more people I couldn't list.
+
+When I examined how thoughtful I was about these people. How much time I spent to get to know them. What they were passionate about?
+
+The answer was in many cases no.
+
+I felt very ashamed when I realised this.
+
+I thought I treated many people as a means to an end.
+
+It is very unlike me.
+
+And so I absorbed this and decided, wow, that will never ever happen again
+
+And I put it into practice. In August, the next CascadiaJs was going to happen. I really focused on the people running the conference.
+
+Tracy and Ben and Blane. All these wonderful people. I focused on what could I do to help them to put on the best conference.
+
+I think, because of that, I had the best experience I had ever had as a CascadiaJs.
+
+It was remarkably rewarding to see what Tracy and her team could do and participate solely for the purpose of removing obstacles from their path.
+
+Beyond being rewarding for me, it was also the best CascadiaJs ever.
+
+And I think that is the case, because I took a step back and let someone else execute their vision. They took the conference to a place I didn't know it could go. It was rewarding to see it happen.
+
+Following the conference, I really wanted to sit down and think about everything that had happened.
+
+I also reached out to a bunch of people who organize conferences and hackathons.
+
+I talk to people like Chris Williams. I'm very grateful for them taking the time to talk to me. I wanted to understand. Is this just a me thing?
+
+Or are other people running into similar issues? Who are involved in the community.
+
+There were a common issues that were pervasive.
+
+So, whether you are thinking about getting involved in the community. I certainly hope that you do. It is one of the most rewarding experiences you can have. Or you are neck deep in it. I'd like to share a few things. About being healthier and happier.
+
+Number 1, you need to watch for signs that you are doing to much.
+
+I got a couple suggestions.
+
+One, your work or family starts to suffer.
+
+Every day you have so many hours.
+
+And you have time with your family. Time doing your job. Maybe you have some time left over to work on community obligation.
+
+When that community stuff starts to creep out it is necessarily going to impact your family, work or both.
+
+Keep your eye on how things are going at home or at work.
+
+You can't remember the last time you said no.
+
+I'm guilty of this. I'm terrible at saying no.
+
+I'm trying to get better. When people want help and reach out. My instinct is to say: Yes, I will help you. It makes me feel good.
+
+You have to learn how to say now. Saying no is not shutting someone down.
+
+When someone asks for help, you are not the person that can help them the most.
+
+There is someone else who can help them much more than you can.
+
+If you are really involved in the community, you have an idea who that might be.
+
+If the requests come in, try to think of who can help them more.
+
+This is a giant red flag. If you work on something that you care about. You can't identify who can take it over, you are doing too much.
+
+You put what you care about at risk.
+
+It is a huge red flag. You are not sharing enough with the people you are working with.
+
+How do I identify and find awesome people?
+
+I wish I can tell you I have a blueprint. I don't. But I have suggestions that are helpful for me.
+
+Really actively pay attention to the amazing things that are going on around you. It sounds obvious. For me it wasn't. I was heads down working on my stuff. I had blinders on.
+
+And you need to take the blinders off and look around. People are doing awesome things.
+
+I met Tracy for the first meaningful time when I went to Portland. She was running Notebodsday.
+
+It would never have happened.
+
+Don't be afraid to ask for help. A lot of people think this is a sign of failure. It isn't.
+
+Asking for help is nothing more than raising your hand and saying, I'm passionate about something. I'd love to work with someone on this.
+
+Two things to keep in mind. Be explicit. Just need help with your meet up is not helpful.
+
+That you want to record the talks, and post them online, is helpful.
+
+You need to be public. Don't talk just to a few people. Put it out there. The truth is, you might not know a videographer. There might not be one connected directly to you.
+
+If you put it out publically, you discover people you didn't know and want to help you.
+
+Lastly. I'm still working on this.
+
+Take the time to get to know people. To get to know these people as people. Understand what they care about, what they are passionate about.
+
+If I had done a better job, I would not have treated people as a means to an end. But I didn't. I didn't prioritize that. That is a huge mistake.
+
+This is the third thing. The crux of my talk. Stop talking like I'm working on a project and start thinking like you are working with people.
+
+I'm starting to do this for the next CascadiaJs. I'm less focused where it is going to be, where it is going to be. But more focused on, who am I going to work with? The details will come later.
+
+You need to do a few things.
+
+You need to learn how to let go. No one here has a kid under 6?
+
+You know who that is. And why this is funny or annoying.
+
+You have to know how to let go.
+
+If you can't figure out how to let go of these precious little things that you have created, you'll never succeed in sharing them with people.
+
+Number 2, you need to get serious about documentation and communication.
+
+And I don't care what tools you use.
+
+Tracy uses GetHub and Irc. The tools don't matter. You have to get everything out of your head and into a place where you can work asynchronously with people.
+
+This is incredibly important in terms of sharing.
+
+This is really funny.
+
+I work for a platform company.
+
+Tulio is uninteresting in a vacuum. No one cares. What is cool is what developers build on top of the platform.
+
+Other people will agree with that at platform companies.
+
+I had to relearn that in the context of community.
+
+It wasn't about what I did, by myself, like it was what I could help other people do. I had to redefine what success looked like for me.
+
+And I'm glad I did because honestly, my involvement in the developer community has been providing me with some of the rewarding experiences in my life. I'm grateful I ended up in this place.
+
+If you think about getting involved. Or if you are very involved. Remember these 3 things.
+
+One, don't try to do everything yourself.
+
+Two, find people who share your passion.
+
+Three, focus on what you can help them accomplish.
+
+Lastly, for anyone who might consider this for a living. Come find me in the hallway track.
+
+I'd like to talk about Twilio. That's it about me. Thank you very much.

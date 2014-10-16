@@ -19,6 +19,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/carter-rabasa.jpeg"
+video: guC2guiPGRc
+transcript: "transcripts/carter-rabasa.txt"
+slides: https://github.com/crabasa/community-toolkit
 ---
 
 {% include speaker.md %}
