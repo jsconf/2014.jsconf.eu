@@ -80,77 +80,59 @@ Since then, she has actually seen me give this talk and we have spoken about it.
 
 She is cool about it, because you want your talk to impact people and how effective is your talk if you don't even have to give it for it to have such a profound inspiration?
 
-So, I attended this wonderful conference and was back to my unemployed life. I had 5 great days. Keeping track of what I was doing. How much time I spent learning each thing.
+So, I attended this wonderful conference and was back to my unemployed life. I had 5 really good days. 5 great days where I was working from the moment I woke up until a reasonable hour in the evening. Keeping track of what I was doing, how much time I spent learning each thing... And it was really productive first week.
 
-And it was really productive first week. After that everything went downhill. I don't know how much you have tried to do on your own, but it is not easy.
+And after that everything went downhill. I don't know how much you have tried to do completely on your own, but it is not easy.
 
-After that it became a big struggle.
+After that it became a big struggle. Luckily at the same time I met another guy, named Franks, who also quit his job.
 
-Luckily at the same time I met another guy, Frans.
+We had these really symbiotic interests, where he was interested in learning more about teaching, I was interested in learning programming and those were both our respective careers, so we teamed up.
 
-He quit his job. And he was interested in learning more about teaching. I was interested in learning programming.
+He became a real huge mentor for me. He would hang out with me and pair program. He would whip up a gist and explain a concept if I was getting trouble getting it and we weren't together.
 
-We teamed up. He became a huge mentor with me. Hang out with me, pair program. Explain a concept if I was getting trouble getting it.
+He wrote homework assignments for me. He really pushed my learning forward. And helped me to have somebody to rely on. Somebody I could trust and ask questions and help me improve and expand my knowledge.
 
-He wrote homework assignments. Pushed my learning forward. And someone to rely on. Someone I could trust and ask questions. And help me and expand my knowledge.
+Soon after this -- because relying on Franks wouldn't have been enough -- I found about a program that was being piloted in Berlin called Hackership.
 
-Soon after this, because relying on Frans wouldn't have been enough. I found about a program piloted in Berlin, Hackership.
+It's based on the Hackerschool in New York, if you're familiar with that. It is a full time learning program for programmers of all levels of experience.
 
-It is based on the Hackerschool in New York.
+Basically, what you do is come together full time and just work on learning whatever you are interested in.
 
-It is a full time learning programming. For all levels of experience.
+Not only do you have mentors provided for you, but you're working alongside a lot of people, so it's like a real academic setting. It helps you have somewhere to go and you get to put on workshops yourself.
 
-And basically, what you do is come together full time and just work on learning. On whatever you are interested in. Not only do you have mentors provided for you.
+One of the best parts was, at the end of every week we had to give presentations to the whole group, so I got to practice my public speaking and got to share what I was working on during these six weeks, which was a web application that I was building in Ruby without any frameworks or any libraries except for the crypto stuff.
 
-You are working alongside a lot of people.
+The thing I was most proud of was the user identification system I wrote. That was really cool.
 
-Like a academic setting. Helps you somewhere to go.
+That was for 6 weeks and that really pushed my learning forward.
 
-One of the best parts was, at the end of every week we had to give presentations to the whole group.
+Just to recap on the timeline of the situation....
 
-I practised my public speaking. And what I was working on, a web application I was working on without libraries or frameworks.
+January 22, 2013 -- last year -- that was when I wrote my first "Hello world" at this front-end web development course.
 
-The thing I was most proud of was the user identification system I wrote. That was cool.
-
-That was for 6 weeks. It pushed my learning forward.
-
-To recap on the timeline of the situation.
-
-January 22, 2013 last year, that was when I wrote my first Hello world at this development course.
-
-And January 21, 2014, I got 2 junior developer job offers. Once I got over the fear of looking for a job.
+And January 21 of this year -- 2014 -- I got not one, but two junior developer job offers. Once I finally got over the fear of looking for a job.
 
 (applause)
 
-so, some really exciting news. I work for Sociomantic.
-
-The team was doing the Scc for banners. I have been doing it exclusively.
-
-I got accepted to a new team this week. Where I will be doing native Javascript.
+So, some really exciting news. I work for Sociomantic. The team I started on was doing the CSS for ad banners. So I have been doing CSS exclusively for the last six months, but I just found out this week that I got accepted to a new team where I will be doing native JavaScript.
 
 (applause)
 
-Yes. I got accepted. I got this job offer.
+I got this job offer and I accepted it but because of some legal issues I had to wait about a month-and-a-half before I could start working.
 
-Because of some legal issues I had to wait 1,5 month before I could start working.
+Again I had some more free time, so I decided to apply to speak at my first conferences.
 
-Again I had some more free time.
+I got accepted to speak at my first conference. It was another Ruby conference in Uruguay.
 
-I applied to speak at my first conferences.
+Uruguay is pretty far away from Berlin. Something happens when you are unemployed for seven months. You run out of money.
 
-It was another Ruby conference in Uruguay.
+So I got accepted to speak at this conference, I was invited to go, but I had no way to get there.
 
-It is pretty far away from Berlin. Something happens when you are unemployed.
+At the urging of the conference organizers, I setup an Indigogo and again the community overwhelmed me with their support. In 24 hours I made all the money I needed to cover the flight and somewhere to stay.
 
-You don't have money. I setup an Indigogo.
+Just out of the generosity of people's hearts. Most people didn't know me at all. They just read the little description of this talk I'm giving now.
 
-The community overwhelmed with their support. In 24 hours I got all the money I needed to have.
-
-Out of generosity. Most people didn't know me at all. They just read the little description of this talk I'm giving now.
-
-I have to talk a couple of people.
-
-Thank you to Bruno, Denis, Davydd, Sven, Seth. Along with a couple of other people.
+I have to thank a couple of people as one of the rewards. Thank you to Bruno, Denis, Dafydd, Seth, Sven, along with a dozen other people who helped me to get there.
 
 (applause)
 
