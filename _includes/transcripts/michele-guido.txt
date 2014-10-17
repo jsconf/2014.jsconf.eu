@@ -1,38 +1,38 @@
 Hello everybody. My name is Michele with 1 L.
 
-This is my talk. It takes a village to make a programmer. A talk in 2 parts. First my story. Second a bunch of suggestions for you how you can help in your own village.
+This is my talk "It takes a village to make a programmer". It's a talk in 2 parts. The first part is my story and the second part is a bunch of suggestions for you how you can help in your own village.
 
-To start my story.
+To start my story... 
 
-I went to school for teaching. I unfortunately graduated at the recession. I was just substitute teaching. The most demoralizing job in the world. I was very unhappy for a while.
+I went to school for teaching and I unfortunately graduated at the height of the recession in the United States. So I ended up not getting a teaching job and I was just substitute teaching, which I think is the most demoralizing job in the world. I was really unhappy for awhile.
 
-I realised I would have to move to get a job. If I'm going to move away for a job, I'll move far far away.
+I realized I would have to move to get a job and I thought: if I'm going to move away for a job, I'm going to move far, far away.
 
-After 2 years, I moved to Germany.
+After 2 years of substitute teaching, I moved to Germany.
 
-When I got here, I got a random office job that wasn't going to be permanent. I had a big decision to make. There were a lot of directions my career could go. Maybe a UX designer. Teach English as a foreign language. I could keep the office job. Or do something totally different.
+When I got here, I got a random office job that wasn't going to be permanent. I realized I had a big decision to make. There were lots of different directions my professional career could go. I had thrown around the idea of maybe becoming a UX designer. I could teach English as a foreign language. I could try to go back to teaching. I could keep this office job if I really wanted to. Or I could do something totally different.
 
-So, one day I was an office manager for tour operator for people on cruises. We got a bill from the programmers.
+So, one day at my office job -- I was an office manager for a tour operator for people who went on cruises -- we got a bill from our programmers.
 
-It was really outrageous. For the customer feedback form that we asked to create.
+The bill was really outrageous. It was for this really simple customer feedback form that we asked them to create for us.
 
-I had written back and forth to them 10 times with all these little things that they could have done to make it better.
+I had written back and forth to them about 10 times with all these little things that they could have done to make it better.
 
-I was taking German courses. I had gone out with my classmates. I was so angry. I was raving: I could do it better! I should be a programmer.
+I was taking German courses at the time and afterwards I had gone out with my classmates. I was so angry and so upset about this, I was raving to them about how I could do it better... I should be a programmer... I should do this...
 
-I didn't take myself very seriously.
+I didn't take myself very seriously, but one of my classmates did. She emailed me about a course that was going to be offered in Berlin called "Front-end web development for beginners".
 
-But one of my classmates did. She emailed me about a course that was going to be offered in Berlin. Frontend web development for beginners. It was expensive. I sent an email to my brother for sponsoring.
+It was really expensive, so I sent an email to my brother saying "Hey, there's this course. Wanna sponsor me? LOL".
 
-I got the loving response of nothing.
+I got the loving response from him of: nothing.
 
-Second time, seriously.
+I wrote to him a second time, "No, seriously. What do you think? Will you help me out?" He said yes, so I took the course.
 
-He said yes. I took the course. Halfway through the course, one of the people working for General assembly, was also running a group in Berlin. I found out they were offering a hackathon.
+Halfway through the course, one of the people working for General Assembly -- the company where I took it -- was also running a group here in Berlin called "Berlin Geekettes". I found out they were offering a hackathon.
 
-With 6 weeks I participated in my first hacathon.
+So after 6 weeks with just knowledge of HTML and CSS, I participated in my first hackathon.
 
-This was where I had my holy shit moment.
+This was where I had my "Holy. Shit." moment.
 
 I was like, o my god, the energy in the room, when everybody was getting together and forming teams and working together. It was electric.
 
