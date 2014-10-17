@@ -6,7 +6,7 @@ permalink: "/speakers/sergii-iefremov-runtimejs-v8-javascript-kernel.html"
 speaker: Sergii Iefremov
 talk: "Runtime.JS: V8 JavaScript Kernel"
 website: ""
-twitter: ""
+twitter: "https://twitter.com/iefserge"
 github: ""
 gplus: ""
 from: ""
