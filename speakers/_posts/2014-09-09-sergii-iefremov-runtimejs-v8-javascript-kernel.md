@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/sergii-iefremov.jpeg"
+video: nPl0zlAI3MY
+transcript: "transcripts/sergii-iefremov.txt"
+slides: http://runtimejs.org/jsconf/
 ---
 
 {% include speaker.md %}

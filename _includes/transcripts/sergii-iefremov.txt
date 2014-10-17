@@ -1,0 +1,395 @@
+Hi, my name is Sergii and I work at Mic Company.
+
+It is about server side javascript.
+
+One second.
+
+This talk is about server side Javascript.
+
+It includes low level technical details. It also is about open source project. Runtime Js.
+
+And Runtime.Js is an operating system kernel built on V8 engine.
+
+Which means that this system boots directly on hardware and it uses V8 engine by Google.
+
+As a core component of the system.
+
+And it is basically the system is the one that optimized to run JavaScript applications. Can execute javascript only.
+
+Doesn't support binaries.
+
+And it has non blocking and asynchronous IO model from the ground up.
+
+It is built from scratch.
+
+And support X86-64.
+
+What is the problem with the existing system?
+
+When we use them to run Javascript applications?
+
+And I think that mainstream operating systems are not the most efficient platforms for Javascript applications.
+
+And the reason for that is because they designed to solve different problems.
+
+They designed to run compiled binaries and not just Javascript code that runs in VM.
+
+They are also too complex. Too many architecture layers.
+
+And provide inefficient Api's. And most system calls block.
+
+Which is a problem when we use Javascript. We want everything non blocking.
+
+And, another problem is that event notifications require some very complex mechanism like polling.
+
+When we need to call a kernel in a loop to get the new data.
+
+There is no central mechanism that lets us to be notified of any kind of event.
+
+Because of that each application is to implement the own system. And use file descriptors to get the data.
+
+It uses some unsafe C language at the core. It is a security issue.
+
+And buffer overflows is a serious problem that compromise the system.
+
+They are written by C pro pgrammers to run C programs.
+
+It means that if we want to run Javascript, we need to convert between C stkuctures and Javascript. There is another layer between those 2 for it to work.
+
+Let's see how the software stack looks like.
+
+When we run Node on Linux.
+
+ON the bottom we have hardware. On top, kernel, it is Linux for example.
+
+Linux provides us with system call Api.
+
+On top the process, node. And node uses libuv and thread pool. For asynchronous Api on the main thread. We have an event loop on the mainthread. We also run an isolate. Which is VM, V8 instance. Which has its own heap and garbage collector. And javascript application on top.
+
+These 3 layers are here to provide some kind of isolation.
+
+For example, system call Api isolates kernel from the user space application.
+
+They cannot break the system. And cannot directly talk to hardware.
+
+And the process isolates applications from eachother.
+
+For example, node application cannot directly access other applications memory.
+
+And then we have an isolate. Which isolates javascript applications from the rest of the system.
+
+These two components, libuv and thread pol, provide us with asynchronous Api.
+
+Let's see what process isolation is. A system that protects kernel from applications. Applications from eachother.
+
+It requires uses an address space for every process. It is a range of memory that processes can access.
+
+And this requires to use context switches. We have multiple address switches. We need to switch between them when we do multitasking.
+
+We need to between usermode and kernelmode.
+
+This adds additional overhead zozer We also need to use system calls. Because kernel is isolated from user space application.
+
+Let's see what is VM isolation.
+
+Because javascript is a safe language. V8 compiles Javascript into trusted native code. That is guaranteed to be correct. It will not access random memory and modify some internals of the system.
+
+Because it guarantees that you can do this from Javascript directly.
+
+Because it creates a sandbox where VM controls, everything that program is allowed to do.
+
+And it is often called software isolation.
+
+Because it doesn't use hardware mechanisms to enforce those memory restriction rules.
+
+And so what is the difference?
+
+We have 2 mechanisms that we use.
+
+And you pay twice when we use both of them.
+
+Javascript VM provides everything that process isolation can offer us.
+
+We generally don't worry that when we run two tabs in the browser. One tab cannot break or change data in another.
+
+Even if they run in the same process.
+
+So, VM can provide this isolation. And we basically don't need the processes to restrict the system from the kernel.
+
+It is required only for native untrusted code.
+
+The runtime.Js is a kernel optimized to run javascript.
+
+First of all, it is a Vm isolation protection system.
+
+That general purpose kernels use processes instead.
+
+We can also provide Js optimized kernel interface.
+
+That basically you can pass code back to the kernel. And ask to call it.
+
+It will work just like that.
+
+And we can also add communication between applications, using Js objects.
+
+We can transfer buffers. Like passing the pointer two applications. It is much faster operation when we don't have process isolation.
+
+And, kernel notifications can use event loop. Built in into the system.
+
+And we can also write some kernel side javascript. It might be useful in some cases.
+
+How does it look like? There is no binary support, no processes, no process isolation, we no longer need. No Posix interfaces. And no system calls.
+
+But instead, the system has software isolated applications, isolates.
+
+Everything runs in a single address space.
+
+It has a builtin V8 engine.
+
+And all IO is non-blocking and asynchronous.
+
+The system has built in global event loop for the whole system.
+
+There is a lightweight threads for multitasking.
+
+Let's see how software stack looks like.
+
+We have hardware, on top we have a kernel.
+
+Then we run a system event loop.
+
+And on top of it we have isolate VM instance. Already provides all the security guarantees that our Javascript application cannot touch hardware or break the system.
+
+This is how architecture looks like.
+
+Some native code that implements the kernel services. It is also V8 engine.
+
+Exposed kernel Api's.
+
+And low level services, something like memory management, IO, interrupt timers. Schedule, etc.
+
+And everything else is built on top using Javascript.
+
+High level kernel services include device drivers. And system services like network stack, and ofcourse applications.
+
+Why would I use Javascript for those tasks?
+
+Hit is already bytecode of the web. We can compile everything to javascript. It is well tested, runs everywhere zozer And easy way to write asynchronous IT code.
+
+It is powerful enough to write system components. We have typed array. And array buffers that are very useful for handling binary data.
+
+And it is safe and secure.
+
+It is built in in the language. It doesn't provide a way to access random memory locations.
+
+So we are very safe with this. And can use it for writing drivers.
+
+And other applications.
+
+And actually the device drivers are the software, basically does IO code.
+
+Basically, it reads from a network and passes it to the applications. It is a very IO heavy applications.
+
+Perfectly reasonably to write in Javascript.
+
+So, the software isolated applications. We don't have processes, just isolates.
+
+Each program runs in its own isolate.
+
+Each has its own garbage collector and heap.
+
+We have an inter isolate communication, using Rpc.
+
+Global event loop in the system.
+
+There is just 1 event loop for the whole system.
+
+And at the same time, each isolate has its own execution stack.
+
+It is like threads. Event loops switches between stacks.
+
+It is possible to interrupt long running Javascript code.
+
+The function foo can block the system.
+
+If we use a stack for each application, we can just interrupt this. And continue with other applications.
+
+So this is how it works.
+
+For example, we have 3 isolates. Each one has an event queue. And isolate stack.
+
+The system starts executing callbacks from the isolate 1. Callback 1, 2, 3.
+
+Then, it switches the stack to isolate 2 stack.
+
+And executes those 2 callbacks. If callback 2 takes too much time, we can switch the stack and continue the callbacks from isolate 3.
+
+And, there is inter isolate communication. Implemented as remote procedure calls.
+
+ functions across asolates.
+
+This is the example of how this works.
+
+For example, we have function add. We can call it from the other isolate. And it will return promise.
+
+We need asynchronous call.
+
+Another example is asynchronous function call.
+
+In this example, we resolve promise in 2 seconds an return it.
+
+When other isolates call this function, it can use this promise to output Hello World after 2 seconds.
+
+Another example is zero copy arraybuffer transfer.
+
+We can just pass the arraybuffer without any copying. It is useful. When we want to get data from a network device.
+
+It can just pass the same buffer that a network card writes to. To the application.
+
+It is much more efficient system.
+
+And we can also pass functions that will return promise on the other side.
+
+There is also an isolate Api.
+
+That every isolate can access zozer It is a data environment. Some system services.
+
+There are functions. Like exit log.
+
+And okay.
+
+There is a demo.
+
+I'd like to show.
+
+Let's boot this system.
+
+So, it loads.
+
+You can see it.
+
+This is the system, it boots into terminal.
+
+We can type commands.
+
+It outputs the list of the files.
+
+Af you can see, those are js applications.
+
+It is a simple application.
+
+We can do like echo hello.
+
+To output our string.
+
+We can do some other tasks. Like for example eval.
+
+And here we can evaluate some javascript.
+
+It all runs on virtualiser.
+
+You can type exit.
+
+There is also some network support.
+
+We can resolve hostnames.
+
+Let's do host.
+
+It resolves hostname.
+
+This network stack. And device driver are implemented in Javascript.
+
+So, what else?
+
+We can see the devices.
+
+On our system.
+
+And, let's exit.
+
+Poweroff.
+
+(applause)
+
+i hosted runtime.Js on a server. You should be able to connect, respond with Udp packets. If you try it.D and type some text. And it should return this information.
+
+Let me see.
+
+Hello.
+
+Hello message.
+
+It shows my Ip address and source port.
+
+Now I can ssh to the server.
+
+Open screen.
+
+You should be able to see your own message.
+
+It works! I think.
+
+So, let's continue with the presentation.
+
+So the project status. It is experimental project.
+
+And it is in development.
+
+It is not ready to use. It lacks many important features zozer Most Api's will probably change.
+
+Right now it targets mainly Kvm. It is easier to support its device driver.
+
+And we can run it on top of Linux.
+
+For the best efficiency, we would like to implement maybe native, hardware drivers.
+
+Not native. Real hardware drivers.
+
+And so, why would you use this system?
+
+Because it is network-first server system.
+
+It provides safe environment.
+
+It has a sandboxed applications.
+
+It uses asynchronous IO everywhere.
+
+Full hackable Javascript. Full control over everything.
+
+If you would like to implement your own file system or network protocol, you can do it in Javascript.
+
+It is easier to work with it.
+
+And it is pretty small. Less than 10 MB.
+
+It is actually around 8.
+
+And V8 is 7 Mb.
+
+I think, the future work would be to support Tcp/http protocols. Add file system support. Right now it is read only file system.
+
+And optimize internal structures.
+
+And maybe at some point lock Api's and support Xen. So we can run it on Amazon.
+
+And about Node.
+
+It is not compatible with Node.
+
+It provides a lower level Api than Node.
+
+It might be possible to port Node on top of it.
+
+But, Node uses really unique Cpi's. There needs to be an additional layer to convert the calls.
+
+We can use an Npm as system package manager.
+
+So, there are the links zozer You can find the projiect on github.
+
+Thanks Mic for supporting the project.
+
+Thank you everyone.
+
+If you have questions, I'd like to answer.
