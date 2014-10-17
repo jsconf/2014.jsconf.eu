@@ -34,39 +34,39 @@ So after 6 weeks with just knowledge of HTML and CSS, I participated in my first
 
 This was where I had my "Holy. Shit." moment.
 
-I was like, o my god, the energy in the room, when everybody was getting together and forming teams and working together. It was electric.
+I was like, "Oh my god". The energy that you could feel in the room, when everybody was just getting together and hashing out their ideas and forming teams and working together... The energy was electric.
 
-I saw amazing things happening. People taking ideas that were existing. Using nothing but their computer and hands. And people could make it into something they could use.
+I looked around and I just saw amazing things happening. People were taking ideas that just existed inside of their own head, and using nothing but their computer and their hands and the people around them they were taking this idea and making it into something that other people could do and use and interact with.
 
-I want to do that and that and that, I want to be able to do everything.
+I thought that was amazing. I thought: I want to do that and I want to do that and I want to do that. I want to be able to do everything.
 
-I quit my office job. I realized what I wanted to do.
+I ended up quitting my office job. I finally realized what I wanted to do.
 
-And I thought, I am going to do it. Berlin is the city where you can take some time off and afford it.
+And I thought, I am going to do it. Berlin is the city where you can take some time off and afford it, so I decided to do this.
 
-I decided to do it. I had a lot of free time on my hands. I heard about a conference, Eurocamp. That happens in Berlin. I never heard about a tech conference before. It was not on my radar.
+I had a lot of free time on my hands once I was unemployed and I heard about a conference called Eurocamp. It's a Ruby conference that happens here in Berlin. I'd never heard about anything like a tech conference before. It was never something really on my radar. I thought, cool, an event where everybody is interested in the same thing and hang out? I want to go!
 
-I thought, cool, an event where everybody is interested in the same thing. I wanted to go. A couple of people I knew had gotten tickets for free. There were no tickets left. I couldn't go myself. Being unemployed. Follow the ticket account and maybe sells them for free.
+A couple of people I knew had gotten tickets through Rails Girls. They'd gotten them for free through a diversity outreach program. But there were no tickets left.
 
-I saw this guy, Bruno. I have this ticket. Let's give me a good reason and it is free.
+I couldn't afford go myself, being unemployed. They said "follow the Twitter account and maybe somebody will sell theirs for free, or get rid of it for a cheap price!"
 
-I tweeted right away. I wasn't sure if I could get the ticket.
+I started following the account and I saw this guy, Bruno and he tweeted: So, I have my Eurocamp ticket and unfortunately I can't go. Let's make it count. Give me a good reason and it's free. #givesomethingback
 
-But I said: I'm really passionate, give me a chance.
+I tweeted at him right away and I wasn't sure if I could get the ticket -- I didn't know what other people I was competing with and what reasons they had -- but I said: I'm really passionate, please give me a chance.
 
-And I did get the ticket.
+And I did get the ticket. I got the ticket with several stipulations.
 
-And I got the ticket with several stipulations.
+He said: OK, you can have the ticket, but I have three rules.
 
-He said:3 rules. You have to have fun. You have to have a lot of fun. I can do that.
+Number 1: You have to have fun. You have to have a lot of fun. I said I can do that.
 
-Number 2: Find my friend Justine, she is giving a talk, give her a hug.
+Number 2: Find my friend Justine, she is giving a talk, give her a hug. I said I can do that, too.
 
 Number 3: I don't care what you do, what it is. Somehow you need to give back to the community.
 
-I said: I can do that.
+I said: OK, I can do that.
 
-So that's part what I'm doing here today. To inspire you to give back to your communities as well.
+So that's part of what I'm here doing today: hoping that I can inspire you to give back to your communities as well.
 
 I went to the conference. It was way more impactful than I could imagine. Where I took my first workshop. And I decided I didn't want to learn programming.
 
