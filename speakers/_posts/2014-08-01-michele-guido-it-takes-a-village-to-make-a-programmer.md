@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 300
   filename: "/speakers/images/michele-guido.jpg"
+transcript: "transcripts/michele-guido.txt"
+video: FHNrw7aiKOE
+slides: https://twitter.com/sheley/status/510758480928854016
 ---
 
 {% include speaker.md %}
