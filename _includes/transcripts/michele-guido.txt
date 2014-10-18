@@ -80,29 +80,27 @@ Since then, she has actually seen me give this talk and we have spoken about it.
 
 She is cool with it, because you want your talk to impact people and how effective is your talk if you don't even have to give it for it to have such a profound inspiration?
 
-So, I attended this wonderful conference and was back to my unemployed life. I had 5 really good days. 5 great days where I was working from the moment I woke up until a reasonable hour in the evening. Keeping track of what I was doing, how much time I spent learning each thing... And it was really productive first week.
+So, I attended this wonderful conference and was back to my unemployed life. I had 5 really good days. 5 great days where I was working from the moment I woke up until a reasonable hour in the evening. Keeping track of what I was doing, how much time I spent learning each thing... It was really productive first week.
 
-And after that everything went downhill. I don't know how much you have tried to do completely on your own, but it is not easy.
+After that everything went downhill. I don't know how much you have tried to do completely on your own, but it is not easy. After that it became a big struggle.
 
-After that it became a big struggle. Luckily at the same time I met another guy, named Franks, who also quit his job.
-
-We had these really symbiotic interests, where he was interested in learning more about teaching, I was interested in learning programming and those were both our respective careers, so we teamed up.
+Luckily at the same time I met another guy, named Franks, who also quit his job. We had these really symbiotic interests, where he was interested in learning more about teaching, I was interested in learning more about programming and those were both our respective careers, so we teamed up.
 
 He became a real huge mentor for me. He would hang out with me and pair program. He would whip up a gist and explain a concept if I was getting trouble getting it and we weren't together.
 
-He wrote homework assignments for me. He really pushed my learning forward. And helped me to have somebody to rely on. Somebody I could trust and ask questions and help me improve and expand my knowledge.
+He wrote homework assignments for me. He really pushed my learning forward and helped me to have somebody to rely on. Somebody I could trust and ask questions and help me improve and expand my knowledge.
 
 Soon after this -- because relying on Franks wouldn't have been enough -- I found about a program that was being piloted in Berlin called Hackership.
 
 It's based on the Hackerschool in New York, if you're familiar with that. It is a full time learning program for programmers of all levels of experience.
 
-Basically, what you do is come together full time and just work on learning whatever you are interested in.
+Basically, what you do is come together full time and just working on learning whatever you are interested in.
 
-Not only do you have mentors provided for you, but you're working alongside a lot of people, so it's like a real academic setting. It helps you have somewhere to go and you get to put on workshops yourself.
+Not only do you have mentors provided for you, but you're working alongside other people, so it's like a real academic setting. It helps you have somewhere to go and you get to put on workshops yourself.
 
 One of the best parts was, at the end of every week we had to give presentations to the whole group, so I got to practice my public speaking and got to share what I was working on during these six weeks, which was a web application that I was building in Ruby without any frameworks or any libraries except for the crypto stuff.
 
-The thing I was most proud of was the user identification system I wrote. That was really cool.
+The thing I was most proud of was the user authentication system I wrote. That was really cool.
 
 That was for 6 weeks and that really pushed my learning forward.
 
@@ -110,11 +108,11 @@ Just to recap on the timeline of the situation....
 
 January 22, 2013 -- last year -- that was when I wrote my first "Hello world" at this front-end web development course.
 
-And January 21 of this year -- 2014 -- I got not one, but two junior developer job offers. Once I finally got over the fear of looking for a job.
+And January 21st of this year -- 2014 -- I got not one, but two junior developer job offers. Once I finally got over the fear of looking for a job.
 
 (applause)
 
-So, some really exciting news. I work for Sociomantic. The team I started on was doing the CSS for ad banners. So I have been doing CSS exclusively for the last six months, but I just found out this week that I got accepted to a new team where I will be doing native JavaScript.
+So, some really exciting news. I work for Sociomantic. The team I started on was doing the CSS for ad banners. So I have been doing CSS exclusively for the last six months, but I just found out this week I got accepted to a new team where I will be doing native JavaScript.
 
 (applause)
 
@@ -128,7 +126,7 @@ Uruguay is pretty far away from Berlin. Something happens when you are unemploye
 
 So I got accepted to speak at this conference, I was invited to go, but I had no way to get there.
 
-At the urging of the conference organizers, I setup an Indigogo and again the community overwhelmed me with their support. In 24 hours I made all the money I needed to cover the flight and somewhere to stay.
+At the urging of the conference organizers, I setup an Indiegogo and again the community overwhelmed me with their support. In 24 hours I made all the money I needed to cover the flight and somewhere to stay.
 
 Just out of the generosity of people's hearts. Most people didn't know me at all. They just read the little description of this talk I'm giving now.
 
@@ -138,27 +136,27 @@ I have to thank a couple of people as one of the rewards. Thank you to Bruno, De
 
 So thank you to them.
 
-As I have said, the community has done so much for me and so much to help me to get to where I am today, that I would like to give you some suggestions for how you can help in your own community.
+As I have said, the community has done so much for me and so much to help me to get to where I am today, that now I would like to give you some suggestions for how you can help in your own community.
 
-I'm going to go through a list of suggestions with some different resources, based on what resources you have. I hope there is something for everybody.
+I'm going to go through a list of suggestions with some different resources, based on what resources you have. I hope there is something for everybody here.
 
-So this is how to help in your own village.
+This is how to help in your own village.
 
 If you have a little bit of time, just a little bit, there are still things you can do.
 
-The first thing is, you can give encouragement. It's such a simple thing, but it can have a huge impact.
+The first thing is, you can give encouragement. It's such a simple thing, but it can have such a huge impact.
 
 I can't tell you how many days I was learning programming and I would get stuck on a concept. It would not click in my head and I'd think: What are you doing? Are you crazy? You should go back to doing something else because you're never going to figure this out. It's never going to work out.
 
 And then, inevitably, living in an international city like Berlin I would meet somebody and they would say: what are you doing in Berlin? And I'd be like: oh, I'm changing careers, I'm learning how to program. And they'be like: no way, that is so awesome!
 
-I'd be like, yes, it kind of is awesome, I'm following my dreams! It would just jolt me back. I have a real reason I'm doing this and I do belong in programming.
+I'd be like, oh... yeah, it kind of is awesome, I'm following my dreams! It would just jolt me back. I have a real reason I'm doing this and I do belong in programming.
 
 Something simple as "hey, that's really cool" can really make somebody's day.
 
 Something else you can do with a little bit of time is expose your passions. I want you to take to Twitter, take to a blog, a meetup, start speaking about whatever you're interested in. Everybody in this room has something they're interested in that is unique, but you don't know who else shares this unique interest of yours if you don't talk about it and you don't share it.
 
-And especially consider ways you can be inviting, to talk people who might not have as much knowledge about this as you do. Think about ways to get other people involved.
+Especially consider ways you can be inviting, to talk people who might not have as much knowledge about this as you do. Think of ways to get other people involved.
 
 If you have a little bit of time or a lot of time, there are some options for you...
 
@@ -168,7 +166,7 @@ There are 2 parts to this.
 
 The first is, just sharing them. If you only have a little bit of time you can find quality resources and share them by tweeting them or just telling people about them. Or if you have even more time, maybe you can write some yourself.
 
-Because as you know, there is such a wealth of resources out there and they are not all created equal. You can Google how to do something and find 25 different blog articles and you know that some of them are crap and some are good. But you don't know, if you are inexperienced.
+Because as you know, there is such a wealth of resources out there and they are not all created equal. You can Google how to do something and find 25 different blog articles and you know that some of these are crap and some are good. But you don't know, if you are inexperienced.
 
 If you have any sort of motivation to write some of these things, please do it.
 
@@ -178,31 +176,31 @@ It is so easy to have so many excuses why you don't want to try something new or
 
 You can talk people out of a lot of excuses, but you can't talk someone out of not having enough money.
 
-You can sponsor someone for a course or workshop -- like my brother did for me -- or some other creative way to use the resources that you have.
+You could sponsor someone for a course or workshop -- like my brother did for me -- or some other creative way to use the resources that you have.
 
-You can also send somebody to a conference. As we said before a conference is much more than just talks and professional development.
+You can also send somebody to a conference. As we said before a conference is so much more than just talks and professional development. There is networking, you meet friends, there can be workshops. You just get so much more from a conference than you can imagine. It can be a really great place, but as you know, they can be really expensive.
 
-There is networking, you meet friends, there can be workshops. You just get so much more from a conference than you can imagine. It can be a really great place, but as you know, they can be really expensive.
-
-If you have some way to get an extra ticket or if you're an organizer... JSConf did a really great job with these diversity tickets where you could buy one and send someone else with it. Something like that is really awesome.
+If you have some way to get an extra ticket or if you're an organizer: JSConf did a really great job with these diversity tickets where you could buy one and send someone else with it. Something like that is really awesome.
 
 If you have a lot of time, you should become a mentor.
 
-This is the single most important thing that you can do for anyone that is starting out or changing careers. It is the biggest thing you can do to help someone. If you have somebody to trust and somebody you can ask these questions to and you can share your experiences with.
+This is the single most important thing that you can do for anyone who is starting out or changing careers. It is the biggest thing you can do to help someone. If you have somebody to trust and somebody you can ask these questions to and you can share your experiences with.
 
 There are so many different ways you can do this. It doesn't have to mean just one thing.
 
-You can meet for lunch as often as monthly, or weekly. Whatever you can commit to.
+You could meet for lunch as often as monthly, or weekly. Whatever you can commit to.
 
-You can pair program with people. You could simply offer advice by email.
+You could pair program with people. You could simply offer advice by email.
 
-In the last year, I found out about this program called mentoring.is. It is a distributed mentoring movement. You add /mentoring to your personal website, and they give you a text that you can use and just say to people, "Hey, I'm open to being a mentor. This is how to get in touch with me."
+In the last year, I found out about this program called mentoring.is. It is a distributed mentoring movement. You add /mentoring to your personal website, and they give you a text that you can use to just say to people, "Hey, I'm open to being a mentor. This is how to get in touch with me."
 
 It is a really great way if you don't know how to get started or how to get involved in your community. You can simply add this and start sharing it.
 
-If you have space and time. There are more options. We need you to create safe spaces.
+If you have space and time. There are more options.
 
-What do I mean by that? It can be anything: a hackathon, a workshop, a study group. It could mean a women-only group. Or some sort of minority-only group.
+We need you to create safe spaces.
+
+What do I mean by that? Safe spaces can be anything: a hackathon, a workshop, a study group. It could mean a women-only group. Or some sort of minority-only group.
 
 I want to make a point about this.
 
@@ -214,7 +212,7 @@ Whatever reason it is, it includes more people who otherwise wouldn't have been 
 
 Why are safe spaces important? They are really important because this is where you challenge yourself and take risks and stretch your limits.
 
-You can't find out what new things you can do if you don't feel comfortable enough to try new things. That's why safe spaces are so important... to have these community spaces.
+You can't find out what new things you can do if you don't feel comfortable enough to try new things. That's why safe spaces are so important... for us to have these community spaces.
 
 Finally, if you have courage, I urge you to tell your story. Especially if you have a story that doesn't fit the mold of the stereotypical kid who started programming when he could write and has been doing it his entire life.
 
