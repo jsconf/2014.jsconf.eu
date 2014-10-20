@@ -1,0 +1,461 @@
+Thank you.
+
+My name is Jan Jongboom. I'm living in Amsterdam. I work in Norway. Travel to Asia all the time. I feel right at home with all the nomads.
+
+It is a telecom that pays me to work.
+
+Half my time I work on Firefox. And working on the keyboard.
+
+You guys are all the creme de la creme of JS.
+
+I'm writing a book on Firefox OS.
+
+I designed my own cover. He didn't have it ready.
+
+They didn't go for this at Manning.
+
+Now it looks like this.
+
+If you are interested in Firefox OS. How to make cool web applications that look cool.
+
+Go to my twitter.
+
+As half the presenters I am going to start with a confession. The moment that I sent in my talk proposal, I did not own a screwdriver.
+
+This is the worst way to get started on a hardware talk.
+
+2 weeks ago I had everything up and running. But, all my demo's were still in mobile phone. I had to disect it.
+
+The result is wonderful. A lesson learned is, if I can do this without owning a screwdriver, you can build cool stuff with things you learn in the presentation.
+
+My timer is not running.
+
+The maker movement is at the moment everywhere.
+
+I was an Malaysia.
+
+A guy came up to me, we have a maker place, come down and fiddle with us.
+
+We build stuff. And the reason we can do it, these new little development boards, for example what we saw in the disco. They are here, cheap.
+
+Microcontrollers. Computers have become so fast. They can be tiny and do cool stuff.
+
+The second thing is, that you can attach phone sensors to this. The whole explosion of smartphones makes that having sensors that control your gravity or small camera's, have become very very cheap.
+
+You can attach them.
+
+There is a downside. This is how an average Raspberry pie looks like. It is too complicated.
+
+I can't stick things in little...
+
+You know.
+
+On top of that, the hardware that you can attach is expensive. Why do I have to pay 35 euro?
+
+If I can get one for 25.
+
+One and one is 2.
+
+I took one of my phones. Developer preview device.
+
+It has bluetooth, Wifi, 3G, 2 camera's. It is a little bit more expensive than 25 euro.
+
+If I can abuse that, I don't need to connect any external things. And it is cheaper.
+
+ It runs Firefox OS.
+
+Why is that cool? It works like this.
+
+I have a phone. Linux Kernel. Then I have Gecko on top of that. And Html5 Ui.
+
+Every piece of UI needs to go through Gecko.
+
+Every Api that does cool shit is included in Gecko. If I strip that off, I have a supercheap phone with Javascript.
+
+That is perfect for hackers.
+
+This is awesome zozer what you get when you search for awesome kids on Google.
+
+This is how you start. You take a Firefox Os phone. Unscrew it. You crack it open.
+
+And end up with this.
+
+This is a tiny printboard that controls everyone on the phone. You can't see it from the back. It contains 2 camera's, everything.
+
+That's amazing. Very small.
+
+So we got a sim card reader, sd card. The screen connector.
+
+One camera. One in the front. Flashlight and touchscreen. Plug and play.
+
+Don't need the screen. Disconnect it.
+
+The camera is easily detached. Because it fell out.
+
+But then, I found something wonderful. This camera's have a standard connector zozer You can go to China and buy a better camera for the phone.
+
+It doesn't fit in the printboard. We are not needing it to fit in a phone, we can buy a new camera and attach that. Blew my mind. Yes.
+
+Then there is at the bottom something.
+
+This is connected to the screen. I don't know what it is.
+
+I ripped it apart and it still worked.
+
+So...
+
+Basically, you end up with this. A print board. The thing at the left is it does radio communication. An antenna extension you plug in.
+
+If you want to do something with data over 3g, or phone calls.
+
+And you'll end up with the casing. It has a touchscreen and normal screen.
+
+I want those to separate as well.
+
+The thing is, at cheap smartphones they are glued together. I tried a screwdriver to unblue these.
+
+It broke and cracked. I can only detach the touchscreen. This is the touchscreen connecter.
+
+That didn't work out that well either.
+
+So the demo's today don't involve a screen.
+
+So, then we got this board.
+
+Wifi doesn't work.
+
+And that really puzzled me. I figured, the radiochip has something to do with this.
+
+I saw the connectors at the backcover of the phone. They look like paper with a copperplating. This little thing. If you attach it with tape to your phone.
+
+You'll go from zero to 12.
+
+I am still puzzled how it works. I'm a software guy.
+
+This is real tape. For your hardware solutions.
+
+It is small. 3/4 of a creditcard.
+
+In all fairness. I first put the creditcard next to the thing. And only 5 minutes for the talk I remembered, you could see my creditcard number.
+
+So what we have is the little board. Gecko running on top. And we can build something cool.
+
+I don't have a problem with anything.
+
+Jan OS.
+
+The unofficial logo.
+
+JanOs is an alternative to firefox Os.
+
+You can run it at any rooted Firefox Os phone.
+
+It is made to run on the board.
+
+There is nothing. It gives you a Javascript console.
+
+If you put a sim card in.
+
+And, I made another mistake. I broke the casing of my phone while I was trying to fiddle with it.
+
+With one hand do this. Go to my computer. Type the flash command.
+
+So, please keep your backcover intact.
+
+Because everything fits together and makes it a lot easier to flash.
+
+JanOs is easy. It is an Html file.
+
+We just render 1 Html file. And it has Javascript.
+
+You can device stuff with it.
+
+You can also connect the firefox developer tools to this phone.
+
+So, if you want a Javascript debugger, use the normal Firefox debugger. It is powerful.
+
+I'll show you in a second.
+
+There is a bunch of things you can do.
+
+Make a security camera.
+
+Take a photo every 5 seconds. See if something changed.
+
+If so, make a photo. Send it to me over Mms or email.
+
+Maybe if something is going on, you can call. You can put a sim card in.
+
+Plus, my little printboard has 4Gb of storage.
+
+So, if you want to do that, 7 lines of code.
+
+You say, camera takepicture. It resolves. You get a blob. Can be on the Sd card or what you have.
+
+And say storage addnamed.
+
+Easy.
+
+Another one, a doorbell. Like I bought a wireless doorbell. It was more expensive than the phone.
+
+It is not wireless at all.
+
+I still have to push a button in front of my door.
+
+I figured, if we use the phone, then we can do it wireless. The phone has a proximity sensor. You can wave the doorpost. It plays over bluetooth.
+
+It has a front camera next to the sensor.
+
+You can include a videostream.
+
+This is cheaper than any of the doorbells with camera.
+
+Also doing this is 8 lines.
+
+I can connec to any device. I have to have the ID to it.
+
+If the user is near, within 10-15 cm, then play a sound. It will play over bluetooth.
+
+Last example that I have. This is me and my friends.
+
+In the middle you see a red boy with a cigarette, Brian.
+
+He has an annoying tendency. He gets lost a lot.
+
+We were in Warsaw. Brian didn't find the apartment back at 5 am. He slept on a bench on a square.
+
+He had to be friends with a bum. His phone is always dead.
+
+So, I figured, the BrianTracker!
+
+I can take the board, solder battery to it. Have a 2G connection.
+
+And whenever he is lost, I can send a push notification, it will tell the geolocation and tadaa!
+
+Here is the cool thing.
+
+A screen is eating most of your battery time.
+
+So, this solution will run 2 weeks on the default battery without charging it.
+
+That's pretty amazing. You can build useful stuff with this board.
+
+The next thing.
+
+Let's do some demo's.
+
+This was me at the afterparty yesterday.
+
+We have, what I have here is one of the boards that I removed from one of the phones.
+
+And now I can connect to this.
+
+And now I have, zoom in, I have a JS console I can talk do.
+
+And do device things with.
+
+For example, if I want to read the devicemotion.
+
+I get the horizontal accelleration including gravity.
+
+If I turn it around, it gets into the minus!
+
+(applause)
+
+okay. That is pretty cool.
+
+Now a new problem.
+
+If you do something on this board that draws too much power, like connect to wifi.
+
+And you don't have a battery attached, it will shut down.
+
+If you hotwire 2 of the wires, then you can probably solve that.
+
+You have seen what happened when I tried to deconnect the screen.
+
+I don't trust myself soldering stuff.
+
+For that I have a second thing.
+
+It is in the casing. I can hold the battery with it and simcard.
+
+I'm going to connect this now.
+
+Here we go.
+
+We can connect here as well.
+
+There is a simcard in here.
+
+It detects if the simcard is here.
+
+And enable data over 2G or 3G.
+
+It doesn't eat any data unless you tell it.
+
+You can buy a prepaid simcard. You can't buy it here. You need to have an address and your mom and give your birthright.
+
+But with my Dutch card it works.
+
+It works.
+
+For example, we have the security cam feature.
+
+Let me demonstrate it.
+
+Read the back camera. Do it every 3 seconds.
+
+And now, hold it like this.
+
+I will take a photo every 3 seconds.
+
+Okay.
+
+That's 3 photo's.
+
+I can stop it again.
+
+Now it saved it to the internal storage.
+
+And because there is Linux running on the thing.
+
+It is based on the Android kernel. Out of the card.
+
+Yeah!
+
+(applause)
+
+i did not promise the images would be sharp.
+
+You can't get me on that.
+
+The other demo.
+
+What I brought today. The sound people put it here carefully.
+
+Bluetooth speaker.
+
+And now, I'm going to talk to bluetooth.
+
+Put that one on.
+
+Start doorbell.
+
+Start it again.
+
+It found the thing. It pairs.
+
+When I hover over the proximity sensor, it will start playing doorbell.
+
+(doorbell)
+
+A bit soft.
+
+Remove it and it stops.
+
+(applause)
+
+okay. It also has Wifi built in.
+
+I hope my tape holds.
+
+Because I wanted to do tracking.
+
+For that you need Wifi connection.
+
+It makes it better if you do it indoors.
+
+Enable Wifi.
+
+Tries to connect to Jsfest.
+
+I hope it is going to work.
+
+My mom always told me to never do any live demo's.
+
+But here we go.
+
+It is connected with Jsfest.
+
+We need an Ip.
+
+We have Wifi connection. It is cool.
+
+And now I can start my tracker.
+
+Let's say that I'm Brian.
+
+At this moment I'm lost.
+
+This is the BrianTracker.
+
+There is no registration yet.
+
+If I tell tracker start.
+
+It will register at the pushserver that Mozilla has.
+
+We don't have the location from Brian yet.
+
+All we need to do is check, request new location.
+
+The phone in a couple of seconds will receive a push message.
+
+Based on that it is going to use the geolocation Api to find out where we are.
+
+And communicate it back.
+
+We got a push message.
+
+Permissions are for suckers.
+
+This is my device. I can do anything.
+
+We send our location.
+
+And now, a couple of seconds later.
+
+ You use static maps. We are blocked here.
+
+When I click on it, we can redirect it.
+
+And find out where we are.
+
+(applause)
+
+now I'm going back to my slide.
+
+There is so much more you can do with this setup.
+
+Because, there is a flashlight on this thing.
+
+Two camera's.
+
+You can walk around and make photo's from this and this side.
+
+The only way to experience this.
+
+This is what I have seen so much.
+
+Is get hacking.
+
+Buy a firefox phone.
+
+You can get it for 60 euro on Ebay.
+
+ Crack it open. Flash my JanOs on it and write your own scripts.
+
+You are in charge.
+
+Even if you are not a hardware nerd.
+
+That's freaking amazing.
+
+With that I want to thank you for being here.
+
+Hopefully see you next year! Yes!
+
+(applause)
+
+it is the first time ever that I finished my talk in the timeslot. That's even cooler!
