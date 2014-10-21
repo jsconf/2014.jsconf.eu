@@ -1,0 +1,373 @@
+I'm Mathias. I live in sunny Copenhagen. Also known as Mafintosh. That is the way to get in touch with me.
+
+We are going to talk about 3 things today.
+
+Javascript, bittorrent and a little bit of mad science.
+
+Stag Vm represent. Whoe.
+
+All right.
+
+So, we are on a tight schedule. We are going to dive straight into it.
+
+What is bittorrent? How does it work?
+
+How many people have heard about Bittorrent? All right.
+
+Usually when I ask this question, what is bittorrent? People tend to think this one thing.
+
+Which is not completely untrue. It is a bit sad.
+
+Actually bittorrent is just like way more than this. Application is way beyond piracy.
+
+So, yeah, let's talk about how it works.
+
+Normally when you fetch a file online it could be any file. Video of this talk. You have the scenario where you have a server and you trust this server and you go to the server and do send me this file. Yes, here is the file.
+
+It is kind of nice. It is super simple and nice. A diagram with 2 things on it. Awesome.
+
+What's the problem?
+
+Well, what happens when 1 million clients come in. We want to watch the video. I don't know if you saw the Apple keynote. They had this experience zozer The server is like, sending the files to everybody. It is going okay.
+
+You can see some of the iPhone things going on.
+
+One natural thing that can happen, the server explodes. It is not really viral anymore.
+
+How about we improve that? And a simple way would be to have every client send data to eachother. It looks like this. We call them peers. They are sending and receiving data.
+
+Swapping data around. That's awesome. This is what we call P2P.
+
+I mean, there are problems. Because, now we are sending data from arbitrary people. Getting data.
+
+How do we know that no one will come in and be like, this is the other talk that nobody likes.
+
+Coffeescript talks.
+
+So, there is a simple solution. Take the file. We split it into equally sized pieces. Half or 10 megs. And hash them. People know what it is. Digest.
+
+So, we can just get a piece from everybody. Assuming we had these hashes. If the hash doesn't match, it is a bad peer. Throw it away.
+
+We have to take this list of hashes, what we call torrent file. And we put it on the server.
+
+It needs to distribute that. That's pretty nice.
+
+But it has to do with the problem. You need people to talk to, to get the stuff. How do we do that?
+
+Well, dht. Distributed hash table. You know what it is? All right!
+
+So, it is basically a table that is dristributed.
+
+ So like a table, you put a key and value in. And you can get the things that are stored, you get the values back.
+
+We can just do something like this. Take the torrent file and hash that. A hash of hashers. 20 byte thing. We store an address.
+
+If we want to find out to share this file, we do a list of keys. On the torrent file and we get peers back.
+
+Supersimple.
+
+And the bittorrent Dht is huge. Crazy.
+
+There are around 10 million nodes. The database at any time is a database where you have 1 million nodes distributing data. You need to take the 1 million people down to bring it down.
+
+The biggest database out there.
+
+It is how it works. It is pretty simple.
+
+All right. So, let's move on.
+
+So, bittorrent is good for distributing a bunch of data. There is a huge amount of data on bittorrent.
+
+That's cool.
+
+But wouldn't it be cool if we could access all this data instantly. That we don't have to wait to download all the data?
+
+If we can make a bittorrent stream? It would be cool.
+
+So, how can we do that?
+
+All right.
+
+So, streaming bittorrent means that we have these pieces, each equal pieces. We fetch the piece we need. If someone wants piece 5, we get piece 5.
+
+You have a peer with piece 5. You ask that peer to give it.
+
+Again this introduces a problem. This guy can become evil. And start being slow.
+
+We are not getting our data. If this peer is slow, we are not streaming. That is a problem.
+
+Luckily it is easy to improve this. We fetch the piece from multiple peers. We take the top 5 peers.
+
+Rank them based on speed or something.
+
+And we fetch the same piece from multiple people.
+
+If one of the peers becomes slow, we can detect it and swap him out. With someone else. That's pretty cool.
+
+This gives the scenario where we waste bandwidth. We are fetching the same data more than we need.
+
+It doesn't really matter. It is for critical pieces.
+
+Only for when we have a...
+
+It turns out it is a good algorithm.
+
+As a module. That's what we do these days.
+
+It is called torrent-stream.
+
+It is a node module that allows you to fetch data.
+
+And do this nice thing. Where you just patch a torrentfile to a constructor.
+
+ You get the list of files in the torrent.
+
+You can create streams right away.
+
+You can do random access. 10 files. Whyf wait?
+
+It is transmitting data when it is ready.
+
+What can we use that for?
+
+It turns out streaming is pretty big on internet.
+
+It is a billion dollar industry.
+
+There are huge players out there. People like Netflix. And as it turns out that during peak hours when everybody is trying to watch House of Cards it consumes 1/3 of internet traffic.
+
+If you think about this number. Fucking huge. 1/3 of the internet! What?
+
+So, natural conclusion, wouldn't it be cool if we take it if we use P2P. Instead of Netflix?
+
+I implemented this, peerflix.
+
+It is a program that streams video using P2P and Bittorrent to Vlc.
+
+I try to do a demo of that.
+
+It is a live demo.
+
+So, things might blow up.
+
+There we go.
+
+All right.
+
+Just do like peerflix
+
+You pass it a torrent.
+
+What it will do now... Go out and start fetching data from peers.
+
+What you will see, it is on my screen here.
+
+This is actually streaming now live, no caching. This is like a video.
+
+Documentary. We can even do cool things like skip in the movie.
+
+Even though we are streaming. Hopefully.
+
+(applause)
+
+so, yeah, that's pretty awesome.
+
+And this gives us, I was watching the worldcup a couple of months back. Germany won I think.
+
+It was noticeable. Where you had a game a lot of people were watching. The quality, their online broadcasting dropped.
+
+We can flip this around and do something opposite. The more are watching, the better it runs. We can actually increase quality. Which is crazy.
+
+The more people watch, the better it runs.
+
+It is really cool.
+
+And I mean, this is streaming video. I have seen it before.
+
+There were some guys built a UI on top of my thing. Popcorn time.
+
+I don't know if you know it. To work around this video.
+
+It can become a gimmick. I like to try to push things.
+
+It takes us to the next segment, mad science.
+
+So, when you are in the space li little while you get the realisation.
+
+We can stream anything out there that is on bittorrent.
+
+Which is kind of cool.
+
+So, week ago I was preparing for this talk.
+
+And I need some cool datastream.
+
+So I went on Wikipedia to try to find some good datasets. Googled around.
+
+It hit me.
+
+Everything on Wikipedia is on bittorrent. There is a torrentfile containing everything on Wikipedia.
+
+It's huge.
+
+So, I implemented Peerwiki.
+
+It is a program that allows you to browse Wikipedia using bittorrent realtime.
+
+I am going to try to demo that.
+
+It is bleeding edge. I'm crossing my fingers here.
+
+So, what it does now is, it is connecting to Dht finding Wikipedia. It creates a webserver. That runs on this thing.
+
+So, what you are seeing here is the Wikipedia article, using Bittorrent.
+
+There is no centralized server. This is peer to peer. If wou went to went to Wikipedia, please give us money.
+
+Because of the servers.
+
+We can even click the links here.
+
+Hopefully.
+
+So, there is latency involved. It needs to get out and fetch this link I clicked on.
+
+So...
+
+(applause)
+
+i mean like, this torrent is crazy. It contains everything on Wikipedia. Even the assets.
+
+This picture. I don't know if you can see it.
+
+That's a file in the bittorrent thing.
+
+That is fetching when I browse.
+
+There are so many things happening here. It is like, we are reading this article. I know what is going on, it is like crazy.
+
+Again we get the property. The more people browse this page, the better Wikipedia runs. It is awesome.
+
+So, let's try to stop that before we kill the network.
+
+There is actually, the first use case for bittorrent.
+
+It turns out like, all of Linux is on Bittorrent.
+
+And it is the case we hear. You should download Ubuntu using Bittorrent.
+
+There is virtual box.
+
+It allows you to spin up VM. Using an Iso file.
+
+A Linux Iso file and virtual machine.
+
+What if we could somehow take virtualbox and max it use bittorrent instead.
+
+What if we can make it on the streams.
+
+Actually, it is lame.
+
+Because virtual box already has a nice feature, it deals with files.
+
+What if we didn't do anything to virtualbox.
+
+What if we somehow made this thing, that would make bittorrent transparent on your machine.
+
+And then make everything appear as regular files. A bittorrent file system.
+
+It is colled torrent-mount. It allows you to take any bittorrent file. The Wikipedia one. Could be any of the files.
+
+And pass this to the prograr. It will create a virtual file system, Fuse.
+
+A thing that allows you to build filesystem in userspace.
+
+And you can browse this using a browser.
+
+Let's try to do that.
+
+I need to open a finder. So, I just run Torrentmount.
+
+And pass the ubuntu image.
+
+Downloading from 40 peers.
+
+I can go to my finder now.
+
+I don't know if you can see it, it is there in the finder. It is an abstract file. We are still downloading. We can boot up virtualbox.
+
+That was the wrong one.
+
+And I can go in and create a new virtual machine.
+
+And I can find storage.
+
+I can click on browser. What I usually do.
+
+I can click, open finder.
+
+And select this iso file.
+
+Launch virtualbox.
+
+It is launching...
+
+So, what is happening here...
+
+(applause)
+
+i don't know if you can see it. We downloaded 80 MB so far. I should select German. Because we are in Germany.
+
+It is like the Ubuntu install thing.
+
+I see we have a little bit more time.
+
+We can even do more fun things.
+
+I should probably shut it down.
+
+We can also take stuff like, we can take the torrentfile. Mount that.
+
+And here is the video. An mp4.
+
+I should be able to... Open this with Vlc.
+
+It is not even there yet. And it is playign. It is live streaming in. From Bittorrent.
+
+And actually, this gives us this nice property. If we skjip in the file and try to find some dialogue.
+
+Hopefully.
+
+If we just... Wait for someone to speak.
+
+You see there are subtitles there.
+
+It is because Vlc is seeing, there is another file in the torrent, the subtitle file.
+
+That file is also on Bittorrent. What is happening, torrentmount says, you want to read the subtitle file, let me try to fetch it live.
+
+And stream it back to Vlc. Vlc doesn't care, it is reading it like a regular file.
+
+You get this really transparent thing. Where programs don't know what they are doing but reading files. Awesome.
+
+Yeah.
+
+That's Torrentmount.
+
+That's it for me.
+
+I am already interested in talking Node, Bittorrent, JS, anything.
+
+Find me at the hallway or at the party before I get too drunk. Or after, how mad the science should be.
+
+You should check out these cool things.
+
+Webtorrent, went into alpha. Trying to do this thing.
+
+But only in the browser. Using no native things.
+
+That's going to be crazy. There are substacks, That we hacked during our conference a while back.
+
+Let's take Google Maps and put it on Bittorrent. We don't need Google maps.
+
+That's it. Thank you.
