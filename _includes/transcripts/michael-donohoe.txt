@@ -1,0 +1,381 @@
+Good afternoon.
+
+The less serious talk is linking to anything on the web.
+
+My focus will be around text content.
+
+Some of this is more applicable to that.
+
+You can go into iframes and images. My focus has been more on the journalism side.
+
+Blog post, articles.
+
+And just while I am here I tried adding German to the slides. And failed.
+
+You have seen some of the workings of Google translate.
+
+The population speaks my language so well.
+
+I don't have a word of German. I tried to brush up. But life, work, anyway.
+
+Good to be here.
+
+As you said, I worked at journalism companies. 12 years in total. At the New Yorker.
+
+Prior to that Quartz. An american business focused news startup. And New York Times. Frontend, platform.
+
+And at the New York Times I stumbled upon the problem we try to figure out. It is about links.
+
+These amazing things for the web. They bind everything together.
+
+Everything we have built today goes back in a shape. Move from 1 document to another.
+
+Within links would be, it is like the Dna.
+
+If you see a good descriptive link, that is beauty.
+
+To find its place on the web.
+
+But also has meaning in itself in readability.
+
+Not Sco. It is something that is definition and context is a big win. That will only get you so far.
+
+The problem I'm trying to solve. It is a solved problem. Built upon, is linking within the documents. You get to the page. What next?
+
+And there is a question of doing that in a reliable way.
+
+Right now, people are probably saying that we have that solution. It is Url fragments. Whatever you call them. If you take a look at that landscape, you find it is not many anchor tags out there. Used reliably. Most of the anchor tags I have seen that are in the document are usually there, they wanted to do something to fill it.
+
+Why is the page jumping pack up when I click this.
+
+The other problem I have with the url fragments is, it is a manual process.
+
+People don't want to do manual things.
+
+It is hard to get journalists to moderate articles on their own.
+
+But going in and find, even to understand markup. You have a Cms or system that will not expose them.
+
+And you know, when it is a manual process and you try to name things.
+
+I'd be better off to explain cache and validation than anchor tags.
+
+There are a few things you can do. Sequential numbering pattern.
+
+People don't do it.
+
+People are abstracted on a Cms level. They are not typically the used case.
+
+In the Cms, you do have the ability to generate these. What you can do.
+
+Generate them in a structured manner.
+
+But then the problem we are trying to solve is that many writers, their work will change.
+
+If you have an article.
+
+We didn't change the articles very much. Only if there was a known error or correction.
+
+Every now and then, between the time published to 10 minutes. There was a window that changed dramatically.
+
+Something would be rephrased. It didn't happen often. They don't like to do it.
+
+It did happen from time to time.
+
+The worst thing you can do is have a deeplink to a paragraph.
+
+You are doing that with a purpose.
+
+Something here important.
+
+If you are landing somewhere else, that's a problem.
+
+How do you do that without digging into Cms.
+
+Track these keys. That map upto content that is changing.
+
+It is a very hard thing to describe. It leads to crazy situations. You are trying to match them up.
+
+Within Drupal or WordPress.
+
+It is not something we would like to do.
+
+So, you take JavaScript and reinvent what is solving the problem.
+
+There are a few approaches. The steps is, you need to be able to generate key off content.
+
+To be tolerant. If the context of the paragraph, I'm using it as example. If that changes and the key changes.
+
+Do you use that pairing.
+
+In tollerance again. It can be updated, corrected.
+
+Sentences are rearranged.
+
+You don't want a system, when it goes out of sync you have to giggle around to match up again.
+
+The other thing you have to accept, in the web.You need something that will cover 90% of the cases. There is an acceptable margin of error.
+
+When you fail, you fail back to the original Url.
+
+You need to deliver the person at the correct location.
+
+There are a couple of methods. 5-6 different pretty detailed methods that I'm going to dig into 2 of them. The first one I recommend.
+
+It is dynamic unique keys. You take a piece of text, generate keys from it by the first 3 words, of the first and last sentence.
+
+Sometimes the same sentence, if the paragraph is 1.
+
+You use that to identify the paragraph.
+
+It works very well. If you are using that as identifier and you build in something like, you measure the distance between keys, you can end up with something robust. With that Url, you can throw in multiple different keys with different variations.
+
+I cannot pronounce this word.
+
+Do you have it where you read a book with a character that has a name, you say it inside your head. I have that going on here.
+
+We use this function in Javascript to pretty much match keys. If you have a key off a paragraph and cut off one of the sentences.
+
+If you change anything in the middle.
+
+It will still pair against the correct key.
+
+You don't have to do anything on the backend.
+
+You don't add overhead to the page.
+
+Unless it found something in the Url.
+
+That's a recap.
+
+The flow would be, if you hit the page you provide a link with this key in it.
+
+At that point, it inspects the page, generates keys. Looks for the match. And do I match this or this and what is the level of difference.
+
+We can this for several hundred articles.
+
+With 10-20 paragraphs.
+
+We found 2 cases where there was a false positive.
+
+An all the cases the first key was the correct one.
+
+You could extend this to images for example, you want to restrict it to something.
+
+This is the fun part.
+
+I'm going to attempt a live demo. And fall back to screenshots. What we did to this.
+
+There is a great article here.
+
+The NY times did a wonderful redesign.
+
+They cleared away everything and started from scratch.
+
+This is functionality that did not make it back.
+
+It was an oversight. Someone is going to do it.
+
+Until something gets done.
+
+They have published the pages through the redesign.
+
+Technically it exists.
+
+Let's see what happens.
+
+This is an old article from 2012.
+
+The idea was that one of the things, a quick backstory.
+
+My first job, I was doing customer service for email. One day we got 200-300 emails about an article. You are so pro Palestine.
+
+The other half was saying, you are so pro Israel. It was about the same article.
+
+Context can matter. If someone wants to tweet something, lies, lies, lies, and provide a Url.
+
+You are not going to read it.
+
+If the person says, actually, on this paragraph, this line, and here, these are the things I'm disputing.
+
+That are interesting. That are interesting facts.
+
+Whether it is a business based article.
+
+You would share the link now and you wouldn't have to give this long copy and paste.
+
+You can use a keylike structure. Not just for deep linking. But in terms of highlighting or sharing or annotation. We did it at the time. It was successful. A power user feature not many people knew about. You have to double tap the shift key.
+
+And even then, it was when it was used, used for something interesting. We would track how this was shared.
+
+You can see people coming in. We didn't set it up.
+
+It is sad that it was gone.
+
+Anyhow, back to. The ability that you can link to a paragraph. You could also highlight content as well.
+
+As you can see, these keys are not necessarily readable. That was one of the downsides.
+
+Depending of the level of granularity.
+
+You can change the rules. The first word. The first words of each sentence.
+
+That would take you on. The screenshot I talked about.
+
+More readable urls.
+
+The first I recommend if you have long articles. If you require more robust measures of tollerance.
+
+As soon as you start changing, the Url or text. You need to include fuzziness if you look it up.
+
+This is my blog, I'm never going to change that. You can make that call.
+
+We try to do something more specific.
+
+Again, the examples are mostly text based.
+
+How you would do it. Link to interactive content.
+
+Link to anything else you want to have on a page.
+
+I avoided that. I can talk about that for hours.
+
+But, readable text. It is a robust solution. If you need to deeplink quickly. You can write it in 5-10 minutes.
+
+The key generation is more robust.
+
+To go to the other way. After the times it worked well, it was solid, people who used were happy. We avoided the problem with integrating with Cms. It is a front end driven process.
+
+You interact with it upon with a double shift tap event. You can have a button, add it.
+
+It was loaded after the fact.
+
+Likewise, there was a check to look at the Url. Is this person trying to deeplink. If they weren't, no more code.
+
+The process of generating keys for the article and looking for matches.
+
+We had a different problem to solve.
+
+In hindside, I would go more towards the frontend.
+
+An annotation system. Not only to link to paragraphs. But annotate it.
+
+The original plan was to leverage social media.
+
+By highlighting and annotating and tweeting was the annotation.
+
+We could pull it back.
+
+The annotation is powerful.
+
+Comments are a great way of readers to interact with the author.
+
+Comments can be a sestpool. That's a terrible thing to say.
+
+Unless you put in the editorials. To properly maintain. You are going to have problems.
+
+They put in a lot of time of people to do it.
+
+They are strapped.
+
+They have more writers.
+
+So, with annotation plan was, if you get someone to say, this article sucks, which is not helpful. To let them go in and say, this paragraph sucks. That's actually a little step up for more helpful information.
+
+Maybe they will make specific reference.
+
+They knew their comment was going to get lost.
+
+We want to do that.
+
+In turn people could annotate and tweet the annotations. And link back to the page. It was there.
+
+I'll quickly show you what it is. And explain how we did it. And what I would change.
+
+Within a given article, you have the things at the side. You can link.
+
+I don't work there anymore.
+
+Within here, you can have these annotations.
+
+Again, if you look at the source of the document.
+
+It is creating a unique ID for every single paragraph.
+
+What they are doing that is different from the times. This is heavily tied into the backend system.
+
+We used WordPress.
+
+essentially, we do try to sync.
+
+The difference in engineering required was high.
+
+In comparison when there was just me and another person.
+
+This took, I forgot how long it took.
+
+It took... Weeks. Yes. Spread over months.
+
+Other projects came in. That we have to stop.
+
+It took a long time.
+
+And it is still one of those things where annotations can get lost. You have to go into the backend.
+
+On Cms level as well. You don't want the writers worrying about matching keys up. Or them getting the emails. An annotation has been lost. It did happen.
+
+It was lessons learned. We thought we could nail it. You can. At the level of effort and return.
+
+You need to balance that.
+
+One of the reasons why I bring this up.
+
+There is a lot of other things to build on top.
+
+Linking to paragraphs is straightforward.
+
+Linking to content that can change. And a system that is tolerant is helpful.
+
+It can go the other way too.
+
+Typically, if you are a WordPress user or writer. You have shortcodes. We know the behavior of that.
+
+To embed a Youtube video. What if we can do that with articles?
+
+I can build a WordPress article. That would pull in the people.
+
+What about embedding parts of the article. I want to reference, cite, i want to have that piece that I'm quoting in the before and after paragraphs.
+
+Building a service to do it is straight forward.
+
+How do you link it back to specific bits of content.
+
+Without iframing the entire article.
+
+There are things that we could do to build.
+
+I'd like to explore within the New Yorker.
+
+But, it seems there is a lot of potential still there.
+
+The other thing in terms of services that you can build on in the page.
+
+Main examples are linking, highlìghting and annotation. I'm sure there are other things.
+
+There are a lot of people here. You are very bright.
+
+I know there is some of the things you hear ideas all the time. And someone else will build on that.
+
+I hope that happens.
+
+There is a repo on github. Project Emphasis.
+
+A drag and drop.
+
+Only dependency was J query. It is no longer required.
+
+More for the Css selectors.
+
+You should dig into it. And play around with it. And see if it works for you. Thank you very much.
+
+(applause)

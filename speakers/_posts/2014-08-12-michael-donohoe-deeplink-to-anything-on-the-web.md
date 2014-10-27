@@ -17,6 +17,9 @@ image:
   type: png
   heightSite: 200
   filename: "/speakers/images/michael-donohoe.png"
+transcript: "transcripts/michael-donohoe.txt"
+video: "ybaVRa5AZ5c"
+slides: "https://docs.google.com/presentation/d/1N6cbH0LOHRGiZY4FPlS5bho9cK7UMtM7Ho_XN8yP1T0/"
 ---
 
 {% include speaker.md %}
