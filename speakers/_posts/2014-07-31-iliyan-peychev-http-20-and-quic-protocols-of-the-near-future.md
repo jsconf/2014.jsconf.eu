@@ -11,13 +11,15 @@ github: "https://github.com/ipeychev"
 gplus: "https://plus.google.com/101163834202763493709/posts"
 from: Spain
 description: "The new HTTP 2.0 and QUIC protocols are coming!\n\nHTTP 1.1 forced both developers and browser vendors to invent different tricks in order to make sites to load and run faster. HTTP 2.0 and QUIC will provide many significant improvements overt HTTP 1.1.\n\nIn this talk I will give an introduction to both protocols and emphasize why are they so important for the Web development workflow and performance."
-
 image: 
   width: 400
   height: 400
   type: png
   heightSite: 200
   filename: "/speakers/images/iliyan-peychev.png"
+video: "qyexqwG6fGI"
+transcript: "transcripts/iliyan-peychev.txt"
+slides: "https://speakerdeck.com/ipeychev/http-2-dot-0-and-quic-protocols-of-the-near-future"
 ---
 
 {% include speaker.md %}

@@ -1,0 +1,275 @@
+Hello, everybody, my name is Illian, I am a software engineer for LA based company called life ring, and today, I will talk about HT TP 2.2 and QUIC protocol, which will replace the protocol which is currently used by worldwide web HTTP 1.1, so first is that question, why do we need the new version of HTTP protocol?  What is wrong with the property coal, after all it's used by worldwide web since 1990, right?  It works pretty well, it's very simple, actually browsers sends question the server, server responds this is it, very simple, but if you check this chart which is just for four years, you'll see there is not only one request, and one response, there are actually multiple requests and response about 80‑90 for the top 100 sites according to HTTP Archive so this comes to tell thaws the web has changed drastically, it's a web platform, it's no more platform for reading different cross‑linked documents.
+
+And because of that, we have to admit that HTTP 1.1 has issues.
+
+Those issues are so big that unfortunately we need a new version of the protocol and those issues are so many that I will mention only three of them.
+
+The first one is that it's very latency sensitive.
+
+Right,able Martha we have a server in LA and our client is right here in Berlin, all those requests should go from Berlin to LA then get back.
+
+This is very expensive, and, latency and protocol is very latency sensitive, right.
+
+Apart from that, the specification is huge.
+
+The original specification has been replaced by ability ten different RFCs for message syntax for similar man ticks and content and so on.
+
+There are optional parts, like, HTTP pipelining, which are sometimes implemented, sometimes they are not.
+
+And more like buggy approximate Chicago servers, so this is the key, latency kills and Bandwidth is not everything, if you check this chart from, I guess, most of you are very well aware of it already, from some point how fast is your net ‑‑ is your internet at home for daily Bruceing doesn't matter, if you have about fiver megabirths, it's pretty much enough, I'm not talking about streaming or downloading full video files for Bruceing.
+
+What matters is the round trip time it's for every 20 milliseconds, as you see, the page loading time increases.
+
+So, of of we are stuck by latency, so what could be the solution.
+
+It's obvious that sending one request and more and turning responses is not enough, so what could be the solution?  One possible solution could be HTTP pipelining, right.
+
+Since that's exactly it's purpose, instead to send one request to the server and waiting for the response, browser sends three or more requests in waiting for three or more response.
+
+Sounds very good in theory, but unfortunately, it's not like this, that's not the solution.
+
+So why not?  It's not because by the specification the server must send it's responses in the same order that requests were received.
+
+So this is it.
+
+In fact, the entire connection remains first in and first out, and head of line blocking can occur.
+
+What this means is imagine we have three questions and the first of them requires some heavy database request on the server, right.
+
+The rest, the rest of those could be just one JavaScript and one CSS field they would be blocked.
+
+There are more buggy proxy servers which are not properly implementing HTTP pipelining, and as a result, in most browsers, HTTP pipelining is disabled or not implemented at all.
+
+So keeping that in mind, what could be ‑‑ what could browsers do?  What can they do in order to improve the performance.
+
+There is no way except to achieve multiplexing by opening multiple connections to the servers and that's exactly what they do.
+
+So this is the one side of the question.
+
+The second side or the next side is that developers, as very creative people, they 'em me meanted a lot of work arounds, so‑called optimizations.
+
+Most of you will be very well aware of them, they are creating images sprites, sharding, resolution sharding, resource inlining, Concatenating file, combo services, pref loading service I was when it's idle, reducing cookie size or even using cookie‑free domains, using link import, to pack components into multipart documents and so on.
+
+In fact, the whole industry has been created to deal with those issues, sites have been created, performance groups in the big companies like Google with Yahoo created, if you're a regular developer, and as soon as you read all those guidelines, you start looking like this ...
+
+why should I do all that?  Why is that needed?  And, if you also got tired of all that, then, say, welcome to HTTP 2.0 and QUIC protocols.
+
+HTTP 2.0 which will replace 1.1 is chin currently on draft 14 ‑‑ is currently on draft 14, it's being developed not yet finalized, probably this year maybe the next one.
+
+And, it's purpose or it's objective is very simple:  To fix the issues in version 1.1, but without breaking the web.
+
+Sounds very ambition and this protocol is actually based on speedy which has been developed by Google in 2009.
+
+The very first draft of HTTP .0 verse 0 was based on the latest specification of Speedy.
+
+so, going inside to the protocol, how browsers switches to that protocol.
+
+There is HTTP and HTTPS if we switch from HTTP we use the upgrade mechanism, however this means a round trip.
+
+That's why it's better to look for another solution.
+
+And if we switch from HTTPS to HTTP 2.0, an application protocol negotiation extension has been used.
+
+Which avoids this draw back.
+
+The protocol has many exciting features, and, those I will note some of them, the main difference with version 1.1 is that it's binary protocol.
+
+It's not text one.
+
+So, for browsers, it makes huge difference for us, it makes that if you use telenet to look to some server, to log in to some server that won't be possible anymore, but because it's binary protocol it's much easier a parse tore be created if you're not a GS GS developer, and you want to create your own server it will be easier for you to create a binary parser based on this binary protocol.
+
+There won't be a need to deal with string limited, with stringe strings at all.
+
+(Limiters) on the very low level browser and several exchange frames.
+
+And each frame belongs to a stream.
+
+If there is a frame, which doesn't belong to a stream, that's protocol error, what is really important is those streams are multiplexed.
+
+Right, we have one single connection, but multiple streams, they are multiplexed and they also have priorities.
+
+This is really important if you ‑‑ as you know, every page there are some resources which are critical for rendering the page and there are others which are not.
+
+CSS are critical, JavaScript could be critical if the page requires JavaScript, but the impages usually are not.
+
+So, now, we can balance with those different streams.
+
+Something which we were doing for years was called resource inlining, now it's on the protocol level and it's called server push.
+
+Again, if I have a no GS server, I can check if the browser allows several push and to push my critical resources when the first page ‑‑ when the page is being loaded, right, instead to put everything on the page, and to deal with cache and something like this.
+
+This is what we have to emphasize:  One connection to the server that should be enough, and not six connection per domain as most browsers do now.
+
+Some of them actually open more than six connections.
+
+But, in general, this is not good for no one.
+
+Neither for the browser nor for the server.
+
+You open the browser, you is to deal ‑‑ has to deal with memory, with balance those connections, that's not good.
+
+Now, just one connection, we go back as to the point, as it should be.
+
+As I said, frames on the ‑‑ that's the ‑‑ that's on the very low level.
+
+And this is how a frame looks like.
+
+We want to take a look on all of this one by one.
+
+ I will mention just two of those, the type of the frame, and stream identifier.
+
+Every page has stream identifier, so as said this would be protocol error.
+
+There are about ten different frame‑types currently in the latest draft.
+
+Like data frame, which conveys or ‑‑ associated with the streams there are streams that deal with heathers some of those are related stream priority.
+
+Some of them are related to promises, to push promises, this is what ‑‑ this is related server push.
+
+Some of them are deep purposes ‑‑ just abort the stream, I don't want the see it anymore.
+
+And those frames are grouped in streams, so streams, by definition is logical bidirectional sequence of frames, frames which are being exchanged between the browser and the server.
+
+So, one single connection can have multiple open streams, like in this example, you may ‑‑ you may see that we currently have three streams.
+
+Stream one, stream two, and stream four.
+
+So, there are ‑‑ they all contain some frames, and they are multiplexed.
+
+One stream may represent an HTML page, another stream may represent a JavaScript file or a third one some style, but they're moment nexted and they are being prioritized by the browser (Multiplexed) so going to priorities.
+
+Each stream has priority, that priority specified by the browser and what is important is that priority can be changed Runtime.
+
+So, the exact order in which frames are delivered can be further optimized.
+
+The priorities are optional, 31 birth value, and stream with priority 0 has the highest priority.
+
+Right ...
+
+streams also have deopinion densies, and like in this example we have two streams B and C which depend on A, so if we have another stream called D, and it just has priority, it will have the same value as B and C, however, if we say that D depends on A, then B and C will start depending on the D too.
+
+Another key part of the protocol is related to headers, as I said, we cannot break the web, right, this is the deal.
+
+So, HTTP 2.0 is stateless protocol too.
+
+Nothing has change changed here, the client still has to send day to to the server, however, there is a big difference.
+
+The headers in version 2.0 are now compressed.
+
+This is the big difference.
+
+Of just a few words about the compression, it's stateful.
+
+It's not stateless, which means that a single compression cop text for the entire con ‑‑ connection for the entire connection is used, and the rhythm is especially designed for the protocol, it's called HPAC because of some evil guys who applied attackses like CRIME andBEACH, so we have a specially designed compression algorithm for the protocol.
+
+Going back to what we know very well, server push, we did that for years, nothing new here, I guess all of you applied some ‑‑ or embedded some resources to the page CSS or JavaScript or SV impage or what ever.
+
+So here, this is the difference server, pre‑emptively send resources to a client in association with the previous client‑initiated request.
+
+So, I'm requesting indexed HTML on the server side me as JavaScript developer who works on GS server, I can push the critical resources which are needed for the page to be rendered.
+
+Right.
+
+Of there is, this is a trick here, the client explicitly must allow it.
+
+So, on the server side when we implement our servers, we have to check if that is allowed otherwise that could be ‑‑ stream or something else.
+
+A client cannot push ‑‑ a client, which means the browser it cannot push resources to the server only the server is allowed to do that .
+of so ...
+
+very briefly, this is it.
+
+HTTP 2 Rulez! Right, because now developers we have full power to apply different kind of optimizations, different than those which we are currently doing, or we can apply more ‑‑ we can get herrist you can how a user behaves to push resources to optimize our pages in different way.
+
+This is not the end because now we have ‑‑ because research continues, we have another protocol, also started by Google, research by Google, it's called QUIC.
+
+QUIC is a natural extension of see ‑‑ SPDY and HTTP 2.0 research, this is also multiplexing transport protocol
+is a big difference, this protocol runs on top of UDP, it doesn't run on top of TCP and of the HTTP 2.0 does.
+
+This protocol runs on top of UDP because it runs off UDP the browsers cannot use those out of the box features which are available in TCP, right.
+
+So those should be implemented on obligation of developer.
+
+So why should do we that?  Because it's very hard to update TCP.
+
+It's everywhere, it's on servers, routers, it needs years until it's being updated.
+
+But now we can apply the results of the search, how to improve the web on QUIC, Google applied to their servers, applied to Chrome and now everything is clear.
+
+If you can use ‑‑ you can see how QUIC works right now in your browser, there is a flag, you can enable it if you want.
+
+ I actually do it to see how it's going.
+
+So ...
+
+that's not the first time when people are trying to fix the issues on using UDP, people haven't slept those years, and there were already existing solutions, like, SCTP over DTLS, that's one possible solution, those are two different protocols.
+
+After all SCTP provides, among other thing, stream multiplexing, right.
+
+DTLS provides SSL quality encryption and awe ten thinkcation over UDP stream.
+
+So why not use those protocols?  The answer is very simple, because roughly four round trips are needed to SCTP over DTLS connection, you can imagine how expensive, again with the expensive of Berlin client and LA server, that's too expensive.
+
+In contrast the goal of QUIC is to perform a connection establishment with zero rant trip time overhead this is the goal.
+
+Of QUIC has all the benefits of SPDY and HTTP 2.0, but ...
+
+there there is a big difference, there is no head‑of‑line blocking in QUIC.
+
+As you can imagine, delaying of only one packet causes the epitire set of SPDY stream to pause, HTTP 2 streams to pause because TCP only provised a single serialized stream interface, but in QUIC when a single packet is lost, only one stream is being delayed.
+
+We can illustrate that with an image, and here is how it looks like.
+
+Here we have three streams, with red, green, and blue color, and if a packet in the stream marked with red color is being lost, the rest two streams are not being affected.
+
+Here we can compare how QUIC behaves versus TCP + TLS, for repeat connection it's zero milliseconds rant trip time, right, for TCP plus ‑‑ it's 200 for QUIC it's 100 for QUIC plus TCP is 300 milliseconds, that's too muchment as I sad this protocol rests on top of UDP, many of the out of the box features in TCP are now not available so they have to be implemented on the application level.
+
+So QUIC also provides encryption, which is compatible to TLS, but with more efficient hand shake.
+
+It has replay attack and IP spoofing protection, and it also has something very important, in order to minimize all those round trips, which really decrees the performance, there is forward error correction, which means price of additional packet for example we can restore a packet which has been lost, so the server won't have to send this packet again.
+
+A really cool feature for us, like especially for us who use mobile phones, if we ‑‑ that the communication channels are not defined by IP plus port, but by an idea, so, in this ‑‑ in this room there is WiFi and if you leave the WiFi on and go outside of this building for using mobile internet, that one ‑‑ that won't be so bad because the connection continues.
+
+So ...
+
+all this sounds very cool, very exciting, and I wanted to see what is the current status of those two protocols where we were going ‑‑ how are we going, especially for this presentation, I created the small site, which is ‑‑ which has really cool name HTTP Rulez.com, it consists on the two pages, on the first page we have ‑‑ on the first page we have some an online shop with CSS JavaScript and images and the second page I have a few web components, they are supposed to be the future of web development, so I wanted to see if we serve the content via different protocols it will make some difference.
+
+So ...
+
+from my point of view that site is like Open Source platform for testing different optimizations strategies for HTTP 2.0, there is ‑‑ this is the idea, same content, but, served via different end points, rya HTTP, HTTPS, SPDY and HTTP 2, that's really cool, I don't have QUIC end point yet, because there is no production ready server, not this there is HTTP 2.0 production server, I implemented this on GS, so I had to build version of node with ALP support, but it currently works, (UDLP ‑‑ on each page we can see the load time so we can compare, and because this is this is ‑‑ because we have great tools like webpage test work, now we can check what is the difference ‑‑ I intentionally did not apply any of those dark work arounds we were doing for years.
+
+ I did not create she sprite for images, there are about 30 images, I did not yee yeah any sprite, I wanted to start with something simple and see how it behaviors, on top we can implement further optimizations.
+
+So, this is what HTT ‑‑ what web past test shows as waterfall when we use HTTPS, this is the waterfall, you can see how it looks like, you can also see that the browser Chrom e opened six connections for this domain and now for each connection we have initializing, we have SSL negotiation, which is expensive, TCP needs ‑‑ three round trips, right, so this is not so good.
+
+Six connection, you can imagine how much time we are losing for all those connections.
+
+And mere I have a waterfall, again with webpage test, which represents HTTP 2, waterfall without server push.
+
+On the server, I haven't pushed any to the surface, I just re laid them to the Bruce tore do it best.
+
+Currently this only works on canary.
+
+It doesn't work on Chrome, I hope in a few months that it will be available in Chrome too, for now we have to use canary and apply a fecial flag if you go to chrome flags you is to enable SPDY/4 which is the internal name of HTTP 2 for canary.
+
+But, now it works, it supports draft 14, which is the latest one which is really cool.
+
+The browser created only one connection to the server, not six, this is the big deal.
+
+All those resources were multiplexed and sent to the browser via just one connection.
+
+This is huge improvement.
+
+But I wanted to see how it behaves if I push some resources so here is the waterfall, what currently webpage test shows, we probably that will change because if you open canary Dev tools you can see the resources in webpage test it looks like I made only ‑‑ that the browser made only one request to the server which is indexed HTML be but not I intentionally pushed all CS several JavaScript and images file when the browser requests index HTML page.
+
+So ...
+
+again ...
+
+we have connection view, it shows only one connection, not six.
+
+Offed if we have to draw the line, I would like to say the following.
+
+If you remember the work arounds, which we did to speed up our sites for years, all those work arounds ask yourself how HTTP 2.0 will affect the way you develop and optimize web applications for you or for your commente company.
+
+Thank you very much (Applause)
