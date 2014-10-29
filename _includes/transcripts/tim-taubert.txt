@@ -1,0 +1,323 @@
+Thank you.
+
+Welcome to my talk, keeping secrets with Javascript. An introduction to the WebCrypto Api. I have been working for Mozilla Berlin since 2011.
+
+I discovered the Webcrypto Api a few months ago and started writing patches. It has been improved. We support most of the algorithms.
+
+I would not call myself a cryptographer. There are experienced people helping me.
+
+You may ask, why do we need a crypto api?
+
+As the web platform is becoming mature, developers are asking for it. You can provide an Api. Or what is written in Javascript. Plugins are not an option for applications. We can use Web crypto for the pin of the lock stream. A web app.
+
+We can secure or encrypt anything in the device.
+
+Also websites can make use of the webcrypto api. Before sending it to the server. To avoid any trace of sensitive data. There are more valid uses. We have a lot to cover today.
+
+I do want to build a notes app. It is a simple example. We don't have to talk about the UI anymore. Most of you have written one.
+
+Our app will be different. As we will be using cryptography. You should be familiar with arrays and how to work with promises.
+
+You will know the basis of the webcrypto api.
+
+And with the storage with only a few lines of code.
+
+It will work in Firefox and Chrome.
+
+As I said before, we don't care about the Ui. Let's start by taking a closer look at the storage.
+
+I picked localforage.
+
+Localforage is great. You can pass any data and automatically get a promised based Api for free.
+
+This is how we would use the storage Api.
+
+It doesn't care about a particular format.
+
+But as maintainers of the Api, we start to think of a few things that could go wrong here.
+
+Let's say we are about data corruption.
+
+Not particular about losing data but wrong data.
+
+The first thing that comes to mind is add some integrity checking.
+
+As it turns out, hash functions are excellent for providing the integrity.
+
+You have seen it before when downloading.
+
+You would calculate the hash and compare it to the hash digest. To check for corruptions.
+
+If it was corrupted you would throw it away and redownload it.
+
+We use the Sha-256. A cryptographic hash function.
+
+Given the same input, hash functions return the same output.
+
+If only 1 would change, it returns a different result.
+
+32 bytes or 256 bits.
+
+For a good hash function it should be hard to find 2 different inputs mapping to the same input.
+
+Hard to find a collision for the function.
+
+The webcrypto Api provides a different.
+
+It takes an array buffer. And also to an array buffer.
+
+Al cryptographic definitions are here.
+
+It can be quite expensive. All do the work asynchronously.
+
+It can do the heavy work. Subtle is supposed to reflect that many algorithms need to be satisfied in order...
+
+Or slightly differently, they want you to know what you are doing.
+
+We will see more Api examples later.
+
+Let's use digest functions for integrity.
+
+This is our basic storage api. We start by modifying the save function.
+
+Instead of only saving nodes we want to use hash.
+
+To store the values nicer. Until all are resolved and lets the caller know.
+
+Sha-256 as the hash function. And pass the notes. We should change the save function signature to make it clear it takes array buffers now.
+
+So now that we stored everything we need to know for integrity checking. Let's implement the check. And look at the load function.
+
+We will use promise.All to use.
+
+People want to compute a digest off the notes.
+
+We just read from disk.
+
+Compare is a simple function that takes 2 types arrays and compares them.
+
+We resolve that. Or resolve to undefined.
+
+Using a cryptographic hashfunction we solved the problem. And can detect accidental corruption. We are not protected against deliberate functions.
+
+It is not really a challenge.
+
+It would be great to combine a secret with the hash function. that we can prevent deliberate changes.
+
+What we are missing is authenticity. When reading data from disk, we want to make sure it was from someone.
+
+Can convince it that the data on disk is genuine.
+
+Hmac or hash based message authentication code are excellent for integrity and authenticity.
+
+In combination with a secret key. For any data you need to know the secret key.
+
+The hash function will be Sha-256 as we have seen in the previous example.
+
+Hash functions take a single input. And return a digest.
+
+We need a secret key. Combining the data and key input, these functions return a message authentication code. And use it later.
+
+Given the same data and same key, the hmac function will return the same code.
+
+This looks similar to how we use digest before. This time the function. And a key argument.
+
+The promise returned for the given data under the given key.
+
+And instead of comparing the digest manually, we can use the function provided by the Api.
+
+We provide the key and data. And a boolean if it is valid of the data under a key.
+
+We first replace the digest function with the function. Algorithm and secret key.
+
+Both the notes and the mac are stored. The save function takes a key argument.
+
+To verify, let's upload the load function.
+
+We don't load a hash from disk anymore, but a Mac.
+
+Instead of computing, we can use the function to compute a mac and verify it at the same time.
+
+The promise return will resolve to a boolean. Whether the mac is valid.
+
+And if all goes well we resolve to the notes or undefined.
+
+The load function takes a key argument.
+
+I hope you are wondering, where does the key come from? Straightforward is to prompt for a password and use that as a key.
+
+The problem is that passwords don't look random at all.
+
+Think of how they are composed. Printable characters. And the same.
+
+You can't use passwords directly. But there is a way.
+
+That is what we call key derivation. It is the process of deriving a second key from a given key.
+
+The webcrypto Api derives to the key method.
+
+To use the base key to derive from whether the algorithm the key will be used for. Whether it is extractable. Exporting it to a different format. And what we plan to use it for.
+
+The promise returned. And that can be used for any operation. Given in the constraints of the last 3 parameters.
+
+In our example, we will specifically use the Pbkdf2. It was specially designed.
+
+So, how does this work?
+
+Looking at the parameters, passwords as given by the user, is a not secret random value.
+
+Tables with the passwords and the variations.
+
+You would have to precompute the table for any value.
+
+For example, we need to recompute 2 to the 64. For most of the people it is too much data to store.
+
+Now, in our case, an attacker could take the salt value and take the dictionary attack.
+
+Until they find their secret key. To slow down this kind of attack, we specify a number of iterations. High enough, instead of a million passwords, an attacker could only try a few hundred per second. And slow down. And also the attack by 5000.
+
+It is important to note that this does not protect from weak keys. As the user uses 1234, the attacker will find it quickly.
+
+Using it for the notes out.
+
+We have a function. Pass the crypto key. And we pass the salt.
+
+The function takes the salt as argument instead of generating it. We want to generate it once.
+
+We have to arrive at it later again.
+
+We will sign and save it. And verify when loading.
+
+For the arguments starting with the password key.
+
+Creating a key is easy. We can call generate key as the algorithm. Usually generate random key. It would open a native dialogue, that is asking the user to type a password.
+
+That is nice, the password will never come to the java script. The Api will only return a key pointer back.
+
+Lastly, let's define the salt function. We want to generate it once and store it.
+
+We generate a few random bytes. Get random values is a pseudo generator. The only method that is not encrypted and synchronous.
+
+It will be filled with pseudo random bytes.
+
+You pick a random byte. An attacker has to compute 2 to the 64 of those huge tables.
+
+Putting it all together, we can use the 3 functions we defined.
+
+We first retrieve the user typed password and the salt.
+
+Given the password and the salt we can derive a key in Pbkdf2.
+
+And pass that to the save function. That will use it. To give it buffer.
+
+This is what the storage content looks like.
+
+We stored the salt using key derivation.
+
+We use the drive key.
+
+That is pretty cool so far. The only thing an attacker could do is modify and make us discard it.
+
+We can have an online backup mechanism. It doesn't feel great. It is probably not great either, having access exposes all the notes.
+
+What most of you think about cryptography.
+
+We want secrecy and we achieve it. At the same time provides integrity and authenticity.
+
+Surprisingly, we use the function.
+
+It returns a promise. Under the given key.
+
+Decrypt at the same key. Will give us the plain text again.
+
+Aes, the advanced encryption standard is popular.
+
+It provides secrecy, but not protection against corruption. This will do that.
+
+Aes-Gcm also takes a nonce. A number only used once.
+
+The nonce is used to randomize encryption. If we use a new nonce, even the exact text will always use a different text.
+
+Without changing anything, it will be different every time. We don't want an attacker to know nothing has changed.
+
+It will be in the bytes.
+
+That means, we don't need to separately store the mac anymore. But like the salt, we now need to store the nonce to decrypt later.
+
+We switch from using hmac. We have to update the key method.
+
+Here we change the algorithm that we plan to use. From Hmac. To aes-Gcm. For encryption and decryption.
+
+Using it is simple. We generate random nonce. Get random values. It is important the nonce is long enough, 16 bytes. It is unlikely we generate the same twice and use the same to encrypt.
+
+We switch to using the encrypt function.
+
+We then store the text and the nonce to decrypt later.
+
+The next thing we have to do is, to decrypt the load function.
+
+The load function has the cipher text and the nonce from disk.
+
+If integrity and authenticity can be verified.
+
+It is failed, the promise will be rejected.
+
+And resolve to undefined again.
+
+That's pretty much it.
+
+We have safely encrypted data. We achieved all that without using Java script libraries and only a few lines of codes.
+
+It works in Firefox. It is hidden behind preference. Chrome doesn't support the whole password key derivation.
+
+To make sure everyone understand what we get here. Let's do a recap.
+
+For those who didn't follow the code. A few diagrams will help better.
+
+The first step we took was to harden the storage.
+
+We didn't only store the notes. But to check for corruption.
+
+ If not equal, we discarted the notes.
+
+Second was authenticity checking. Also deliberate changes.
+
+We stored the notes and the mac. And if the mac didn't verify under the given key, you would discard the notes. We didn't have the key to use yet. The next step was to look at password based key derivation.
+
+We prompted the user for the password and used that for the key.
+
+In addition to the notes and the mac we also have to store the salt so that we arrive at the same key every time when deriving.
+
+That doesn't work.
+
+And as the encryption to the notes.
+
+We stored the salt for key derivation.
+
+The nonce was the random value that changes with every save operation.
+
+If the encrypted notes do not pass. We will just simply discard them again.
+
+You can find the code for all steps we talked about.
+
+On Github. I didn't want to leave you with the reminder. Make sure the knowledge is sufficient.
+
+And ask for experienced peers.
+
+Cryptography is hard.
+
+I'm sure you heard that a lot already.
+
+We have seen it the last years.
+
+I want to encourage you to brush up your crypto skills.
+
+Go out there and make the web a better place.
+
+These courses were helpful.
+
+Cryptography started a week ago. You can join it.
+
+I will post the slides later. They will have links to more information.
+
+If you want to talk about the crypto Api, you can find me at the Mozilla lounge later. Thank you.

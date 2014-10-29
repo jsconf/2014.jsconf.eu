@@ -17,6 +17,10 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/tim-taubert.jpg"
+transcript: "transcripts/tim-taubert.txt"
+video: yf4m9LdO1zI
+slides: "http://timtaubert.de/blog/2014/09/keeping-secrets-with-javascript/"
+
 ---
 
 {% include speaker.md %}
