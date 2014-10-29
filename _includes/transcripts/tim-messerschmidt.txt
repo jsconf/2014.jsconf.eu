@@ -1,0 +1,423 @@
+Thank you. I hope you really enjoyed the lunch.
+
+It is one of the conferences where you can see the money really goes into the benefit of the attendees.
+
+Thanks for attending my talk. It is sometimes thankful to have the talk after the lunch. I hope you are not falling asleep.
+
+This is going to be as said, how Paypal transforms into a better company. With nodes. And a lot of other cool things.
+
+I hope that you are getting something out of it. I try to leave some time for Q&A. Let's see.
+
+Most good stories talk with a little bit of background. Like one of the movies. Where you go back in time. If you go back in time it shows where the characters come from and why the current situation exists.
+
+Paypal got founded in 1998. Back then everybody had Pda-pagers. Anyone ever owned a Palm? It used the communicate through infrared.
+
+A few guys, including the investor, thought it would be awesome if you could send money around using infrared. It didn't work out. They started new products. In 1999 they came up with a product, Paypal.
+
+They realised sending money is not easy on the web.
+
+In 2000 a company, acquired them. And then in 2002 they got acquired by eBay. A lot of different history.
+
+As long as they exist, being one of the oldish company in Silicon Valley, they had a bunch of different engineers. Sometimes finish things.
+
+The technology was a kind of mess.
+
+If you think about this. I imagine it is greying out. Thinking about Archibalt.
+
+The traditional applications that Paypal had were 2.
+
+The first stack was traditional C++ stack. A lot of stuff that we do is processing heavy. Then there is Java. Which used to do a lot of the web apps hosting, based on Java, Spring.
+
+And it was kind of effective for a while. And our teams basically knew how to scale those applications. You cannot scale every application in infinity. Nowadays people don't like to touch those things anymore.
+
+Anybody looks like this. People are disguisted. C++, Java, we don't want to go for. I used be a Java engineer. So please bear with me.
+
+This is Paypal in 2002. We used to have this big problem where we had deployments every 6 weeks.
+
+And now if you imagine, there is the number saying, we have 100 million users. It changes.
+
+We have to wait 6 weeks to deploy things.
+
+It was not just the website that got deployed.
+
+Also applying to our Api. If something went wrong in the Api you had to wait 6 weeks.
+
+Going forward in the modern engineering culture. Where we do continuous deployment and education and so on.
+
+This was really awkward for the engineers.
+
+They realised it is painful to work on the product.
+
+On the one hand we used to have the production stack, 6 weeks of deployment.
+
+On the other hand we have the prototyping stack.
+
+That's where the developers had modern environments.
+
+They came up with new functionality.
+
+They used modern toolkits like Bootstrap.
+
+And then they had to roll it out in the regular stack. They had to do a port.
+
+Instead of taking the Java script template and the Css, they had to come up with ways to bring it to the stack. I'll go there in a second.
+
+We had user testing. And then we had to wait 6 weeks again to roll the features out.
+
+We don't really interact with full stack engineers.
+
+We had the traditional Java backend guy and the web developer. Those guys didn't talk to eachother.
+
+A lot of the reasons lead to huge problems obviously.
+
+The situation we were in at the moment was kind of frustrating.
+
+We had the C++ stack with stylesheets for Html.
+
+Most was based on Spring.
+
+Then we had this cool prototyping stack that I usually justify as Nodes. With Js templates. We tried out of the languages. And at one moment actually the big decision game we should go for Dust.
+
+Heavily driven by Linkedin. People at Paypal adopted it, liked it.
+
+I will go into it in a few minutes.
+
+It is not about the templating language in general. It is more about Javascript templates.
+
+We had this big issue with the Java stack.
+
+We were running Jsp. We were writing our Html and Java script in Java.
+
+It was not Jsp pages that we rendered.
+
+Big problem is that you end up with a lot of different programming and scripting and markup languages in 1 file.
+
+You can have Html, Css, Javascript and Java.
+
+It was a big mess. We had to get rid of that.
+
+A few people came up with a UI toolkit. Spartan. It was a solution based on Spring.
+
+Nowadays we would do it differently.
+
+Big issue with proprietary software is, when you bring in new engineers.
+
+They have to learn about the frameworks. We had the deployment cycles.
+
+People were not happy.
+
+Now, there was a big push into open source.
+
+A lot of great new engineers came into the company. They worked for other companies.
+
+Open source might be valuable.
+
+3 reasons why you might want to go for open source. Less rampup time for the engineers. They can work with the tools they know anyway.
+
+They are more efficient on doing work on the toolsets they know.
+
+The big issue where engineers have to focus on setting up environments and setting up the project and all that stuff instead of building the app.
+
+You want that your engineers can do what you want to achieve and not the setup work. That is less efficient and you waste time.
+
+The last reason is, proprietary solutions are seldom better. There are open source solutions. Why don't you go for that and try to bring benefit in that.
+
+We came up with rapid deployment and development cycles and everything was great, right?
+
+On the production stack, we still had to go with the old stuff.
+
+We ended up with a push into going in a new production stack.
+
+And this all was before we introduced.
+
+We had bootstrap and Javascript templating.
+
+If you want to go for the regular stacks. We have C++ and Java. What we did was, we injected the C++ engine in the stack.
+
+It was easy. The project Delorean, from Back to the Future. That was the car.
+
+It was a fit.
+
+And then there is Mozilla's Rhino. A Java script in Java. To run the different templates.
+
+And looking at that, basically we now had a few different environments.
+
+Prototyping, we went with Dust and it was great.
+
+Since we settled on using Dust on the Java stack we leveraged Rhino.
+
+And that was great for us. It helped us to not leave the old stacks behind.
+
+If you want to push for new apps, it is an easy choice to say, we want to go for Node. And we leave the old stuff behind.
+
+Since we had so many different applications, it was not something we could do.
+
+We wanted to try out Nodes in production.
+
+This one thought, wish came from a single project.
+
+Paypal checkout page, you might know when you buy something online, generates 3.5 billion dollars every year.
+
+We thought, why not start at the core of Paypal. That drives the revenue.
+
+A project named af Hermes, got born.
+
+And Hermes is the god of Agility and mobility.
+
+We started with a simple stack that we introduced at the beginning of that week.
+
+We had nodes running, bootstrap for lean UI.
+
+And we used other open source.
+
+And the first prototype of a new checkout platform was born in 3 days.
+
+People were excited. Because we didn't have to fill out the frameworks. It was easier for new engineers to get involved. It was great.
+
+Then we thought, we should try this with another project. The paper wallet app.
+
+If you go to Paypal, you see the balance and funding. That is the first product that we did.
+
+And, it is actually kind of risk to go for a new platform in production if you are not sure that it is running.
+
+What we did is, we first had this initial project, checkout page. People were convinced.
+
+We had 2 teams starting with 2 projects. A traditional Java team and was well trained to build apps on the stack.
+
+The second team was only 2 Java script engineers.
+
+And they were supposed to give it a try with the same kind of experience.
+
+We started in January 2013. And a Java team used the existing components.
+
+In March, 2 months after, the environment for Node was setup. We had key stores, logging services, we knew how to connect the databases.
+
+That's what the 2 engineers did on Javascript.
+
+In June they met crossroads.
+
+One team, 5 Java engineers started with the existing services. The other team was just 2 Node engineers.
+
+So we ran a few functionality tests and they passed. We ran a few benchmarks.
+
+I don't want to bore you with numbers.
+
+We have a bunch of different requests.
+
+This is the Java stack. The Java stack averages at 11 pages per second, starting with 1 user per request. Then we go higher, upto 15 users that request at the same time.
+
+This is for production hardware we are using.
+
+Then we had the Node stack. The node stack serves double the requests. And the same happens on one core at that moment.
+
+It was a very young new stack.
+
+It was barely optimized and more efficient straight away.
+
+You cannot compare apples to peaches. It is not fair to compare. One is using the proprietary Java stack, the other not.
+
+For us it was a good sign to go ahead with this.
+
+A few more numbers we had, the code was lean. We had to write less code. And we needed less engineers.
+
+We were convinced to go ahead.
+
+Our Java engineers were not so negative about it. Started to contribute to parallel workstreams.
+
+And got some more Node and Javascript skills.
+
+The new stack, the Paypal changed over.
+
+What we have is C++, we have Java, and all the new apps running Nodes.
+
+And I think the biggest step in the direction was decoupling the UI first.
+
+If your application layer and UI layer are tightly integrated, it is hard to reiterate and go ahead and start a new stack.
+
+Now that we are able to run Dust on the different stacks, we can basically bring all the new features to all the stacks. Which is amazing for us. Since we do Javascript templating, we have the benefit we can render on the client and server side.
+
+We use that a lot. If you have a Paypal account. The initial page is on the server side. For dynamic content. We render it ahead, or when the client loads it up.
+
+So, one of the benefits of Node is the Node package manager. We use it heavily to distribute the internal services.
+
+If we want to use the services, anything that interacts with the C++ stack, we can go ahead and can install npm modules. We are using a proxy which I show in a few seconds.
+
+We had the situation, we were able to start and go ahead and use Node and we had Dust and everything was great.
+
+For us, this was the moment to release the Kraken. The animation you saw, took me about half an hour.
+
+So, bear with me.
+
+With Kraken, we actually had this one situation.
+
+Where a lot of different teams have been working on Node, leveraged express, a lot of ways for the service.
+
+And best practices. Kraken is a suite on top of Express. Not a whole framework. I would not call it framework.
+
+It comes with sensible defaults, that make sense.
+
+As I said, we used Dust for templating. It doesn't have to be Dust.
+
+If you like Jade or other things you can use that.
+
+And originally it was made to make middle to corporate scale companies. To make it faster.
+
+A lot started using Kraken.
+
+Because they didn't have to care about security and a lot of other stuff.
+
+It taps into middleware.
+
+The reason is, as I said, lots of different teams at Paypal are working on the same kind of stacks. And different apps.
+
+If you have a lot of teams building apps, you will realise, everybody configures frameworks differently.
+
+If you have engineers moving from 1 project into another they are lost. Configuration is made different. Some might use some json files. Some methods to initialise things. It was a big mess.
+
+We tried to resolve that by bringing best practices into that.
+
+Now I said it before, they have more time to build projects. Setting up the environments. That is really good for us.
+
+The project structure is kind of opiniated. We try to push for clear controllers. We use that by having different frameworks.
+
+We use backbone and a lot of other frameworks.
+
+It was too heavy for us. We went ahead and did our own structure and it works well for us.
+
+We have those templates, can be render both server and client side. With unitesting.
+
+And what is interesting about Kraken. We move the logic away from the initial index js file into the different controllers.
+
+This is something that you can see, is also present.
+
+Express 3 didn't have that. And they actually moved it to Express 4. They realised it helps to have cleaner files and better structure.
+
+The best for modules. There is a whole different modules. Makara is used to do internationalisation, localisation, specialisation in your apps.
+
+Lusca comes with security. Adaro. And Kapa is the proxy.
+
+It is quite easy. It is our own kind of format with property files.
+
+You load up bundles. You can do it on the fly or use Kraken.
+
+You don't have to use Kraken to use all of the modules.
+
+We have a provider that loads for various locates.
+
+And prepares the values.
+
+The property files are not difficult. It is not json.
+
+You can define multiple values.
+
+It is useful for us. You don't have to use this format. But it is pretty good. It also has subkeys.
+
+If you want to use this, it heavily taps into Dust.
+
+One of the good things about it is, if you switch the locale, it changes for you as well.
+
+By levering the folder structure.
+
+Different keys in different languages get resolved for you, which is handy.
+
+Down beload with the head attack.
+
+Indexes my controller. My localisation is bound to the controller. And loads in the file for me.
+
+Which is handy for me.
+
+If I want to use Adaro. I have Dust as the view engine for Express.
+
+I can use any other view engine. It is just Dust for us. A lot of engines have a lot of logic.
+
+Try to do a lot of processing and calculation.
+
+We tend to move that into the controller logic.
+
+So, you basically have a layout. What happens is, nothing magic.
+
+Some cool stuff like sections. Your view context in that.
+
+Different modules can be directly.
+
+It comes with conditionals. Not too much logic.
+
+Just saying, if a content is there, show it or don't show it.
+
+It doesn't try to be that smart.
+
+Now, security is something that I think is interesting.
+
+Lots of frameworks come with security measurements and lots of ways to make your app secure.
+
+A lot of the frameworks don't with sensible defaults.
+
+Quite often they tend not to do that.
+
+One of the biggest features we support is cross site request forgery.
+
+And it says, if you want to manipulate my data with post requests, you have to provide a token to make sure it is the app and not someone else.
+
+Click jacking. I'm framing your website in another website. Can be prevented by setting up the same origin header. Output escaping against crosssite scripting.
+
+If you have attended last year's conference, you might have seen it.
+
+It is awesome stuff.
+
+Configuration via Json. You say, I want that feature, i don't want to have that feature, that is my setting.
+
+Or you can go through the method calls one by one. You don't have to use orders.
+
+I always mention. You have to provide a token. It is a hidden input field you provide over to the app. Your app manipulating the data.
+
+Npm proxy Kappa is easy to install.
+
+You can go for locally or globally. That's what we use. The database access.
+
+Logging monitoring. Based on Npm delegate.
+
+If you look at the configuration, it is a folder.
+
+In that folder you have a bunch of different files.
+
+You can setup environments. You can say, this is my staging, my development, my test environment.
+
+It is pretty much easy to setup.
+
+In this case you see the view engines. And you can do that for all the kind of different settings for Kraken.
+
+If you want to setup Kraken with passports, you could go and really just configure it by providing options to it.
+
+And this is just the index Js file you would use for that.
+
+Now, the nice thing is, you don't need to mess around the life cycle. Figure out when is the module being loaded and why.
+
+Tap into different events, like middleware.
+
+After the session is loaded, I make sure I can use the passport. I make sure it is civilized.
+
+And that's it. It provides a clean environment. To make sure they are nicely and visible. It helps a lot.
+
+Since we wanted to make sure that people don't have to setup this manually, it comes with a generator.
+
+You do Npm install generator kraken. And that's it.
+
+It is really easy to setup. It does a lot of scaffolding for you.
+
+Which is really useful for all of us I guess.
+
+Kraken nowadays is in 1.X. Which came with the Express 4 push.
+
+One of the features that we will focus on heavily is going to be specialisation. Not going to be used for AV testing. But also mobile device versus desktop. It allows us to do a lot of logic.
+
+And, well, I can summarize for us it has been a really good thing to introduce Node.
+
+We have the smaller teams. With a lot of engineers, that are able to move faster. Write the applications more efficiently. We have Dust as one UI layer. We don't have to mess around with different templates. It was the first push into open source. It really helped to make sure we don't make proprietory software for Paypal.
+
+But useful for everybody.
+
+All the new apps are going to be written on Nodes purely.
+
+Thanks for attending my talk. I'm open for questions.
+
+(applause)

@@ -19,6 +19,8 @@ image:
   type: png
   heightSite: 300
   filename: "/speakers/images/tim-messerschmidt.png"
+transcript: "transcripts/tim-messerschmidt.txt"
+video: gKebfQH8aXU
 ---
 
 {% include speaker.md %}
