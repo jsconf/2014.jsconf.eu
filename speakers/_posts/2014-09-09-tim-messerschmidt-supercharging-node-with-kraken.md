@@ -6,9 +6,9 @@ permalink: "/speakers/tim-messerschmidt-supercharging-node-with-kraken.html"
 speaker: Tim Messerschmidt
 talk: Supercharging Node with Kraken
 website: ""
-twitter: ""
+twitter: "https://twitter.com/SeraAndroid"
 github: ""
-gplus: ""
+gplus: "https://plus.google.com/+TimMesserschmidt/posts"
 from: ""
 description: "Scaling Node applications from prototyping stacks to production can be very difficult as there is a big lack of conventions and best practices that work across companies and even communities. In this talk Tim will be showcasing his favourite 4 modules of KrakenJS – a thin convention layer on top of Express – which helped PayPal pushing out Node apps.
 
