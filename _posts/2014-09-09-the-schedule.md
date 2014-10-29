@@ -9,7 +9,7 @@ image: /img/top_bollocks.jpg
 
 {% include header.md %}
 
-Choose your favourite version of ou [time table](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html), or make your own :)
+Choose your favourite version of our [time table](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html), or make your own :)
 
 - ___[HTML version](https://docs.google.com/spreadsheet/pub?key=0AhO5JVicsAJOdENKSG0xZU5wOVN0U1F6T0FFOHU4NUE&output=html)___ (always up to date)
 - [Mobile web](http://labs.outsystems.net/JSConfTimeTable/Home.aspx)
