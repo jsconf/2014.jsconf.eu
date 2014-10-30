@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/lloyd-watkin.jpg"
+transcript: "transcripts/lloyd-watkin.txt"
+video: DRz5T3kcygM
+slides: http://talks.evilprofessor.co.uk/jsconfeu-2014/
 ---
 
 {% include speaker.md %}
