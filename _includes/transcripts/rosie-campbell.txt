@@ -1,0 +1,219 @@
+Hi everyone. I have tried to fit in with the pink team. I wouldn't find a hairdresser to get by hair the right color.
+
+I'll talk about how to design for displays that don't exist yet.
+
+I'm at the Bbc R&D department. It is the Public broadcaster. It has an R&D department. It is thet part of the organisation for investigating new technology that might be of interest.
+
+Camera's, novel distribution methods.
+
+And I work at the user experience section. Towards the end of the chain.
+
+Industry standards or services.. Also mid term projects. To the blue sky thinking. The kind of thing I'm talking about today.
+
+The stuff I'll talk fbsout is what we expect to reach the consumer in 20 years time.
+
+A project unconventional screens. Emerging, unusual display technology and experiences them. It doesn't exist yet.
+
+How we approach this problem. Let me remind you how the screens have developed. And this sounds pretty familiar.
+
+Going back to early 2000s. There was a lot of content on the web.
+
+Everyone was using the same device. A laptop or desktop. That sounds straightforward.
+
+It meant it was impossible to get your website looking consistent across all browsers. It was a problem of cross browser compatibility. Browsers got more sensible about it.
+
+Unfortunately, it wasn't so easy. As desktop browsers was getting their act together, there came new devices. Developers were having to deal with mobiles, tv's, tablets.
+
+No one is to look at a giant monitor designed. It wasn't the same. But how to get optimized for the type of device.
+
+That was the design. I'll talk about it later and explain how Javascript can push it further.
+
+So, i don't want to be the bringer of bad news. This is getting worse. Smart watches, Google Glass, Fashionable displays. Smart fridges. I don't know what it is, but it is cool.
+
+Screens are getting weirder.
+
+So, the screens are getting weirder.
+
+So, not only are we going to have our content make look beautiful. We also need to think about the kind of content that is appropriate for each device.
+
+You don't want the same content on your watch as on your smart wallpaper.
+
+That might sound daunting. How can we be expected to prepare cool stuff for these devices when they don't exist.
+
+Don't panic. There are a few things you can do. That make the process not only little less daunting. This is the future and it is cool.
+
+I will talk you through a casestudy.
+
+We went from blank sheet of paper to a working prototype and what we are going to do with it.
+
+I'm hoping by sharing the approach, you might go away with an inspiration. How to make your ideas a reality.
+
+This will start with a question. What if you could paper the walls of your home with flexible electronic wallpaper?
+
+That sounds like sciencefiction. If you look at current trends. It is something that could be likely within 20 years time.
+
+Just to be clear. The Bbc aren't going to make the wallpaper. What we do is anticipate, and test the user experiences.
+
+And then we can be ready for the technology when it emerges zozer I'm lucky at the Bbc. Unlike other companies you have to be concerned with profit.
+
+We can provide the best user experience. Focusing on openness and innovation.
+
+My first view is, to take a user experience led design approach. We let the user experience drive the ideas not the technology.
+
+Certain companies have done well in the past. There is additional approach, the other way around.
+
+They'll put loads of time in developing hardware. That's great. What are we going to do with it? A good example is tv internet browsers. Everyone excited.
+
+But they completely overlooked the user experience.
+
+There is no additional value. It just didn't take off.
+
+We are advocating an approach the role of science fiction. Demonstrating what you can do if it existed. In the case of smart wallpaper we want to show the prototype. That it will create an appetite. So that manufacturers will create it.
+
+What does it mean in practice?
+
+You need to have an open discussion. No matter how rediculous. And it is really important not to sense yourself. You want to be divert. No idea is too silly. After we have done it, we converged our ideas to the ones that seem to be plausible and engaging. And turn into mockups. I'll show you some of them now.
+
+This is what your livingroom might look like after you papered it with your plain small wallpaper.
+
+Then you switch on the tv and start looking.
+
+Here we experiment with the concept of augmenting broadcasts. At the moment it will clog up the screen.
+
+We are not just looking at the livingroom. How it might apply to a teenager's bedroom.
+
+The Bbc provides educational services. How those might be presented on small wallpaper.
+
+They can see infographics. They can scrible notes on the device and send them to the wall.
+
+They can turn on their favourite channel. Virtual window and instagram feed.
+
+Whatever they are listening to.
+
+A lot of people check weather and travel. The best place for that is your kitchen where you have breakfast.
+
+When you get back from work you display steps for the recipes and you can cook along with tv chefs. Back in the livingroom.
+
+Somebody is watching a daytime magazine show. And picture frames with interesting things you can discuss with family and friends.
+
+Another idea was to build up anticipation.
+
+The 50th anniversary of Dr. Who. You could get your whole room to transform to get you into the mood.
+
+In this slide we have a virtual window.
+
+Then the dr. Starts appearing. You get a nice spacy wall.
+
+And you get scary characters creeping up.
+
+Finally you are in the world of Dr. Who.
+
+Some of the ideas we had when we concentrated on creating exciting user experiences.
+
+That brings me to the second principle we tried to stick to.
+
+That is: Stay agnostig to underlying hardware.
+
+In the case of small wallpaper we don't know if it is touchscreen, video screen, made of tiles of displays.
+
+Or something more.
+
+The e-ink option is more likely. It is less intrusive. It makes it more challenging. We have to think about the type of content.
+
+We found that having restrictions, makes you think more creatively.
+
+We have more novel use cases than a giant video on the wall.
+
+How to go about prototyping experiences.
+
+When you don't know the capabilities of the technology.
+
+We recommend using standard web technologies.
+
+Any new devices will use internet protocols and web contecned in some way.
+
+That's helpful. Not only that we know how to know how it will evolve.
+
+It will help with every step.
+
+It is a gradual thing. We are not going to leap from nothing to covering your whole room. Bigger screens in the house, in the kitchen.
+
+As long they have a browser, there is no reason it can't be adapted for those in the meantime.
+
+So we won't.
+
+Javascript. With Api and backend. We spent a lot of time designing the architecture of the system to make it flexible. I can't go into it now. Ask me if you are interested.
+
+It means that anything with a browser can pretend to be a wall. It doesn't exist yet. We have to fake it as best as we could. We used 2 giant projector screens. We connected it. And display a fullscreen browser.
+
+To interact with the wall and change some display.
+
+By that point we had something that approximates a smart wallpaper.
+
+I will show you the film. And turned them into an interactive experience.
+
+
+
+(applause)
+
+i tried to embed it in Reveal, ignore it.
+
+The reason I wanted to show it. You can start with an idea that is abstract. By being resourceful, you can make something that approximates it. We have been doing it for a few months. We chose to use web technologies, we moved to prototype quickly.
+
+What's next for us?
+
+We have a lot of experimenting to do. It is unusual that we use JavaScript for experiments. It is for using for user products.
+
+Unlike a compiled language, code changes are instantly reflected. There are so many Api's that connect with novel hardware. You can start experimenting when it is available.
+
+Earlier I mentioned the difficulty to get a content to display across devices. That is getting trickier. The next major research area is how we can use Javascript to push concepts of responsive design for screens.
+
+To remind you of what we mean by responsive design.
+
+It provides continuity between different viewing contexts, remaining completely agnostic to the type of device used and the size of the screen it has.
+
+We don't want manually position what they want.
+
+We want the content flow and fit around their furniture, taken into account people have different shapes and sizes of walls.
+
+It is not just dealing with rectangles anymore.
+
+So, we can do a lot of responsive design. They do a good job of dynamically packing rectangular elements.
+
+Unfortunately, rectangles are not enough. Zt crrkt
+
+It can be in all sizes.
+
+We need to be experimenting with new elements. And more novel Js libraries.
+
+We are building a webbased tool for testing layouts. One is Binpacking. An algorithm that is widely used.
+
+For those who don't know. It is finding the most efficient way of packing in different shapes in bounding area.
+
+That means that, there is no straightforward algorithm to solve it. It is a brute force approach.
+
+The size of your problem increases the complexity, the brute force approach is unsustainable.
+
+There are heuristics that you can use that help. Try to place the larger shape first and the little ones around it.
+
+We are not primarily concerned with many things on the wall.
+
+We are concerned about to place in a pleasing way. As aspiration how to do it, we looked at currently how it is arranged at the home zozer Using algorithms in data visualisation. I'm wondering if they can be a good approach with Binpacking to replicate that human design input.
+
+It is going to be interesting to find out what principles we can take from algorithms and apply them in the context of visual design. I hope you will have a blog page.
+
+In the meantime if you want to have a go and writing responsive design for those algorithms, that will be helpful.
+
+Where does this leave you?
+
+Screens are changing. You are going to have to deal with it. Start thinking how we can create extreme responsive design.
+
+Don't panic. Javascript is awesome. It is a flexible tool for prototyping.
+
+Be playful, try to prototype ideas and experiment.
+
+If you want to be ahead of the curve, think of the user experience.
+
+Most importantly, watch a load of scifi. Thank you.
+
+(applause)

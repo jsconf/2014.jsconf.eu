@@ -17,6 +17,8 @@ image:
   type: png
   heightSite: 133.33333333333334
   filename: "/speakers/images/rosie-campbell.png"
+transcript: "transcripts/rosie-campbell.txt"
+video: QAha1prc_pU
 ---
 
 {% include speaker.md %}
