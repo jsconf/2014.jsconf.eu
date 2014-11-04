@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/hunter-loftis.jpg"
+transcript: "transcripts/hunter-loftis.txt"
+video: QX0eauXBKwc
+slides: "http://wwabgp.herokuapp.com/"
 ---
 
 {% include speaker.md %}
