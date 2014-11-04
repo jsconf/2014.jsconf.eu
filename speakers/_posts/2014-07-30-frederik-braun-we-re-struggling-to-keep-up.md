@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 195
   filename: "/speakers/images/frederik-braun.png"
+transcript: transcripts/frederik-braun.txt
+video: mj-U9FlbAl0
 ---
 
 {% include speaker.md %}
