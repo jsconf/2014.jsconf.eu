@@ -1,0 +1,289 @@
+Welcome to my talk. As you see it is called, we are struggling to keep up.
+
+Something brief about me.
+
+My name is Frederik. I work for Mozilla in Berlin. I have an email address and so on if you are interested.
+
+Why am I here? I want to make the web more secure. I hope by educating about security.
+
+As it reads in the Mozilla manifesto number 5. Individuals security and privacy on the internet are fundamental and must not be optional.
+
+What will I talk about? An introduction. Then past, present and future of security features in the browser. For you as developers.
+
+First of all the web and the browser.
+
+I work for Mozilla. Everybody says and keeps on saying in meetings. The web is the platform.
+
+It is true. The web is not going away. And it is becoming more and more featurish.
+
+I don't know if you recall Html 4, hypertext, linking to text. That's not what is the web today.
+
+The web is experienced through rich applications like Gmail, Twitter, Facebook. There is a graph how it developed.
+
+I don't need you to read it. The high level picture you should get is, it has developed and evolved a lot.
+
+So for example, Html 5. Which contains stuff like canvas, full screen, Xml requests. And all these things that you need for rich applications on the web.
+
+That of course lives us with the topic Xss. It is what the buffer overflow was in the 1990's. Every application or service application was vulnerable to buffer overflow.
+
+But since 2007, the most common vulnerability in applications seems overall vulnerabilities are Xss applications.
+
+Not for a reason. Because the most popular applications are web applications.
+
+It doesn't leave us with something small.
+
+It is also in your phone. On your tv. And maybe on the plane if you came here.
+
+And given all these applications platforms. And extensions. Xss is more than these alert box, but some way to control all these devices.
+
+Hopefully not on a plane though.
+
+I do know it can make your phone ring. There are phones that make it do.
+
+I want to talk about authentication, authorisation, frames.
+
+Http was stateless. You issue a request to a server and you get a response and you may do that again and get another response. The server doesn't know and care who you are.
+
+And will not remember you are the same person as previously.
+
+This was solved with cookies. As you hopefully all know.
+
+The server generates an ID. And keeps track what you are doing.
+
+One of the problems here is, everything is sent in the clear. Of plain text. If you use public wifi in a coffeeshop for example, it exposes al the authentication data. And even more.
+
+And bankstatements. As we know, Https is the solution. Some say it is example. I have a website with Https. There are certificates for free.
+
+Also Google will rank you higher if you use Https.
+
+It is in. When you type in the domain, it will go to Http. And that is even more or less undetected. The user is not supposed to know if there is a lock or green lock or something different.
+
+Also Https doesn't give full guarantee. You may have ads or widgets.
+
+Not everything is protected. We'll come back to this. I want to introduce you to something that is the same origin policy.
+
+In 1996, when Javascript was invented and Frames, the idea was to have something in the web and include as a component in the webpage.
+
+Reusing existing code, which is good. It was realised it is a bad idea if you are able to include something and read everything within it.
+
+Imagine go to a webpage that reads the bankstatements. It was forbidden.
+
+We shouldn't allow that from other origins.
+
+So you have to be on the same origin. What is an origin? It is more than just the domain. It is the scheme and the host and the port of a Url.
+
+And we take that as a criterium to compare to things. The frame. Just to make it clear, I want to walk through examples. I want it to be interactive. Knod or shake your head.
+
+Example.Com. And there is another Url in the table. I hope it is big enough.
+
+Is it the same origin? A lot are nodding. It is the same.
+
+What about this one? Everybody shaking.
+
+Https is not Http. Http is using a different port than https.
+
+What about this one? About:blank.
+
+The domain is not blank. What is the port?
+
+What are we doing? What do you think?
+
+Some people shake their head. A lot of people are not doing anything.
+
+It is mostly allowed. If you open a popup you have done access granted. By reading things. Everything in there is basically, has been written by you or an empty page.
+
+It is not going to contain bank statements.
+
+What about the next one?
+
+I see thumbs down there. I have been tricking you. Internet Explorer doesn't care about the port.
+
+If you change document.Domain, all browners will stop looking at ports.
+
+So, to summarize the same origin policy, it is not as strict as we think.
+
+It is a bit weird. It behaves differently. You wouldn't do it to about:blank.
+
+There is not just 1 same origin policy. There are multiple scenarios. The policy says, port, domain, scheme.
+
+And there are also so many bypasses.
+
+Out of the same policy. And then there is a hack that is meant to bypass the same origin policy. Which I don't recommend you to use.
+
+If you want to learn more, I can suggest one of these talks. From 2012. The other one is from me. I had to write a very long thesis about the same origin policy. Presented in Hamburg 2013.
+
+We'll come back to the topic of frames.
+
+But let's go on to the present.
+
+I want to talk about Https and frames. It was opt in. There is Http strict transport security.
+
+It was invinted in 1994. And this year is from 2012.
+
+We have realised it is a bad idea to have Https.
+
+There is a way to enforce, the browser will always use https.
+
+It works like this. You do start off with http. And the client sends a request. Server responds. Hopefully forwarding to https. And once it is established, strict transport security. It comes with a time to live. Cash this for an amount of time. When it has not elapsed, continue using https. That's neat. The browser will always use https.
+
+What about this one? Plaintext again. A network that is stripping off the forward.
+
+There are a lot of tools that are easy to use that are doing that. They setup a proxy.
+
+And the user isn't using it.
+
+There is a proload list. Firefox and Chrome share the list and synchronise.
+
+This contains the bit here, let's cache this.
+
+The browser will always use https, without requiring the first header. This list we have in the browsers. They are opt in.
+
+So to fill this list, security engineer Adam Langly working at Google went around security conferences and said, people, do you want to be on the list? It is better than what you have now.
+
+Send me an email.
+
+And you know, this method to maintain the list is failed. Nobody sent an email. It is sad.
+
+I hope, the mails coming in have increased.
+
+Now there is a google form you can do it automated.
+
+If you are using web applications and providing them to somebody. And you are using https, consider using script transport security header. Or get into the preload list.
+
+Now I'm come back to it. The threat model here is being framed. What we had before.
+
+An innocent user goes to a website and the website is evil. It does include an iframe. He is clicking around things. You may have hoard about this. This is click jacking. A non transparent thing on top. He thinks he is clicking a game. He is clicking on the website and liking stuff.
+
+And there are much more evil things. When they frame your website.
+
+Here is the funny thing from when the user is using IE.
+
+It is forcing the browser into a rendering mode. And potentially legacy vulnerabilities.
+
+Whenever there is somebody going in the website with this. IE will say, this is an old website. I will use IE 7, which is about 7 years.
+
+And of course, this is inherited to the frames.
+
+If somebody goes to a website framing your website. Your website will behave differently.
+
+Which is bad potentially. It will look bad.
+
+And there is more we can do with frames.
+
+I don't know if you have Xss filters and know how they work. It is built into the browser, can help an attacker. How do they work?
+
+The filter is looking at the request and response.
+
+If there is something smuggled into the webpage. The filter will say, the script has been in the response. I'm sure this is an attack.
+
+It is not passed as script.
+
+The user is secure. What if there was static Html or Javascript in the page. But it doesn't have value. Making up a fake. And sending it to the server. The server doesn't work with it. It ignores it.
+
+The browser will think, this is the same, I'm going to remove it. What if it is a security?
+
+You don't want your website to be framed. Key is to send a header that sends: Deny. If you do need it. Allow from this or same origin. You know what same origin means.
+
+It is a security problem we had for 12 years.
+
+It was implemented in 2008. It was only published last year.
+
+There is much more. A person could do to your website and the users.
+
+If you allow it to be displayed in a frame.
+
+I wrote a long p paper. There will be links on the slides. If you are interested, I recommend you look into that.
+
+I want to jump into the future of browser security.
+
+I have to talk about frames again. Cross site scripting. And I want to talk about content delivery. Which are so useful.
+
+How do we include untrusted content?
+
+The threat is, we have to show something, a user upload or from third party, what we can't control, but we are going to show it.
+
+Or general things. The man in the middle, could mess with it.
+
+And we all know that cross site scripting can redirect.
+
+To explain how to do it. I'll introduce you to Not so much authority.
+
+Access to the frames that are necessary.
+
+In system security theory, we talk about the principle of least authority.
+
+Only access to the resources that it needs, nothing more. The least possible resources.
+
+But least authority in a browser is weird.
+
+It has been proven that Html 5, without Javascript...
+
+I wouldn't say. To solve this. There is a feature, iframe Sandbox. This attribute makes it safe by default.
+
+It forbids scripts, disallows forwarding of the outer window. No forms. No plugins. And no matter what the origin of the content of the frame to the outer window.
+
+It is a unique and different origin. No matter what they are in real life. If you want to mess with Sandbox and you need scripts, you can make it weaker. I'm not going through the keywords. It is straight forward.
+
+Let's go on to Xss and fixing it.
+
+Who knows about Csp? Who is using Csp?
+
+Yes.
+
+That's the problem.
+
+Nobody is.
+
+There are great introductions how to make it work for your web application without having to rewrite. There are 2 really good talks. If you are interested. First one is last year, Mike West. It was referenced by Tim. Previously before me.
+
+It explains it in a very long way. A colleague Mark Goodwin went to Sheffield a few months ago.
+
+And tried to focus on not how it works, but how to make it work for you. How to make sure your web application is more secure without having to rewrite. A few developer tools as well.
+
+I just want to say, look into the talks. It is good.
+
+It doesn't make sense for me to repeat.
+
+As I said, I do want to talk about content delivery.
+
+You include a script from something that is not under your control. It is highly convenient. There is something that is most likely in the browser cache. Other people are using the same content delivery network. The website is nice and faster.
+
+But what if someone changes the file? It means, they can execute script and change everything.
+
+It doesn't mean just for this webpage, but all in the same origin.
+
+So, the plan is, the idea for the future is to lock it down with sub resource integrity.
+
+It is yet to be a W3C application.
+
+This is how it looks like.
+
+It doesn't look pretty. What you do is, your computer hash. If the file changes, you don't load it.
+
+Problem might be, the whole web application doesn't work.
+
+It doesn't look much more pretty. But there is some source. The fast bit. To be in the cache.
+
+It is tried to load by the browser and the browser does all the checks. Loads the script. And checks if it matches. It is not going to break. It is going to use the source from your domain, which is probably not in the cache.
+
+But the website keeps on working.
+
+As I said, feedback is appreciated. We can talk about it later.
+
+There is much more into it. I don't want go through the details. This may be an option for you.
+
+Now I am going to conclude. And say the browser can help the web application.
+
+There are more improvements on the horizon.
+
+I might want to call it chaotic. There were basic security checks. Provide encryption.
+
+There are cookies, that works. And then the web as a platform, rich application platform, was adopted between 1995 and now, everyone is using a website for something.
+
+Maybe we shouldn't put the patches on top and try to think about it when we develop new things. If you are concerned about your website, that's a nice dashboard. Gives an overview of the security features.
+
+If your website looks red, don't feel too bad.
+
+Thank you for listening. If you have questions, I will be at the Mozilla hacklounge after this talk. I don't think there will be time for questions. Thanks for listening.
+
+(applause)
