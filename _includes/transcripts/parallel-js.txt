@@ -1,0 +1,170 @@
+Hello, everyone, thanks for the introduction. 
+
+ I will be talking about Parallel JavaScript, before I tell you more about it, why Parallel JavaScript?  Well, simple the hardware you have is getting more and more parallel, you have more cores, you is wider vector units, your GPUs are increasing in performance since 2006 there's been a 75 X increase of par are legal use ‑‑ at the same time, the kinds of applications would you write with JavaScript has changed. 
+
+Now you have physics and fluid simulations you have path tracing, real‑time game engines at the same time JavaScript programs have access to device sensors, on board sensors, multimedia streams, so the kind of applications are changing, many sophisticated more computing intensive. 
+
+But there's no support for parallel computing. 
+
+Why do we wanton vent a new parallel programming model
+'s so many, so many people have invented so many, why not take it and bolt it on top of JavaScript, right. 
+
+Turns out the web has specific requirements that make this approach undesirable. 
+
+First thing we want to preserve is ease of use, whatever programming, whatever parallel programming model we use should fit in well with JavaScript. 
+
+So the programmerrer should haven't to two different mental model, one for the sequential parts of the program and another for the parallel part of the program, it should all just be JavaScript. 
+
+We want to have a very high level API, we don't want the programmer to worry about and exchange primitives, or even threads, we want a very high level API fitting with the Ethos of JavaScript. 
+
+We want to be deterministic where possible, this is hard for parallel programming, but the determinism is awesome for debugging and deployment. 
+
+We also want to be platform indent, we want to run on all kind of platforms, from single core, mobile phones to the most powerful desktop computer, we want the leverage different kinds of particularism, could be multicore or GPU, not just that, we want the program to write the same code for all of these different kinds of parallelism, we don't want the programmer to write one kind of code and another for GPUs, e we want that to be abstract away, our goal is to extract reasonable performance from parallel hardware. 
+
+it's a secondary goal and this should not be completely to the developer, the browser Runtime should share a lot of this burden of extracting performance, we want to make the expression of parallelism easy but not exactly how you implement it . 
+
+Finally we want to make it suitable for the open web, we want to ‑‑ we don't want to increase the attack service for JavaScript, we don't want native execution of native code for example, we still want to preserve the sand boxed execution environment of JavaScript, right. 
+
+So, this is a brief overview of the Parallel JavaScript API, it's built on 3 pillars, the first is collections, these collections in JavaScript are just JavaScript arrays, and, typed object, which are going to be in an ES 7. 
+
+Then you have high level data par are legal methods that operate on these collections, some of these may already be familiar, map, reduce, filter, scatter, the PAR suffix simply conveys the programmers intention that he would like this method called to operate in parallel. 
+
+It may not, as we will see, but he would like it to be. 
+
+So very high level. 
+
+No threads. 
+
+The third component is elemental functions, these are just regular JavaScript functions that are the things that are execute in the par are legal across cores, GPUs and so on, there's one important caffuate, that have to be side effect free, they cannot alter global state. 
+
+So global state may for example be a global variable, right, in a parallel region, you not, in an elemental function, you cannot change global state, right, you can read it, but you cannot write to it. 
+
+To there are also more subtle kind of side effects in JavaScript program which is are engine level side effects, so, for example just ‑‑ two strings, though it appears at a surface level has engine level side effects, but it's not up to the programmer to worry about those things, it's about the browser Runtime were tory about that. 
+
+So let's look at some code example (To worry about that) this is a very simple example of how you would use the MapPar, you have a tie any array, one, two, three, four, you give mapPar an elemental function, that fat arrow function over there. 
+
+And that increments each element in the input array, this looks exactly like map, if you load this using map it would look exactly the same. 
+
+The different here the elemental function is execute in the parallel for each element in this array. 
+
+If you ‑‑ of course in this case you don't need parallelism, it's only four elements if you is a million elements and your elemental function is doing something more sophisticated you imagine how this would be useful. 
+
+Reduce looks similar, you give it, again, an elemental function that takes two values and returns one value so you're reducing A and B to produce B, when applied to this array produce ten this is exactly the semantics that normal Java can produce as well. 
+
+By adding Par you're marking it parallel
+'s an important caveat here, determinism, when you do reduce, determinism is guaranteed only when the elemental function is associated, right, if the elemental function is not associative, then, you'll get, you'll transparently get sequential execution, it will be equal in to just reduce. 
+
+In other words, the programmer does the best job he can to write code that is paraism friendly, if not, if it's not paraelism friendly he'll get sequential execution, without changing any code. 
+
+So let's say you have an input image which is a 3 dimensional width times height times four, right, four is RGB alpha, this is how you would convert it into gray scale, you do a mapPar, ignore 2 over there and give it an elemental function that averages the first three channels, the RGB values and returns an array with this so this is a simple averageaing gray scale operation. 
+
+The two here is the depth at which you want the mapPar to operate, if you have a 3 dimensional collection, sometimes would you like to operate on rows of an image, sometimes would you like the operate on fix els, sometimes would you like to operate on individual color channels in an image, the depth parameter would allow you to select what slice you want to do this parallel operation on, in an input collection, okay. 
+
+You don't have to worry about all the details, theu just to give you an idea of what the APL looks like, so reversing an array, simple exact million you create an ray for build par ‑‑ in parallel it constructs an array that just contains 0123 and scatter Par takes a function that maps elements in the input array to the out put away. 
+
+ScatterPar is taking the first element putting it in the last index and so on. 
+
+Filter works exactly the same way as ‑‑ filterPar works exactly the same way as ‑‑ just give it an elemental function this returns the Boolean, it determines whether it stay in the out put array or not. 
+
+Typed objects are a new proposal. 
+
+I believe there are ‑‑ there's a preliminary implementation in fire fox. 
+
+The API just works on typed objects I dentically to JavaScript objects, the same gray scale operation I showed you earlier, it's very similar, except it's returning the JavaScript array, you're returning a new typed object. 
+
+So, this is what I mean by feeding in with the rest of JavaScript, you don't want to introduce new types or concepts, you want to kind of build upon what is already there. 
+
+Of Parallel JavaScript is an ES 7 proposal at this point. 
+
+We're discussing the API in the committee and with the browser ‑‑ there's a specification you can look at. 
+
+And a preliminary implementation is in fire fox nightly the API I just showed you is the result of a collaboration between my team and the Mozilla team that is implements JPS in Nightly. 
+
+So in order to get parallel execution, they had to solve several challenges I'll briefly describe them, first was JIT support, so you want for parallelism you want to go in IC side effect freedom, how do you make sure they Donahue state global state T way they do this is theyv a static safety analysis that inspects your JavaScript and figures out whether there's a violation of the side effect freedom requirement. 
+
+They also have right guard which is are dynamic checks that check whether you're following the rule. 
+
+They have a pretty cool work stealing scheduler that tries to schedule work on hardware threads in the way that reduces imbalances on threads, if you have hypothreading, you have many hardware threats, it tries to keep all of them busy. 
+
+And there's a new garbage collection scheme just for Parallel JavaScript that is kind of integrated with the spider monkey, fire foxes generational garbage collector, and cool thing about this is it actually exploits the programming model, the property of the programming model, which is that you can't have side effects, and this fact makes garbage collection fast, it turns out, which is cool. 
+
+Finally there's a lot of work on providing retail reasons for why something did not execute in parallel. 
+
+For example in the mapPar, if I were to insert some Dom, which is not side effect free, then the program will bail out of parallel execution and you'll just get sequential execution, but your console will tell you that this is the operation at this line number in your program, that is the reason for you not getting parallel speed ups, right. 
+
+They also provide complete stack frames at bailout points so that you can actually debug why things didn't flan parallel this is really important ‑‑ didn't run in parallel. 
+
+ I would like to take a few minutes to talk about parallel JavaScript on GPUs, hugely important resource that I think we should use more in JavaScript programs in the non‑graphical portions of JavaScript programs, I mean GPGPU, general programming context. 
+
+But, compiling Parallel JavaScript to GPUs is not easy, it's challenging,I I'llout line a few reasons why, GPUs have a separate address space than CPU, ‑‑ how do you make that available to a JavaScript program running on the GPU?  You have copy it, which would be hugely expensive otherwise you would have to map it somehow. 
+
+So this is a non‑trivial problem. 
+
+Even though in some new chips, physical memory is shared, virtual memory is not shared, this makes the problem of mapping non‑contiguous parts of the heap on your device very challenging. 
+
+Then there are a number of paths to the actual GPU hardware, there's directX,there's openCL Kernels and there are tons more. 
+
+Each of these have slightly different semantics, each of these is ‑‑ allows a different subset of JavaScript, so I'm talking about compiling JavaScript to one of these, right. 
+
+So, as you can imagine, you can compile a different subset of JavaScript, so you have to reconcile these together in your browser Runtime. 
+
+So, some things that would be possible to express in, let's say openCL would not be possible to express in OpenGL, right, just because of the programming model. 
+
+You have to keep that in mind when you're compiling. 
+
+Then there's no dynamic location on northwest GPUs there, is no notion overheap, as such, it's just scratch pad memory, the star there indicates that on kind of more recent GPUs there is actually, I think Kuda, 2.0 has Mallac, it's not wide limply meanted on all GPUs, there's no general notion of a stack either, rite on a GPU, so most interesting JavaScript programs would like to do heap allocations, I presume, this would be hard to support, you would have to build a dynamic memory managerrer, and a collector that runs completely on the GPU. 
+
+There are also no function pointers in most GPU programming models, this makes things like dynamic dispatch difficult to impresent. 
+
+And polymorphism is also difficult oimpresent. 
+
+And getting final performance is not easy, the developer has to keep track of different families of GPUs, this is a fourth generation GPU with Open CL, and this is a Coda, so it's very, it's an intractable problem and unreasonable to expect the programmer to keep track of all of these things. 
+
+So our approach is to basically take this high level specification in PGS and let the browser Runtime ‑‑ the browser Runtime has perfect knowledge of what the platform is, it can query GP capabilities, it can do all of that, the idea is to threat browser run time do it, transparently. 
+
+We've implemented a back end that takes your JavaScript and compiles it to run on GPU, we have impresented it within fire fox. 
+
+So, this is an overview of what it looks like, the blue parts are what would happen with normal parallel Java execution, CPU, would you run for a little while with an at the present timer, baseline JIT, once your code has been hit a few times, it's hot, you know all the type information, then you would go to the Ion monkey JIT that would spend more time optimizing, it's that the point doing parallel safety analysis, checking to see if it's safe to run in parallel or not. 
+
+Then lower it a few times then you get just native code,right. 
+
+In the GPU case, we take MIR, which is the mid‑level intermediary rep evennation in JavaScript in Ion monkey, we do GPU specific safety analysis, this checke checks whether all the byte codes can be supported on the GPU, for example, if you're compiling to GSLL, then maybe some particular byte codes are not supported
+are no equal lens in GLL for some Java code. 
+
+Then we do some simple type inference, this is basically taking the JIT, ION monkey git information and translating it to type that open CL understands, and we do some optimizations for exploiting local memory, which is very fast on GPs, and then finally we generate open CL, and then Open CL is built into a CPU binary and we reuse that binary, as long as type information doesn't change, the types flowing your you JavaScript program doesn't change, the Kernel is valid and we keep reusing it. 
+
+So what does all of this buy us, right?  Let's look at the energy and ‑‑ let's look at performance first, verse parallel execution on a CPU, remember, the baseline here is Parallel JavaScript execution on a CPU, which is already depending on mow cores you is, which is already faster than regular sequential JavaScript, right. 
+
+So the blue access, the blue white access performance relative to CPU, so these are ‑‑ these are some simple benchmarks that I picked. 
+
+We have more, I can show them to you later, so this MM is dense matrix, it does 8 times better than on the GPU than on parallel CPU, this is written in JavaScript using PGS, and 2D‑Conv which you use for image sharpening, finding contours or optical flow, it's a fairly important ‑‑ it does 2.8 times faster on GPU than parallel CP, you all know the Mandel set, it does 6.2 times better in terms of performance than CPU. 
+
+What about energy?  So for dense matrix multiply, GPU execution the 7.7 times lower in energy than CPU execution, than parallel CPU execution, it's 3 times and Mandel is 7.7 times lower, not only are you getting huge increases from par are legal execution on GPU, over what is already fast parallel CP um, you're also getting huge decrees in total energy consumption, this is big. 
+
+The matrix multiplier programs runs ‑‑ runs 22 times faster. 
+
+So this 8 X is over that. 
+
+Ever 6 ‑‑ this would be 2.8 times faster than that. 
+
+Okay. 
+
+Let me quickly show you a quick demo ‑‑ this is a simple program of so there are a burner bunch of bugs the goal of the game is to move them using my hand to the frog, feed them to the frog or take them to their house, right. 
+
+So, I probably should be standing closer, so, it's using ‑‑ it's doing optical flow on the image stream captured by the camera to basically figure out which way I'm moving so you can see tall bugs settling on my face (Laughing) so it basically detects changes in energy in the image. 
+
+So if I were to just run the sequential version of this today. 
+
+It would run like this. 
+
+Right this is pretty slow. 
+
+Let's go back to the parallel version. 
+
+(Applause) so, let me go back to my presentation, I can show you this in more detail, if you're interested. 
+
+Okay, so the implementation is in fire fox Nightly there's a ECMA script proposal, we would like the feedback, this is the time to influence when the API looks like and how it's specified, if you is comments write to me or participate in the discussion on ECMAS discuss. 
+
+Try it out and let us know what you think. 
+
+Thank you (applause)

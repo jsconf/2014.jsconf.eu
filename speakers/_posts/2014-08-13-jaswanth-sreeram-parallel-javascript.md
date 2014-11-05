@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 241.0958904109589
   filename: "/speakers/images/jaswanth-sreeram.jpg"
+video: "Ls27mCiYsQo"
+transcript: "transcripts/parallel-js.txt"
 ---
 
 {% include speaker.md %}
