@@ -17,6 +17,9 @@ image:
   type: png
   heightSite: 200
   filename: "/speakers/images/dominikus-baur.png"
+transcript: "transcripts/dominikus-baur.txt"
+video: X2ZlDrx6dAw
+slides: "http://dominikus.github.io/jsconfeu_2014/"
 ---
 
 {% include speaker.md %}
