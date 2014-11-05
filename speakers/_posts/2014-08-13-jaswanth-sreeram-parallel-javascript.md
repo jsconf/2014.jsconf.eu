@@ -6,7 +6,7 @@ permalink: "/speakers/jaswanth-sreeram-parallel-javascript.html"
 speaker: Jaswanth Sreeram
 talk: Parallel JavaScript
 website: "http://jaswanth.co"
-twitter: ""
+twitter: "https://twitter.com/jsreeram"
 github: "https://github.com/jsreeram"
 gplus: ""
 from: "Menlo Park, USA"
