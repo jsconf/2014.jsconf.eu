@@ -1,0 +1,395 @@
+Thank you.
+
+I have to wake my computer up.
+
+Hi everyone.
+
+I'm Arne Martin, I live in Trondheim Norway. I work for Boost Communications. They paid for my trip. I'll be talking about programming languages. I'll be talking about isotheric languages. And why I think you should write in one of these crazy languages.
+
+But, what's an isotheric language?
+
+Programming shouldn't be all business.
+
+Esotheric programming languages are languages that are often just for fun. And they are in almost all cases completely useless for any practical use. That makes it great.
+
+I have a few examples that you might have heard of.
+
+Brainfuck. Hello world.
+
+It is one of the most minimal languages. Only 8.
+
+It is kind of hard to use though.
+
+Then you have Malboge. It is harder to use.
+
+This is created to be hard to write programs.
+
+Each instruction is encrypted. The encryption changes for each step of the program.
+
+This Hello World example has not been written, as much as generated using brute force.
+
+And then we have things like Piat.
+
+ It is a language you can write in an image editor.
+
+But why should anyone want to do that?
+
+Well, my main idea is: Why not? It is fun.
+
+Have some fun, write some code you would never write at your day jobs.
+
+Programming in new ways. As you write. And trying to learn the language you are writing for.
+
+I have to warn you before we proceed.
+
+I have no idea what I'm doing. No education or knowledge of writing compilers or interpreters. I just do things.
+
+I hope that you will not use any techniques, code, concept. That you will see here in any production code. I will not be held responsible.
+
+When I write code for fun, I don't do writing comments, or consider issues, like logging.
+
+It is just for fun.
+
+If I can save 2 lines. I will do so.
+
+The first language I will demonstrate is Befunge.
+
+Befunge is an ideocratic language. Which has new concepts.
+
+It is stack based. No variables. Only on a stack. You can only push and pop from this stack.
+
+Befunge are reflective. Can read and modify their own sourcecode at runtime. Multidimensional. Consist of single character instructions on a grid. There is an insertion pointer that moves in any direction. And executes instructions as it passes.
+
+Because of this, it is a cross between Forth and Lemmings. It is quite annoying to write programs for. It is completely useless. But also quite fun.
+
+I'll show you what it looks like.
+
+Here is an interpreter I have written for Befunge.
+
+It is using React.
+
+Now, the code is Hello World.
+
+It is on the stack in reversed order. A loop that will print out all the characters. Until it hits zero and terminates.
+
+Slow it down a bit. You can see down here, the program as it executes.
+
+ The characters. And printing them. Back and forth.
+
+There.
+
+Another example. You know Fizzbuzz.
+
+You write the numbers from 1 to 100.
+
+You print fizz or buzz. You write fizzbuzz or just the number.
+
+Pay attention to the instruction pointer.
+
+Look at it go!
+
+Isn't it hilarious?
+
+So, what it does is, it adds 1 to the current number. Checks if it divisible by 3, if not it goes this way.
+
+It pushes the string it needs onto the stack. It goes down here down to this area to print it out.
+
+Then it goes all the way back to the beginning.
+
+And, does it over again.
+
+Nice example.
+
+This program demonstrates the reflective nature.
+
+If you pay attention to the upper left corner of the program.
+
+There is a number. When I run this.
+
+It is a counter. It reads in the number, adds 1 to it and prints it back out.
+
+Modifying the source code.
+
+Because it is reflective, Quine quite simple.
+
+Quine is a program that prints out its own source code. It reads from itself and prints itself out.
+
+You can write things like this one. Which I'm proud of. This program.
+
+Reads itself, one character at a time and prints itself back into the program on the next line. Moves down, and keeps going.
+
+You'll see what I mean.
+
+Prints itself out.
+
+When it is done it jumps down. Does it once more.
+
+It keeps going.
+
+Quite fun.
+
+Right. Let's look at the source code for this interpreter.
+
+The main entrypoint is this file.
+
+JS.
+
+What it does is basically create a new object. The main entry point for the interpreter.
+
+Functions like stopping and starting and stepping and things like that.
+
+The parser is what reads the source code and turns it into an actual program.
+
+Like a data structure. That the interpreter can work on.
+
+And that's actually quite simple in this case.
+
+All it needs to do is read in a text file and dump it into a 2D array. Splits the screen. And divides each line into separate characters.
+
+The interpreter for this thing is the main meat of the program.
+
+So, the interpreter is a huge multi method.
+
+Which has 1 implementation for each command in the language.
+
+It is like a functional switch statement.
+
+Different implementations, based on its first argument.
+
+If you get a space, we do a noap.
+
+There is a lot of stuff.
+
+Hash. We skip to the next cell. The add cell terminates the program.
+
+ the underscore is the east-west if.
+
+If it is zero, go right, otherwise go left.
+
+The pipe-character is a north-south if.
+
+The numbers, push themselves on the stack.
+
+Including hexidecimal numbers.
+
+Basic aritmethic operators.
+
+Pops 2 values from the stack and pushes the result back.
+
+It takes 2 values and the operator in between and evals the result.
+
+Everything here is written.
+
+ I don't know if you heard of that.
+
+If you haven't, I recommend you to check it out.
+
+It was brand new at the time.
+
+I started doing this.
+
+And it is a bad idea when it comes to memory usage. It was fun.
+
+Let's go back to the presentation.
+
+Did you enjoy it?
+
+(applause)
+
+This is online. You can try it if you want.
+
+I'll get the address later.
+
+I have 1 more language to show you.
+
+It is Thue.
+
+It is named after a Norwegian mathematician Thue.
+
+It is a quite different language.
+
+Very simple. It is based entirely around string rewriting.
+
+It is non deterministic.
+
+Which makes doing certain things hard.
+
+It is very simple.
+
+A program in Thue consists of several rules.
+
+Lefthand side, righthandside and colon, colon, equal.
+
+It will read from the user. It will print out what comes after. And then return the empty string.
+
+The rules section is finished with an empty rule.
+
+Below that is the initial state of the program.
+
+And the program runs by picking a rule at random.
+
+Applying it to the current state. Replaces the content of the lefthand side with the righthandside. And repeats.
+
+Until there are normal rules that can apply.
+
+So, let's implement this.
+
+Here is the basic skeleton for the Thue interpreter.
+
+A few basic functions. Parse to read the string. And generate program data structure thing.
+
+Run function to run the program.
+
+And it reads the file from arguments.
+
+And parses it and runs it.
+
+So, to parse is quite simple.
+
+First we start with what should the data structure look like.
+
+It is very simple.
+
+An array of rules.
+
+It has a string, current state.
+
+There is a flag that tells us if there are more rules that can match.
+
+So, what we do is to take the input string.
+
+And first of all we strip out the new lines and comments.
+
+And we divide it into 2 parts.
+
+The rules part. The initial input part.
+
+And we assign the initial input to the program state.
+
+Then we split the rules.
+
+And push them one by one on the array of rules.
+
+Next we get the run function. This is very simple.
+
+While the program is not exhausted, run another step.
+
+The step function, basically, it takes the program state as an input.
+
+Let's see.
+
+It takes all the rules. It shuffles them into random order.
+
+It sets the flag to true.
+
+And it loops through each of the rules.
+
+And as soon as it finds a rule, that actually can apply to the current program string, it runs the apply rule function. Which does the substitution.
+
+Then returns.
+
+The apply rule function, also quite simple.
+
+A few special cases to handle.
+
+First it assigns righthandside to the righthandside of rule. If it is 3 colons, it prompts the user for input.
+
+If the righthandside starts with tilde. It will writes.
+
+And it replaces every occurrence of lefthandside with righthandside in the input string.
+
+So, the result.
+
+I have a Hello.Thue.
+
+First it replaces B with A.
+
+Then it prints Hello World.
+
+See if it works.
+
+Yes! It does.
+
+I have another example program in Thue.
+
+This program prints the 99 bottles of beer on the wall song. All 99 verses.
+
+I didn't write this. I have a hard time wrapping my head around doing anything in Thue.
+
+There we go.
+
+All 99 bottles.
+
+Nice, right?
+
+Right.
+
+So, the main point of my talk is just, have some fun. Write some ugly code, create something.
+
+Having to write an interpreter and having it run the program. And print it.
+
+It is a quite nice feeling.
+
+I have some time left.
+
+I'll show you something completely different.
+
+A tool I'm using for the slides. I have written myself.
+
+And I had an interesting bug with this the other day.
+
+So, you remember... Get back to it.
+
+There. The Piat. That's an image.
+
+And I use substacks, picture tube that prints an image to the terminal.
+
+But, that was giving me, what you call it?
+
+When I was trying to run it. I tried to track this bug.
+
+There was a bug in the Pmg.js library.
+
+I'll just show you how I fixed this bug.
+
+ there we are.
+
+Here we are inside where it copies the data.
+
+This is the point. I added this line. If 1 = 1, do nothing.
+
+If I comment this line out.
+
+And I try running my slides again.
+
+ Quit this.
+
+And save it.
+
+It will say: fault.
+
+If I move this line one step up, and save.
+
+It will say: Fault.
+
+If I put it back where it was.
+
+It works just fine.
+
+If any of you have any idea why this could be!
+
+Please come talk to me.
+
+I'm really impressed with this. Craziest thing I have ever thing. Not literally.
+
+Right.
+
+I'll go through it to see my last slide.
+
+There we go. Thank you very much.
+
+(applause)
+
+for my slides and things. They are on Github.
+
+If you want to talk to me, I'll be in the lounge. That's it.

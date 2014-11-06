@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 200
   filename: "/speakers/images/arne-martin-aurlien.jpeg"
+transcript: "transcripts/arne-martin.txt"
+video: oCPT3L33848
+slides: "https://github.com/arnemart/jsconf2k14"
 ---
 
 {% include speaker.md %}
