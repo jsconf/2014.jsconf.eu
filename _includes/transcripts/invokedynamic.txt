@@ -1,0 +1,331 @@
+1, 2, I am here to introduce a children's book. My name is Slava. I am usually thinking of compiling various languages into native code. Today I will be talking about compiling languages. I'll be using the Smalltalk as a first language that gets compiled. I like the Smalltalk. It is easy to compile to Javascript. If you put enough regular expressions.
+
+It is so amazing, the power of regular expressions.
+
+A very tight output. It looks that normal JS programmer would write. It has zero overhead.
+
+I want to patent it.
+
+There is a small problem. If I try to run in Smalltalk. Of a 10 and Vector I get an error. The 10 doesn't understand the message X.
+
+I do not get a number in JS.
+
+So, this problem really repeats itself again and again when people release compilers for languages in JS.
+
+They forget about 1 detail, semantics in German.
+
+It comes from a Greek word. It means significant.
+
+How can we forget about a compiler that forgets.
+
+How to make not a compilor that is not a sham?
+
+In Smalltalk, everybody, the binary operations are messages you send to your object. Instead of using JS operators like sum and multiplication, you send a message. This looks slow when you write it like that.
+
+Let's confirm it by benchmarking. I don't want anyone to call me out. I use it to promote my ideas. I'm cooking the numbers basically. I didn't tell you that. Cut it out.
+
+So, I wrote this small piece of Javascript code. An array of vectors and computes the sum of them and the length or length square. Using the dot product. It makes no sense, but I like the benchmarks that make no sense. I translate it to Smalltalk where everything is replaced to objects.
+
+Don't try to read all the code. Just let it go into your brain. When you sleep, you will suddenly have an enlightment.
+
+I wrote this sent function. That sends a message.
+
+Arguments, everybody writes code like that. It is JS.
+
+I'm also evil. I put some stuff on the number prototype.
+
+I want to send a message plus to the numbers.
+
+I modify the prototype. It works out of the box.
+
+It is fine. It is the speed the Js used to run 10 years ago.
+
+The reason is simple. We made it too complicated. There is a single congestion point.
+
+It cannot be optimized by V8. I get a factor of 10 speed up. The factor of 400 will be missing there.
+
+So, we cannot do anything. Calls and calls send in the loop.
+
+Does it mean that the universal VM for the languages is just a fat lie?
+
+Well, I don't believe that. I believe Jit is a superhero. It just needs a sidekick that would help it to save us all.
+
+And, i was searching for the sidekick. There is another language in the world which claims to have a great VM. And libraries and so on. And they have a lot of languages that compile to this VM. People like it.
+
+Of course this is Java.
+
+What they used to run different languages. On the Gvm. For static programming languages. It was only VM for Java. They introduced this byte code into the VM. That allows to havse a dynamic behavior.
+
+We can start reading a lot of text about invokedynamic. And sooner or later, a week ory 2 you figure out it is related to the callsite.
+
+There is more text describing CallSite.
+
+Let me highlight the most important part of this text.
+
+We know what variable is in Javascript.
+
+If we store functioning, what happens? The behavior of this call through this variable changes. Basically, enlightment, in JS every invoke is dynamic. We don't need this stuff.
+
+We can easily mark things from the Gvm specification into the JS.
+
+It is just a variable.
+
+The invokeddynamic.
+
+ Methodhandle that is stored in Javo is a closure.
+
+And relinking action that happens when you change the target, is an operator equals, done.
+
+Let's use it to make our code run with the speed I don't know, healthy elephant.
+
+We used to have this addition in Micro benchmark. Believe me, it was there.
+
+And then I rewrote it in a nice way with Smalltalk sense.
+
+And now we are doing the invoke dynamic. Send, x:. We introduce special global variable. Which will be specialized. And so on for each in the program.
+
+We could initialize them in this way. This will not give us any performance. We do the same stuff we used to do. It is 5000 times slower. What we are going to do is more Javalike.
+
+We introduce the thing that encapsulates the management of this global variable. It knows which messadge we want to send. And then it also knows how to produce the small closure and patch it into this global variable. There is a lot of code here that does that. I don't want you to read all of it. Let me highlight. This bootstrapping procedure consists of the compilation of the handle that handles this sendsite. And link it. The compilation is a lot of magic. Load, doesn't matter.
+
+What it does, it plays Php with your sourcecode.
+
+So, it takes some things and splices them into the sourcecode. Here you can splice the list of arguments into the function and then you can splice the operation. And there is this unique identifier. To distinguish the different handles that we are compiling. Otherwise it will merge those of them that match together. It has a complilation cache.
+
+Here is the send X to the object.
+
+This is the message plus to an object.
+
+And linking as I said is storing the handler which is the closure into the global variable, a given name. Very simple.
+
+And we are now only 3 times slower. We gained like a factor of 1000 in performance. Success.
+
+And the re reason why we are slow. If you look in the presentation of the code that we got from running the benchmark.
+
+V8 went beserk with nuverics. Iteration variable that was integer in the hot loop became a double. It boxed, consuming all the performance.
+
+So, it is because we have a single congestion point, it is this function we patch into the prototype of the number. All the operations of the numbers, that go through this single congestion point. How we solve it? We need to put the send into the handler. We need to put this into the handler. Specialize the handler for the arithmetic.
+
+We changed the template. It does the check before it does the operation. If it fails it goes and handles it somewhere else. In a sitespecific way.
+
+So, for numbers the check is obvious. You need to check the left and righthandside of the operation. Is a number. And if it is, we perform the operation in a fast way. Instead of using the call on the message.
+
+So, this is how the send of operation less than now looks like. You check left and right side. If they are numbers you return the operation. I Now we are 25% slower. We solved most of the performance issues we had.
+
+The 25% thing might be scaring you. If you look in the code, you see the picture is nice and better than I expected when I was testing this.
+
+Because these things that are grey on the picture are the false cases of type of equal number comparisons.
+
+V8 was able to figure out that certain things are numbers.
+
+Optimized away.
+
+So, we are good. The hope is back!
+
+Maybe we can run Smalltalk efficiently on the JS engine.
+
+However the bad part is the semantics are still broken. If I want to send this message, the identifier is not a function.
+
+It is universal truth.
+
+This universal truth doesn't apply to Smalltalk. There is no undefined there.
+
+How can we solve that? Well, we know how we can solve it. We can say which messages the vector understands. It understands x, x: and y and y:.
+
+And I am using sigma script features, which are call.
+
+We don't know how to rewrite the handler. We want to have a check and send the message. We don't know what we can check. Something like this we can check.
+
+The constructor or receiver whether it has this set and understands the x. And then we call X.
+
+So it looks reasonable. It is hard to optimize. It doesn't see the connection between the constructor and the fact that it has this set and this set is mutable. You are not able to tell it.
+
+It can't optimize that. One way it can do is load constructor from an object. If it knows the object's hidden class.
+
+We will compare the constructor of an object with some value and do a message send directly.
+
+Unlike with the number case we don't know with what to compare when we bootstrap the handler for the send side.
+
+We need to obtain this value as the program runs.
+
+And the way we can do it, is we can remember that we can relink send site as the program executes. And this is where the power of this system with sendsites adapt into the things they see comes from.
+
+So, the solution is to bootstrap uninitialized handler and relink it when we miss.
+
+The bootstrap is simple. It misses. It goes to the site.Miss thing.
+
+It is specified to be false.
+
+Then we will miss, in the miss case, we can check if the constructor has understand declares that this object understands this message. You can compile a specialized handler for this constructor and link it into this site. Otherwise we throw this nice message, this object doesn't understand this message.
+
+Okay.
+
+The template looks like that. We have the constructor captured as a closure variable in the handler itself. We compare the constructor against it.
+
+We send the message directly. Nice and efficient you will say.
+
+However, we just lost all of the performance that we gained. Something in the calculations was wrong.
+
+And the thing that was wrong was our assumption that it will behave nice and tight. It really decided it doesn't want to align the handlers anymore.
+
+Because the V8 has these guys built in. They run around and try to figure out what the program is doing and how to optimize it.
+
+They are not always smart enough.
+
+So we need to help them to be smarter.
+
+Stop, hammertime.
+
+I went into the sourcecode of the V8. And this is not JavaScript, it is C++.
+
+There is a heroistic. The function is an old function. A lot of garbage collections.
+
+Otherwise, it is not worsing, it can change. It was just created.
+
+So, i just click it to be smart. If the name of the global variable starts wit sigma, we align, no matter what. A great solution.
+
+I am not going to submit this patch to V8.
+
+Nobody calls their function with the sigma in the beginning.
+
+It will be a fine heuristic.
+
+With this we regained in terms of performance. We aligned the handlers.
+
+There is still a problem with the code.
+
+So, I had the assumption that both lefthandside and righthandside of the comparison in the check are constant.
+
+And it is true for the self.Constructor. V8 was able to figure out it is a constant.
+
+However that is captured in the context is not a constant.
+
+It just loaded from the context.
+
+And the context itself is a constant. It is strange that V8 did not put this together.
+
+I took my precision hammer again and went into V8 and added these lines of code.
+
+If the variable in the context is never assigned after initialized and the context is during compilation time we can load it in the compilation time. It is true that it will never change.
+
+And then you can use it as a constant, yes.
+
+Otherwise you do the normal load.
+
+And we are almost there where we wanted to be there. Only 25% slower again.
+
+And you can implement the at thing. You want to check bounds when you send the at. You don't want to patch array prototype. You can use it, the same techniques to produce a specialized handler for the at: sent.
+
+And even if after you do it, you will be only 25% slower.
+
+We are good, we are perfect.
+
+And the semantics is now correct. If I try to send this dot: message I get a nice error.
+
+And if I try to access the array out of bounds. You get the undefined. You get a nice error.
+
+You can ask me, where are the 25%? I could spend another talk, trying to explain where they are coming from. Efficiencies in the compiler.
+
+The time here is scary, I will not do it.
+
+If I use the hammer long enough, I can regain almost all of it. By hacking in the V8.
+
+The register allocation issues and optimisations.
+
+I'm positive you can regain more. You need to use a bigger hammer.
+
+It depends on the Cpu.
+
+It is almost the same. What is for this what I cooked for this talk.
+
+And when I run it on different machines, it behaves differently. At my workstation at work it is roughly the same performance, with the baseline version.
+
+So, during the course of this talk, you should have figured out JS is an invokeddynamic.
+
+And we have enough expressivity in the language to solve these problems.
+
+What we don't have enough of is optimizations. The VM's are almost there, but not entirely.
+
+They are not completely optimized for the used case of compiling the dynamic programming languages into the Jsh.
+
+We want to get rid of the heuristics, specialisation and so on.
+
+We want to have a set of conventions.
+
+Invokedynamic is a set of conventions that guarantee certain functions are always aligned on machines with JS.
+
+We will use those conventions to squash all these cockroaches.
+
+There is a much harder thing to compile in SmallTalk.
+
+The non local return.
+
+That's for the next time.
+
+Thank you for your attention!
+
+(applause)
+
+Suprisingly I have 5 minutes. I was jrunning like a sick eliphant.
+
+I have the shirts that I want to give iway.
+
+They are all immense sizes for elephants.
+
+We have time.
+
+You can maybe ask me a question. Whoever asks the question, gets a shirt for his elephant.
+
+Come on?
+
+Let's wake up together. Yes! Dominique.
+
+-Do we need an in line keyword?
+
+- No, keyword is too 97.
+
+You can use a symbol. Assign the symbol to the function. Always in line.
+
+- Everybody will be in line?
+
+- If they do it like that. The people understand the stuff will use it for performance.
+
+People who don't understand it they can use their hands.
+
+You want a shirt? Okay. I will resever one for you.
+
+Somebody?
+
+- I had this problem with operators. I added vectors to JS. You can't really do it. Operator overloading. To add functions and turn all operator calls into functions. That probably sucks for performance.
+
+Or can I get away with it?
+
+Maybe you can?
+
+- You can use functions for all the operators. As long as you play nice.
+
+I was using the same function for polymorphic things.
+
+If you add vectors together, you are good.
+
+- I can't see the difference between a normal number and functions.
+
+If it is not a vector. Then the performance penalty becomes huge.
+
+- I t didn't get that part.
+
+You also use different things to add?
+
+- You have to replace all operators with calls.
+
+- Then you should use something like that.
+
+Or a static language.
+
+And there are still 2 minutes. I want to use my time to the fullest.
+
+Everybody was asleep? I was too fast?
+
+It was a pleasure.
+
+If you want shirts, they are here.

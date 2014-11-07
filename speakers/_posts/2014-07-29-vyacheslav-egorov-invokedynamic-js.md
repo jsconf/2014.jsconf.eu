@@ -17,6 +17,9 @@ image:
   type: png
   heightSite: 133.33333333333334
   filename: "/speakers/images/vyacheslav-egorov.png"
+transcript: "transcripts/invokedynamic.txt"
+video: YOHBZactXus
+slides: http://mrale.ph/talks/jsconfeu2014/
 ---
 
 {% include speaker.md %}
