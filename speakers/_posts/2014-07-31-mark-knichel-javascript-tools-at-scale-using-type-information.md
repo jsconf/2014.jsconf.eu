@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/mark-knichel.jpg"
+transcript: "transcripts/mark-knichel.txt"
+video: oXZaqHWq6cM
+slides: "https://docs.google.com/a/jsconf.eu/presentation/d/1-bXaZUjGdg9KIwPj2v3jRY4ak4CjmwIDWBVDlEknj6c/present?slide=id.p"
 ---
 
 {% include speaker.md %}

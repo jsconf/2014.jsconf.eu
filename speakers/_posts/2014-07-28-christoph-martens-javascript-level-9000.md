@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 300.3003003003003
   filename: "/speakers/images/christoph-martens.jpg"
+video: v34CEyqVEuM
+transcript: "transcripts/9000.txt"
+slides: https://github.com/martensms/jsconf2014-slides
 ---
 
 {% include speaker.md %}

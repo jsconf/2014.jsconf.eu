@@ -1,0 +1,183 @@
+Thanks for the charmful introduction. 
+
+Yeah, my talk is called JavaScript level 9000 I had no idea how to name the talk otherwise. 
+
+Yeah, let's get started. 
+
+So, I was previously working for Zynga doing the benchmarking and putting out products like the Zynga jukebox, but, after that, I founded by own project call GTTS, like a JavaScript engine, it's bit more game engine, and artificial intelligence that is clustered and stuff like that, it's something like a hobby for me, yeah, I was previously also fixing some Linux stuff, so I was also implementing like the row Dee yum driver or fixing or supporting the HD cards back then. 
+
+ I got into V8 because I thought back then, like, it's hard to push out a game on do different other platforms if they're not supporting HTML 5, so basically I started to realize it would be much more awesome when I could just use open GL there or use free Glut, and, then I put out a prototype for V8 GL, which was basically V8 combined with open VL bindings, porting to other platforms like Android IOS stuff, the advantages that you can even cross compiling to Xbox 360 or PS 4. 
+
+Basically I'm currently focusing on DSL stuff, so it's based on SDL and web GL is much easier when it comes to networking. 
+
+So, this talk will be starting low and trying to give you an idea how the data types inside a VM are implemented and is focusing on a garbage collection concepts or what the problems in JavaScript are compared to other languages for example. 
+
+So, it's trying to increase the level, straight, linearly. 
+
+So, yeah, first. 
+
+Data types. 
+
+Primitives are the basic understandings of data types and in JavaScript it's a bit come collated becausee because primitives are also objects, but they're not. 
+
+So in these examples the primitives are like numbers, Boolean, null and undefined, they're primitives and defined as primitives, strings and regular expressions because they have a length property and stuff like that, they are objects, but they're handled as primitives, will explain it later. 
+
+So, of the strings are primarily handled in the Runtime memory, which means they are deallocated after the call string is finished or after doing scope was destructed afterwards, and there's so‑called hidden classes idea behind the implementations, so they use like hidden classes to implement everything for you, and the hidden classes are the abstraction that you need for memory allocation stuff. 
+
+So, and also, unique stat tick strings so if you write down the same string over your code like ten times or so then it's only linked as a similar billion inside the JIT VM. 
+
+So, yeah, primitives, if you use the native construction, like calling new number, then you create an object instance, and the object instance is handled differently than the literals of the number itself. 
+
+If you type like the Upsone slob variable here, it is differently handled in the VM, of course, it's then the ‑‑ if you use a con instructor or it's not. 
+
+Arrays and objects are basically all object instances even the literals, for example arrays and instance of array but it's also an instant of object, and the objects themselves are always instances of objects because the literals are defined that way, the difference here is that the primitives are not reusable there. 
+
+And the object instances are reusable after the scope is closed or after the function scope is closed and destructed. 
+
+That's basically the idea of the garbage collection in JavaScript. 
+
+The hard topics is the dynamic typing stuff because previously before the web GS standard you had no possibility to use something like type erase. 
+
+And, the idea behind the JIT VM was that they wanted to optimize everything as far as possible, so, in this example, both have like the same values and the array has the same content afterwards but optimized in a completely different way. 
+
+The Foo example here is optimized at compile time because the JIT knows, oh, the array has this length and it's closed afterwards so it's finished, at this stage, and the bar example, is allocating everything dynamically, so, at first, it would just ‑‑ in the first two examples, the 13 and 37 values whale just allocate everything, after that, if you change the type, it will convert everything to doubles, that's the so‑called unboxed, it has to be unboxed converted and unboxed again. 
+
+Everything will be converted doubles, the position of 13 and 37 would be something like dot 0 and then an assigned integer F you allocate something differently to values like true, which is an object, then, it will ‑‑ everything convert everything to objects or to references, but I well explain it later how that is solved. 
+
+That's basically the difference about the objects and array stuff in JavaScript. 
+
+What is also important is that objects have unique identifiers, even if they have the identical contents so you can use the DB equals, DB equals comparison and they will always be, like, completely different because of the identifier. 
+
+And, but they share the same hidden class behind them, they are I dentically typed and identical properties and the hidden properties inside the VM will use the same hidden class in that case. 
+
+Hidden classes are basically on the data types, or the values of ‑‑ or the types of the values, and the order of the values or the properties, so, for example, in this case, the Foo and Bar example is identical, but the Qux example is identical when it comes to values but the properties are ordered in a different way, if the properties are annotated or assigned to the object in a different order then it will create automatically a hidden class. 
+
+So that is bad, you don't do that. 
+
+Hidden classes are also an abstraction for functions, because function templates are basically if they are constructed,creating object instances, so, in that case, Foo and Bar have like, when they're assigned the same hidden class of point, but it will create a new hidden class for the bar example because you're assigning it a property external to it, so Jit isn't recognizing it, oh, that's a completely different thing and I have to create a new hidden class for it, the bar is for Foo then. 
+
+When you want to implement custom primitives in JavaScript, there's a concept behind the value off method and the two stream method, so if the value off method is called on binary operators, for example if you do something like an addition that case, it will try to find out in's an arithmetic value to it, and if the value off method returns Null, it has no arithmetic method at all, it would be just zero, that is the reason why you add Foo and bar in that case, it would be zero, you add another number to it then it'll be like the number value, one, two, three, plus zero is of course, one, two, three. 
+
+Value value off is used for the arithmetic value, and if you return a number value instead of Null, so it has ‑‑ value you can add it to other strings or numbers, and in that case, it will automatically convert it dependent on that. 
+
+That is the same problem with NAM stuff, if you add a number to a string it will give a different result because it will be the other way around before the conversion, in that case, it's just like if you want to add a string to it, then you have, of course, string conversion from the number, so the numbers and the values will be identical except the types. 
+
+And after the value off stuff is called then it will try to determine if there's no arithmetic value, it will try to find out if it's a string or converted to a string. 
+
+That's reason why you see something like object, object all the time when you try the dump it into the controller or something like that when you are returning inside a value off method, returning an object instance there, that means you are a high level object and not a primitive anymore, that means the two stream method is called, and if you add those two examples together or do an addition to it, then you get different results because it's just converting everything to a string then. 
+
+And, yeah. 
+
+That's basically how it works. 
+
+So, now have to of enter function stuff, and what function templates, funk instances and prototypes are. 
+
+So, functions in JavaScript, of course V. 
+
+the prototyping stuff, and prototypes means there's something like smart pointers to the memory. 
+
+And if you is like this example where you're constructing a new vector there, then the vector will of course be true, but the prototype look up, the underscore pro toe, underunderscore underscore is something like a nonstandard stuff to look at prototype to look at the next Hero key, it will point to vector then it will point to object, because everything is an object instance, of course it's not an instance of function, but, yeah, the proTroto look up will be Null, then it's overnet jet and there's no inheritance afterwards. 
+
+And, yeah. 
+
+That's basically how it works, so, if you have something like a new instance from a function, then, the direct Proto look up will point to the function pro type, and will point to the object prototype and so on. 
+
+So, of yeah, if you want to implement something like entities because, again, I'm a developer, I want to use vectors and stuff like that, I'm implementing a basic entities and reuse vector effort there is, there's a problem you need instances on the prototype to have it fully integrated with the Java VM so I'm just pointing the entity prototype like this example to the vector prototype, I have the same methods, but I don't have an instance of a vector of course, you get prototype method called on the entity instance itself will not point to the vector itself, it will point to the vector of the prototype. 
+
+So, yeah, that's basically how the instance of operator works. 
+
+Of when you create a new vector instance, like in this example, this is correct, Marx, then, you have ‑‑ when the prototype of instances or the prototype of function template is pointing to a new instance, you is, of course, the correct example with the instance off check there. 
+
+Of so, yeah, that's basically next templates are impresented, I hope it was easy to follow, when it comes to hosting and closure stuff, it's pretty important to understand hosting and closures because JavaScript has a problem that the scoping stuff is not easy to back trace when it comes to memory optimizations, so yeah, let's get started with that topic. 
+
+Hoisting is using the ‑‑ something like housing ‑‑ well, okay the explanation of hoisting is you is a variable inside the function scope but if it's not accessible not bound inside this scope it billion go upwards and try to use the next method ton outer side. 
+
+And, that example, I'm binding, I think, yeah, I'm binding Foo and bar, but with different names, so it's the other way around when I'm calling the outer function, time using the outer function to bar pair meter which is referring to the Foo outer scope if I'm reusing it, I'm binding it, so that is like a closure, I'm . 
+
+Resetting the Foo variable, I'm not of over writing the bar inside the on scope, that is still referencing not the origin of Foo, it's just referencing to the state of the Foo when the reference was called, so that is why Foo equals, equals bar false then afterwards. 
+
+Closures, so, a typical problem is like iterating over an array with objects or stuff like that, and then you is something like, you do asynchronous loader, like loading an image and a an unblowed method called afterwards and you want to use Da, which is the interlator and variable there. 
+
+If you want the use the "A" there, it will have always the last value, probably the asset load will be slower than interration, and, yeah, that's a typical problem like in JavaScript, a fix for that is just using a closure to hold every variable, so they have the same state when you wanted it to be, and you can just in reuse the property at that stage there or the variable at that stage there. 
+
+And, yeah, that's basically hoe closures work, there's basically a function that binds the variables to their own sub scope or their own handle scope, and, yeah, which they are binding a variable or a property inside their own scope when they would be free otherwise. 
+
+That's basically what I think closures are. 
+
+So, that leads us to the following problem. 
+
+We need something like a garbage collector because we have instances and stuff like that, we want the delete them afterwards otherwise our memory will be totally bloated. 
+
+The basic knowledge about memory management or garbage collectors are we have the Runtime memory, which is the primitives, they're cleared directly after your scope has ended if your scope is being called, if your scope is detrucktive, the Runtime memory is just deallocated, how that works, it's just important that it's deleted afterwards and can't be reused afterwards, regular expressions and strings are now acceptance because they have length property and stuff like that, they're treated as Runtime allocations, inside the VM, they're basically primitives, they're not primitives, but, yeah. 
+
+The heap memory something like the memory that is available afterwards, but you're not able to use it, if you're not referencing it. 
+
+But, yeah, for example there, are function instances, object instances, array instances, and that's basically what heap memory is. 
+
+The references are not needed anymore, and can be unreferenced, then they are cleared up by the garbage collector. 
+
+You're creating garbage every time you have something overwriting the original reference with a new object. 
+
+In that example I have only named Foo object, and creating new garbage when I'm locating or assigning a new object to it . 
+
+So, that means, unreferenced object instances always create garbage, unreferenced variables or named properties or arguments inside your scope, will trigger the garbage collector, so he knows, oh, I have to do something like that. 
+
+And after scope it was destructed the garbage collector checks if the references are still there or if they need to be cleared up. 
+
+So can do hints for garbage collector, a cheep trick is to set everything to Nul will, it's nonreferenceble and a primitive, you set it to zero, that would be number, and optimizetion stuff is a bit weird herement if you do something like you're assigning a visual Foo and you have object located to it you can dereference it by setting to null and then putting on the object instance afterwards, the garbage collector JavaScript code optimizer will know, that's the state where we can clear up everything, afterwards it's a plain object and then resort everything. 
+
+So, that leads us to the garbage collection implementation itself or how it works basically inside VMs, so, mostly referencing here to the Java stuff because it was one of the first languages to impresent a garbage collector, most part of the methods are used in VA or variance from Mozilla. 
+
+So, when it comes to terminology. 
+
+A garbage is an object in your program that your program cannot reference anymore. 
+
+So it's not usable at all. 
+
+Of a so‑called root node is inside a graph inside a garbage collector is any direct reverence your program can access, that means for example local variables on a stack or static class variables. 
+
+Like the length property on an array or something like that. 
+
+Object instances are life if they're not garbage, that's basically the opposite. 
+
+Live objects or live object instances are referenced by a root or referenced by another object instance that is inside the root. 
+
+Of of you can Detective garbage by having basically detecting like if you have a graph where all the nodes are referencing each other then you have two different ways to determine if they're referencing, and one of the algorithms is a depth first or a breath first search, and both of them are basically refer to the same result that you know that you if you're having a depth first search algorithm will go to each sub node first and try to determine where there's a breath first ‑‑ and the breast first will go down words and look at the neighbors if they're referenceble because you have two dimensional linking options. 
+
+Local variables are something like named pointer that is pointing to somehow, anywhere inside the black home to memory address. 
+
+JavaScript has basically only pointers you can use, so everything inside your high level language is only a pointer or a number if it's optimized or base primitives and the hidden classes are the so‑called abstractions for that. 
+
+One method or basically the method that is used for garage age collector, the mark ‑‑ it has two different faces, first is the mark face and the second is the sweep phase. 
+
+To determine inside the graph nodes and works along all roots that it has, and tries to mark every object that is referenceble from each root node. 
+
+The program will pause, so, your program is like completely stopped, then mark phase is running to determine tall objects that are referenceble, afterwards, the sweep phase is going on. 
+
+The sweep phase is traversing all the marked objects, and deallocates them and does all the garbage collection stuff, so marks everything, and marks to memory addresses inside the low‑level C + + code and tries to allocate them or tries to free up the memory as far as possible. 
+
+And garbage collection, you have also in garbage collection languages you is the problem with fragmentation, so for example, these two examples are identical hidden classes and they have like two different properties, of course, with the same values, I dentically, afterwards you're deleting one of the problems with one of the instances, like the problem with Prague mennation. 
+
+Memory is free at this specific address inside the memory and could be used otherwise. 
+
+So, there's so‑called compaction going on that is trying to re‑order all the object references that highlyism implemented and appoints them to new memory addresses (Oh, three minutes) so, in this example, having references to, I'm trying to explain the references so called handles inside a JIT compilinger, it's basically like a point tore a pointer, if you're using your bar your Foo inside your code, it'll be basically a point tore another pointer, the reason to do so is that pointers can be used as a fixed size, you is a fixed size memory array, it's easier optimize you don't have to guess what kind of memory size it will use later. 
+
+The lifetime is determine bid your handle scope, and handle scope inside the function context are destructioned afterwards. 
+
+And the result in garbage collector trying to clear up everything. 
+
+So, each time a scope is closed, the garbage collector runs over it and tries to determine the references there. 
+
+Another algorithm, to market 3 is garbage collection, it's base concept where you have two different static sizes of memory, and, you have like the pointers referencing to somewhere in your code,and if you are deleting a reference or creating a new reference, it's just copying it vice versa, from the memory A it's use everything it finds and uses the first allocation in the other memory, and then just use the first memory and go the same way over and over again. 
+
+The advantages that it's super fast and easy to implement because you have ten other codes to implement it, it's of course, bad, because you have so much to do, and end of the references is getting bigger and bigger. 
+
+A generational garbage collector, like in V8 or I guess in monkey variance two is using both of the algorithms and try to have a lifetime algorithm determination, trying to find out if your code can access other objects on previous date in the timeline and if they're still referenceble or not. 
+
+If not, that means they have a younger age, because it's just like one second old and they can be cleared afterwards, older objects are ones that can be accessed any time, if you have something like objects on a global scope, you can guess that they are ‑‑ they are referenceble ten seconds afterwards, so that means object cans be used, can be optimized in the ‑‑ and younger objects are optimized by the copying object algorithm. 
+
+Yeah, yeah, 30 seconds that's the end, basically that's the introduction on how garbage collection works, you enjoyed it (Applause. 
+
+I would invite you to hackerse's lounge for a beer and cheerful discussion. 
+
+Stuff like that.

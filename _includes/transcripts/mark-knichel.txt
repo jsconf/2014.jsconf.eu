@@ -1,0 +1,361 @@
+Thank you.
+
+Thank you for the introduction.
+
+So, like he said, I want to talk about Javascript tools today.
+
+And specifically how you can use type information to help scale your code base. As you add more code and developers, there are areas where it is harder to maintain and evolving and changing.
+
+My name is Mark. I'm software engineer at Google.
+
+This is the number of lines of JS lines at Google.
+
+It is up to the right. It is going at fast pace.
+
+We are adding the size multiple times a year now.
+
+The number of developers are going at that same pace. A bit frightening.
+
+With this we have 1 single large codebase. At some point this becomes harder to maintain, change the codebase and keep a high quality part.
+
+And so, myself and a few others at Google spend time to figure out what we can do to eliviate this problem. To make it easier to keep the codebase.
+
+One example challenge. If you want to rename a function.
+
+You have a class and define a function.
+
+It has a generic name to it.
+
+But, because your code is so large, you have 50 other classes that have that name. How do you differentiate between codes, 2 objects of the type. When you want to rename one and not the other one.
+
+This and other problems. To help fix these we worked on 2 tools.
+
+The first is RefasterJS.
+
+Tool to make refactoring easy.
+
+All the excuses that developer can come up why it is hard to change code.
+
+There are too many people to depend on it. It is impossible to fix.
+
+This ptool should make this all go away.
+
+The second thing is JS conformance.
+
+A way to prevent bad code from coming back. It helps developers and your project keep a high code quality.
+
+No matter who is submitting the code, you can make sure it is preventing bad code from coming in.
+
+To tie everything in.
+
+It is important. How do you eliminate Xss issues in your project?
+
+It can be costly to the user. Using user data. And the company with lawsuits, privacy. And so forth.
+
+And so, using RefasterJS and existing. And how Conformance can prevent from coming back again.
+
+This example is based on something the Security at Google has worked on over the last year.
+
+They call Api hardening. Specifically, they worked on a library,goog.Dom.Safe.
+
+The dom Api has a lot of security holes.
+
+ And important is, if you are assigned to the Hrf window.Location. And the they can execute arbitrary javascript code.
+
+With a very tiny change that anyone could implement, you can rewrite it to a safe set of location. That would sanitize the input. No attack is executed.
+
+A colleague of mine published an article on the Acm. On the overall effort and other api's. An interesting read.
+
+So, to dive into the first tool I want to talk about is RefasterJS.
+
+This i a tool where you write Ravascript.
+
+We shouldn't have to write another language or learn something new to try to change a piece of code.
+
+We should be able to write and something should make that happen.
+
+It is core additional. Type information to pinpoint the code that you want to change. It is not matching too much, and not too little. Just matching what you want.
+
+We ran it over the google javascript.
+
+It is running in minutes across large sets of code.
+
+The core piece of thing you need to provide is a JS file. It looks like this.
+
+And there is 2 functions that you provide to the refasterJS tool.
+
+If you notice, these tools are based on the closure compilor. An open source compiler from Google.
+
+Main thing is the ability to process type information and store it and use it at later time to do time checking and optimisations.
+
+If you are familiar with that you are familiar with this syntax.
+
+But, the first template shows, what code should be matche. If you pass 100 source files it knows which statements are the ones you want to target.
+
+And the second thing is when you have those matches. How do you acquire fix?
+
+What should it look like?
+
+And in this case we want to match assignments.
+
+And so, looking at the matching code, it looks a little bit like this.
+
+And this will match the direct assignment. Where you have the window.Location.
+
+But also, match the alias, window.Location to local variable.
+
+And on the righthandside you have a function that returns. It still knows how to match.
+
+This is not of the correct type. This is where the type information comes into play.
+
+To differentiate between these cases.
+
+How does it do this?
+
+Well, the first thing it needs to do is build an Ast.
+
+An abstract syntex tree.
+
+Without going into detail. How does a compiler represent a piece of code?
+
+As you see here on the lefthandside is the node structure.
+
+An assignment, the lefthandside with property and lefthandside with variable.
+
+On the righthandside you can see highlighted, this preserves type information.
+
+A lot of other Ast's don't preserve this information.
+
+They don't know how to infer the type information for code.
+
+And looking at a quick demo, there is a webservice tool.
+
+Where we can look. That the compiler team provides.
+
+We can store a piece of code here.
+
+Zooming is not working very well.
+
+And then on the righthandside when we compile this, we can see what the Ast looks like.
+
+This is exactly the same as what you see on the slides.
+
+We have the variable declarations for accessing, storing the Url and the location object into local variables.
+
+You see here, it knows the type information.
+
+ whether it is a string or window object or location object.
+
+That's a nifty tool if you want to play around and see what the compiler is doing. And what the Ast, and types look like.
+
+Once you have this, then the tool needs to compare structures from the template against the source code.
+
+There are a lot of different ways to do it. Depending on the accuracy and what you have available.
+
+A naieve approach is this.
+
+You take the lefthandside. Which is the structure of the code and make sure that those match.
+
+And if you change 1 node in it. You change it from a variable to a string, then it won't match anymore.
+
+This will match things like location.Href = url.
+
+Some randomobject. With somestring. That is the same structure. Even though the types and the names are different.
+
+It won't match something like location.Href.
+
+They have different structures.
+
+You can improve this a little bit. You can use the node structure and the name of the variables.
+
+But again if you do that, changing one of the two, the structure or the variable name causes it to break.
+
+This will match, it will match that.
+
+Also matches if you just have a normal object. And it won't match where you change the variable name zozer this is not really what we want. It is not accurate enough.
+
+That's where we get to the last matching. It uses the node name instruction. Or the JS type.
+
+This is where the type comes in handy to have the flexibility to match different pieces of code.
+
+And so, every level in this Ast you can see it is matching on left or righthandside.
+
+It doesn't have to match both.
+
+And the way it knows whether which one it needs to match, you told it.
+
+In the template you told it which are the types.
+
+And which have to be the exact same thing.
+
+The Href property has to be href.
+
+Here you see that the boxes correspond, these Ast's are different. They use the same type zozer this is okay. This is what RefasterJs matches.
+
+And so with this, we get matching the alias case. Or where we have the whole thing.
+
+We don't get, if you just have an object. assign a property on that. It is of a different type. This is looking pretty good. It will match the right set of code.
+
+Once we have that, then we need to take this code and transform it to what the code we wanted to look like.
+
+And so, it looks, this function looks similar to the before case. Except the body of the function corresponds to what you want the code to look like.
+
+And so, it will take an iexample like the top piece of code and then transform it to something like the bottom piece of code.
+
+Where you preserve the names. The tool doesn't care about that.
+
+You can alias window.Location to any name. And it will preserve the right piece of code.
+
+It does it because of the matching by type.
+
+In a template, theLoc variable should be replaced by the source code from the same type. It can preserve the structure and names.
+
+And so, taking a look at a demo, back to the handy webserver page.
+
+We can see, down here, that the template you can enter in this page the template. As it looks.
+
+This is the same as what I had on the slides. Including matching. And then, you can see up top.
+
+That I have input a lot of sample code.
+
+Following differentn JS contracts you might have.
+
+A direct assignment. Assigning it to functions. Whatever it may be.
+
+And then, when I hit this button and run, I can then see what the tool will transform the code to look like.
+
+And so here, I can zoom in a little bit.
+
+I can see it transforms the statements on the lefthandside to the corresponding function. Preserving the code structure.
+
+Whether it is using a string, variable name, function call, or even accepting function parameters and preserving that as well.
+
+Again, because it understands type information. It doesn't match location. Like an object.
+
+And so, this is pretty handy tool. It can show you how you can debug this. If you have warnings in the code. The code isn't formatted correctly.
+
+Also shows you at the bottom, the Ast are the template and source code.
+
+If something is not looking torrectly, you can compare these and see whether they should or should not match, based on the type information and node names.
+
+Like I said, this was designed for codebases.
+
+If it is large enough. You can run it as run as a mapreduce.
+
+In a matter of seconds or minutes, run it across hundreds, thousands, millions of files.
+
+And just in a very short amount of time.
+
+In addition to fixing, an important thing to do.
+
+How can you keep evolving your codebase?
+
+As your code groows, more and more people are depending on core libraries and Api's. It becomes harder and harder to change these.
+
+If you wrote it 5 years ago. You may want to change the type signature. How people use it. Migrate to something else.
+
+It becomes harder and harder. This can be used to make sure that all the excuses engineers have for not modifying code are eliminated and they can constantly evolve the codebase and hive the highest quality standard. And it is robust and nice to use.
+
+This is how we refactor core libraries inside Google. It is very useful.
+
+So, common question that burns on people's mind. I don't use type information
+
+Is this of any use to me?
+
+There is good and bad news. Yes, it can be useful.
+
+But at the same time, the compiler might not have all the information that it needs. You may get unexpected results.
+
+And so, opening this demo, you can see on this righthandside I have a function where I take an anchor and assign it to some url.
+
+So, in the example I gave before, this shouldn't match. You have an anchor tag and not location.
+
+Unfortunately, because there is no type information, we have to transform this. You get a lot of false positives in this case.
+
+The good news is that the team does a lot of work trying to improve type imprints. They have a major change coming out over the next months. Which will keep improving how much type information can be inferred. There is a series of passes that takes information. How do you call a function, what variables. and tries to infer the rest of the code. You don't have to explicitly type it.
+
+And so, constantly trying to improve this, the refasterJs tool can become more useful for projects that don't use type annotations.
+
+So, now that you fixed the existing usages in the code. You want to make sure people don't introduce new ones. Every new one. Something that your project, you don't want to be submitted in your project.
+
+As your project grows and your company grows, it is not feasible to make sure somebody keeps an eye on the codebase.
+
+UYou can help make sure it becomes problematic. They never get submitted in the first place.
+
+So with a few lines of code that you can pass the configuration to the closure compiler, you can prevent this from the direct assignment ever coming back. And the user would get a nice compiler error saying, this is not allowed. This i a violation. You are not allowed to directly assign to location href. But use goog.Dom.Safe instead. With this, the developer knows they have to go back and fix their code.
+
+You have avoided it. Whether it is something else. If you are refactoring api's and so forth.
+
+So, breaking down this configuration, the first thing you want to provide to is the type of the conformance.
+
+Here we are u using a banned property write.
+
+We want to ban people assigning to a property.
+
+There are a lot of other confommance types. Each one is meant to target a specific idiom JS developers use. Writing or reading a property. Calling a function. and so forth.
+
+And as another example, you can ban eval by saying, ban name and specify eval as the value.
+
+More complicated, you can use the refasterJs syntax for flexible configuration for the compiler that matches more complex statements.
+
+If there is something more complicated than banning a property, you can use this syntax, the same as RefasterJs. To create the configuration as well.
+
+The second thing you need to do is provide which value you want to ban. This depends on the type. In this case. We are banning property rights. We want to ban anything that is assigned to location prototype href. It can be any object or property name you want. in your entire codebase.
+
+You want to provide a nice error message. This is what developers would see when they get a violation. You want to be informative and telling the developer why it is not allowed and what they can use instead.
+
+When they see this, okay, I have to go back, make a quick change. Use goog.Dom.Safe instead.
+
+You can use a whitelist. This directory has been approved by the security team. It has been heavily audited. This file won't be warned upon when the compiler checks the code.
+
+Going back to the handy debugger page, that we were at earlier.
+
+There is a box here, if you want to try this out that contains the conformance configuration.
+
+You can see that this configuration is the same as what you saw on the slides earlier.
+
+And then you can again go up to the box here. And insert some javascript. Whatever you want to test.
+
+When you hit compile, you can see here that the compiler in this warning box shows you the violation.
+
+If I change the piece of code to say again, I want to change the type. If I alias the variable. And hit compile.
+
+It knows the code structure and type information. And this statement is still not allowed. If you alias local variables. Do whatever magic you want. It is able to warn.
+
+And only warn on the cases where it is actually a violation.
+
+So, just like refasterJs. There is a number of possibilities you can do this.
+
+It is similar that you can do. But because it knows type information, you can take it 1 step further. And more different problems that you find in your code base. Including eval, html. Document.Write. And so forth.
+
+You can also use it as part of the core library team. For restrict api calls. From one api to another. You want people to prevent using the old one if you migrate.
+
+If you migrate to promises, banning your old, whatever there might be, would be a good use.
+
+You can also specify any team or project specific concerns that you have. The framework is flexible.
+
+So, all these tools are now available open source on the closure-compiler page.
+
+I hope that... Oh, oh...
+
+Computer is freaking out.
+
+Okay.
+
+So these tools are available open source.
+
+All the debugging are available.
+
+You can use them to take a look of the tools. And see if they are useful.
+
+I hope that by trying to utilize type information...
+
+i'm going to...
+
+That you can try to take a codebase one step further. And it scales as it grows with the number of code.
+
+You can keep it secure performant and highest code quality that you can
+
+And so please take a look and provide feedback. Definitely interested in hearing how it can be used externally. Thank you.
+
+(applause)
