@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/raquel-vlez.jpg"
+video: "rP1q6oIVco4"
+transcript: "transcripts/evolution.txt"
+slides: "https://speakerdeck.com/rockbot/evolution-of-a-developer"
 ---
 
 {% include speaker.md %}
