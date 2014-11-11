@@ -112,83 +112,63 @@ Whatever you want to say about databases... blah, blah, blah. At the time, what 
 
 Again, talking to people in person. Being able to use words that didn't make sense to Google, but made sense to people, made a huge difference.
 
-Empowered with all this incredible knowledge I went back to my app.
+Empowered with all this incredible knowledge, I went back to my app.
 
-I have Mongoose. And Express. And how do I integrate these things? I don't know.
+OK, I'm building this app. I've got Mongoose, and I've got Express. And how do I integrate these things? I don't know. But now I have keywords that I can ask Google.
 
-I have key words I can ask Google.
+You type: Mongo Node. There is this wonderful module called Mongoose. They have a website, and they have code samples. You're like "Yes! Perfect! Code samples!" Copy, paste.
 
-Mongo. Node. There is this wonderful module. Mongoose.
+I expect magic to happen. And no magic happens. And, you're like, "Why isn't this working? I don't know."
 
-They have a website. They have code samples. Perfect! Copy, paste.
+You don't have the concepts fully integrated into understanding how this is all supposed to come together.
 
-No magic happens. And, you're like, why isn't this working?
+So you go back! And maybe your local meetup only meets once a month, so you need to expand your group of people to ask questions.
 
-I don't know.
+What did I do? I went on to IRC. If you don't know what IRC is, it's this amazing technology that's been around apparently forever, but I didn't hear about it until 2012.
 
-You don't have the concepts fully integrated into understanding how this is supposed to go together.
-
-You go back. And they only meet once a month.
-
-You need to expand your group of people. What did I do? I went to IRC. Amazing technology.T has been around forever.
-
-I found a Mongoose.Js channel.
-
-I'm using your thing. It is not working.
+And it was on IRC that I found the Mongoose.js channel. And I was like "Hi! I'm using your thing. I think it's the right thing for me, but it's not working in my stuff."
 
 They're like, send us your code.
 
-I copied and pasted all of my code into IRC. It was like, 25 lines of stuff.
+And I did what every single new person does: I copied and pasted all of my code into IRC. It was like, 25 lines of stuff.
 
-Someone said: Oh, god, don't do this.
+Someone said, "Oh, god, please don't do that again."
 
-I learned about Pastebin. That was useful.
+And then I learned about a thing called Pastebin. That was super-useful. Then of course, gists, etc.
 
-And gist etc.
+But I did the thing that everybody does, and I got very politely yelled at. "Don't do that again." "Okay."
 
-I did the thing that everybody does.
+But still, being able to share my code with someone else from a larger community. People who were from all over the world, not just my local community!
 
-I got very politely yelled at, don't do that again. Okay.
+Because when you're hacking at 2 am, sometimes your friends are not awake, but somebody in Germany might be! And that's awesome because they can give you this feedback, and they share more appropriate vocabulary with you, and then you understand the concepts: you understand how things link together. And it's really awesome!
 
-But still, being able to share my code with someone else from a larger community. From all over the world.
+You take all this knowledge. And you're still going to mess up.
 
-Not just my local community. When you hack at 2 am, sometimes your friends are not awake. Somebody in Germany might be. They can give feedback. And share more vocabulary. And you understand the concepts and how things gather.
+If you're not messing-up, you're not doing engineering. Just FYI. This is how it works.
 
-It is awesome. You take the knowledge. You are still going to mess up. Otherwise you are not engineering.
+You do good, you mess up, you succeed. It's just this cycle and you just kind of keep moving forward.
 
-You do good, mess up, succeed.
+But! There is this turning point. These concepts are coming together enough, and you have grown your community enough to the point where you're like "OK, whenever I have a problem, I might not know what it is, and I might not know how to fix it, but I at least know what to ask, where to ask, and who to ask."
 
-A cycle. You keep moving forward zozer But, there is this turning point.
+Right? Go on IRC, go to your friends, go to your meetup. Whatever. Know exactly the magical keywords to get the thing out of Google or Stack Overflow. Fantastic.
 
-These concepts are coming together enough. You have grown your community enough.
+So now you can keep moving forward. And you're like, "Yes! I got this!"
 
-When I have a problem i might not know how to fix it, I know what to ask. Where to ask.
+You find this point at which you are like, "Wow, this is actually really cool! This is so fun! I love this!"
 
-And who to ask.
+But I'm doing this on the side. I have another job, and it is sucking all the life out of me because I really just want to play with Node all the time.
 
-Right? Go on IRC, friends, meetup. Whatever.
+"Maybe I can get a job in Node! Yes! That's totally a perfect idea."
 
- Know the keywords to get out of Google.
+At some point you get to where you know enough information that you can be a junior developer.
 
-You can keep moving forward. I got this!
+Junior developers are useful. They're useful because you can tell them exactly what to do and you don't have to pay them very much money and you can still move forward with your product.
 
-You find this point at which you are like wow, this is really cool. So fun.
+So you bring a junior developer on-board. Yeah, you have to train them a little bit, but you get to train them doing exactly what you want them to do.
 
-I love this. But I'm doing this on the side. I have another job. It is sucking all the life out of me.
+So from a junior developer perspective, you're like "Oh my goodness! Now I have this opportunity to get paid while I learn. Awesome."
 
-Maybe I can get a job in Node! Yes! That's a perfect idea.
-
-You go and, at some point you get to the point, you know enough information that you can be a junior developer.
-
-At that point, junior developers are useful. You can tell them exactly what to do. You don't have to pay much. And you can move forward to the product.
-
-You get to train them exactly what you want them to do.
-
- Now I have this opportunity to get paid while I learn.
-
-Awesome.
-
-For me, i got a job as intern. I wasn't even a junior developer.
+For me, i got a job as intern. I wasn't even a junior developer yet: I just got enough to be an intern.
 
 I got 500 dollars a week. Not very much at all. Someone from Robotics, it was a blow to the ego. It is worth it. I'm going to make it work.
 
