@@ -84,53 +84,33 @@ PRO TIP: "caret-y thing in Node" does not produce any useful results. There's ju
 
 Again... no vocabulary. No way for me to say, "I have no idea what I'm doing. I need help."
 
-So, and then on top of that. That was the beginning of 2012.
+And then on top of that, this was at the beginning of 2012, when Node was super-new. It had been around for a couple of years, but it was still really brand-new.
 
-When Node was supernew. It has been around for a couple of years.
+To the point where any tutorials I found... if it was more than 6 months old, it was completely out-of-date. This isn't even useful to me.
 
-Any tutorials I found. If it was more than 6 months old, it was out of date.
+So, whatever. I still try. I find some things.
 
-This isn't even useful to me.
+I start playing around and I say "This is cool, but... I... Caret-y thing? Help?"
 
-So, whatever. I still try. I find some things. Playing around.
+So at that point I realized I needed more people in my life. I needed to start asking questions.
 
-This is cool. I... Charity thing? Help?
+So I went to a local meetup. That's a great way to start meeting people. Local developers in your community, and you can actually talk to them.
 
-So at that point I realized I needed more people in my life. Start asking questions.
+You can say, "So look, here is my terminal. n-o-d-e enter. Caret-y thing." (shrug)
 
-A great way of meeting. Local developers in the community.
+And they go, "Oh, that's the REPL! Yes, that's the read-eval-print-loop. That's how we do all of our on-demand type stuff. What you really want is, you want a separate file. And then you can run node file."
 
-You can talk to them.
+And then it runs, and magic, and you're like "Oh my god, why did nobody tell me this? I didn't understand anything."
 
-Look, here is my terminal. Node enter.
+But that's okay. Because you go, and you talk to these people. And they have been there enough that they can read your mind a little bit.
 
-Charity thing.
+And you're like "Caret-y thing!" and they're like, "Yes, REPL. That's the word." And you're like, "Cool!"
 
-And they go: That's the redevelop print loop.
+At the same time I was trying to build this app. And I was like, "I have this app. I want it to store data. And I know I need a database, but I've only used MySQL before." Because that's what I used when I was hacking on my Wordpress blog. "Is that what I want to use?"
 
-That's how we do all the on demand stuff.
+Whatever you want to say about databases... blah, blah, blah. At the time, what I needed was MongoDB. It was the perfect solution.
 
-You want a separate file. And then Node file. And runs, magic.
-
-Why did nobody tell me this?
-
-Didn't understand anything. It is okay. You talk to the people.
-
-They have been there enough that they can read your mind a little bit.
-
-And they're like, yes, Rapl, that's the word. Cool.
-
-At the same time I was trying to build this app.
-
-I have this app. I wanted to store data. And I know I need a database. I have only used MySQL before.
-
-Is that what I want to use? Whatever you want to say about databases.
-
-I needed MangoDb.
-
-Talking to people in person. Being able to use words that didn't make sense to Google.
-
-It made sense to people.
+Again, talking to people in person. Being able to use words that didn't make sense to Google, but made sense to people, made a huge difference.
 
 Empowered with all this incredible knowledge I went back to my app.
 
