@@ -8,7 +8,7 @@ So, let's get started.
 
 On a scale of "fist" to "high-five", where would you rate yourself as a developer?
 
-Where a fist is, I'm just figuring out this whole JavaScript thing. I think I know what a variable is and I'm learning about loops, etc...
+Where a fist is, "I'm just figuring out this whole JavaScript thing. I think I know what a variable is and I'm learning about loops, etc."
 
 To "I have taught Brandon Eich everything he knows."
 
@@ -18,83 +18,71 @@ You can play along too! Feel free to play along. Cool.
 
 I'm seeing kind of like beginning to middle... That's awesome. Great.
 
-What I'd like to talk about is how we go from here to here.
+What I'd like to talk about is how we go from here (fist) to here (high-five).
 
-Because I think a lot of us who are here, don't know what this path looks like.
+Because I think a lot of us who are here (fist with wiggling thumb), don't know what this path looks like (opens to high-five).
 
-And I think those of us who are here forgot what it was like to be here.
+And I think those of us who are here (high-five) forgot what it was like to be here (fist).
 
 So, let's go through that whole process.
 
-It is intense. I am going to use my personal story. It will not match everybody's.
+It's intense. I am going to use my personal story. This is not going to match everybody's, but I think a lot of the elements are going to be the same.
 
-It all starts out the same.
+It all starts out the same for all of us. For whatever reason we say, "I'm going to start learning JavaScript."
 
-Whatever reason we say, I am ginger to start learning JavaScript.
+Or insert technology of your choice, but I'm going to start with JavaScript.
 
-I'll stick with JavaScript.
+Whether it's for a business reason or for personal reasons, we say "Okay. This JavaScript thing? I'm going to do it. Let's do this. Yes! Totally!"
 
-Whether it is for business or personal reasons.
+For me, I used to be a roboticist. I used to build robots.
 
-Okay. This JavaScript, I'm going to do it. Yes! Totally!
+And I said to myself, "This is kind of boring, because the robots... they don't really have fun with me. We don't get to party. We don't get to talk about boys. We don't... They're just kind of robots."
 
-For me, I have been building robots.
+And so I decided I needed a little more people in my life.
 
-And I said to myself, this is kind of boring. The robots don't really have fun. We don't get to party. Talk about boys. We don't, just kind of robots.
+I was living in Charlotte, North Carolina at the time and I said "Where is a cool place to work? I think the Internet is kinda cool. Let's do that."
 
-And so I decided, I needed to have more people in my life.
+I mean, I was a roboticist. The Internet can't be that hard.
 
-I was living in North Carolina. Where is a cool place to work? Internet is kinda cool. Let's do that.
+I talked to the CEO of the coolest company in town. I said, "I'd really  like to work at your company. What do I need to do to work here?"
 
-I mean, I was a robotocist. The internet can't be that hard.
+He said, "Learn Node."
 
-I talked to the CEO of the coolest company in town. I'd like to work at your company. What do I need to do?
-
-He said, learn Node.
-
-Okay. Cool. I went home and said: I am going to learn Node. Let's do this.
-
-I'm going to build an application. That's how I learn.
+Okay. Cool. I went home and said, "I am going to learn Node. Let's do this. I'm going to build an application. That's how I learn."
 
 And I got nowhere.
 
-This happens to all of us.
+This happens to all of us. We have no idea what we are doing, because we don't know the words that we need.
 
-We have no idea what we are doing, because we don't know the words we need.
+I knew enough to say, "Node is a project, a thing. Go to the website: nodejs.org."
 
-I knew enough to say, Node is a project, a thing. Go to the website.
+I downloaded Node. I knew enough about the command-line to say, there's no "application", so I don't double-click.
 
-Downloaded Node.
-
-I knew enough to say, if there is no application. I don't doubleclick.
-
-Node. Enter.
+I go to the command-line and type n-o-d-e enter.
 
 What happens at that point?
 
-You get this little thing. Looks like this.
+You get this caret-y thing. Looks like this: >
 
- You see it in the JavaScript console.
+You see it also in the JavaScript console, when you go in a browser.
 
-It doesn't say anything.
+And you're looking at it, and it doesn't say anything.
 
-Okay...
+You're like "Okay..."
 
-So, go! Enter.
+So, go! g-o enter.
 
-Undefined. You're like, okay. This doesn't work for me.
+And what does it say? It says "undefined".
 
-I don't know what to do. I don't have the vocabulary to say. How to make it work zozer So, what do you do next?
+You're like, "Okay. This doesn't work for me at all. I have no idea what I'm supposed to do."
 
-You go online.
+I don't have the words. I don't have the vocabulary to use to say "How do I make this thing work?"
 
-Go to Google. Stack overflow. Blogpost.
+So, what do you do next? You go online. Go to Google. Stack Overflow. Blog posts. Whatever. And you start looking for help.
 
-And you start looking for help.
+PRO TIP: "caret-y thing in Node" does not produce any useful results. There's just nothing in there.
 
-Charity thing in Node doesn't produce anything results.
-
-No vocabulary. No way to say, I don't know what I am doing. I need help.
+Again... no vocabulary. No way for me to say, "I have no idea what I'm doing. I need help."
 
 So, and then on top of that. That was the beginning of 2012.
 
