@@ -1,30 +1,22 @@
-Thank you so much. So, as has been said, I'm Raquel. I am @Rockbot on all of the things.
+Thank you so much. So, as has been said, my name is Raquel Vélez. I am @Rockbot on all of the things.
 
-I'm a senior developer of software at Npm.
+I am a senior software developer at npm, Inc. You may have heard of npm, you use it to install all of your wonderful JavaScript things.
 
-I'm honored to be able to work there. I have answers and stickers for you.
+I am honored to be able to work there. If I can answer any questions or give you stickers, please let me know. I have answers... and stickers.
 
 So, let's get started.
 
-On a scale of fist to high five.
+On a scale of "fist" to "high-five", where would you rate yourself as a developer?
 
-Where would you rate yourself as a developer?
+Where a fist is, I'm just figuring out this whole JavaScript thing. I think I know what a variable is and I'm learning about loops, etc...
 
-Fist is, I'm just figuring it out. I know what a variable is and learning about loops.
+To "I have taught Brandon Eich everything he knows."
 
-To I have taught Brandon everything.
+And you can totally do the Fitbit thing if you want. You can be like, "I'm a three-and-a-half" or whatever. Cool. All right.
 
-You can be a 3,5 or whatever.
+You can play along too! Feel free to play along. Cool.
 
-Cool.
-
-All right.
-
-You can play along too.
-
-Cool.
-
-I'm seeing kind of like being in the middle. Awesome.
+I'm seeing kind of like beginning to middle... That's awesome. Great.
 
 What I'd like to talk about is how we go from here to here.
 
