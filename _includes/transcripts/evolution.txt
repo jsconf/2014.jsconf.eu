@@ -168,37 +168,27 @@ So you bring a junior developer on-board. Yeah, you have to train them a little 
 
 So from a junior developer perspective, you're like "Oh my goodness! Now I have this opportunity to get paid while I learn. Awesome."
 
-For me, i got a job as intern. I wasn't even a junior developer yet: I just got enough to be an intern.
+For me, I got a job as intern. I wasn't even a junior developer yet: I just got enough to be an intern.
 
-I got 500 dollars a week. Not very much at all. Someone from Robotics, it was a blow to the ego. It is worth it. I'm going to make it work.
+I was getting paid 500 dollars a week, which is not very much at all. Especially for someone who is coming from robotics, it was kind of a blow to the ego, but I was like, "You know what? It's worth it. This is gonna be OK. I'm gonna to make it work."
 
-Fantastic. You start working, learning.
+Fantastic. You start working, and you start learning. And then you get to this point where you are like, "This is super fun, but I'm not exactly learning all the things that I want to learn. I'm learning the things that my employer's telling me to learn. And that's fine, because at least for me, I was working at a consulting company, so I got to see a little php, I got to see a little bit of Node, I got to see a little bit of front-end stuff. I was convinced I was going to be a back-end developer because I did robotics.
 
-You get to this point where you are like, this is superfun.
+Then I was like, "Hey, CSS -- as annoying it can be -- is actually really cool. You get to see stuff. And you get to move things. Floats, and divs, and wow!"
 
-But I'm not learning all the things I want to learn. But the employers want me to learn. For me, I was working at a consulting company. Php, node, frontend stuff.
+And so at that point I kind of transitioned to be more of a front-end person, but still lovin' the Node.
 
-I did robotics.
+I like to think at it as a buffet of learning. You go in and you just get a little bit each of these little things.
 
-Then I was like, Css, as annoying it can be is cool. You can get to see stuff. And move things.
+But I still felt like I was missing something.
 
-Now.
+"Yes, this is our stack at this company, but I know that there's more. I keep hearing these rumours of these single page applications and all this other stuff. Where do you go to learn that?"
 
-I transitioned to be more of a frontend person.
+Where do you go? You come to one of these. This is where you find out about all those things that you knew you were missing out on, but you didn't know what it was.
 
-I like to think at it as a buffet of learning. Get each of the things.
+How many of you've learned something new that you didn't realize even existed since being here?
 
-I was missing something.
-
-Yes, this is our stack at this company. I know there is more. I keep hearing this rumours, single page applications and other stuff.
-
-Where do you go to learn that? Where do you go?
-
-You come to one of these. This is where you find out of the things you knew you were missing out on something.
-
-How many of you learned something new since being here?
-
-Yes! Exactly.
+Yeah! Exactly.
 
 So, it is fantastic. You get what you are missing.
 
