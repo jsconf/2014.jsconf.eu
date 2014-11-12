@@ -190,47 +190,27 @@ How many of you've learned something new that you didn't realize even existed si
 
 Yeah! Exactly.
 
-So, it is fantastic. You get what you are missing.
+So, it's fantastic. You get what you are missing.
 
-It is drinking from a firehose. It is just like, right in your face. My goodness, gracious.
+It is like drinking from a firehose. It's like trying to get a drink of water and whoosh! Right in your face. My goodness, gracious!
 
-It is totally worth it.
+But it is totally worth it, because then you get super-excited about all this stuff.
 
-Then you get suerexcited about this stuff.
+My first conference was NodeConf SummerCamp 2012. I went to this conference hoping to learn more about the event loop. Apparently there's going to be a talk about the event loop later: I'm totally going to that.
 
-My first conference was Nodecamp summercamp 2012. I went to learn more about the event loop. I'm going to it later.
+But at this conference I didn't learn about the event loop. I learned about "node-core" and "domains" and "error handling" and I was like "Whoa, I just want to learn about the event loop, please. I'm new to this."
 
-At this conference I didn't learn about it. Nodecore and domains and error handling.
+But there was another really important aspect of going to a conference.
 
-Wow, I just want to learn about the event loop, please.
+I learned about people. I met people. Met all of these incredible people that have completely changed my life. Every conference I go to, I meet new people and it's incredible. I become really good friends with these people.
 
-I am new to this.
+As a side note, if there's nothing else you get out of this entire conference. Nothing. At all. Because let's be real: you can watch these videos at home later...
 
-But there was another important aspect of going to a conference.
+Walk away with at least 5 twitter handles. 5 Twitter handles of people that you are going to hang out with and talk to on Twitter. If you don't like Twitter, use Facebook or email. I don't care. Make sure you get to know somebody else. Because these people, that are sitting in this room with you? They are going to help you get your next job. They're going to help you when you have a bad day and they'll send you funny cat gifs.
 
-I learned about people.
+Like, super awesome. These people are really going to change your life. Right here. The ones that are sitting right next to you. And those of you following along at home, come to a conference and let this totally tranform you.
 
-I met people. Met all of these incredible people that have completely changed my life.
-
-Every conference I meet new people. It is incredible. I become good friends with these people.
-
-If there is nothing else you get out of the conference. Nothing at all.
-
-You can watch these video's at home later.
-
-Walk away with at least 5 twitter handles of people that you are going to hang out with on Twitter.
-
-Or use Facebook or Email. Make sure you get to know someone else.
-
-These people in the room r here, are going to help you get your next job. Help you when you have a bad day.
-
-Like, super awesome. These people are going to change your life right here.
-
-The ones that are sitting next to you.
-
-Come to a conference if you are home. And let this transform you.
-
-Coming back.
+OK. Coming back.
 
 You are talking to these people. You are at the conference zozer there is so much cool technology. I want to play with it.
 
