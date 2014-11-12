@@ -212,39 +212,25 @@ Like, super awesome. These people are really going to change your life. Right he
 
 OK. Coming back.
 
-You are talking to these people. You are at the conference zozer there is so much cool technology. I want to play with it.
+You're talking to these people. You're at this amazing conference. "There is so much cool technology. Oh my goodness! I totally want to play with this!"
 
-When do you do it? With all the technology?
+When do you do that? What do you do with all that cool technology?
 
-You start working on it. On your own.
+You start working on it on your own.
 
-And yes, it stings. You don't always get to take all the cool technology back to work with you.
+And yeah, it kind of stinks. You don't always get to take all the cool technology back to work with you.
 
-There is a good opportunity. If you can hack things on your own.
+But let me just tell you a little bit: this is a really good opportunity. If you find the time to hack on things on your own, you expose yourself to a whole bunch of other stuff. You get to use all the people you met at this conference, where you learned about all this stuff. And you can ask them, "Hey, can you take a look at my code?"
 
-You expose yourself to a whole other stuff. You get to use all the people you met. And you can ask them, hey, can you take a look at my code?
+Here is the thing about open source. It is not about contributing to jQuery or node-core. It's about taking literally your source and you're opening it up. Just sharing it on Github.
 
-Here is the thing about open source. It is not about contributing to Jquery. It is taking your source and you open it up. Sharing it on Github.
+It doesn't need to be anything like, "Whoa, magical!" or life-changing. It just needs to be some code. Show it to somebody. Let someone else say, "Hey, why did you do that? What was your inspiration for this? How did you figure that out? That was really cool!" Getting feedback on your code from somebody else is super-useful.
 
-It doesn't need to be magical. It is some code. Show it to somebody.
+For me, I was at this conference and talking to somebody. They said to me, "Hey, you used to do robotics. You know what we're missing in node: we don't have a matrix module."
 
-Let's someone else say, how did you do that. Inspiration for that.
+I said, "You know, that's true. There isn't a matrix module." And I used to do robotics, so matrices and me? We're like this.
 
-How did you figure that out?
-
-Getting feedback on your code from somebody else is superuseful.
-
-For me, I was at this conference.
-
-Talking to somebody.
-
-They said to me, hey, use your robotics. We don't have a matrix module.
-
-You know, that's true. There isn't a matrix module.
-
-I used to do robotics.
-
-So, I went aheaid and started hacking on stuff.
+So, I went ahead and started hacking on stuff.
 
 You start hacking on things.
 
