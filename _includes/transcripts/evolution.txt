@@ -228,49 +228,27 @@ It doesn't need to be anything like, "Whoa, magical!" or life-changing. It just 
 
 For me, I was at this conference and talking to somebody. They said to me, "Hey, you used to do robotics. You know what we're missing in node: we don't have a matrix module."
 
-I said, "You know, that's true. There isn't a matrix module." And I used to do robotics, so matrices and me? We're like this.
+I said, "You know, that's true. There isn't a matrix module." And I used to do robotics, so matrices and me? We're like this. So I went ahead and started hacking on stuff.
 
-So, I went ahead and started hacking on stuff.
+So, you start hacking on things. Look: you are still going to keep messing up. And failing. And then you're going to succeed. And there will be moments where you are like "Oh my god!" and you're going to run around the office or your bedroom, or whatever. Because it's so exciting that you're getting it.
 
-You start hacking on things.
+But the point is that you're playing with these things. You're kind of already getting to know the concepts and you're figuring all these things out. And it just starts to feel really good because you're building confidence in yourself.
 
-You are still going to keep messing up. And failing.
+And you're like, "Actually... I'm not a total newb anymore. This is awesome!"
 
-And you succeed. And moments where you are likse this. Run around the office or bedroom, wherever.
+I mean, you didn't teach Brandon Eich everything he knows. But you're starting to get somewhere and you feel really good about it.
 
-It is so exciting you are getting it.
+These concepts are gelling really well, and you start to experiment a little bit. What happens when people get a little too confident? They start to get a little experimental. "Hey, I wonder what happens if I do this thing?"
 
-The point is that you are playing with these things.
+It's kinda scary. And it's not always going to work. But every once in a while it will.
 
-You get to know the concepts.
+Also at NodeConf I met this guy named Chris Williams. You may have heard of him. He kind of started the whole JSConf thing.
 
-And it just starts to feel really good. You are building confidence in yourself.
+But he's also into robots. And I remember being at the conference and talking to him. And I was like, "Yeah, you know, robots are kinda cool. I guess. Whatever."
 
-Actually, I am not new anymore. This is awesome.
+And then he DM'd me later and he was like, "OMG, wait. You mean you used to do robotics full-time? What are you doing right now? Why are you in this whole web thing? We need to be working together! I do this thing called Nodebots. It's not really a thing yet, but I want it to be. Help!"
 
-You didn't teach Brandon everything he knows. But you feel good about it.
-
-These concepts are really well.
-
-You start to experiment. What happens when people get too confident? They get experimental. I wonder what happens if I do this thing.
-
-It is kinda scary. It is not always going to work.
-
-Once in a while it will.
-
-Also at NodeConf I met Chris Williums.
-
-You may have heard of him.
-
-He is also into robots.
-
-And I remember being at the conference. Yes, you know, what's cool I guess. Whatever.
-
-And then he was like, you used to do robotics fulltime? What are you doing? Why are you in the webthing?
-
-I do Nodepads. I want it to be a real thing.
-
-Okay. That sounds crazy. Maybe afterwards I'm building this matrix module. It is an opportunity to segway into that. That's kind of cool.
+So I said, "Okay. That sounds kind of crazy. Maybe I can..." And afterwards as I'm building this matrix module, I was like "Wait, maybe this is an opportunity for me to kind of segue into that. That's kind of cool."
 
 These concepts are so solid. And I have all this extra background information. From what I used to do. Things that excite me in general.
 
