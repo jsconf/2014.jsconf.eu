@@ -250,99 +250,77 @@ And then he DM'd me later and he was like, "OMG, wait. You mean you used to do r
 
 So I said, "Okay. That sounds kind of crazy. Maybe I can..." And afterwards as I'm building this matrix module, I was like "Wait, maybe this is an opportunity for me to kind of segue into that. That's kind of cool."
 
-These concepts are so solid. And I have all this extra background information. From what I used to do. Things that excite me in general.
+These concepts are so solid. And I have all this extra background information from what I used to do. Things that excite me in general. And you keep experimenting and you keep playing around. Eventually something starts to stick. Something starts to stick real well.
 
-And you keep experimenting and playing around. Eventually something starts to stick. Real well.
+And for me, this was my vector module. Not very many people use it, but it is actually really cool how basically it is a robotics-focused matrix module. It's specificaly for robots. It's specifically for matrices. But I started building some really cool robots with it.
 
-And for me, this was my vector module. It is actually really cool how basically it is a robotics focus matrix module. For robots. I started building really cool robots with it.
+And as you are building these things, you're like, "Hey, people are starting to notice this stuff!" They start to use your stuff.
 
-As you are building these things. Hey, people are starting to notice this stuff. Use your stuff.
+Whatever it is you are building, at some point it is going to be successful enough that people are going to notice.
 
-Whatever it is you are building. At some point it is going to be successful enough people are going to notice.
-
-You are sharing your code, putting it in open source.
+Because people are going to check it out. You are sharing your code, right? Putting it all out in open source.
 
 People are going to notice.
 
-I never forget the day I got a tweet from Rick Waldrin. I never met by that time.
+I never forget the day I got a tweet from Rick Waldron, who I'd never met at that point.
 
-If you don't know him, he is on Tc39. He wrote Johnny 5.
+If you don't know who Rick Waldron is, he is on TC39. He's on the board of jQuery. He wrote Johnny Five, which is like a jQuery for hardware.
 
-This is a guy that I totally bowed down on. You know JavaScript. I don't know JavaScript. You are saying my code is really awesome?
+This is a guy that I totally bowed down to. I was like, "Oh my goodness. You know JavaScript. I don't know JavaScript, but you know JavaScript, and you're saying my code is really awesome?"
 
 This is wild. How did that happen? How did I get here?
 
-Yu completely forget all of the hard work you went through trying to get there.
+And you completely forget all of the hard work you went through trying to get there.
 
-From that point, you start to realise that as you are writing about your stuff.
+But from that point, you start to realise that as you're writing about your stuff -- you write blog posts, you go to workshops, you lead workshops -- this stuff that you didn't ever think was evenly remotely possible... you are standing up and sharing your knowledge.
 
-You write blogposts, you lead workshops.
+And people are starting to think like you're an expert. They start asking you for help. You're the one they're waiting for on IRC. "Hey! There you are! Hey, I have all these questions! Oh my god, can you please help me? Here's all of my code!"
 
-This stuff you didn't think of was possible, you are standing up and sharing your knowledge.
+"Hold on! Use a gist, please..."
 
-And people are starting to think like you are an expert. They are starting you for help.
+People start to notice your expertise. And that's really exciting. For me, I started doing Nodebots, and Nodebots completely took off. We had a workshop at JSConf. We had another workshop at the next JSConf. We had International Nodebots day... twice! There are all these incredible events, and more stuff is coming.
 
-You are waiting for. These questions. Help me. Here is all of my code.
+But I want to hit home on this one thing. As you start to build expertise, as people start to notice all of the things you are contributing, other people outside of your necessary little niche are starting to start noticing too.
 
-Hold on.
+Because as you become more of an expert, as you start to actually know what you are doing, other people are going to want to start bringing you on board.
 
-People start to notice your expertise. That's really exciting. I started to do Nodebuds. We had a workshop at JSconf. International Nodebuds day twice. All these incredible events. More stuff is coming.
+I stopped interviewing at this point. I don't really send my resume out anymore. I get other people calling me.
 
-I want to hit home. As you start to build expertise, as people start to notice all of the things you are contributing. Other people of your little niche are starting to notice too.
+And I don't want to sound like, "Oh, look at me: I'm so awesome!" No.
 
-Because as you become more of an expert, to know what you are doing. Other people are going to want to start bringing you on board.
+What I'm saying is: other people are noticing that you -- yes, you -- are really quite good at what you're doing. Believe it or not.
 
-I stopped interviewing at this point. I don't really send my resume out anymore.
+And they start calling you up and saying, "Hey!" Maybe they're Isaac Schlueter -- the BDFL of Node: aka, the leader of the Node project at the time -- saying, "Hi! I really like the things that you're doing. I'm starting this new company called Npm Inc. Do you want to come on board?"
 
-I get other people calling me.
+And you have this moment where you're like, "I'm a total newb... Right?"
 
-I don't want to sound, look at me, I'm awesome.
+And no, you're not. You're not a newb anymore. You have gone from here (fist) and you're slowly making your way up. Very slowly.
 
-Other people are noticing that you are really quite good at what you are doing. Believe it or not.
+But you're there. You're sharing your stuff everywhere. Everybody's already asking for help.
 
-And they start calling you up and say, hey, maybe Isaac Schoeder. The leader of the Node project. Hi, I really like the things you are doing.
+How is it so much harder of an idea for somebody to say, "Please come on board. I want to pay you to work for me and nobody else."?
 
-I'm starting this new company, Npm Inc. Do you want to come on board?
+That's a pretty amazing opportunity.
 
-You have this moment. Like, I'm a total new...
+There gets to be this point at which you realize -- despite every single little piece of imposter syndrome that sits in your head saying "You have no right to be up here." -- you say that you've got to be up here. Because if you don't share, then who will?
 
-No, you are not. You are not a nube anymore. You have gone from here and you are making your way up. Very slowly.
+And, you realize that you have received so much from this community. So very, very much. They put up with your ridiculous IRC logs and they put up with your silly questions like "caret-y thing?"
 
-But you are there.
+You realize you are not alone, and you've got to give back. You have to give back. Somebody needs to hear your story.
 
-You are sharing your stuff everywhere.
+So, I want you to know, that no matter where you are on this scale (fist to high-five)... Seriously. Anywhere you are.
 
-Everybody is asking for help. How is it so much harder of an idea to say, please come on board I want to pay you to work for me and nobody else.
-
-That's an amazing opportunity.
-
-There gets to be this point at which you realise, despite every syndrome that sits in your head, you have no right to be here.
-
-You say that you have to be up here. Because if you don't share, who will?
-
-And, you realise that you have received so much from this community. So very very much.
-
-They put up with your ridiculous IRC logs and your silly questions like charity thing?
-
-You realise you are not alone. You have to give back. Somebody needs to hear your story.
-
-So, I want you to know, no matter where you are on this scale, seriously. Anywhere you are.
-
-At some point you are like, I know everything there is to know. Someone is going to throw a brand new framework at you.
+And believe me, at some point you're going to be like, "Oh yeah, I know everything there is to know about Angular or Ember, or whatever" and someone is going to throw a brand new framework at you and you're going to start at zero all over again. And you're going to continually say "I have no idea what I'm doing!"
 
 I want you to remember this major thing.
 
-We are in this together.
+We're in this together. We are all in this together.
 
-We are all in this together.
+And wherever you are, we are with you. I'm with you. You're with me. We're in this together. Sorry, you're stuck.
 
-And wherever you are, we are with you. I'm with you. We are in this together. Sorry, you're stuck.
+It is really important to remember that JavaScript is so much more than syntax. It's not about semicolons or tabs vs. spaces, or any of that.
 
-It is really important to remember that JavaScript is so much more than syntax. Not about semicolons or tabs, spaces.
-
-Any of that.
-
-It is all of us.
+Frankly, it's all of us.
 
 Thank you very much.
 
