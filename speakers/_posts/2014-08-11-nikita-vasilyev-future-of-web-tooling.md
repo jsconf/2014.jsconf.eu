@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/nikita-vasilyev.jpg"
+video: U0_IrPqvwn4
+transcript: "transcripts/web-tooling.txt"
 ---
 
 {% include speaker.md %}
