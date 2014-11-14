@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 266.6666666666667
   filename: "/speakers/images/michael-poltorak-nielsen.jpeg"
+transcript: "transcripts/alternative-smartphone.txt"
+video: q20W5dWHTas
+slides: "http://www.slideshare.net/michaelpoltorak/slides-alternative-smartphone-interactions-39642568"
 ---
 
 {% include speaker.md %}

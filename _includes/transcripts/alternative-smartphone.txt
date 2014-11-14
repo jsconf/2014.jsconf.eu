@@ -1,0 +1,375 @@
+I am going to talk about alternative iPhone interactions.
+
+Basically, it is about sensors in this guy. When we move the smartphone about. A lot of data.
+
+And, instead of using touch and keyboard input. A whole range of data we can utilize to augment. How we work.
+
+How we interact with smartphones today.
+
+I'll get back to it in a little way. This is me. I'm a huge American football fan. Bronco's fan.
+
+This picture was taken Superbowl night. Just before disaster struck.
+
+Some of you know what happened.
+
+I work at Statsbiblioteket.
+
+What did he say?!
+
+It is a library. This is the book tower.
+
+16 stories of books.
+
+I'm a frontend developer. Working with search engines for the library and mobile stuff.
+
+A quick rundown.
+
+This is university research and national library. In Aarhus. It keeps a lot of stuff. Physical and digital.
+
+My demo today is going to be performed in the search index of 1 billion books and articles.
+
+Hopefully that works. As you can see. We save a lot of stuff. Mostly for preservational and cultural reasons.
+
+All right...
+
+So, just going to, my speech is 5 minutes too long. I have this Android watch with me. I'll look at it.
+
+Mobile javascript sensor Api's and events.
+
+Just going to...
+
+This is Can I use webpage. Maybe you know it
+
+Essential if you work across browser cutting edge. And you can see what browser is supported.
+
+I'm not going into it. It is a really good resource.
+
+These are the sensor events and Api's I have identified as relevant in modern mobile browsers.
+
+Obviously the touch screen. For touch events.
+
+The geolocation. Event. Coming from the Gps.
+
+Gives you location.
+
+Motion. From the device motion.
+
+Api's. They fire when you move the phone in space.
+
+The device motion. And the meter. A subtle difference in the two.
+
+The Getusermedia and streamapi. It is for access to camera. Communication.
+
+And then there is the web speech Api.
+
+For recognizing speech. The rest are odd. Proximity. How close to the phone. How much light is in the room. I can get a reading on that.
+
+Battery status. I don't know how interesting that is.
+
+But okay. I'll just show you the demo  search engine.
+
+Hopefully this works.
+
+As expected. Need to do one more thing here.
+
+This is a live demo. Anything can go wrong.
+
+Actually, now,... I need a bit of tweak here.
+
+This is Quicktime recording on the iPhone. That is the best way I found to get a mobile phone on the screen.
+
+So, I'll perform a quick search.
+
+And now I'm live searching on mothership index of 1 billion records. Hopefully with a result.
+
+That's the search result for you. A really basic search. One that I built for this purpose.
+
+I can switch the views.
+
+To see a little more information. Full view. And go back. Scroll up and down and favorite an item. Fairly basic, but it works.
+
+That was the demo search engine.
+
+I'll be taking a closer look at the touch event, device motion and web speech Api.
+
+Touch event. Touchstart, touchend and touchmove.
+
+It is fairly basic.
+
+I'll show you on the demo over here.
+
+Switch to my touch part of the demo.
+
+So now, we can see over here. This is a bit small, isn't it?
+
+Can you read the log? Okay. Great. I don't have to do anything.
+
+So if you can see it says...
+
+The finger I put on the screen, there is a reading.
+
+I can fit 5 fingers on my screen.
+
+I don't know if it goes well. Every time I press the screen a touch event fires and you can see over here.
+
+Containing information about the touch event.
+
+A lot of stuff in there. Basically, it is the position on screen. And the target element. Which Dom element I pressed with my finger. There is a touch list. Containing an array of touch events. For each finger. So, basically, you can access any data about what happened on the screen.
+
+And this is fairly basic stuff.
+
+So, what can you do with it?
+
+This is the Dollar 1 touch resture recognizer.
+
+It is a little library. That can be used to pick up gestures. I'll show it here. This is the live website.
+
+You see, there is a canvas here.
+
+If I draw a circle, the code picks it up as a circle.
+
+If I draw a rectangle, it gets picked up as well.
+
+I won't go into this. This code up here.
+
+It is in the library. Being able to pick up gestures on screen.
+
+I have put this into my demo.
+
+So, hopefully, I can also pick up some more advanced movements on the touchscreen. Let's see.
+
+Now, I just...
+
+Now I draw a circle.
+
+Hey! It picked it up. A circle up here.
+
+I can do... Triangle. A line, and so on.
+
+So, given an input, array of touch events. This code recognizes basic shapes.
+
+Which is a good thing. So, how that can be used later.
+
+So, now...
+
+The device orientation event.
+
+This is when you move the phone about. A device orientation event is fired. With 3 parameters. The gamma. Gamma is the measurement of the left to right tilt of the phone.
+
+Beta is front to back tilt. And the alpha is compass direction of the phone.
+
+Turning this way. Also show you that. On the phone.
+
+This is a website that shows, tilts.
+
+Tilt the phone to the left. You have negative gamma readings. Tilt it to the right. Sorry about that.
+
+Positive gamma readings. And I tilt it forward.
+
+Positive beta readings and backwards.
+
+And of course if I can't see it on the screen when I'm turning the phone.
+
+So, have a alpha reading.
+
+Yes, so, what I did was, try to use this data coming from the device. Orientation event. To create a higher order gesture. This reads the change in the gamma, positive change yields tilt right. And negative gamma change is tilt left. I'll be using it in the search engine.
+
+A demo in a little while
+
+so, just show you how.
+
+How things look.
+
+So, I switch to...
+
+I choose my motion.
+
+So, now you see data about the phone's position in the room.
+
+Move it about, you get readings. As you can see.
+
+Oops! Upside down.
+
+Tilt left.
+
+No...
+
+It is not supposed to happen.
+
+I am just going to...
+
+Sorry about that. This is a live demo. Things go wrong and they did.
+
+Now, you see me. Hello!
+
+This is a new way to demo!
+
+And we are back, I hope.
+
+Yeah. Okay.
+
+Now, to speech. The web speech. Api picks up. Speech.
+
+And recognizes words, what I speak is actually, webservice. The backend of this feature is a backend. Sorry, web service, provided by Google. Which is also why it is only available in Chrome, on Android at the moment.
+
+It used to be on IOS. But Apple pulled it for some reason.
+
+I don't know.
+
+I'll just demo it in the desktop Chrome version. It works on Android phones. It was too much to get it all setup.
+
+I'll just switch to the speech part.
+
+And speech recognition. Hello computer?
+
+Get a reading.
+
+Well...
+
+It is not perfect!
+
+That's better.
+
+So... This is the fun part.
+
+Always... Yeah!
+
+You have to speak in whole sentences.
+
+Don't make breaks and don't, well, you know, see what happens now.
+
+That's fairly okay.
+
+So, I'm...
+
+(applause)
+
+that's probably why Apple pulled it from Ios.
+
+I'm going to do one more thing I never thought I would do in a presentation.
+
+Fuck!
+
+Yeah, well, okay...
+
+(sigh)
+
+So, let's put all this together in the search engine and see how we can augment the way we use it.
+
+Okay.
+
+So...
+
+All together.
+
+I do a search again.
+
+So now, this is the same search result as we saw before.
+
+Augmented with the gestures and I'll just show if I tilt the phone, to the right.
+
+It switches view.
+
+And I do it again. Switches again.
+
+The max view. Tilt the view to the left. Then it goes back. And back.
+
+Tilt to the phone... Forward.
+
+Scrolls down. I don't know if you can see it. It does.
+
+And if I... Tilt it back, it scrolls up.
+
+Now, also, hopefully, I'm scrolling down to the bottom. If I make a circle, it has to go up. It has a circle on screen.
+
+Did you see it? I'll do it again. It is difficult. The screen is scrolling. But I'm drawing a circle. It goes back to the top.
+
+Also if I do a line right, hopefully it switches view. No, it doesn't. Yes, it did.
+
+This is picking up the two gestures that you saw earlier on. This is a combination of 2 and 3 gestures.
+
+And it tends to get messy because things get picked up mixed together. If I scroll up, sometimes it also turns to the medium view and so on.
+
+I'll show how to control the search engine using speech.
+
+So, this is now the search enabled, speech enabled speech engine.
+
+I say: Search for computer. It searches for computer. Down! Down.
+
+Well...
+
+Down!
+
+Yeah! It is scrolling down. Down.
+
+This is... I never speak like this.
+
+Down.
+
+It is almost German accent. Down! Down...
+
+Home!
+
+It is going to the top.
+
+Medium.
+
+Medium.
+
+Extended.
+
+Small.
+
+Okay. It works. If you are very articulate.
+
+(applause)
+
+so, how much time do I have?
+
+Clearly, we can augment the traditional paradigm with these things.
+
+The big question is of course, is it useful?
+
+You look quite, sometimes, it is easy to speak to the phone. Something you do with the phone.
+
+You look silly when you try to command your phone. Search. People... Also, you disturb other people if you are talking to your phone all the time and doing stuff.
+
+And as we saw, it is very difficult to decode the speech, there are bound to be mistakes.
+
+Bound to be mistakes when you speak to the phone.
+
+Then, the gestures. 2D and 3D gestures.
+
+They lack a common language. We don't have a way of, common set of gestures that mean something.
+
+That's a challenge.
+
+Also, they are quite hard to do on screen as you saw. If you have a scrolling search result and you have to draw a circle. Or triangle or something. It is not very easy to interact.
+
+Also, 3D gestures are quite hard to code. And to separate noise and different interactions from eachother.
+
+So, there is a really a lot of challenges involved.
+
+But I guess, as always, it is very important that you evaluate new features and test them on users. In this case, I really couldn't see any of these ideas getting into the production search engine.
+
+Perhaps, perhaps this.
+
+Except this.
+
+Not scrolling down.
+
+The subtle tilt, you can do it with the phone.
+
+That's okay for me I think.
+
+That could work. But... Drawing circles on the screen seems a bit off.
+
+So, as always, when you do such things.
+
+Kill your darlings.
+
+This is the best advice I probably can give when dealing with these things.
+
+Cutting edge speech and 3D gestures. That was it. Thank you.
+
+(applause)
