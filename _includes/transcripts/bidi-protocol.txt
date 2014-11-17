@@ -1,0 +1,431 @@
+Hi everyone. I'm Will. I work for the mobile web team in London.
+
+- My name is Pavel. From Moscow.
+
+We both work for Badoo.
+
+We built web and native applications. More than 200 million users. To meet eachother.
+
+- I lead the mobile webteam. We have been rearchitecting a lot at the api lab.
+
+I'll talk about that. The problems with Api.
+
+Pavel is going to discuss details. About how we have implemented that. And I'll finish with examples of how we used the tools.
+
+What is an Api? It is an application programming interface.
+
+In simple terms connecting your client side and backend together, transferring data between the two.
+
+General operations, inputs, outputs, and has some type semantics around that.
+
+It is independent of the implementation we are using to create it.
+
+Simple. So, what are the requirements for building a good api. We want a perfect want.
+
+It wants to work and be magic.
+
+Wants to be flexible, extensible, testable, maintainable and platform and language neutral.
+
+Most of all, we are on it together.
+
+We want to focus building great features and not the bytes over the web.
+
+How can you split up in 3 areas? You have encoding.
+
+This is what you send over the world. Format of the data we are sending.
+
+Then we have rules about what messages we want to send and how we deal with them. Client server side. We have the messages from A to B.
+
+We want general help.
+
+And general validation that we do on the messages.
+
+How does it look in a classic Api example?
+
+We build in web applications that rely on the common technologies.
+
+So, typically in the application you are going to make Ajax request, encode it. The server is going to match that. We have some Php or Node logic that will format that data in the response we want.
+
+Send it back through the system. Parse it and code it and go through similar validation and use it in the business logic.
+
+But what are some of the problems we see?
+
+And why we haven't chosen this?
+
+Well, we have 2 different encoding semantics. That looks symmetric.
+
+ But server side we are sending Json. Client we are coding it in url.
+
+What happens if we want to send back data the other way?
+
+We are limited when using this example.
+
+And the server. What we want to initiate. We can use web sockets. Then we have to have another layer of system that deals with the logic. We can't build it all into the same thing easily.
+
+And, data access.
+
+There is no, when we build an Api, we have different parts of the company dealing with eachother. How this is going to work. We don't have some process defined in the use of the Api that we can use in showing. We don't have the versioning. And have duplicate code.
+
+So, Badoo's Api's. How does it fit in the things we are doing?
+
+We have a lot of databases in memory caches. That allows us to scale to 200 million users.
+
+They are connected via some native, binary interface to a core web Api.
+
+That is in Php. We have the desktop side.
+
+Which connects and builds the feature.
+
+It didn't suit mobile. We have a mobile Api core that sits and presents a different view.
+
+We have applications for Ios, Android and Windows.
+
+Then the first thing we did was, we have a desktop and native side. We don't have a mobile website.
+
+We had designs for mobile. We decided to build a feature of the site. That connects. That uses Java as technology. And the same interface.
+
+Then, 18 months, 2 years ago, we wanted a single page for web application.
+
+We connected it to the mobile api.
+
+We didn't. Sadly, we couldn't use the binary technology out of the box.
+
+We had another Api layer on top of the Java. And a semi service there.
+
+Recently, we have been joining the back direction.
+
+Pavel will talk about some of the ways we used the experiences. And allowed us to encode it in a more web friendly way.
+
+- I will talk about the solution we used. And key points you should keep in mind.
+
+There are a lot of implementations on market.
+
+But some of them are overengineered.
+
+Some have too much Xml inside. Forces to write in readable language.
+
+Let's take all the best parts and build our own.
+
+We want to tell you about building another universal Api. You know what happens if you try to build a universal solution which solves all the problems.
+
+I will tell you about the problems we found during the protocol design and how we have solved them.
+
+What should be the protocol values?
+
+First of all we want to have a protocol description which is independent from language and platform. We want Api to be available for all platforms, including Java, objective C. All the stuff.
+
+We want to be it Cpu and network efficient.
+
+On the same platforms. We want to have a nice data access class.
+
+We want, we don't want to have a config with all the roads, to send a message to get something back. We want to put it inside the protocol.
+
+And of course, because we are feature rich product, and we want to deliver new features fast, we want to have versioning.
+
+All of you know how long it takes to get from Google and Apple. And the users don't update instantly.
+
+So we decided to look at Google protocol buffers. Used in the backend communication.
+
+And try to bring it to client server communication.
+
+We can take a look at the same diagram we have. Both sides. We want to have a kind of event based system to handle all the messages and take decision what comes to the other end.
+
+We have a generated class with nice Api. Dependent on a protocol which can be different. We want protocol description.
+
+We want to automate as much as possible.
+
+So, let's take a closer look at Google Protocol Buffers. They have a nice interface language. All the features that we need.
+
+Internal representation is very good. We can easily extend their protocol. Itself.
+
+In case we have to patch the compiler, things like that.
+
+In terms of language support. It ships support for C++, Java and Python.
+
+At 2009, when we started looking at it, there was no support for Php.
+
+Plugins allow you to write your own language you need.
+
+Encoding is network and Cpu efficient. It is binary. There are a lot of comparisons that are efficient.
+
+Let's take a look at details of Google Buffers.
+
+Description language has a number of entities. Enumerations, messages, fields and simple service layer.
+
+All of the entities have options.
+
+Which describe details of the message. But isn't passed.
+
+The main advantage of Google implementation of the compiler and the language itself.
+
+Is that is self describing. It is a protocol buffers message.
+
+It is brilliant stuff.
+
+Let's look at details. Field can be repeated, optional or required.
+
+The message wants validated.
+
+It can be an array. 0 of that field.
+
+Interface description language has a wide type system.
+
+Including messages and enumerations, which allow to describe structures.
+
+And, all the fields have numbers.
+
+Field numbers give us versioning.
+
+I will talk about that later.
+
+A couple of examples. We had required, user field.
+
+Here is a small example of how does a message look in the profile. William will give examples later.
+
+So, we have a nice description language we can describe the protocol.
+
+Let's find out what we should actually use in application code.
+
+We have only binary importing. We have a simple Rpc.
+
+And we don't have native support. Only third party solutions. Which have a bit different infrastructure.
+
+So, why we have chosen the solution so much parts of which we don't like?
+
+Actually, there is an answer.
+
+It is because protocol buffer compiler.
+
+They allow us to implement our own coding, generate our own classes. And nicely decouple all these things from eachother.
+
+The infrastructure is nice. You can write a plugin in 20 lines. There will be an example later.
+
+You can write compiler plugins at any language you like and generate the code at language that you need.
+
+This architecture makes it completely independent of all the parts. From the serialisation.
+
+So, return to the picture. We started with.
+
+We have Badoo Api's. On this diagram.
+
+We use native encoding for native clients, for communication between Php and services.
+
+We want to use Json encoding between our side and the mobile browsers.
+
+We want to build our own solution, which encodes protocol buffers in Json. It appears to be quite performant.
+
+It is not a problem. We can easily plug in serialisation. Or xml.
+
+So, we have to generate the classes.
+
+Simplified development process.
+
+Auto generate all of that. We change something. We want to generate all the data access classes. And all the stuff.
+
+On mobile developer infrastructure. We have a task.
+
+On the website more control over backend.
+
+We can generate code only in case that it is newer than generated code.
+
+On production we do the generation on deploy process.
+
+So, we have a nice interface description language, a tool which auto generates all the classes. And we have a nice encoding we are happy with.
+
+Let's talk about message exchange.
+
+So, out of the box we have services. Simple implementation.
+
+Rpc is an ability of one node to call procedure on another node without knowing the implementation details.
+
+For me, the services from Google Buffers are too simple for complex application.
+
+We need a protocol layer. Which contains message ID, global protocol service. All will be in a message.
+
+Also we have dependencies that we want 2 way Rpc.
+
+We need to be able to call procedure on a client.
+
+To deal with the right client.
+
+Ask for operator.
+
+We control the server. And we can deploy a number of minutes.
+
+But we don't control... Sorry.
+
+Plan control is harder.
+
+So, and, we built our own Rpc implementation. We call it two way Rpc.
+
+Rpc class takes a parameter the common idea and message.
+
+You can subscribe to any message that came from the backend.
+
+If you want to listen to all Rpc messages, you can subscribe on Rpc any layer.
+
+And listen to all responses that could come from the server.
+
+You can think about this as a back way server. Procedure on a client.
+
+The call back we receive our nice generated class with all the types validated.
+
+You don't need to worry about field existance.
+
+And actually we use entities we had at the protocol.
+
+The enumeration for message ID. Requesting the response.
+
+Normal messages.
+
+Last but not least. Versioning is very important.
+
+We have out of the box per field versioning.
+
+When you pass a new field to a client which doesn't know about it, it will ignore it.
+
+Because of field number. I have told earlier.
+
+Because of Rpc implementation, we can ignore unsupported comments.
+
+On a client.
+
+Also, because we use only generated data access classes. In case you have removed some field in protocol and try to use it in a client.
+
+You will receive errors. That it doesn't exist.
+
+So, in the end, you should define protocol in 1 way.
+
+In 1 place.
+
+You should use generated classes to abstract protocol internals from the application code.
+
+You should have validation inside those generated classes.
+
+To be able to switch like even complete protocol implementation inside.
+
+You can, this way allows you to have different encodings depending on a situation.
+
+You have a Rpc layer, a lot of protocol details.
+
+And gives you simple, you listen what you want. And helps you to focus on features, not the protocol details.
+
+Versioning is also very critical.
+
+So, if you go this way, you'll end up with implementation which actually, everything decoupled.
+
+And now Will will give you a couple of realworld examples of what we have built.
+
+- Thank you.
+
+So, now we have all the tools. We want to put them together and go through it.
+
+So, this is a mobile app. We have a couple of apps.
+
+This is a screen.
+
+And we type in a city. Change location.
+
+We want to click on it and save the location.
+
+So, what details do we need to build that service?
+
+Simple. Send a city name. The part of the city name.
+
+And we come back with an ID, list of cities.
+
+And I'm going to talk about, 2 way Rpc.
+
+Communication as well.
+
+We also want a client notification. The service saying, some reason of state that we need a warning message be displayed.
+
+These are the protocol definition messages you need to define.
+
+The first is the enum messagetype. Definds the command that we send one way or the server sends back.
+
+We use the convention here. Messages from the client to the server. Start with Server.
+
+And back to the client, start with client.
+
+It is about readability.
+
+Then we define the messages for the data we have to send.
+
+So for city query. We have a string.
+
+And we deliberately try to make the messages semantic.
+
+We find that being specific about the types of message we send, allows us to see the code.
+
+And then the response coming back can be a city. We have repeated city object. Which allows you to nest these things nice.
+
+And you get a structure.
+
+Finally, you have client notification message. An ID and message.
+
+Before we move on, there are core things we have to define once.
+
+Wrapper message. We have the initial message. Everything that is contained that is sent.
+
+A version and message ID and a message body.
+
+We fill the message body with this type of message. And the way it works, you can fill that in with optional fields and you have it available for you.
+
+This is a generated class example. The details don't matter. A couple of things to take away.
+
+There is a base class we have control over.
+
+You don't have to edit it on a day to day basis.
+
+Some generic validation for you. Make sure everything is happening properly.
+
+Here we have the descriptive information that we pulled out when we did the generation stage from the message into the actual generated class.
+
+And then the same thing for peer to peer. You can generate it into java.
+
+We have extended a base class. And we have a descriptor information, specific how we want to format it.
+
+Now we have a generated classes. And we are ready to start using it with the library.
+
+So, we want to make a new Rpc call. And send server search cities.
+
+From client to server. And we want to give that a city query object which contains the data that we want to query.
+
+We have to build a new city query.
+
+We pass it in.
+
+Once we have done that, we need to bind some events in.
+
+We want to listen in this case to client cities.
+
+And we want to pass that to a call back.
+
+So, this is kind of node style. We pass in an error and city object.
+
+We can handle the error or ignore it. And loop through the list of cities.
+
+Likewise we can listen to the client notification event here. And pass that into a call back.
+
+And then finally, we send, file a request with function.
+
+That sends it off to the server and we see for response.
+
+We said that we want to do a notification on any situation. We don't want to have to go and do with every Rpc.
+
+We want to bind that into the Rpc any call.
+
+We want to remove that on client notification message there. And create an Rpc on any call, we can find it generically. Any message that we send. Or if we use a different communication channel. Websockets or other kinds of service enabled, that can be pulled out.
+
+So, that's the end of the examples.
+
+And this is a quick summary of what we have gone through.
+
+We have discussed Rest and Json. Why it wasn't suitable. Gone through the protocol values.
+
+And a few examples.
+
+So, these are the contact details. The slides will be up at Techblog.Badoo.Com.
+
+We are available for questions later on.

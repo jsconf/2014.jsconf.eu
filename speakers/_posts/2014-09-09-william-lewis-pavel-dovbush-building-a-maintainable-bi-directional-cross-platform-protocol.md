@@ -23,6 +23,9 @@ image2:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/pavel-dovbusch.jpg"
+video: Wkw4TOBEKUY
+transcript: "transcripts/bidi-protocol.txt"
+slides: "http://techblog.badoo.com/files/building-a-maintainable-bi-directional-cross-platform-protocol/JSON_RPC.pdf"
 ---
 
 {% include speaker.md %}
