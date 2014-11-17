@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/lindsay-eyink.jpg"
+video: 65YYMLQ1jkU
+transcript: "transcripts/lindsay.txt"
 ---
 
 {% include speaker.md %}
