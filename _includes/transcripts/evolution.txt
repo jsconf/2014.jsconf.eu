@@ -1,474 +1,314 @@
-Thank you so much. So, as has been said, I'm Raquel. I am @Rockbot on all of the things.
+Thank you so much. So, as has been said, my name is Raquel Vélez. I am @Rockbot on all of the things.
 
-I'm a senior developer of software at Npm.
-
-I'm honored to be able to work there. I have answers and stickers for you.
+I am a senior software developer at Npm, Inc. You may have heard of npm, you use it to install all of your wonderful JavaScript things. I am honored to be able to work there. If I can answer any questions or give you stickers, please let me know. I have answers... and stickers.
 
 So, let's get started.
 
-On a scale of fist to high five.
+On a scale of "fist" to "high-five", where would you rate yourself as a developer?
 
-Where would you rate yourself as a developer?
+Where a fist is, "I'm just figuring out this whole JavaScript thing. I think I know what a variable is and I'm learning about loops, etc."
 
-Fist is, I'm just figuring it out. I know what a variable is and learning about loops.
+To "I have taught Brandon Eich everything he knows."
 
-To I have taught Brandon everything.
+And you can totally do the Fitbit thing if you want. You can be like, "I'm a three-and-a-half" or whatever.
 
-You can be a 3,5 or whatever.
+Cool. All right. You can play along too! Feel free to play along. Cool.
 
-Cool.
+I'm seeing kind of like beginning to middle... That's awesome. Great.
 
-All right.
+What I'd like to talk today about is how we go from here (fist) to here (high-five).
 
-You can play along too.
+Because I think a lot of us who are kind here (fist with wiggling thumb), don't know what this path looks like (opens to high-five). And I think those of us who are here (high-five) forgot what it was like to be here (fist).
 
-Cool.
+So let's go through that whole process.
 
-I'm seeing kind of like being in the middle. Awesome.
+Yeah, it's intense. I am going to use my personal story. This is not going to match everybody's, but I think a lot of the elements are going to be the same.
 
-What I'd like to talk about is how we go from here to here.
+It all starts out the same for all of us. For whatever reason we say, "I'm going to start learning JavaScript." Or insert technology of your choice, but I'm going to start with JavaScript.
 
-Because I think a lot of us who are here, don't know what this path looks like.
+Whether it's for a business reason or for personal reasons, we say "Okay. This JavaScript thing? I'm going to do it. Let's do this. Yes! Totally!"
 
-And I think those of us who are here forgot what it was like to be here.
+For me, I used to be a roboticist. I used to build robots. And I said to myself, "OK, this is kind of boring, because the robots... they don't really have fun with me. We don't get to party. We don't get to talk about boys. We don't... They're just kind of robots."
 
-So, let's go through that whole process.
+And so I decided I needed a little more people in my life.
 
-It is intense. I am going to use my personal story. It will not match everybody's.
+I was living in Charlotte, North Carolina at the time and I said "OK, where is a cool place to work? I think the Internet is kinda cool. Let's do that."
 
-It all starts out the same.
+I mean, I was a roboticist. The Internet can't be that hard.
 
-Whatever reason we say, I am ginger to start learning JavaScript.
+I went and talked to the CEO of the coolest company in town. I said, "I'd really  like to work at your company. What do I need to do to work here?"
 
-I'll stick with JavaScript.
+He said, "Learn Node."
 
-Whether it is for business or personal reasons.
-
-Okay. This JavaScript, I'm going to do it. Yes! Totally!
-
-For me, I have been building robots.
-
-And I said to myself, this is kind of boring. The robots don't really have fun. We don't get to party. Talk about boys. We don't, just kind of robots.
-
-And so I decided, I needed to have more people in my life.
-
-I was living in North Carolina. Where is a cool place to work? Internet is kinda cool. Let's do that.
-
-I mean, I was a robotocist. The internet can't be that hard.
-
-I talked to the CEO of the coolest company in town. I'd like to work at your company. What do I need to do?
-
-He said, learn Node.
-
-Okay. Cool. I went home and said: I am going to learn Node. Let's do this.
-
-I'm going to build an application. That's how I learn.
+Okay. Cool. So I went home and said, "I am going to learn Node. Let's do this. I'm going to build an application. That's how I learn."
 
 And I got nowhere.
 
-This happens to all of us.
+This happens to all of us. We have no idea what we're doing, because we don't know the words that we need.
 
-We have no idea what we are doing, because we don't know the words we need.
+I knew enough to say, "OK, Node. It's a project, it's a thing. Go to the website: nodejs.org."
 
-I knew enough to say, Node is a project, a thing. Go to the website.
+I downloaded Node. I knew enough about the command-line to say, "There's no 'application', so I don't double-click on anything."
 
-Downloaded Node.
-
-I knew enough to say, if there is no application. I don't doubleclick.
-
-Node. Enter.
+I go to the command-line and type n-o-d-e enter.
 
 What happens at that point?
 
-You get this little thing. Looks like this.
+You get this caret-y thing. Looks like this: >
 
- You see it in the JavaScript console.
+You see it also in the JavaScript console, when you go in a browser.
 
-It doesn't say anything.
+And you're looking at it, and it doesn't say anything.
 
-Okay...
+You're like "Okay..."
 
-So, go! Enter.
+So, go! g-o enter.
 
-Undefined. You're like, okay. This doesn't work for me.
+And what does it say? It says "undefined".
 
-I don't know what to do. I don't have the vocabulary to say. How to make it work zozer So, what do you do next?
+You're like, "Okay. This doesn't work for me at all. I have no idea what I'm supposed to do."
 
-You go online.
+I don't have the words. I don't have the vocabulary to use to say "How do I make this thing work?"
 
-Go to Google. Stack overflow. Blogpost.
+So, what do you do next? You go online. Go to Google. Stack Overflow. Blog posts. Whatever. And you start looking for help.
 
-And you start looking for help.
+PRO TIP: "caret-y thing in Node" does not produce any useful results. There's just nothing in there.
 
-Charity thing in Node doesn't produce anything results.
+Again... no vocabulary. No way for me to say, "I have no idea what I'm doing. I need help."
 
-No vocabulary. No way to say, I don't know what I am doing. I need help.
+And then on top of that, this was at the beginning of 2012, when Node was super-new. It had been around for a couple of years, but it was still really brand-new.
 
-So, and then on top of that. That was the beginning of 2012.
+To the point where any tutorials I found... if it was more than 6 months old, it was completely out-of-date. This isn't even useful to me.
 
-When Node was supernew. It has been around for a couple of years.
+So, whatever. I still try. I find some things.
 
-Any tutorials I found. If it was more than 6 months old, it was out of date.
+I start playing around and I say "This is cool, but... I... Caret-y thing? Help?"
 
-This isn't even useful to me.
+So at that point I realized I needed more people in my life. I needed to start asking questions.
 
-So, whatever. I still try. I find some things. Playing around.
+So I went to a local meetup. That's a great way to start meeting people. Local developers in your community, and you can actually talk to them.
 
-This is cool. I... Charity thing? Help?
+You can say, "So look, here is my terminal. n-o-d-e enter. Caret-y thing." (shrug)
 
-So at that point I realized I needed more people in my life. Start asking questions.
+And they go, "Oh, that's the REPL! Yes, that's the read-eval-print-loop. That's how we do all of our on-demand type stuff. What you really want is, you want a separate file. And then you can run node file."
 
-A great way of meeting. Local developers in the community.
+And then it runs, and magic, and you're like "Oh my god, why did nobody tell me this? I didn't understand anything."
 
-You can talk to them.
+But that's okay. Because you go, and you talk to these people. And they have been there enough that they can read your mind a little bit.
 
-Look, here is my terminal. Node enter.
+And you're like "Caret-y thing!" and they're like, "Yes, REPL. That's the word." And you're like, "Cool!"
 
-Charity thing.
+At the same time I was trying to build this app. And I was like, "I have this app. I want it to store data. And I know I need a database, but I've only used MySQL before." Because that's what I used when I was hacking on my Wordpress blog. "Is that what I want to use?"
 
-And they go: That's the redevelop print loop.
+Whatever you want to say about databases... blah, blah, blah. At the time, what I needed was MongoDB. It was the perfect solution.
 
-That's how we do all the on demand stuff.
+Again, talking to people in person. Being able to use words that didn't make any sense to Google, but made sense to people, made a huge difference.
 
-You want a separate file. And then Node file. And runs, magic.
+Empowered with all this incredible knowledge, I went back to my app.
 
-Why did nobody tell me this?
+OK, I'm building this app. I've got Mongoose, and I've got Express. And how do I integrate these things? I don't know. But now I have keywords that I can ask Google.
 
-Didn't understand anything. It is okay. You talk to the people.
+You type: Mongo Node. There is this wonderful module called Mongoose. They have a website, and they have code samples. You're like "Yes! Perfect! Code samples!" Copy, paste.
 
-They have been there enough that they can read your mind a little bit.
+I expect magic to happen. And no magic happens. And, you're like, "Why isn't this working? I don't know."
 
-And they're like, yes, Rapl, that's the word. Cool.
+You don't have the concepts fully-integrated into understanding how this is all supposed to come together.
 
-At the same time I was trying to build this app.
+So you go back! And maybe your local meetup only meets once a month, so you need to expand your group of people to ask questions.
 
-I have this app. I wanted to store data. And I know I need a database. I have only used MySQL before.
+What did I do? I went on to IRC. If you don't know what IRC is, it's this amazing technology that's been around apparently forever, but I didn't hear about it until 2012.
 
-Is that what I want to use? Whatever you want to say about databases.
+And it was on IRC that I found the mongoose.js channel. And I was like "Hi! I'm using your thing. I think it's the right thing for me, but it's not working in my stuff."
 
-I needed MangoDb.
+They're like, "Send us your code."
 
-Talking to people in person. Being able to use words that didn't make sense to Google.
+And I did what every single new person does: I copied and pasted all of my code into IRC. It was like, 25 lines of stuff.
 
-It made sense to people.
+Someone said, "Oh, god, please don't do that again."
 
-Empowered with all this incredible knowledge I went back to my app.
+And then I learned about a thing called Pastebin. That was super-useful. Then of course, gists, etc.
 
-I have Mongoose. And Express. And how do I integrate these things? I don't know.
+But I did the thing that everybody does, and I got very politely yelled at. "Don't do that again." "Okay."
 
-I have key words I can ask Google.
+But still, being able to share my code with someone else from a larger community. People who were from all over the world, not just my local community!
 
-Mongo. Node. There is this wonderful module. Mongoose.
+Because when you're hacking at 2 am, sometimes your friends are not awake, but somebody in Germany might be! And that's awesome because they can give you this feedback, and they share more appropriate vocabulary with you, and then you understand the concepts: you understand how things link together. And it's really awesome!
 
-They have a website. They have code samples. Perfect! Copy, paste.
+So you take all this knowledge. And you're still going to mess up.
 
-No magic happens. And, you're like, why isn't this working?
+If you're not messing-up, you're not doing engineering. Just FYI. This is how it works.
 
-I don't know.
+You do good, you mess up, you succeed. It's just this cycle and you just kind of keep moving forward.
 
-You don't have the concepts fully integrated into understanding how this is supposed to go together.
+But! This is a turning point. These concepts are coming together enough, and you have grown your community enough to the point where you're like "OK, whenever I have a problem, I might not know what it is, and I might not know how to fix it, but I at least know what to ask, where to ask, and who to ask."
 
-You go back. And they only meet once a month.
+Right? Go on IRC, go to your friends, go to your meetup. Whatever. Know exactly the magical keywords to get the thing out of Google or Stack Overflow. Fantastic.
 
-You need to expand your group of people. What did I do? I went to IRC. Amazing technology.T has been around forever.
+So now you can keep moving forward. And you're like, "Yes! I got this!"
 
-I found a Mongoose.Js channel.
+You find this point at which you are like, "Wow, this is actually really cool! This is so fun! I love this!"
 
-I'm using your thing. It is not working.
+But I'm doing this on the side. I have another job, and it is sucking all the life out of me because I really just want to play with Node all the time.
 
-They're like, send us your code.
+"Maybe I can get a job in Node! Yes! That's totally a perfect idea."
 
-I copied and pasted all of my code into IRC. It was like, 25 lines of stuff.
+At some point you get to where you know enough information that you can be a junior developer.
 
-Someone said: Oh, god, don't do this.
+Junior developers are useful. They're useful because you can tell them exactly what to do and you don't have to pay them very much money and you can still move forward with your product.
 
-I learned about Pastebin. That was useful.
+So you bring a junior developer on-board. Yeah, you have to train them a little bit, but you get to train them doing exactly what you want them to do.
 
-And gist etc.
+So from a junior developer perspective, you're like "Oh my goodness! Now I have this opportunity to get paid while I learn. Awesome."
 
-I did the thing that everybody does.
+For me, I got a job as intern. I wasn't even a junior developer yet: I just got enough to be an intern.
 
-I got very politely yelled at, don't do that again. Okay.
+I was getting paid 500 dollars a week, which is not very much at all. Especially for someone who is coming from robotics, it was kind of a blow to the ego, but I was like, "You know what? It's worth it. This is gonna be OK. I'm gonna to make it work."
 
-But still, being able to share my code with someone else from a larger community. From all over the world.
+Fantastic. You start working, and you start learning. And then you get to this point where you are like, "This is super fun, but I'm not exactly learning all the things that I want to learn. I'm learning the things that my employer's telling me to learn. And that's fine, because at least for me, I was working at a consulting company, so I got to see a little php, I got to see a little bit of Node, I got to see a little bit of front-end stuff. I was convinced I was going to be a back-end developer because I did robotics.
 
-Not just my local community. When you hack at 2 am, sometimes your friends are not awake. Somebody in Germany might be. They can give feedback. And share more vocabulary. And you understand the concepts and how things gather.
+Then I was like, "Hey, CSS -- as annoying it can be -- is actually really cool. You get to see stuff. And you get to move things. Floats, and divs, and wow!"
 
-It is awesome. You take the knowledge. You are still going to mess up. Otherwise you are not engineering.
+And so at that point I kind of transitioned to be more of a front-end person, but still lovin' the Node.
 
-You do good, mess up, succeed.
+I like to think at it as a buffet of learning. You go in and you just get a little bit each of these little things.
 
-A cycle. You keep moving forward zozer But, there is this turning point.
+But I still felt like I was missing something.
 
-These concepts are coming together enough. You have grown your community enough.
+"Yes, this is our stack at this company, but I know that there's more. I keep hearing these rumours of these single page applications and all this other stuff. Where do you go to learn that?"
 
-When I have a problem i might not know how to fix it, I know what to ask. Where to ask.
+Where do you go? You come to one of these. This is where you find out about all those things that you knew you were missing out on something, but you didn't know what it was.
 
-And who to ask.
+How many of you've learned something new that you didn't realize even existed since being here?
 
-Right? Go on IRC, friends, meetup. Whatever.
+Yeah! Exactly.
 
- Know the keywords to get out of Google.
+So, it's fantastic. You get what you're missing.
 
-You can keep moving forward. I got this!
+It is like drinking from a firehose. It's like trying to get a little sip of water and whoosh! Right in your face. My goodness, gracious!
 
-You find this point at which you are like wow, this is really cool. So fun.
+But it is totally worth it, because then you get super-excited about all this stuff.
 
-I love this. But I'm doing this on the side. I have another job. It is sucking all the life out of me.
+My first conference was NodeConf SummerCamp 2012. I went to this conference hoping to learn more about the event loop. Apparently there's going to be a talk about the event loop later: I'm totally going to that.
 
-Maybe I can get a job in Node! Yes! That's a perfect idea.
+But at this conference I didn't learn about the event loop. I learned about "node-core" and "domains" and "error handling" and I was like "Whoa, I just want to learn about the event loop, please. I'm new to this."
 
-You go and, at some point you get to the point, you know enough information that you can be a junior developer.
+But there was another really important aspect of going to a conference.
 
-At that point, junior developers are useful. You can tell them exactly what to do. You don't have to pay much. And you can move forward to the product.
+I learned about people. I met people. Met all of these incredible people that have completely changed my life. Every conference I go to, I meet new people and it's incredible. I become really good friends with these people.
 
-You get to train them exactly what you want them to do.
+As a side note, if there's nothing else you get out of this entire conference. Nothing. At all. Because let's be real: you can watch these videos at home later...
 
- Now I have this opportunity to get paid while I learn.
+If there's nothing else you get out of this conference, walk away with at least 5 Twitter handles. 5 Twitter handles of people that you are going to hang out with and talk to on Twitter. If you don't like Twitter, use Facebook or email. I don't care. Make sure you get to know somebody else. Because these people, that are sitting in this room with you? They are going to help you get your next job. They're going to help you when you have a bad day and they'll send you funny cat gifs.
 
-Awesome.
+Like, super awesome. These people are really going to change your life. Right here. The ones that are sitting right next to you. And those of you following along at home, come to a conference and let this totally tranform you.
 
-For me, i got a job as intern. I wasn't even a junior developer.
+OK. Coming back.
 
-I got 500 dollars a week. Not very much at all. Someone from Robotics, it was a blow to the ego. It is worth it. I'm going to make it work.
+You're talking to these people. You're at this amazing conference. "There is so much cool technology. Oh my goodness! I totally want to play with this!"
 
-Fantastic. You start working, learning.
+When do you do that? What do you do with all that cool technology?
 
-You get to this point where you are like, this is superfun.
+You start working on it on your own.
 
-But I'm not learning all the things I want to learn. But the employers want me to learn. For me, I was working at a consulting company. Php, node, frontend stuff.
+And yeah, it kind of stinks. You don't always get to take all the cool technology back to work with you.
 
-I did robotics.
+But let me just tell you a little bit: this is a really good opportunity. If you find the time to hack on things on your own, you expose yourself to a whole bunch of other stuff. You get to use all of these people you met at this conference, where you learned about all this stuff. And you can ask them, "Hey, can you take a look at my code?"
 
-Then I was like, Css, as annoying it can be is cool. You can get to see stuff. And move things.
+Here is the thing about open source. It is not about contributing to jQuery or node-core. It's about taking literally your source and you're opening it up. Just sharing your stuff on Github.
 
-Now.
+It doesn't need to be anything like, "Whoa, magical!" or life-changing. It just needs to be some code. Show it to somebody. Let someone else say, "Hey, why did you do that? What was your inspiration for this? How did you figure that out? That was really cool!" Getting feedback on your code from somebody else is super-useful.
 
-I transitioned to be more of a frontend person.
+For me, I was at this conference and talking to somebody. They said to me, "Hey, you used to do robotics. You know what we're missing in node: we don't have a matrix module."
 
-I like to think at it as a buffet of learning. Get each of the things.
+I said, "You know, that's true. There isn't a matrix module." And I used to do robotics, so matrices and I? We're like this. So I went ahead and started hacking on stuff.
 
-I was missing something.
+So, you start hacking on things. Look: you are still going to keep messing up. And failing. And then you're going to succeed. And there will be moments where you are like "Oh my god!" and you're going to run around the office or your bedroom, or whatever. Because it's so exciting that you're getting it.
 
-Yes, this is our stack at this company. I know there is more. I keep hearing this rumours, single page applications and other stuff.
+But the point is that you're playing with these things. You're kind of already getting to know the concepts and you're figuring all these things out. And it just starts to feel really good because you're building confidence in yourself.
 
-Where do you go to learn that? Where do you go?
+And you're like, "Actually... I'm not a total newb anymore. This is awesome!"
 
-You come to one of these. This is where you find out of the things you knew you were missing out on something.
+I mean, you didn't teach Brandon Eich everything he knows. But you're starting to get somewhere and you feel really good about it.
 
-How many of you learned something new since being here?
+These concepts are gelling really well, and you start to experiment a little bit. What happens when people get a little too confident? They start to get a little experimental. "Hey, I wonder what happens if I do this thing?"
 
-Yes! Exactly.
+It's kinda scary. And it's not always going to work. But every once in a while it will.
 
-So, it is fantastic. You get what you are missing.
+Also at NodeConf I met this guy named Chris Williams. You may have heard of him. He kind of started the whole JSConf thing.
 
-It is drinking from a firehose. It is just like, right in your face. My goodness, gracious.
+But he's also into robots. And I remember being at the conference and talking to him. And I was like, "Yeah, you know, robots are kinda cool. I guess. Whatever."
 
-It is totally worth it.
+And then he DM'd me later and he was like, "OMG, wait. You mean you used to do robotics full-time? What are you doing right now? Why are you in this whole web thing? We need to be working together! I do this thing called Nodebots. It's not really a thing yet, but I want it to be. I need your help!"
 
-Then you get suerexcited about this stuff.
+So I said, "Okay. That sounds kind of crazy. Maybe I can..." And afterwards as I'm building this matrix module, I was like "Wait, maybe this is an opportunity for me to kind of segue into that. That's kind of cool."
 
-My first conference was Nodecamp summercamp 2012. I went to learn more about the event loop. I'm going to it later.
+These concepts are so solid. And I have all this extra background information from what I used to do. Things that excite me in general. And you keep experimenting and you keep playing around. Eventually something starts to stick. Something starts to stick real well.
 
-At this conference I didn't learn about it. Nodecore and domains and error handling.
+And for me, this was my vector module. Not very many people use it, but it is actually really cool how basically it is a robotics-focused matrix module. It's specificaly for robots. It's specifically for matrices. But I started building some really cool robots with it.
 
-Wow, I just want to learn about the event loop, please.
+And as you are building these things, you're like, "Hey, people are starting to notice this stuff!" They start to use your stuff.
 
-I am new to this.
+Whatever it is you are building, at some point it is going to be successful enough that people are going to notice.
 
-But there was another important aspect of going to a conference.
-
-I learned about people.
-
-I met people. Met all of these incredible people that have completely changed my life.
-
-Every conference I meet new people. It is incredible. I become good friends with these people.
-
-If there is nothing else you get out of the conference. Nothing at all.
-
-You can watch these video's at home later.
-
-Walk away with at least 5 twitter handles of people that you are going to hang out with on Twitter.
-
-Or use Facebook or Email. Make sure you get to know someone else.
-
-These people in the room r here, are going to help you get your next job. Help you when you have a bad day.
-
-Like, super awesome. These people are going to change your life right here.
-
-The ones that are sitting next to you.
-
-Come to a conference if you are home. And let this transform you.
-
-Coming back.
-
-You are talking to these people. You are at the conference zozer there is so much cool technology. I want to play with it.
-
-When do you do it? With all the technology?
-
-You start working on it. On your own.
-
-And yes, it stings. You don't always get to take all the cool technology back to work with you.
-
-There is a good opportunity. If you can hack things on your own.
-
-You expose yourself to a whole other stuff. You get to use all the people you met. And you can ask them, hey, can you take a look at my code?
-
-Here is the thing about open source. It is not about contributing to Jquery. It is taking your source and you open it up. Sharing it on Github.
-
-It doesn't need to be magical. It is some code. Show it to somebody.
-
-Let's someone else say, how did you do that. Inspiration for that.
-
-How did you figure that out?
-
-Getting feedback on your code from somebody else is superuseful.
-
-For me, I was at this conference.
-
-Talking to somebody.
-
-They said to me, hey, use your robotics. We don't have a matrix module.
-
-You know, that's true. There isn't a matrix module.
-
-I used to do robotics.
-
-So, I went aheaid and started hacking on stuff.
-
-You start hacking on things.
-
-You are still going to keep messing up. And failing.
-
-And you succeed. And moments where you are likse this. Run around the office or bedroom, wherever.
-
-It is so exciting you are getting it.
-
-The point is that you are playing with these things.
-
-You get to know the concepts.
-
-And it just starts to feel really good. You are building confidence in yourself.
-
-Actually, I am not new anymore. This is awesome.
-
-You didn't teach Brandon everything he knows. But you feel good about it.
-
-These concepts are really well.
-
-You start to experiment. What happens when people get too confident? They get experimental. I wonder what happens if I do this thing.
-
-It is kinda scary. It is not always going to work.
-
-Once in a while it will.
-
-Also at NodeConf I met Chris Williums.
-
-You may have heard of him.
-
-He is also into robots.
-
-And I remember being at the conference. Yes, you know, what's cool I guess. Whatever.
-
-And then he was like, you used to do robotics fulltime? What are you doing? Why are you in the webthing?
-
-I do Nodepads. I want it to be a real thing.
-
-Okay. That sounds crazy. Maybe afterwards I'm building this matrix module. It is an opportunity to segway into that. That's kind of cool.
-
-These concepts are so solid. And I have all this extra background information. From what I used to do. Things that excite me in general.
-
-And you keep experimenting and playing around. Eventually something starts to stick. Real well.
-
-And for me, this was my vector module. It is actually really cool how basically it is a robotics focus matrix module. For robots. I started building really cool robots with it.
-
-As you are building these things. Hey, people are starting to notice this stuff. Use your stuff.
-
-Whatever it is you are building. At some point it is going to be successful enough people are going to notice.
-
-You are sharing your code, putting it in open source.
+Because people are going to check it out. You are sharing your code, right? You're putting it all out in open source.
 
 People are going to notice.
 
-I never forget the day I got a tweet from Rick Waldrin. I never met by that time.
+I never forget the day I got a tweet from Rick Waldron, who I'd never met at that point.
 
-If you don't know him, he is on Tc39. He wrote Johnny 5.
+If you don't know who Rick Waldron is, he is on TC39. He's on the board of jQuery. He wrote Johnny Five, which is like a jQuery for hardware.
 
-This is a guy that I totally bowed down on. You know JavaScript. I don't know JavaScript. You are saying my code is really awesome?
+This is a guy that I totally bowed down to. I was like, "Oh my goodness. You know JavaScript. I don't know JavaScript, but you know JavaScript, and you're saying that my code is really awesome? This is wild. How did that happen? How did I get here?"
 
-This is wild. How did that happen? How did I get here?
+And you completely forget all of the hard work you went through trying to get there.
 
-Yu completely forget all of the hard work you went through trying to get there.
+But from that point, you start to realize that as you're writing about your stuff -- you write blog posts, you go to workshops, you lead workshops -- this stuff that you didn't ever think was evenly remotely possible... you're standing up and sharing your knowledge.
 
-From that point, you start to realise that as you are writing about your stuff.
+And people are starting to think like you're an expert. They start asking you for help. You're the one they're waiting for on IRC. "Hey! There you are! Hey, I have all these questions! Oh my god, can you please help me? Here's all of my code!"
 
-You write blogposts, you lead workshops.
+"Hold on! Use a gist, please..."
 
-This stuff you didn't think of was possible, you are standing up and sharing your knowledge.
+People start to notice your expertise. And that's really exciting. For me, I started doing Nodebots, and Nodebots completely took off. We had a workshop at JSConf. We had another workshop at the next JSConf. We had International Nodebots day... twice! There are all these incredible events, and more stuff is coming.
 
-And people are starting to think like you are an expert. They are starting you for help.
+But I want to hit home on this one thing. As you start to build expertise, as people start to notice all of the things you are contributing, other people outside of your necessary little niche are starting to start noticing too.
 
-You are waiting for. These questions. Help me. Here is all of my code.
+Because as you become more of an expert, as you start to actually know what you are doing, other people are going to want to start bringing you on board.
 
-Hold on.
+I stopped interviewing at this point. I don't really send my resume out anymore. I get other people calling me.
 
-People start to notice your expertise. That's really exciting. I started to do Nodebuds. We had a workshop at JSconf. International Nodebuds day twice. All these incredible events. More stuff is coming.
+And I don't want to sound like, "Oh, look at me: I'm so awesome!" No.
 
-I want to hit home. As you start to build expertise, as people start to notice all of the things you are contributing. Other people of your little niche are starting to notice too.
+What I'm saying is: other people are noticing that you -- yes, you -- are really quite good at what you're doing. Believe it or not.
 
-Because as you become more of an expert, to know what you are doing. Other people are going to want to start bringing you on board.
+And they start calling you up and saying, "Hey!" Maybe they're Isaac Schlueter -- the BDFL of Node: aka, the leader of the Node project at the time -- saying, "Hi! I really like the things that you're doing. I'm starting this new company called Npm, Inc. Do you want to come on board?"
 
-I stopped interviewing at this point. I don't really send my resume out anymore.
+And you have this moment where you're like, "I'm a total newb... Right?"
 
-I get other people calling me.
+And no, you're not. You're not a newb anymore. You have gone from here (fist) and you're slowly making your way up. Very slowly.
 
-I don't want to sound, look at me, I'm awesome.
+But you're there. You're sharing your stuff everywhere. Everybody's already asking for help. How is it so much harder of an idea for somebody to say, "Please come on board. I want to pay you to work for me and nobody else."?
 
-Other people are noticing that you are really quite good at what you are doing. Believe it or not.
+That's a pretty amazing opportunity.
 
-And they start calling you up and say, hey, maybe Isaac Schoeder. The leader of the Node project. Hi, I really like the things you are doing.
+There gets to be this point at which you realize -- despite every single little piece of imposter syndrome that sits in your head saying "You have no right to be up here" -- you say that you've got to be up here. Because if you don't share, then who will?
 
-I'm starting this new company, Npm Inc. Do you want to come on board?
+And, you realize that you have received so much from this community. So very, very much. They put up with your ridiculous IRC logs and they put up with your silly questions of "caret-y thing?"
 
-You have this moment. Like, I'm a total new...
+You realize you are not alone, and you've got to give back. You have to give back. Somebody needs to hear your story.
 
-No, you are not. You are not a nube anymore. You have gone from here and you are making your way up. Very slowly.
+So, I want you to know, that no matter where you are on this scale (fist to high-five)... Seriously. Anywhere you are.
 
-But you are there.
-
-You are sharing your stuff everywhere.
-
-Everybody is asking for help. How is it so much harder of an idea to say, please come on board I want to pay you to work for me and nobody else.
-
-That's an amazing opportunity.
-
-There gets to be this point at which you realise, despite every syndrome that sits in your head, you have no right to be here.
-
-You say that you have to be up here. Because if you don't share, who will?
-
-And, you realise that you have received so much from this community. So very very much.
-
-They put up with your ridiculous IRC logs and your silly questions like charity thing?
-
-You realise you are not alone. You have to give back. Somebody needs to hear your story.
-
-So, I want you to know, no matter where you are on this scale, seriously. Anywhere you are.
-
-At some point you are like, I know everything there is to know. Someone is going to throw a brand new framework at you.
+And believe me, at some point you're going to be like, "Oh yeah, I know everything there is to know about Angular or Ember, or whatever" and someone is going to throw a brand new framework at you and you're going to start at zero all over again. And you're going to continually say "I have no idea what I'm doing!"
 
 I want you to remember this major thing.
 
-We are in this together.
+We're in this together. We are all in this together.
 
-We are all in this together.
+And wherever you are, we are with you. I'm with you. You're with me. We're in this together. Sorry, you're stuck.
 
-And wherever you are, we are with you. I'm with you. We are in this together. Sorry, you're stuck.
+It's really important to remember that JavaScript is so much more than syntax. It's not about semicolons or tabs vs. spaces, or any of that.
 
-It is really important to remember that JavaScript is so much more than syntax. Not about semicolons or tabs, spaces.
-
-Any of that.
-
-It is all of us.
+Frankly, it's all of us.
 
 Thank you very much.
 
