@@ -1,0 +1,361 @@
+Hello!
+
+Js Conf has been an amazing experience for me. I have been to a lot of tech conferences. I want to thank the organisers and Jan. I have given this talk once. At Berlin Js to 15 people.
+
+I am no stranger to the internet. Javascript community. I have a lot of background in the internet.
+
+This talk is about your roots.
+
+In order to know what you are doing and where you come from. You need to know a little bit about the industry you are working in, the history.
+
+I think, technology and, it is about history and culture.
+
+History and culture is something that drives everything we do on daily basis. How you eat, look at the world. How you create music.
+
+And I think sometimes people forget that your industry has a history.
+
+You don't think about where it came from.
+
+So this talk is about the roots of our industry and how we ended up becoming technologists. And able to empower people. I want to guide you through some of the history of Silicon Valley.
+
+It is near and dear to me. I have lived there for 11 years.
+
+So, Hi, I'm Lindsay. I'm an independent product manager for Amateur Historian.
+
+I have a background in interaction design, visual communication. I also studied history.
+
+And I'm pretty avidly into politics and culture.
+
+Less than 2 weeks ago I moved to Berlin. I used JS conf as excuse to move. That is not a joke.
+
+I have been coming between Berlin and San Francisco yearly since 1999.
+
+The history is important to me. When I studied.
+
+This photo is from Teufelsberg. A station in the West.
+
+You should definitely go.
+
+I thought it was ironic. Someone had grafiti's that Sf to Berlin.
+
+They have a lot in common. I'll get to that at some point.
+
+I'm not going to talk about myself for long. I spent most of my professional history at Apple. 2005 to 2011. I started as an individual UI engineer. It was not before internet.
+
+I went to Webkit. In november 2009, we were getting upto speed.
+
+I'm not a stranger to internet technology. What it can do and how it affects people.
+
+My team created interactive web prototypes, promotions. If you see anything for iTunes London.
+
+We worked on the backend and frontend systems. To make that technology work.
+
+I quit 3 years ago. I needed a break and do something different.
+
+I spent 3 months in Berlin when I left.
+
+I think this leads nicely to a quote that I think we are possibly familiar with zozer Stay hungry, stay foolish.
+
+Has been misappropriated to Steve Jobs a lot.
+
+He mentioned in a 2005 Stanford speech. After he died, people started making the Steves quote.
+
+It actually came from the back of something of a catalogue.
+
+I'm going through history. It influenced how we got to personal computingt.
+
+I'm going to introduce Stewart Brant. He is a biologist. In interest in politics as well zozer He worked on the mother of all demo's. You know with Doug Inglebart.
+
+A famous presentation of lot of computer technologies. Hypertext, email and the mouse.
+
+When he was a kid, he was running around on this hippy bus. With the Merry Pranksters.
+
+This is in 1964.
+
+They were really trying to dropping Lsd in Middle America. Doing drugs. And getting cold war america to see an alternative. To a more adventurous way to live.
+
+They were not afraid of technology.
+
+It was mostly being used for war.
+
+So the Merry Pranksters really deployed technology to create new consciousness and a new form of social organization.
+
+I could talk for days about Counterculture.
+
+If you would like to read more about that bit of the counterculture. There is a book. The electric Kool-Aid acid test.
+
+It is a good reference where it was coming from.
+
+I also want to talk about what was going on in Silicon Valley.
+
+It has a large root in military technology. And military investment.
+
+Stanford created a link between the department of defense and technology. Satellites were being developed back to the 1920s, through the 40s and 50s. They were making microwaves, missiles. It became known for what it is, the microprocessor.
+
+So there was this anti technology sentiment going on. This is a student protesting at Stanford. He has a punchcard that says Strike.
+
+There was a large part of people who were not into technology.
+
+The counterculture you used to seeing is more of these protesters out with signs. Trying to change things based on standing around with signs. There was a division between the countercultures zozer there was this new left idea.
+
+Before I go through the slide, I want credit Fred Turner who wrote the book. He divided these countercultures.
+
+The new left was working through bureaucracy, hierarchy, organization and established structures.
+
+The new communinalists. They were smart. Using small scaled technologies, Lsd. Bucky domes. And community building.
+
+The difference is, the new left was trying to work with the established systems. And these new communalists said, this is fucked up. We are going to do something different.
+
+There is a story of a protest at Berkley. Where looking at these kids saying, what are you going to do?
+
+Change something? He starts to play his harmonica. That was the mindset of the people there.
+
+So,t if the American state deployed massive weapons to destroy far away people, would deploy small scale technologies to bring people together. It looked like this. This is one of the first communes. It was in Colorado, Drop City.
+
+People started moving away from their homes to create this new city, new idea. This new way of living. That was around a common humanity.
+
+Dome was the new home.
+
+This is, it was literally like, your suburban houses are square. We live in domes. This system is fucked up. We are ready to get bombed by someone.
+
+There was the notion of distributed working. This slide says, if you can read it. Workers of the world, disperse. It is not uncommon how we can work today. We can do our craft. There is a link between this and how we can work today.
+
+San Francisco basically became the heart of a new world for the United States. People were coming from all over the country to experience what it was like.
+
+This is not so different to how I see people trying to flock to San Francisco today.
+
+It really was the heart of it.
+
+It was very much centered in the West Coast.
+
+To introduce the catalogues.
+
+Sitting on a hill. Looking at the earth.
+
+He wondered, why haven't we seen a photo of the whole earth yet?
+
+ This was in 1966. He started a public campaign for Nasa. To publish a photo of the whole earth.
+
+It was a powerful symbol of humanity. When you face a nuclear war.
+
+ Adapt the strategies.
+
+The whole earth catalog was born. This is the front of the catalogue.
+
+It became a manual for people on the land.
+
+The difference was, the catalog didn't sell anything. When Steve mentioned this, he was talking about how this was Google before Google existed.
+
+It didn't sell anything. The purpose of the catalog was basically to empower people. To do their ov thing.
+
+This says, we are as gods, we might as well get used to it. In response to... This was in the catalog. User contributed content. People would write in things they thought were useful. I think you should publish this.
+
+They would go ahead and publish it.
+
+I am going to keep this. You can read it.
+
+I think this is the core of the thinking at the time and the thinking around this catalog and movement highly influenced everyone that created technology today.
+
+This is the inside of the catalog.
+
+Like I said, readers could submit information.
+
+And it also included a lot of books.
+
+A lot of books around mindset and thinking.
+
+Not around how to make gardens.
+
+So, it was not only a functional tool for how to build your dome. But also a consciousness tool how to think about the world.
+
+Here is another one.
+
+I brought my copy of the catalog to Berlin. It is one of my most prized objects.
+
+I have it if you want to see it.
+
+I haven't taken it out of the wrappings.
+
+This was printed on cheap newspaper paper.
+
+And one of the things is interesting. At some point this calculator showed up.
+
+It was a 4900$ calculator.
+
+It had to be good and uncommon knowledge to be in the catalog.
+
+So, the founding editor of Wired magazine actually was an actually of the Whole Earth Catalog.
+
+Brand invented the blogosphere before there was an internet.
+
+The idea of the earth was, people could rally around. And get together around their common ideas. Which is again not so different what we do on the internet today. On Twitter, wherever.
+
+So, this is a photo of Alan Kaye. The first Gui.
+
+And Xerox library had a lot of the books from the catalog. Alan Kaye talks about how he was influenced by the thinking of that time.
+
+This culture started to get into university labs and the AI institute.
+
+There was a story about how people would sit around naked in a sauna smoking pot waiting for the code to compile.
+
+You compile your code at some point.
+
+There is a lot of this history. It goes on forever.
+
+I'm fascinated by it.
+
+The whole earth wasn't just a catalog. There was a network of people and ideas that started to come around.
+
+There were publications after the Whole Earth. It was from 68 to 74.
+
+Next slide is, there was the thing called the Well.
+
+Also the Global Business network Brand is a part of. It enables government agencies to think about longterm thinking rather than shortterm thinking zozer Wired Magazine you know.
+
+And the Long Now Foundation. What Stewart Brand is currently involved in.
+
+This is a photo of the Well.
+
+It is still active on the internet today.
+
+It is the oldest community running on internet.
+
+Since 1985. It has been on the internet since 30 years.
+
+30 years is a long time. Especially in internet time.
+
+It is mostly known for the internet forums.
+
+Provided email. Access to webpages.
+
+It became one of the original Isp's. When commercial access was allowed.
+
+What else is interesting.
+
+The founders met on the Well.
+
+They start talking about this idea and it was kind of this whole earth turns into the internet.
+
+So terms that came out of it things you know. Personal computer, virtual community, electronic frontier.
+
+They are part of the history and why we can sit in this room today.
+
+We are from, I'm from the US.
+
+There is a lot. This is required reading if you work in technology.
+
+From counterculture to cyberculture. Fred Turner is a friend of mine.
+
+How the councerculture influenced Silicon Valley. A nice story about Fred. He lived in Kreuzburg in the 1980s. And was part of the counterculture in Berlin.
+
+He is a professor at Stanford. It is a great book.
+
+It is longer. If you would like a more journalistic approach, What the Dormouse said.
+
+By Markoff. Some of the anecdotes about how the East and West coast ideology, were shaping. How personal computing and thinking about computing happened.
+
+I don't know if you are really known about San Francisco.
+
+I don't know what the fuck happened.
+
+I have lived there for 11 years.
+
+And we have Obama's advisor.
+
+We have becoming rejecting the man to becoming the man.
+
+And I have been in San Francisco, this has been in the blogs forever.
+
+It has been coming up for years.
+
+Now it is in the international press.
+
+It is all over the place.
+
+Another one from the Economist.
+
+This notion of I don't know this notion of this ideolized society has gone to a capitalistic view of how everything should work zozer here is one from a German newspaper.
+
+Not sure what happened.
+
+Here are some ideas about what happened.
+
+The counterculture was homogeneous.
+
+Most were middle class, white.
+
+Excluded outsiders. It was cliquey.
+
+There are photo's of women. Carrying bread.
+
+Charisma was a huge part. How to become a leader in the commune zozer It was cool.
+
+You see it reflected in cultures like Google or Apple.
+
+It's a little bit disturbing. Somebody mentioned.Z You work at Google, it is great.
+
+The guy behind the counter is making less than minimum wage.
+
+You really just kind of cause this disperity to continue.
+
+So, we need to reidentify. I believe in this.
+
+And what I see happening. Especially, in the US and world. People want to copy Silicon Valley. I don't think you can do it. It was centered in culture in a place in time.
+
+Silicon Valley in California. Great.
+
+You have Silicon Allee in Berlin.
+
+You have Silicon Roundabout, which is funny, in London.
+
+Silicon Forrest in Portland.
+
+You have this rubber stamp of people copying a culture that doesn't make sense.
+
+So, first of all, can we stop calling things silicon?
+
+You know anybody knows making silicon? Apps, Javascript, not silicon chips.
+
+I think it is time that we reidentify. This culture is really old.
+
+It is like I feel we are at the same historical moment with everything that is going on. With Nsa. Wars going on.
+
+It is time that we relook and reidentify what we are doing.
+
+Is anyone from London in the room?
+
+Silicon Roundabout?
+
+It was a joke that came up in a pub. By Matt Biddulph. The government got involved. Started funding the roundabout.
+
+It was a joke!
+
+It is crazy.
+
+So, my point is, is that we all come from totally different historical and cultural backgrounds. It is imporlant like Europe. Berlin. We come from different mindsets.
+
+Trying to rubberstamp Silicon Valley doesn't make sense.
+
+You should be London, Dublin, Paris, Amsterdam.
+
+Please, fucking stay Berlin.
+
+I mean it.
+
+I see the same kind of things going on in the city.
+
+I chose to move here. It reminded me of San Francisco 11 years ago.
+
+I think this room gives me a lot of optimism zozer Everyone I met is super ankesome, interesting. Really, about I don't know being creative and using technology.
+
+It is frustrating to watch it happen.
+
+If I have a say while I'm here, Make sure that Berlin stays Berlin. We started out about, we needed to lower tresholds and empower individuals.
+
+We need to get back to that.
+
+As you move on, this was the back of the last World Catalog. Stay hungry and foolish.
+
+Thank you for letting me talk.
+
+(applause)
