@@ -58,7 +58,7 @@ I mean, I was a robotocist. The internet can't be that hard.
 
 I talked to the CEO of the coolest company in town. I'd like to work at your company. What do I need to do?
 
-He said, learn Node.
+He said "Learn Node".
 
 Okay. Cool. I went home and said: I am going to learn Node. Let's do this.
 
@@ -100,7 +100,7 @@ Go to Google. Stack overflow. Blogpost.
 
 And you start looking for help.
 
-Charity thing in Node doesn't produce anything results.
+clarity thing in Node doesn't produce anything results.
 
 No vocabulary. No way to say, I don't know what I am doing. I need help.
 
@@ -114,7 +114,7 @@ This isn't even useful to me.
 
 So, whatever. I still try. I find some things. Playing around.
 
-This is cool. I... Charity thing? Help?
+This is cool. I... clarity thing? Help?
 
 So at that point I realized I needed more people in my life. Start asking questions.
 
@@ -124,9 +124,9 @@ You can talk to them.
 
 Look, here is my terminal. Node enter.
 
-Charity thing.
+clarity thing.
 
-And they go: That's the redevelop print loop.
+And they go: That's the read-eval-print-loop.
 
 That's how we do all the on demand stuff.
 
@@ -138,7 +138,7 @@ Didn't understand anything. It is okay. You talk to the people.
 
 They have been there enough that they can read your mind a little bit.
 
-And they're like, yes, Rapl, that's the word. Cool.
+And they're like, yes, REPL, that's the word. Cool.
 
 At the same time I was trying to build this app.
 
@@ -146,7 +146,7 @@ I have this app. I wanted to store data. And I know I need a database. I have on
 
 Is that what I want to use? Whatever you want to say about databases.
 
-I needed MangoDb.
+I needed MongoDB.
 
 Talking to people in person. Being able to use words that didn't make sense to Google.
 
@@ -154,7 +154,7 @@ It made sense to people.
 
 Empowered with all this incredible knowledge I went back to my app.
 
-I have Mongoose. And Express. And how do I integrate these things? I don't know.
+I have Mongoose and Express, and how do I integrate these things? I don't know.
 
 I have key words I can ask Google.
 
@@ -224,7 +224,7 @@ At that point, junior developers are useful. You can tell them exactly what to d
 
 You get to train them exactly what you want them to do.
 
- Now I have this opportunity to get paid while I learn.
+Now I have this opportunity to get paid while I learn.
 
 Awesome.
 
@@ -448,7 +448,7 @@ You say that you have to be up here. Because if you don't share, who will?
 
 And, you realise that you have received so much from this community. So very very much.
 
-They put up with your ridiculous IRC logs and your silly questions like charity thing?
+They put up with your ridiculous IRC logs and your silly questions like clarity thing?
 
 You realise you are not alone. You have to give back. Somebody needs to hear your story.
 
