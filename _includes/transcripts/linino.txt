@@ -1,0 +1,119 @@
+One, two, three, you hear me. 
+
+Good afternoon, it's a pleasure to be here the day, we oar very excited to introduce a new technology that developed in the past 12 months using JavaScript and some with WiFi and blue tooth connectivity that allow us to have the IOT connected with the JavaScript. 
+
+ I just make a quick introduction about myself, May name is Frederico, I'm planning a global ‑‑ called dog Hunter, the little guys on the hon train with my two daughters, we have a global start up based in US ‑‑ we build WiFi modules. 
+
+We are here today to explain a little bit about our Open Sourcability prop named Linieo, the philosophy behind the Linio project is basically to bring the hacker community and the maker community all together. 
+
+So we're building a gateway that allow the hackers that try apps on the web to talk with the makers community that usually write software for the real things. 
+
+Switch, Light Controllers stuff like that. 
+
+What is Linio,. 
+
+It's an Open Source project based on an echo system. 
+
+So we build hardware, we build WiFi and blue tooth modules, we write open software that allow us to use JavaScript to interact with micro controller, we write also the open Cloud software that allows the user to interact with the Cloud. 
+
+We call this project Lin Io, we have Lino.OS, IO and J S, we call it Linux for IoT. 
+
+What we're trying to do is we build a server module, sever hardware, one of the module is a Chiwawa, a small lodge yule of Linux built in, and we built this module in any devices that has an MCU, so basically we bring the powerful Linux inside the MCU. 
+
+As you can see here, we have full Linux OO is package manager, WiFi connectivity, and we build this module inside free scale MCU, At mel,SM any generic MC um, we transform the dam devises into something we call smart devices connected all together with WiFi and blue tooth. 
+
+So, how do we do that?  The classic approach is basically to write code for the MCU and then to find the library or gateway that allow the Linux to talk with MCU. 
+
+We build something different. 
+
+We basically took the MCU directly inside the Linux part, and then all the features of the MCU that should be analog devices GPIO, PWM, SPSPI is part of the Linux part, it's all together in just one core (SPI, UART ‑‑ what we're able to do here is to keep the MPU for Apache, JavaScript, and OGS and still use the MCU for the real‑time application. 
+
+And, we do that not only on the wireless space but also ‑‑ not only in the wired space, but also the wireless, any module that is connected on our network exsport the features of the Linux OS, and we're able to see all these features just in the file system. 
+
+So, basically, we can control devices, just ‑‑ that's a very simple example that I have here, using switch on or switch off and basically what happen when I use this devices everything is on the file system, so I can see the results of my devices directly in the file system. 
+
+The sample that I have here, I can change the PWM value just changing a value in the file system, as you can see in the Sys/Class/Mcuio ‑‑ I can do the ADP and the GIO in the classical application you have to write your application in the MCU, you need to write your application in the Linux, and then you need to use some API some bridge to talk together. 
+
+With this solution you don't have to do that, but just to use the file system, so whatever happened on the MCU would be exported on this file system here. 
+
+So, we build bunch of hardware modules that have already this technology. 
+
+One very famous is that Arduino Yun, we build this module last September and as you can see we build basically an MCU from Atmil and we build the Linux part and we bring it all together. 
+
+We have other modules like something we call lightening OI, the same stuff we did with Rrdin Yun ‑‑ just a different form factor. 
+
+We build also some modules LJ module we call Chiwawa, it's for mass production, same thing you can use with Yun other Yun one but a small module you can bring on your project. 
+
+And then we have some other module that are available today to $2 .4 and 5 gig hearts, we have a free scale MCU, because very important part that e with build this technology as a cross platform technology, so we can use, basically an ATML MCU, and new MCment that you are working right now. 
+
+And, of course, we also build some shield, so with the sensor that allow you to control stuff. 
+
+So let me talk a little bit about the software modules. 
+
+And, talk a little bit about open stack and then show you some sample we did and we are able to show you in the back stage. 
+
+So, basically we have two modules the hardware that is the Linux part and the MCU part, and in this sample here we have a Mips Mpu, we have our Linux up and running, and then we have the Linio that is another small operating system that is up and running on MCU, and we are able to export all features directly on the file system on the Linux machine, doesn't matter if the Linux machine is on my desk or is somewhere else, like Boston, Chicago, time able to control everything as native application on my desk. 
+
+So, this Linio operating system, we're yourselfing right now open WRT, and we building top of that Linio using the Linux card modules and on top of that we is the NOGS for embedded development or we can use just the shell scripting Java, Lua, Python, and of course, on top of everything, we have the application wrote in JavaScript for mobile application or Cloud applications. 
+
+To keep simple we build a small ID that runs directly on the module, you don't need external application, external tools, you can use our ID Linio that is built directly inside the module. 
+
+As you can see, you can definitely use no node JS to write your application as a sever label. 
+
+This is a screen shop of Ideino, we have the mile manager, everything is Open Source, everything is available directly inside the module. 
+
+We made a couple slides now that we are trying to show you a real scenario, so the first is mood Cue basically a node.js software that we build inside the module, we have several modules that we bring here, then we made another demo using mobile control, so basically iPhone, and everything has been done using JavaScript. 
+
+So let's show the first one. 
+
+The first one uses one of our module, everything is Open Source, open hardware, we build open module, someone else could make it and we put some little switch that allow us to control the motor. 
+
+The code that you need to write on the node.js side is the one that you see here, we import our library, from node.js, we connect to analog port zero and then we basically use a call back to set the digital 9 to the very mode. 
+
+What happened is when we turn the switch on and off, we're able to move the RO that show us our mode. 
+
+I'm using a small demo here, I'm using Ideno, I write my code directly on my computer. 
+
+When is done, I start run, and transfer the control over my little CPU, as you can see, there is an initiallization procedure, and then I move the RO directly with the switch. 
+
+And is done directly on the board, so I don't need to use any library, any bridge. 
+
+Everything is done inside the JavaScript environment as I showed you before. 
+
+We build another application, a little more complex that I will be happy to show you in the back stage, if you want, that basically control an LED, a very easy one, something we call the hello world for the MCment. 
+
+So, in that case, we made a small application on HTML 5 using our library, again, an Open Source library that you can use on the mobile control, so, in JavaScript and  jQuery, what we build inside the small devise in the lines of code, we import the Lin eo board, the HTML board and import the GTO ‑‑ we are using tool in this case, we're using Intel X D K tool to be able to control over the phone my device, and the code that I have to write on these tools is basically what you can see here. 
+
+So, some initiallization code, and then event when I press the button on my mobile. 
+
+And this is the demo. 
+
+Again, I'm using any. 
+
+deno, inside the board, press the code, press run, transfer the control, now to my mobile application that will be able to control my device. 
+
+The one that we're using right now is Lineo, but we can use Lineo 1, but use any other module. 
+
+It's Open Source, so we can put this code to any other Linux platform or TP link router whatever. 
+
+The software that you're viewing now is an Intel X D K that allowstous have an application from an iPhone in an easy way, we don't need to apply to put our application in the apple App store, that's why we use this, it's an Intel XDK, it was a company that was recently acquired by Intel. 
+
+Very easy stuff. 
+
+Now, this is very, very simple application, you can say, hey, we saw that, many, many times. 
+
+The difference is, I don't need to take care of the micro controller, the only thing I need do is write the JavaScript application that will play with the Java file system. 
+
+You can see it on the desk, but it can be run remotely. 
+
+The last part of our software structure is the Cloud, and that is something that we're going to announce in the next week in New York. 
+
+And basically we're building a system provisioning platform that allows us to have control over the Cloud. 
+
+Everything is Open Source, so you can eventually build your own Cloud to control your hardware. 
+
+The provisioning platform, we are working to build a special MPN library just for Lineo (NPM) we're using Mips technology now, sometime we need to recompile the library, in our small module we don't have the power enough to do that so we're doing it directly in our serverrers, we oar working to have an e quo system to take all the modules and connect it together, and of course, we're bringing this technology, also to other devices, Raspberry Pive, BeagleBone, or call come, ‑‑ it is one I don't know if you're familiar with this (Qualcomm) it was a very short introduction, I hope you enjoyed. 
+
+ I hope if you have any questions, I will be more than happy to show you in more details what we've done, and I just want to say thank you for your time and your patients today. 
+
+Thank you so much (Applause)

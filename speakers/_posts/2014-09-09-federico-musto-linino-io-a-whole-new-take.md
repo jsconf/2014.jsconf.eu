@@ -17,6 +17,8 @@ image:
   type: png
   heightSite: 224
   filename: "/speakers/images/federico-musto.png"
+video: eipW64BGoOE
+transcript: "transcripts/linino.txt"
 ---
 
 {% include speaker.md %}
