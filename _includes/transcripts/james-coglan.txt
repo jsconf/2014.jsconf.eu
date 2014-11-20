@@ -1,0 +1,242 @@
+Thank you for that wonderful introduction, that once expected. 
+
+Yes, hello, I'm James, I'm going to talk to you today about practical functional programming, to make sure I get through this in plenty of time, and the clock's not ticking down, so I don't know how much time I've got, that's very confusing. 
+
+What do I mean by functional programming?  Well, initially I didn't even know, itches looking for ideas to talk about on Twitter a while ago, and Jan gave this idea, practical function fallal programming, and I brushed it off with a little juke. 
+
+Got me thinking. 
+
+It has first class functions, and we have venttion and call backs and we have all the array operations like map, filter, reduce and stuff like that. 
+
+But, there's a lot more to functional programming than we often acknowledge. 
+
+And what I would like to do is sort of demystify that a little bit. 
+
+Because one criticism of functional programming, it's not very practical and you need a PhD to understand it. 
+
+What I'd like to do is sort of talk about the ways in which we are already using functional ideas in mainstream JavaScript and how we can pay better attention to those and get better value out of them. 
+
+Also promise the last occurrence of the word Monad in this talk, there's not going to be a lot of type theory stuff going on. 
+
+What do we mean by functions?  Functional programming is about programming without side effects, if you're in the Parallel JavaScript talk earlier you would have heard that side effects are one of the biggest barriers to parallelizing a program because you can't reason about changes to a global state, makes it hard to parial rise things. 
+
+What does it look like to program functionally. 
+
+You want to calculate the length of a list, length takes a list and returns an Int that's what that little type signature means. 
+
+So, what you could do is set the counter to 0 and increment the counter for every  iment and return the last value of the counter. 
+
+How does that run out in practice, want to get the value of the list, set the count to zero, first element, increment the index, there's a second element, we increment, there's a third, we increment, there's no fourth element we break the loop and induction is 3. 
+
+The values of the index comments ‑‑ those aren't statements that appear anywhere in the program that state you have to keep in your head while you figure out what the program dugs, that's what makes imperative programs hard to reason about. 
+
+A functional version would look like this, cough free script has three dot syntax that breaks a list into the first elements and the rest of the elements. 
+
+If the first element is undefined the list is empty, right, so it has length 0 otherwise the length one plus the length of the rest of the list, we're doing a recuresive break down. 
+
+What does that look like in practice, so, there is a first element, so we'll pick a second bunch. 
+
+We're just going to replace the definition, we're using it as a rewrite rule, no implicit state to keep track of. 
+
+We do that a couple more times then we get length of the empty list, which we pick the first branch of the conditional, which is 0 and result falls out. 
+
+So here rather than writing comments with sate in them, I've written "is" before each expression, that's because they're identical. 
+
+Doesn't mean they have the same value at a particular point in time, they always have the same value you can replace any of these expression with any of the other and the program will do the same thing. 
+
+Substituting bitting of source code for each other makes it easy to think about, you don't have to track state somewhere else in your mind or on paper. 
+
+Let's take another function, map, the signature means map takes a function from A to B and a list of As and returns a list of Bs, the imperative version of that would be to take an empty list and push ever VEX for every element in the input and return the list. 
+
+The functional version would be to say in is no first element, the effect is undefined then return an empty list otherwise afully F to the first element and then combine that with map over the rest of the list. 
+
+Same structure as we're doing the went, we're using list instead of numbers, say we want to square the first three numbers, we go, there is a first element, so we'll take a second branch, so square of one is one, we pull that out of the front and map over what's left, map over what's left, square two and then, we have anmentty list, and so, the ‑‑ an empty list and then the result falls out. 
+
+These are our functional solutions to the problem, theye they work by not my stating the state, they work by giving you an expression you're trying to calculatend that you can replace and you do that recursively. 
+
+You can program by substitution by using these things. 
+
+The imperative solutions work by making some state and then like changing that state until some condition becomes true and then handing that state off to you at the end. 
+
+But even though those have internal state and they're not internally functional, they do exactly the same thing as these versions, because, ‑‑ they don't Mutate ‑‑ you can treat them as if they're the same functions. 
+
+That's useful, it means their state is completely ensuelated the sidefects continue leek out into the rest of the program. 
+
+We use that in promises. 
+
+Promises have internal state, they are pending and they can become fulfilled or rejected with a value or an error. 
+
+But, every time you call then it will yield the same value to you, you never get to see what's actually going on inside of the promise, Jo us call then and value pops out and it's always the same value you can treat a promise as an immutable value, which is useful. 
+
+A couple weeks ago too much ash ford had this really good essay, vents are bad primitive for data flow, they require distribution of mutable state around your code and it's not idiomatic or plea Saint to flow through data through events. 
+
+We can use types to answer that question, if we consider the FS.read file, that takes a path name, an encoding, a call back and it returns nothing, and the call back is itself a function that takes an error, value and alts returns nothing. 
+
+Now function that returns nothing must have side effects because if a function has no return value and no sidefects what why you calling it?  It's not doing anything. 
+
+The thing that you think of not having side effects is reading a file we work with these things using side effects functions, completely. 
+
+When we're dealing with all these asynchronous things all the time we have to make sure all the side effects happen in the right order so the program doesn't get into a bizarre state, and trying to did that on concurrent programs is very, very difficult, which you doubt know. 
+
+It gets even harder when you try odo a lot of things at same time, if you want to read a file and request a URL and get something out of a data business at the same time, you use Async.parallel, and do operation, when they complete you get a cull back and you get value for those things, what would I do if I wanted to get the value of the file before the other things are completed and do something with it. 
+
+Because this, if any of the things fail, I won't get any of the values, I only work on the file even if the HDP request fails, I could pull the file operation out top. 
+
+ I have an FS.read file ‑‑ but now I've made the program slower because the second thing are blocked on the first thing completing, so I de‑parol liesed it. 
+
+That kills the performance, it's convenient, but, you've traded convenience for performance. 
+
+What you actually have do is keep the parallel construct to make sure the IO happens at the same time but plug your processing into the bit where the file is requested, the more you do these things the data processing, what you're forced do by the way that we schedule things in asynchronous programs your programs get very messy, edge tangled you get into what we
+roll call
+back hell, it's not a sin tackic thing about your code creeping across the page, it's the inability to reason able when things are happening in your program and make sure they happen as efficiently as possible, to do this you is to construct your program in a very specific way with call backs in all the right places. 
+
+So, last year I read this article called call backs are imperative, promises are functional, which had this quote "the future of promises is that they remain immune to change circumstances."  I've already mentioned that ‑‑ I got some laughs ‑‑ I already mention how promises look like immutable values because then always gives you the same result out once the tasks are completed, but this is also true in a second way that I department realize at the same, the promises that deal in changing promises much more easily. 
+
+Before when I was using the asing module I had to change my program quite radically, I could make a big structural change to it to make quite a small requirement change. 
+
+But say those functions return promises my FS.read and database dot get always return promises of strings, I can call all those functions and put the results in an array and all the Io will just happen in parallel, but now I have an array of promises of strings. 
+
+And if I want just the first ‑‑ if I just want the file out of that, then I can get the first promise out of the list and do something with the result. 
+
+If I want to wait for all of the things to finish, then I can call promise.all with the documents and I get a promise that will give me all of the results when they're ready, if I don't want to deal with the file on it's own, I just delete the documents.zero line, I can just add lines for those, I don't have to make bige structural changes to my program. 
+
+You keep the ability to keep your IO happening in parallel, but you keep the convenience of being able to work with it easily, that's really important for dealing with programs that change a lot over time. 
+
+And the reason this works is that I can ask for the value out of the file promise and promise to all can also answer the value out of that file promise, and it'll work both times because you can keep asking for the value over and over again, and you won't repeat any work, what it means to be immutable, it's rejuiceble, right. 
+
+So let's talk ‑‑ it's reusable. 
+
+We talk about I in very imperative terms, we say then takes a function and that function will be invoked when the task completes with the value of the task, if it's completed it will be invoked with the value of the task it returns a promise and that promise will be invoked with the return of the call back, we talk about then, do this, then do this, and then do that. 
+
+But if you think about the types of things that are involved, what then really does it takes a promise of A and function there A to B and returns a promise of B, if we have a promise of a string and we call then with a function that counts the word in a string, string.split on spaces.length what we get is a promise of an I Int, we might not have the Int, but that's the type of the value we have, we continue to do more processing on it, transform it into another thing, transform it into another thing, and use the promise itself as a value, not the thing that's inside of it. 
+
+This is exactly the same thing a ray.map works it takes list of something and a function from A to B around returns a list of B, right, so if you have a list of strings and you map a word counting function over the list, you now have a list of word counts just as if you called then with a word counting function you turn a promise of a string into a promise of a word count, a promise is just a container, it's a list, they're the same thing, the operations are the same thing, a container of up type, container of another type with a mapping function between them, and because they're just containertion you can compos containers, they're just another type of data structure, if you have a list of promise of strings you turn that into a list of promises of Int by mapping over the array this is no different than mapping over nested array you have two maps inside of one another. 
+
+Promise to all is the same, we talk at promise to all as in you give it a bunch of promises as input then it will give you one promise when it resolve, we talk about it in time terms, if you talk about it in type terms, it turns a container inside out you give it a list of promises and it gives you a promise of a list, you get one promise back that will give you a list of all of the things. 
+
+This also solves the Zaga ‑‑ Zalg oproblem, personification of the problem with writing call back APIs that will execute a call back synchronously or asynchronously. 
+
+A equals Null promise.then X equals data equals X on statement before line three otherwise your program won't work, if it ran asin concurrent resolution noselite would break. 
+
+The only reason it's a problem is because you have side effect, you care about things happening in a certain order something that's been changed into another state before another statement runs, if instead you do your process inside of the promise construct you don't think of a promise as a thing to get value out of you think of it as a value on it's own that you can do commutation inside of, then that problem goes away. 
+
+Want to talk about laciness, another big topic in functional programming (Lazi iness) I want to show you a little bit of Hasckell code ‑‑ Haskell code. 
+
+Cough free script is written as a colon, first element colon, the rest of the elements. 
+
+So map we've already seen, map of an Ety list is an empty list,and map in the general case, you apply F to X and combine that to map over the rest of the list, it looks weird but we saw it working in coffee script, filter works pretty much the same way, filter of an empty list is an empty list, where peer Cex is true you keep X you you combine with the filter of the rest of the list otherwise you throw X away and keep the rest of the list, we keep X braced on whether the predicate is true for the value. 
+
+Take, first and end elements of allis, take where N is less than 0 you don't want to take any more data, take of an empty list because there's no more day the to take, so empty, then take in a general case, you pop the first element and take N minus one of what's left and apply that recuresively the value will fall out. 
+
+This lets you do somethinger, very powerful. 
+
+Haskell has infinite data structure, list of ..., is to infinity, the filter would never return, it tries to process the whole array at once, looks what happen in Haskel, I'm going to program by replacing functioncal with the definition, so let's see what happens, so, even if one is false, so we drop the one. 
+
+Even if 2 is true, so pull the 2 out front and filter over what's left. 
+
+Now, we've destructured the umer end to map so we can pull that 2 through squaring functions, we structured the upper end to take, can pull that expression out front, three minus what's left, levering with two, one value through the list all the way through the pipeline. 
+
+We do more time. 
+
+We come down to take one, and one more time again, we come down to take zero and we have three elements out front. 
+
+We know by definition, take of zero is an empty list and the result pops out. 
+
+We didn't have to look at the rest of the infinite list, we didn't have to care about it. 
+
+That's really really powerful, skipping work you don't need to do to get the result you want. 
+
+Again, Tom ash worth summed it up nicely there are two ways to combine transformations you perform the first transformation on the whole collection before moving on to the second or perform all the transformations on the first element of the collection before moving on to the second. 
+
+Now the first version is how JavaScript deals with array, filter the whole array and hand that off to the map and the map maps over the whole array, reiterates it over how ever many operations you have, the second way is the way Haskell deal was arrays
+'s nothing inherent about the data structure that says you is to process them this way, you can use either strategy. 
+
+Just as Haskll deals with lists as if they were streams question can deal with streams as if they're lists. 
+
+Streams they're big part of node programming right. 
+
+Huge part of node programming, really node's core feature, these streams. 
+
+So, do something a little Funky. 
+
+So, I'm going to make a classical map that inherit from stream.platform, and transform method is going to replay that function to incoming chunk and push it. 
+
+Going to add a map method to stream.prototype that pipes the stream through map transform, it's a similar lair toy array.map, we're taking a stream of As, and a function from A to B and a stream of A to B. 
+
+Same operation, filter same way, predicate function, and now we're going to push the chunk, if the predicate is true for that chunk. 
+
+Take is going to be substance showuated with a number and in the transform method we're going to push the chunk if N is greater than zero and then call N if it reaches zero, it will mean all the streams that are feeding into this will stop sending it data because it's emitted end, doesn't want anymore data, we can stop processioning when we have the information we want. 
+
+That gets us lay citiness. 
+
+We have split ‑‑ Laziness. 
+
+I'm going to add the split modules to the prototype. 
+
+Set high water mark 0 on all the streams, that means node won't egg eerily buffer data the streams don't need, it will pull data through as it needs. 
+
+Put in a file called Lazy.Commonwealth of Virginia fee, I can split the on‑line breaks and filter those lines if cluster finishing and map those matches to upper case and take one of them. 
+
+And if I attach a data list to that I will get the first class definition that comes out as upper case, if you watch the filter and the map functions here, they'll only be called as many times as necessary to produce the output, the program won't consume the whole file, it's powerful. 
+
+You're letting the consumer of the operation dictate how much get read at the other end, you're avoiding work you don't need to do. 
+
+So here we're programming the streams and they look like arrays, it might look like a cute trick, it's a general model of programming, general functional programming, I'm going to write an IRC client using this strategy, first I'll write it imperative so it's familiar Irc is going to take a TCP socket stand in and out, in a log file, we're going to split the TCP and put on‑line breaks, IRC is a line warranted protocol, going to write that file to the logs, going to pause the line into a ‑‑ park it into a command structure, if it's a notice we'll print to screen. 
+
+All the client will do is receive notices from the server and print them. 
+
+These are also wants to join rim,es so we'll split standard I believee input on‑line break and if we see a line slash join, we set our global variable room to the value of the Redux match and construct an Irc command, the Irc command for joining that rim. 
+
+If we did manager to construct a command, then we'll unparse it turn it into a string and write that string to TCP and we'll write it to the logs. 
+
+We also want to send messages so if we oar in a room and the line is not blank we'll construct a proof message command ILC speak for sending a mission age somewhere with the room and the line of input, that's the room that we're currently in, we always send a message to the room we're currently in. 
+
+We want to receive messages from the server, we'll get the channel and the message out of that command and then compare the channel to the room that we're currently in, if they match, we'll display the line, so we're only going to display messages from the server from the room that we're currently in instead of all the rooms we've joined. 
+
+There's what room we're in, there's conditional processing, side effects things being written to, event listeners, this is the imperative style for solving this problem. 
+
+Programs like this tend to not scale very well, the bigger they get, the harder it is to reason want is happening at which times, which is important you've written in a state. 
+
+Way. 
+
+So, write that functionally, we can write function that takes TCP input stream and user input stream and returns synchronously a TCP output stream and user output stream and some logs, rather than taking it all as input and returning nothing with side effects we take the inputs and return the outputs and do this without using call backs. 
+
+How is that going to work. 
+
+We take Irc in equals TCP map, ‑‑ take a stream of strings mapping them through a pausing function and that gives a string of IRC objects, just like working with arrays, pretend you're working with arrays, that's what's going to happen, to get the notices, we can filter those commands for one who's command is notice, then match map the matches and assign the notices to user out here. 
+
+And that means user out will be the formated notice commands from the TCP stream. 
+
+And for the logs, we're just going to say the logs are the TCP input for formatting function. 
+
+We want to join room, add more code, say room s is the user input, mapped through a function that does a reject match on each line of input, it's going to match/join with a rename, we're going to filter the reduction matches, so we just get the lines thattingually matched and we're going to match those matches to pull the room value out of the ‑‑ now we have a stream of rooms that we've join joined to tell the server about that we need need fro deuce a join command, join command equals room.map to produce an IRC command. 
+
+And then to send those to the server, we can say TCP out, equals joint command IRC, we oar taking this stream of joint commands here, mapping them to strings and assigning that to the TCP output, I'm also merging the TCP output into the logs here, time taking stuff from input and stuff from out put and combining them in really clean way to get my logs, instead of putting logging logic at different point in the program as before. 
+
+Now, we want to be able to send messages, to send a message you need the room you're currently in, and you fled message you want to send, we try dog this without states, there's no global room variable (Need) instead of what we do user end out filter for lines that aren't blank and we do this thing rooms.sampled by, whatever messages ‑‑ event, it gets the latest vent by rooms and give both of the values by function arguments and construct an IRC out of them, and then, we can just merge those into the TCP output with the joins that we're sending earlier. 
+
+So ... 
+
+finally we want to be able to receive messages from other people. 
+
+So, we're going to filter the incoming messages for ones that match prove messages, and again, we're going to use sample by, so every time we get a message in, we're going to give the room we're currently in, and the message we just got, and compare the room that we're currently if to the message room parameter, this gives us a stream of Boole cranes to tell us whether the message we just got is for the room that we're currently in, it's slightly weird operation, but it does work. 
+
+And then I can filter the in‑coming messages on that stream, if you have a stream of Boole cranes you can use that to filter something else. 
+
+This will give you a stream of the in‑coming messages for the room I'm currently in, I've written a non‑trivial network application that does exactly what we had before, no side effects no variables are my stated, no call backs in the sense of side effect functions that return nothing. 
+
+It's all pure functions, you can replace any variable variable in the program with a definition and the program will do exactly the same thing, there's no hidden state to take care of, rather than write ago program that says do this, then do this, you've written a program that defines streame streams of day the relative to other streams of data and the control flow is implicit that makes it easier to work in current programs. 
+
+To sum up you can get the slides here. 
+
+The article that Tom Ashwroth wrote. 
+
+ ‑‑ similarities between promises and liveses and maybes and stuff like that and how they compos, last year Phillip Roberts is giving a talk here tomorrow, gave a really good talk ant real‑timeCONF that you need watch. 
+
+And I've ended that with the links to documentation for some of these streaming libraries that I've use in the this talk. 
+
+Finally, I thought I'd try and do something nice while I'm here, earlier this year I wrote this book, apparently it's quite good, if you use the code JSFST for this weekend you can get fiver pounds off of it, and it's already half price. 
+
+thank you for having me. 
+
+And I well see you upstairs (Applause)

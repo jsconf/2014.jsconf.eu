@@ -11,6 +11,9 @@ github: "https://github.com/jcoglan"
 gplus: ""
 from: London
 description: "We often talk about JavaScript as a 'functional programming language'. This is mostly because it has first-class functions, but there is far more to functional programming than that. Immutable data, recursion, laziness, type systems and sophisticated static analysis are all tools in the functional programmer's box.\n\nUnfortunately, many of those tools are regarded as impractical, academic concepts of no use to real-world software engineers. But as you'll find out, they're based on quite simple ideas and you're already using a few of them -- you just don't know it yet. And the ones you're not using might inspire you to look at programming differently.\n\nBy consciously paying attention to these techniques, we can make our programs easier to understand, test and change, and we can even use them to make our computers solve more of our problems for us."
+video: XcS-LdEBUkE
+transcript: "transcripts/james-coglan.txt"
+slides: http://slides.jcoglan.com/functional-jsconf
 ---
 
 {% include speaker.md %}
