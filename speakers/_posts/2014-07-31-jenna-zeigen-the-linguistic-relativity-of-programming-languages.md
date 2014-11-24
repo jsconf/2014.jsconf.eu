@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 266.6666666666667
   filename: "/speakers/images/jenna-zeigen.jpeg"
+video: tNylHHf2uJk
+transcript: "transcripts/jenna-zeigen.txt"
+slides: http://jennazeigen.com/jsconfeu-2014.pdf
 ---
 
 {% include speaker.md %}

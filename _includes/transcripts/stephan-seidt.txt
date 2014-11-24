@@ -1,0 +1,375 @@
+Thank you (Applause) thank you. 
+
+Da‑da. 
+
+Good evening, we oar almost done with day one. 
+
+If you don't know me in my free time I submit presummually JSConf 2014 talks and sometimes I write funny tweets such as a JavaScript funk returning this shall henceforth be known as a Selfie (Laughing) before the talk (Trumpets) before the talk, I worked for Contentful if Berlin, they paid for my flight. 
+
+They're hiring script developers. 
+
+Okay. 
+
+The meaning of words. 
+
+I want to start by reminding you of a ‑‑ of someone's guiding principle. 
+
+Creators need an immediate connection to what they're creating. 
+
+This is Brett victor's guiding principle I'll show you some of his ideas following this principle to give you an idea of what he's talking about. 
+
+On the right side we have an editor, on the left we're showing a picture the code generates. 
+
+The editor allows direct manipulation of values, changing a value on the right gets an immediate result on the left. 
+
+There is no compilation or any other sort of waiting, every change is instant. 
+
+So, Brett thinking this immediate connection is very important. 
+
+You can't do certain things if the computer makes you wait all the time. 
+
+And I very much agree. 
+
+ ‑‑ Brett is very inspiring go watch all his videos if you haven't. 
+
+ I think his ideas should be part of every creative environment. 
+
+However, I thought I'd play his principles to something different. 
+
+So, the ideas I'll show attempt to remove everything that stands between your idea and running or sharing it as a program. 
+
+So, do we have an immediate connection to what we're creating in JavaScript?  Nein. 
+
+ I think this preference million is often violated.
+Are many things which are actually disconnecting us from our creative process. 
+
+Setting up development environments is a pain in the ass. 
+
+Here's a tweet. 
+
+If you set up your development environment yourself, and if you can't tear it down and recreate it in one command you are coding in prototype. 
+
+ I think Jessica makes an important point here. 
+
+Jo hulledn't have to copy paste or overflow answers with the highest vote rating or whatever, or Blog posts. 
+
+All of this stuff really must be automated. 
+
+But, even if you're using something like Vagrant, it's going to take time until your environment is set up. 
+
+Alas, we're not done with waiting for things. 
+
+Another thing we wait for is long running tests or MPM install or deployments to servers. 
+
+Like for example when a test run takes more than a few minutes, I can't do anything during that time that changes it's outcome. 
+
+I'm forced to work on something else and when I get back to the test result, when it's done, my mind will have lost all context. 
+
+Another disconnect is managing package deopinion den say and releasing packages. 
+
+We depend on packages also on NPM and GitHub and other places, where it gets really fun is when you're publishing your own packages there, coordinating between these different services is difficult and you will make mistakes unless you're very careful. 
+
+For example it's possible you mixed up version numbers between NPM and GitHub. 
+
+There's even more to fix like randomly occurring CIRs, test timeouts or third party failures,. 
+
+Here's a tweet that sums it up nicely, I think. 
+
+Programming is the act officiousing one error so you may proceed to the next error, by Michael Fogus. 
+
+It's Ironic and probably true. 
+
+This is wanders above the sea of flog by Fredirich. 
+
+Pictures have different interpretations just like JavaScript syntax rules. 
+
+John Gaddis an American historian felt that the character of a wanderer is contradictory, suggesting mastery over landscape at the same time the insignificance of the individual within it. 
+
+Computers are insanely powerful, but, still we can realize the full potential of our ideas. 
+
+Maybe we are the wanderer above the sea of computation. 
+
+We like to look at terminal windows or at least we think we do. 
+
+It is certainly part of our identity. 
+
+The text displayed to us offer abstract descriptions of what's going on. 
+
+It alerts us of problems and eventually will always ask us what we want to do next. 
+
+So while the terminal is a great interface, I think we're too often doing things that the computer is better at. 
+
+We suck at playing computer. 
+
+So, ‑‑ Ooops. 
+
+Sorry. 
+
+Befehlsze Ilenbeklemmung, having forgotteden what you want to enter into the command prompt. 
+
+The terminal interfaces we use are well designed. 
+
+That's because most of them are four years old. 
+
+But that's not the problem, what ‑‑ because we can imitate great examples from the past. 
+
+What matters is that I want to work with people who aren't programmers. 
+
+ I also want to teach people and seriously get them started with programming. 
+
+ I don't want to tell them what they're supposed enter into their terminal when stuff goes wrong. 
+
+And the same is true in my job where people are using my tool automation. 
+
+If your process is sufficiently complex you need to automate it. 
+
+Browserliebe, browser love sharing, sharing an internet address lovingly for browser consumption. 
+
+Browsers are powerful,both as instruments of media consumption like looking at cat pictures and it's instruments of creation, you're also read so the demo I'm going to show you later is browser‑based, I wanted to build something that I can share immediately. 
+
+There is no read me with a pattern of commands or please download this and install that instructions. 
+
+It just works. 
+
+Hopefully. 
+
+Because it's a live coding demo. 
+
+So, let's look at a couple of problem areas, I'll focus on dependency management and building in today. 
+
+So, what does depend mean?  It means that code that we write depends on a stack of things working properly, which is the hardware, and the operating system no J S or browsers or dependencies we use. 
+
+So as an example let's assume we have a Mac with node installed and let's build a package. 
+
+So, I don't know about you but I had a fantastic breakfast this morning, let's write a module for making pancakes. 
+
+So, usually I search for modules that I can use, so let's to search.com and look for things that we can use ‑‑ NPM search.com. 
+
+There's NPM.org search. 
+
+ I usually get this. 
+
+ I don't even understand it. 
+
+Well, I do, but ... 
+
+so, then we found our packages and I need to itch stall these packages, so I switch to ‑‑ and we need to install these packages, so I as much to terminal and install the commands for the packages I found. 
+
+Next, well, what next ‑‑ wait for a few seconds or minutes depending on what it's going to download, and after that I open my file from the terminal. 
+
+And finally we're in the code. 
+
+In my editor like ten minutes later, I begin by requiring the modules I installed just before. 
+
+And then I can write my function making use of the modules I found. 
+
+We'll do this in a demo. 
+
+At last I explore my bacon pancake factory function, we need to be a proper module citizen, then I go back to step one and two to find and intell a suit suitable testing framework. 
+
+ I go back to ‑‑ create a file that puts the tests, sorry, create a file to put the test for our module N the test we're going to require a test framework and our own module and finally write our test Phew! So, I don't know about you, but, this is really complicated, this really sucks when you're maintaining many small modules you have to do all most all of this by hand and many, many times. 
+
+And it's incredibly easy to make mistakes. 
+
+Of it also gets very repetitive for files within the same package, for example, when you're building a react up with nicely separated components in their own modules you'll have to require react in every single file. 
+
+As programmers, seeing the same block of code usually makes us forthing with rage! That's not Dry! But in case we accept our reality. 
+
+Weird isn't it. 
+
+Of so what if we went back to here and we remove everything that isn't our code?  If of we're left with function declaration. 
+
+It's calling pancakes and bacon and it's passing an array of results into fry. 
+
+What if we just tried to run this now?  We better reports that some words are not defined ‑‑ well, of course, you might think, but think for a moment, these are words that have meaning for us. 
+
+We know that they exist, somewhere, and we know what they're supposed to do, we have expectations if we understand them, why can't the computer?  So, to help the computer to understand, let's look at how the computer sees code. 
+
+This large blob of text is the abtract industry and you don't need to read it. 
+
+So, we search the DAC for words or in terms of ‑‑ identifier nodes. 
+
+And each time we find an identifier we check to see if it's been defind anywhere in our file. 
+
+And since they're not defined in this case, we get a list of these three identifiers. 
+
+Which is what we saw before. 
+
+So, we have our unknown identifiers, and we match these against our known words. 
+
+What are known words?  They're things we remember. 
+
+They're modules we've written ourselves. 
+
+They're modules like ‑‑ there are modules on NPM like redact or load ash, or there are modules like note build like HTTP or FS. 
+
+Well, it turns out that a simple functional transformation of your code and a prediction of words that you're referred to yield the expended code that you can run, and pass into note ‑‑ and it works, prepending the appropriate required calls and exporting your main module, we'll see that in a bit. 
+
+So, and that means that a series of manual commands that you have to enter into terminal and editor can be expressed by just mentioning a word. 
+
+ I think that's a pretty powerful idea. 
+
+So before we go to the demo ... 
+
+I want to talk about building stuff. 
+
+So, what does build mean in our context?  It means taking our source and our dependencies and creating something that can be executed by node or a web browser. 
+
+Docker is an amazing tool, we're going to use it as a very efficient build system and "runtime" you can post a ‑‑ archive of your code and dependency to a docker DBHM point and it will extract the archive and build our package running any commands we tell it to. 
+
+And in the end, it will spit out a nice little contain their can be run on any other docker host. 
+
+That means we can run this container on our local development environment, but also on a core OS cluster of thousands of nodes. 
+
+At the end of the word look up face we end up with a dependency tree. 
+
+Sort of like an MPM shrink up file that includes everything required to install something. 
+
+Okay. 
+
+Demo time. 
+
+So, FN, F 1 ‑‑ thank you Jan that didn't work (FN + F 1).
+>> Try it now.
+>> Command ... 
+
+yes! Are you seeing what I'm seeing?  I think so. 
+
+So, this is my prototype editor. 
+
+So we go in here and we have a name and we have a description ‑‑ hold on. 
+
+6 (Making pang cakes that's what it's going to make, pancake pancake (Singing).
+>> Can someone come up here and dance please. 
+
+So, this is probably something went wrong here because this function is returning a German sausage specialality. 
+
+So, let's just, you know, turn this into something which we want so making bacon pancakes means frying bacon and pancakes. 
+
+And let's remove this comment. 
+
+So we have used these words and our editor knows that these are not defined yet, so we go in here in to bacon andism me meant this function and we go back and it's defined. 
+
+Magic. 
+
+And liquid kind of magic and we go to pancakes and we return pancakes. 
+
+Go back again, another function defined and there's one more left, which is frying, so frying means making a set of items hot, so we take the items, we want to cook, and we join them in a string. 
+
+Okay. 
+
+So ... 
+
+we go back once more and we have a program which the computer is, fully able to understand and knows everything we're using in our program. 
+
+But, we're not calling this function yet. 
+
+Let's create a command line interface for this. 
+
+Okay, so ... 
+
+we're going to build the JS Con of breakfast modeling interface. 
+
+So, it's a new module. 
+
+And we are going to just ‑‑ log ‑‑ so we call our make bacon pancakes function and we also call the function we just defined in our program. 
+
+Makes sense?  Okay. 
+
+So, here comes the docker part. 
+
+When I click "engage" this dependency tree, which has been generated is going to be turned into a jarble archive and posted to the docker Daem no which will turn it into a nice image we can execute. 
+
+This is the name of the image, let's go to my terminal and rune run it. 
+
+Works (Applause) so, let's go into the docker container and run bash. 
+
+Free docker tutorial. 
+
+So here we have index such as, which is ‑‑ which has a required statement, we have to recall it typed into our editor and exporting this thing as a module. 
+
+And we also have ‑‑ sorry, we also have node modules with the function we referenced and there's another index of JS in here, which is our making bacon pancake function, it is also requiring stuff this is probably very obvious by now but, there's even more modules, right. 
+
+And it's like bacon for example also as an J S file and it's returning a string bacon and exporting itself. 
+
+So, we turned this very simple to understand, I would say, representation of a module hierarchy into something very obvious. 
+
+So, the next step is kind of, you know, let's go out of this container again, and just run it again, and I think this is a very sorry amount of bacon pancakes for JSConf 2014, so let's go back and, you know, we could just do this. 
+
+(Laughing) run it multiple times and engage, again. 
+
+Write and run it, but it's not very exciting, so I know a function on NPM which does this much Bert than I could do, so, not only does our editor know words from our own creations, it also knows all the words which exit on NPM so I can just reference load Ash and tell it to run 20 times, if works as expected, click on this, it will open loadash on NPM that's what I was referencing, so we build this again (Lodash) and I run it again and it works. 
+
+(Applause) so, let's descend into the madness of the container once more. 
+
+This time my node modules had Lodash, it does exactly what you would do if you wanted to install Lodash, it installs it. 
+
+(Chuckles from the audience) so ... 
+
+I would say one more thing, but it's not really that special any way. 
+
+One more thing, we created a CLI from our make bacon pancakes, this is saw some, let's make them pancakes with maple syrup. 
+
+Ummmm fantastic. 
+
+Let's go back and recompile whatever our CLI. 
+
+And run it again. 
+
+Sorry. 
+
+And we have maple syrup, it's really, I want to change something off this program, I just do it, run it again and it works, I don't have to bump dependencies or Synlink or whatever. 
+
+ ‑‑ Symlink ‑‑ or whatever. 
+
+We could also turn this function into an API, right, let's say we have the breakfast server, API, ‑‑ sorry. 
+
+Bacon pancake API, and, in here, we oar just going to do the hello world example so we create a server and the computer is smart because it knows suddenly what you already knew that HTTP is of course the built‑in HTTP module node J S, so we're going to answer this request with a response and of course, we're going to make bacon pancakes. 
+
+And it works, so we call this function and we listen to a port and for convenience reasons we're also going to add a log line. 
+
+ ‑‑ what's the magic.P address, I don't know, let's copy paste it. 
+
+Okay this is the IP address of the docker Daemon. 
+
+Right, so we built this and there's some amazing docker output. 
+
+And we run this ... 
+
+what was the name?  Bacon pancake A PI, it's great if all you have to do is remember names of things. 
+
+Okay, and it works. 
+
+(Applause) so, such timing, very on time. 
+
+Ooops, you're not supposed to see this, this is my reality, let's switch back to your reality. 
+
+Yes. 
+
+So ... 
+
+this is happening. 
+
+There are smart people who are already doing stuff like this. 
+
+For example hoodies semantic release completely automates process for publically releasing new software bundles. 
+
+Basically all you do is the local part. 
+
+You say I want a new origin and I want it to be a patch, and it even knows that you can say I want a new version, it's going to figure out your comments and figure out the kind of release you want to do. 
+
+Have a look. 
+
+And, as anything that will ever be done in the next fifty year in software development most of it will already have been done by mad scientist on this IRC channel ... 
+
+it's true. 
+
+Look into the log files. 
+
+So ... 
+
+I want to thank you and I want to thank great friends who gave ‑‑ who give me great ideas and people who support you. 
+
+I'm working on this stuff right now I would like to ship it to you and I for one am looking forward to the party now. 
+
+Thank you (Applause).

@@ -1,0 +1,385 @@
+Well, I... Hi everyone!
+
+ My name is Jenna.
+
+I'll be talking to you about the linguistic relativity of programming languages.
+
+I know from people asking. What are you talking about. linguistic relativity is not obvious. Don't worry. I'll get there.
+
+First more information on me.
+
+I was fortunate to be part of the Fall 2012 hacker school.
+
+Which is an awesome 3 month program for becoming a better programmer. They have a great set of social rules. Which makes it wonderful.
+
+That was fantastic.
+
+And now I'm a front end engineer at Bitly. You can find me on internet, Zeigenvector.
+
+Since I'm a good bitizen. I made you a linke. Those are the slides.
+
+Send them to your friends.
+
+Cool.
+
+All right.
+
+For the good stuff.
+
+First I'll explain what this linguistic relativity thing is.
+
+Then, say, does it apply to programming languages?
+
+It does. Spoiler alert.
+
+Otherwise there will be no talk.
+
+Then I'll move on to, not the first person to say, programming languages and linguistic relativity.
+
+Maybe have something to do with eachother.
+
+I'll tell you some other people have said.
+
+Then, go on to say, how it applies to programming languages and in parallel the implications of the application.
+
+So, linguistic relativity. Once upon a time there were 2 men. Sapir and Benjamin Whorf.
+
+Now, the hypothesis is, it is a miss...
+
+Sapir was his mentor. Who didn't have much to say on the issue.
+
+This is history.
+
+So, this Sapir-Whorf hypothesis.
+
+The languages you speak determine, the strong form, or influence, the weaker form, the way we think.
+
+No one really believes in the strong form. Because it is naieve to believe that we are holding constraints by the languages we speak.
+
+We do have the ability to reason about things. That we don't exactly have words for it. We can't really explain.
+
+The weaker form, that's linguistic relativity. While stile controversial, it is easier to see how it might apply.
+
+How the words that we have, the way that we have to see things might at least cover our world.
+
+And an example of this, classic example, the words that we have for colors.
+
+The colors exist on a spectrum. But we have a discrete amount of, discrete words for the color space.
+
+So, the way in English think about this space that I have up here.
+
+This might be the only use of gradients in a presentation
+
+We have green and blue. While the barrier between the two might be controversial between you and your friends.
+
+There is indeed a line.
+
+However if we were to have a third word in between. Grue. Then we have 3 ways of thinking about this.
+
+2 lines that trisect. Of this spectrum.
+
+But, this is JS Conf EU. Does it apply to programming languages?
+
+I think so. I'd like to propose the programming languages we know strongly influence the way we think about programming.
+
+This is strongly influence. Not quite you know, lazy influence. That spoken languages have on thought.
+
+This strong influence falls from key difference that I see between programming languages and spoken languages.
+
+Programming languages create and manipulate the space, rather than just describe it.
+
+This is not the case with spoken languages. We can only describe the space with spoken languages. We are not wizzards from Harry Potter. To have the chair fly. It is not how it works.
+
+It feels like, when you program, you do magical power. The language itself manipulates and creates the space.
+
+Without programming languages, there is no space, you are reasoning about. No data.
+
+Whatever.
+
+So, furthermore, animals don't have language like we as humans do.
+
+They are capable of interacting with and manipulating their environment.
+
+So, as I said, I'm not the first person to say, programming languages, do they intersect? Have influence on eachother?
+
+Kenneth Iverson, one of the APL language program. Using symbòls.
+
+Programming languages offer important advantages as tools of thought.
+
+It will have some influence on the way we are thinking about the programming space.
+
+More notably and maybe infamously, Paul Graham had an argument in his paper, speech paper. Beating the averages.
+
+This argument is the Blub paradox.
+
+Some prograngming languages are more powerful than others.
+
+He motivates this argument. By supposing a fake very average programming language, Blub.
+
+They can do whatever they want to do in Blub. It is enough for them.
+
+They can get their stuff down. They look at programmers in weaker languages. Languages they see as weaker.
+
+How could you use that? It doesn't have a construct? How do you do anything?
+
+Similarly they look at other stronger languages.
+
+Programs. Lisp is the strongest language.
+
+He loves lisp.
+
+So, Blub programmers look up to stronger languages.
+
+I'm happy using Blub. It can't be that much better. I don't understand the other things. I don't use them.
+
+If I don't use them, how important can they be? I can get everything I need to do done.
+
+The Lisp programmers look down on Blub.
+
+More concretely, Python, Java, C and Perl. As Blubs.
+
+And he wonders, how can these programmers get anything done in these languages?
+
+Without macros?
+
+Similarly, I don't know what macros are. I'm a mere Blub script programmer. Maybe I should look into it. It seems pretty cool.
+
+He goes on to say, programmers in Blub are satisfied with whatever language they happen to use, because it dictates the way they think about programs.
+
+He says, he knows from his own experience. When he started in Basic. He didn't miss it. He thought in basic.
+
+Dijkstra had something more to say about it.
+
+He says, they are mentally mutilated beyond hope of regeneration.
+
+Well, this might have been said to prove a point of some sort.
+
+Really, mentally mutilated beyond hope?
+
+You know...
+
+No. Paul Graham was able to rise above his basic roots and learned Lisp. The most powerful language.
+
+With this I would like to amend my original proposal and say that we are influenced by the constructs and idioms of the most powerful programming language we know, not the languages themselves, or the language we are using at the time.
+
+So, what do we do to really you know, optimize for everyone mind expansion?
+
+There are 3 differences that I see, 3 more differences. That I see between programming languages and natural languages.
+
+Which motivates this proposal.
+
+The first of which is that we can learn more programming languages and how to program them idiomatically.
+
+This is very hard. Especially for adults to learn zozer A new spoken language.
+
+You can study one for years and years and never become fluent. You might forget it.
+
+This is because your brains are no longer plastic.
+
+Your neurons don't have the capability of learning things as you used to.
+
+If you don't learn spoken language at a certain age, you are doomed not to learn any.
+
+It is not with programming languages.
+
+We were capable of learning 1. Assume most of you here do know JS.
+
+We do have the capability to learn new languages. And learn another one. Within 6 months you are likely to be proficient and make cool things if you want to.
+
+An example is from my personal experience.
+
+I started programming as a junior in university.
+
+For some reason, in 2010, they still decide they are going to teach new programmers how to program in Java.
+
+And with that, they only taught us loops. I was pretty happy.
+
+Mutating data and arrays. It was powerful. I felt like I can do anything.
+
+Then, a year later I took a class in algorithms and data structures. With that came Python.
+
+With Python came the list comprehension.
+
+I was able to learn this quickly. Especially the more simple constructs felt like looping.
+
+Eventually I could pick up the more complicated constructs zozer And it was pretty good.
+
+Then, I went to hacker school and started off happy. In my programming language world zozer I made friends who were super hardcore into functional languages.
+
+Do you even map, bro?
+
+What's that?
+
+So, I eventually picked up map. It took some time to wrap my head around it. I got it.
+
+And now I have chose map out of the toolbox first as much as I can.
+
+So, the second way that programming languages and natural languages are different. Is that we can implement the constructs of more powerful languages, programming languages in whatever language we use at the time.
+
+This really does not happen in spoken languages. You can't say, well, I went to Germany and heard this cool word. I'm going to keep using it.
+
+Here is the dictionary of all the cool words. I'm going to be using them. That doesn't happen.
+
+In spoken languages.
+
+It happens in programming languages.
+
+It happens with libraries.
+
+But more popularly in Javascript we have transformations, precompilers and the like.
+
+So, Steele said, we should now think of a language design for being a pattern for language designs, a tool for making more tools of the same kind.
+
+And, I agree with that.
+
+ An example of this is underscore or lowdash. Help stabilize what we can use, regardless of the es spec.
+
+So, the JS is the thing we have to worry about.
+
+But, that's besides the point.
+
+Underscore allows me to use map whenever I want. I love map now.
+
+I don't need it to be on the prototype necessarily.
+
+As long as I can do mapping things.
+
+All I really need.
+
+Another example of this. That was at JS camp US.
+
+Is Sweet.Js. You have macros now. We can craft the language we always wanted.
+
+No longer confined by Blub script.
+
+So, never used it.
+
+Going to try to in the future.
+
+And third example of this is, we have these future scripts.
+
+They are still in the future.
+
+And you are all itching for classes and generators and array comprehension. That can be now. If we use features and feature specs.
+
+No longer restricted by the language wae have now.
+
+We can bring in those things that we have seen in other languages.
+
+That we missed. If we want to.
+
+Thirdly, programming languages are synthetic and we can change them if we want to.
+
+We make up programming languages. They can be whatever we want them to be.
+
+It is not really the case with spoken languages. They evolve over hundreds of years with no regulations. It leads to irregularitis.
+
+We love to talk about the quirks and irregularities.
+
+We have it good, compared to English.
+
+Spoken languages tend to not catch on.
+
+There was Esperanto. Do you know any Esperanto speakers? No.
+
+A short anecdote. As a kid I used to think that spoken languages like English were indeed standardized by a group of very important smart people sitting in a room.
+
+It is not the case with spoken languages. But, really don't know what goes in TC night.
+
+So, of that, we can, if we are powerful enough, submit proposals to Javascript or whatever programming language we are using.
+
+It is important between the difference of computers and humans.
+
+ So, we loose that. Also, get less quirks in languages. That's cool.
+
+Example of what is changing.
+
+As I mentioned. Javascript as array. And map in it.
+
+Eventually, we'll get array comprehension and generators.
+
+That's cool. I know how to use array comprehension.
+
+Generators not yet.
+
+Still a little mystical to me.
+
+But I trust that like many other people, eventually I'll be use them idiomatically.
+
+That will be awesome.
+
+So, Guy Steele said, languages that can't easily grow will die.
+
+And yes. I think so.
+
+If we all go off and know other programming languages. And JS doesn't have what we have. We will defect and write something else.
+
+I really want macros.
+
+But, we need you guys. Writing Javascript.
+
+We need Javascripts to grow.
+
+Furthermore. I'd like to say, grow allows for more rapid growth.
+
+But what I mean is that for example, like once we get generators. We can write more efficient and concise and idiomatic things that we also miss.
+
+Also I read this article recently. About Csp processes. And also enclosures. I don't understand them. I'll be the first one to admit.
+
+But, you know, people want that.
+
+And if they want that it is not in JS, what are they going to do?
+
+They want to be able to write these things and have them in the language that they are writing.
+
+So, what do we do?
+
+We could all go off and learn closure script and come back. Next year it will be CLJS 2015.
+
+Or, we all could go and new languages. It will make you a better programmer if you know many languages.
+
+And bring them back to the community.
+
+And share with your friends and fellow programmers. Those who don't know JS. And make it great.
+
+I think, out of all of these 3 opportunities that we have. I think the second option, creating libraries, is the best.
+
+It is the most democratic. We can do it.
+
+It will teach you about the components of your favourite concept in other languages.
+
+The JS community has a wide array of people of different abilities.
+
+Few of them have cloud.
+
+So, that's all we have to do.
+
+We can write libraries if you want to use something.
+
+But, another talk could be, well, let's have 1 language to rule them on all.
+
+That's not good either. There is a reason that we use languages that we use.
+
+They evolve of certain circumstances. That's why we use them.
+
+There is reason why we have many languages. Let's keep JS weird.
+
+All right!
+
+(applause)
+
+so, these slides are on bit.Ly.
+
+And there is a slightly less evolved blog post.
+
+We like short links.
+
+You can find me on Twitter.
+
+Hit me up with any questions.
+
+Thanks!
+
+That's what I look like if you can't see me down here.
+
+(applause)

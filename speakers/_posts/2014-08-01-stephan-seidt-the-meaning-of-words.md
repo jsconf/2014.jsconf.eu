@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/stephan-seidt.jpg"
+video: d1HM-9reFAE
+transcript: "transcripts/stephan-seidt.txt"
 ---
 
 {% include speaker.md %}
