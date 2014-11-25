@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Blog">
+<html itemscope itemtype="http://schema.org/Blog{% if page.speaker %}Posting{% endif %}">
   <head>
     <meta charset="utf-8" />
-    <title>{{ page.title }}{% if page.video %} [Video]{% endif %}</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/stylesheets/screen.css?12345678" type="text/css" media="screen, projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="canonical" href="http://2014.jsconf.eu{{ page.url | replace:'index.html','' }}" />
