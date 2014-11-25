@@ -1,0 +1,423 @@
+Can you hear me? Good? Okay.
+
+In a world with 1 man, versus his own mind, and 24 hours, this is a game jam, there is just one problem... His game, Astroids, totally different this time is actually not different.
+
+Oh man... It is just Astroids. That's kind of a problem! I can't even shoot! That's even worse. Oh my gosh. Okay...
+
+It is not different at all. It uses all this typed arrays and physics. Fun making it, but the players don't care. There are only a few hours left before the deadline. Maybe I can quickly change it? Maybe? All right, what can I do here? All right. I can try, making a ship huge.
+
+All right! I got a big ship. Cool!
+
+That's the same game...
+
+That's really a problem. Astroids tiny. hard to hit. People like hard games, right? Right?
+
+- Right!
+
+- Thank you.
+
+- Okay... Well, now it is just... Just bad.
+
+So, that's no good. No good at all.
+
+Okay. What the heck I'm going to do?
+
+Like... Uh...
+
+Oh! What if... You... Control the astroids?!
+
+Yes! I can do this! This is something I can do. This is awesome! Yes, yes, yes, totally cool, let's do this.
+
+Wait, wait, how I have the time? It is not easy. I'm going to change the game. How is this going to be possible? All right.
+
+I modeled everything as data. That's awesome. Right? Right? Okay, cool. All right. What does it mean? Crap, I forgot.
+
+Is there like a database? Databases are fun? No, they are boring. Really quite boring.
+
+They are not a game. Like, in fact, if you like go up to one and hit the action button, you can capture one. Then it corrupts your save game. Then your game is gone.
+
+Oh!!
+
+Sorry. Sorry. I'm back, I'm back.
+
+Totally back. All right, all right.
+
+So, what are we talking about here?
+
+Okay.
+
+Well, before we discover what we talk about, let's talk about how another version of Astroids might have been created. An object oriented, approach.
+
+You have your Astroid, your ship, bullet, you have other things.
+
+They would inherit from eachother. It might look like this. On the left Astroid, on the right bullet.
+
+They are similar. They inherit from a renderable thing, collidablec thing, inherits from a global world thing. Great.
+
+The ship is a bit more interesting. It might inherit from keyboard control. We need to move it around.
+
+And, there is going to be a lot of implementations done in each of the areas of the hierarchy. Especially the ship itself. An update. If you saw Hunter's talk. Update functions.
+
+Throughout the hierarchy. You are going to have concrete implementations of things. Draw. It is going to be in the ship. If it is renderable.
+
+It needs to know how it renders itself. And shoot. The ship shoots.
+
+If we want to refactor our code. You can tell what is going on here. If we want to refactor the fake code to enable controllable astroids. What will it look like? Like this. The inheretence tree.
+
+The keyboard control, rip it out and put it into the astroid entity. And physically copy code. Handle input. And the shoot function. A lot of other things too.
+
+Copy data properties. It is hard to know what those are. Paste it in the Astroid. Tricky.
+
+The real world is definitely a bit worse.
+
+This is a game jam. You write code and get it done. That is really messy code. It would be worse.
+
+So, pro's and con's quick.
+
+You faked out. All the logic is local. In the ship.
+
+Or in the render or in the collidable. It is spread out through the hierarchy. As well as the state. Your position, rotation, shapes, images.
+
+All spread thoughout the hierarchy.
+
+Also hard to optimize. You have to deal with these objects. They may have different interfaces. It is hard to do it.
+
+You are restricted for certain types of optimisations.
+
+That's the object oriented approach.
+
+The data oriented approach, what the Astroid game is made out of, has 3 main tenants.
+
+Functions operate on data, not Objects.
+
+Obviously new object is capital O.
+
+What I mean by this, is an object meaning an object that inherits. Or has methods attached to it.
+
+Anything more than simple data. We want functions that are relatively pure. There are going to be more than 1. Even though if it is a game in the browser.
+
+For double buffering.
+
+There can be more than 1 ship or more astroids.
+
+The final tenant is not inhibit optimisation if the developer choses to do that. We'll see how in a little bit. Bashing things up mostly.
+
+This is not perfect. I barely know what I'm talking about.
+
+Let's move on.
+
+It all starts with a pocket. This system, this thing I wrote, I wrote it obviously. But not a library.
+
+To demonstrate the ideas. So, just keep that in mind.
+
+It starts with a pocket. It is a container, just like your pocket.
+
+And, it also has a tick method.
+
+It is not really important. It is something constantly running.
+
+Once we have a pocket, then we can add component types to the pocket.
+
+Like in react. Maybe? Well, no... Not at all actually.
+
+Components in React, they don't have a ton of state. They can have state. They have methods or functions.
+
+It is a little bit different. An example.
+
+A rotation component type. Of what rotation means in terms of data, properties.
+
+It has an angle property and a rate property. They default to 0.
+
+If we look, the pocket, when it is told to create, passes an object.
+
+That we then use to attach the properties to.
+
+A pattern implying you pass options and you get back data.
+
+On the further slides a shortcut. To saves typing.
+
+In further slides you'll see it instead.
+
+Another example, a drag component. That slows down over time. Dragged upton.
+
+No functionality. The data require. A percentage of velocity kept each frame. We'll see how it works in a minute.
+
+It is just data. Just plain objects.
+
+Once we have our component types, definitions, once we have that, we can request a key from our pocket. Your pocket always has keys. Right?
+
+A key is simply a collection of component types. Turned into instances of that component.
+
+In this case we are requesting a key to be made. Rotation and drag. A default value of rate 0.9. This is important. It defaults to 0. We are overwriting the value. The key back is an ID, a number. Uses index into something else.
+
+This is important later, I swear. It is just an ID.
+
+Here is a bigger example. A lot of code.
+
+Not important to notice the details. Also that there are several things in quotes. The component types.
+
+And the options.
+
+In this case, there is no options passed on the thrust or drag, but rotation has a default rate.
+
+This is actually the ship. How the ship is defined in the Astroids game. We define the points.
+
+And some other things, I'll get into more.
+
+Once we have our component data and keys, then we can write systems.
+
+These are going to modify the component data.
+
+This is the system or the functionality, required to apply thrust to something in the game.
+
+So, first of all, has a name.
+
+It has requirements. These are the types of data that it operates on. This system will only be invoked if the types of data exist.
+
+Finally, what the system does, the action.
+
+It is invoked, given a list of keys that have all these different components.
+
+And then finally giving collections of the component that you can index into.
+
+This is what that looks like. You can see, Var(k) = keys. Shapes, positions shapes, rotations.
+
+The actual code that does render point shape, in the previous apply thrust, it is not on the slide.
+
+It is not magical, suddenly it moves.
+
+It is to show the structure around it. It is the same in the games.
+
+Okay. Here is another example of a system, sorry, here is the input thrust system. One more little shortcut. Rather than in this previous slide, the system is invoked once and loop through each key manually.
+
+In this case, the system is invoked once for each key and gives you the data that you want, the position, rotation, thrust. It is just a shortcut. Don't worry about it. I wanted to point it out.
+
+Okay.
+
+Now, at the beginning of this we talked about player controlled Astroids. Are we going to come back to it?
+
+I have been talkig for a while now.
+
+All right, yes, the first step is rotation.
+
+We want to take our Astroids and make them rotatable.
+
+Here is the rotation code. This is it. All the code responsible for rotating something.
+
+It has a rotation component and a human controlled zero 1 component. Scientific!
+
+You might be wondering, what is up with that? Why is there no data passed in, human control zero 1? There isn't one. This is the last part of our pocket system.
+
+We use labels as anonimous components. To label a key as something.
+
+This is the definition of an Astroid.
+
+It has a position, shape, bounding box and rotation. It also has an Astroid.
+
+It has a name of Astroid.
+
+This is useful, because for example in the Astroid ship collider code, we only want to talk to Astroids.
+
+And a ship is similar to an Astroid. The ship also has shape, position and rotation.
+
+The astroid tag or label is the only thing that makes this simple only being invoked for astroids. Instead of all of these things.
+
+The pocket gives you a little warning. Don't know if you can see it.
+
+If it doesn't find a component it says, I didn't find it. I hope it is a label.
+
+This is the first step in making the astroids controllable.
+
+We have the tag human-controlled-01. This label.
+
+What happens if we add it to the astroids? Maybe something awesome? Let's find out.
+
+Is there astroid? Perfect.
+
+I'll add this in.
+
+Save it.
+
+Refresh.
+
+Hey! That's not working at all!
+
+What happened?!
+
+What happened? Well, what happened is that we have our human-controlled-01. What didn't happen. If we look at the system itself, it accept rotation. And it uses the rate to increase the angle of rotation. The logic is not that important. What is important, the component, rotation has a default value zero.
+
+On the astroid we have to make sure, we use an actual value instead of default.
+
+These are rotation.
+
+Save. Refresh.
+
+We have astroids moving around.
+
+I swear they are moving around. Let me undo my changes of before.
+
+Astroids are moving! All right!
+
+(applause)
+
+Cool!
+
+There is step 1.
+
+Okay.
+
+Yes!
+
+Now let's make them thrust!
+
+So, to make them thrust here is the thrusting code.
+
+We look at the requirements.
+
+Position, rotation, thrust. Human controlled-01.
+
+Here is what thrust looks like in the ship.
+
+Let's add it to the astroid.
+
+Here is our astroid over here.
+
+Refresh.
+
+We are spinning and moving. Okay!
+
+Yes!
+
+We have a cloud of astroids.
+
+(applause)
+
+okay. We are really getting somewhere now! Let's make them shoot.
+
+If we look at the astroid. The projectile launcher thing is already on the ship.
+
+Let's add it to the astroid.
+
+It should be good. Projectile launcher.
+
+And the value was launchforce. That's how much power, how fast it goes.
+
+Refresh.
+
+Yeah! Look at that. I've got so many astroids.
+
+They even kill themselves, look!
+
+There we go.
+
+Killing themselves.
+
+Not even a challenge anymore for the ship. Yeah!
+
+That's cool. Let's make the ship get hit. Let's reverse things.
+
+This is the code that is responsible for colliding astroids and the projectiles.
+
+The only thing that is specific to astroids about this, besides the name, some string, is the astroid label. We added that astroid label for the heck of it.
+
+What happens if we take the system, and instead of operating astroids, we tell it to operate on ships. Let's try that.
+
+Here is our projectile collidor. Change it to ship.
+
+If we go back to ship, it has a ship tag. Label.
+
+Hit refresh.
+
+And... Now... If we... There we go, it killed itself.
+
+If we chase the ship, eventually, where did it go?
+
+If it hits...
+
+I should make the ship bigger. The ship.
+
+Trust me, it dies!
+
+Okay. All right.
+
+I'm going to do it for real.
+
+Here we go.
+
+Wait, wait. For real. Okay. It will be impossible to miss. Got it!
+
+(applause)
+
+okay. The hunter has become the hunted.
+
+The astroids have their revenge.
+
+There is still tons more work to do.
+
+But not today. We could finish this thing.
+
+So, talking about the data oriented approach and pro's and cons. These are the same thing.
+
+I call them pro, con. Sometimes beneficial.
+
+Logic is spread out. Many systems. Logic is in each system. It can be tricky, but it is nice, because they are separated.
+
+The state is consolidated. The only thing that changes are those components.
+
+Because we can create a system that operates on a whole range of components. It is easier to optimize.
+
+If we want to want it for typed array, we can do that. All of the positions are stored in the same kind of area. Same data.
+
+As you saw, it is modular. We can take labels, code and move them around. And get different functionality. Well, pretty different functionality.
+
+I did mention databases a long time ago.
+
+What does that mean? There is a pretty good 1 to 1 analog between what I have done here and concepts of a database. At a fuzzy level.
+
+The component tipes. It is like a schema. Each is a column. The rotation has a rate and angle. Columns in a table.
+
+Our components are like the individual entries in the table. They are the rows. Each individual instance of rotation is a row in the rotation table. Our primary keys. They's why they are keys. Also the pocket. It looks pretty good.
+
+And finally, our systems are not stored procedures.
+
+More like queries and business locic mixed together. Php-land. It is okay. It is game development. It is fine.
+
+All right.
+
+And just to show you how much like a database this is. Here is the pocket. The container of things.
+
+If we look at the different components and log that out.
+
+We get this. It gets interesting if we scroll down to the positions.
+
+This is the position for key number 4.
+
+This is like entity number 4. Thing number 4.
+
+The values are right there. This was a snapshot in time. When this was taken.
+
+The X-Y values. It is an instant safe state.
+
+You can have save states.
+
+Here is the rotation for key number 4. It didn't have an angle set, but a rate. Cool!
+
+(sigh)
+
+I'm sure you are all wondering, did I finish the game jam? That was the number 1 question on your minds right now.
+
+And, get ready... I hope you are prepared!
+
+I didn't!
+
+Ehm, there wasn't even a jam.
+
+It was just for this talk. I'm sorry if I confused anyone.
+
+But that's all it was. There was no game jam.
+
+And, you know, hope that's okay.
+
+Thank you very much!
+
+(applause)

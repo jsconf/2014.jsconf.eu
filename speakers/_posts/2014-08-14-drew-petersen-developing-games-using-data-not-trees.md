@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/drew-petersen.jpg"
+video: uNVP5jDOVAY
+transcript: "transcripts/drew-petersen.txt"
+slides: https://speakerdeck.com/kirbysayshi/developing-games-using-data-not-trees
 ---
 
 {% include speaker.md %}
