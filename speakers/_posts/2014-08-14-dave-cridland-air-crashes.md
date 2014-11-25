@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 200.2832861189802
   filename: "/speakers/images/dave-cridland.jpeg"
+video: Oxz23A9_Mc4
+transcript: "transcripts/air-crashes.txt"
+slides: https://www.surevine.com/air-disasters-and-software-not-such-a-tenuous-link/
 ---
 
 {% include speaker.md %}

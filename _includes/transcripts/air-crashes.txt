@@ -1,0 +1,551 @@
+Right.
+
+So, let me begin by taking you back in time.
+
+The time is now 10 past 5. On the 28th December, 1978.
+
+(music)
+
+In the skies above Portland Oregon, is a DC 8. There are 189 souls on board. Going to land.
+
+So, as they are coming to land, they start to lower the undercarriage. There is a big loud thumb. They can hear and feel. It is not much of a approach. They are going to go back upto 5000 feet. We have a landing gear problem.
+
+Landing gear problems aren't a big deal. They can land with any undercarriage at all. It is normal for landing gear failures that happen every year. Nothing interesting happens. Nobody dies.
+
+It is a huge surprise when after some regular ordinary radio traffic, Portland hears this one.
+
+United 173 heavy. Maydy. The engines are flaming out, we are going down. We are not going to be able to make the airport.
+
+They impact with powerlines.
+
+That's downtown Portland.
+
+That's what it ended up looking like.
+
+Only 10 people died. 24 were seriously injured.
+
+Most of it was because they hit a tree.
+
+It was a small wooded area. They were very lucky. There was a rescue team on an exercise when they hit the ground.
+
+So, this is air crashes. In case you got confused. That the last picture was a makefile.
+
+I'm Dave Cridland.
+
+I have been working in and around the internet around 1996.
+
+ I work for Surevine.
+
+My colleague Lloyd over there also speaking, works with us as well.
+
+And we do social stuff on the web.
+
+For people who really care about security.
+
+When I got into air crashes or reading them. And reading the reports.
+
+This was way before they were all on the web. Which they are now. They have pretty animations.
+
+I got into them, a company I worked for 15 years ago, would hand you aircraft air reports. Read this one, it is great.
+
+I don't do anything with aircraft. I do software.
+
+Aircraft are large systems with interacting components. So is the software that we built. It was Javascript.
+
+And, the kinds of areas that you get.
+
+Sorry, skipped a bit.
+
+What we do to avoid errors is we deal with redundancy and recoupling.
+
+The failures we get are error chains.
+
+Cascade failures. Same thing.
+
+And even the name that we use is the same.
+
+With aircraft, every time an aircraft doesn't function as it should, there is a detailed investigation analysing every cause and all possible recommendations afterwards.
+
+It is not quite the same in software.
+
+(applause)
+
+So, I have read dozens of reports and summaries. I'm still not scared to fly. I took 2 flights here. I had to change at Schiphol.
+
+There are 2 accident reports that leave me feeling scared about everything.
+
+How many people flew here?
+
+That's great.
+
+How many are thinking of flying back.
+
+Okay.
+
+We'll change that!
+
+So, what happened with United 173. Why did that plane crash?
+
+This might give you a hint.
+
+A small one.
+
+When it took off from Denver, Co, it had 46700 pounds of fuel.
+
+They like the imperial measurements.
+
+When it was on the approach to Portland, we can measure how it flew, it had 14800 pounds of fuel left.
+
+We know that, the undercarriage was down, flaps was down. It is burning 2200 pounds per minute.
+
+He sits behind the pilot. He has the full readouts of everything. The 2 pilots, captain, first officer, they were at the figure.
+
+In order to check exactly how much fuel you have, you ask the flight engineer. They had a headline.
+
+By 17:46 they have 5000.
+
+And the flight engineer is reporting this to the first officer.
+
+Who is the pilot flying.
+
+The captain is sorting out problems.
+
+And the pilot in charge, captain, tells to prepare for landing with 4000 pounds of fuel.
+
+You can see, that is minutes after he had 5000. Something wrong here.
+
+The first officer requires a fuel check. He is told 4000.
+
+The captain tells Portland, we are going to land with 3000 pounds of fuel. This is not right.
+
+6 minutes past 6. The first officer says: We are going to lose an engine buddy.
+
+Why? Fuel.
+
+Well, activate the cross streets. To shuffle fuel between tanks.
+
+Then they think it is a good idea to ask for landing clearance a minute later.
+
+Couple of minutes later the flight engineer is reporting only 1000 pounds. Mayday is declared at 18.13. With the engines running out.
+
+The report basically said, this accident exemplifies a recurring problem with management of crew resources.
+
+This is an odd phrase to use. The blame was assigned to the captain, who was stripped of his license and never flew again.
+
+The contributing factor was given as crew failure.
+
+They are not saying the landing gear was a problem, the fuel. They say, this was a crew problem.
+
+This is rather unfortunate. The flight engineer was one of those killed in impact.
+
+Before I go on to other crashes which this is referring to.
+
+There is a top aircraft safety tip. Where is the safest place? The passenger seats.
+
+As a crew you are must more likely to die. Be a passenger.
+
+The related crashes which are similar. 1963 Tupelov 124 in the Neva River.
+
+There was a landing gear problem on take off.
+
+They decided they would circle to use up fuel. In the days before the aircraft dumped it. They looped too many times. No casualties. They didn't evacuate the aircraft, they towed it.
+
+1969 Scandinavian. Failed to watch the altitude.
+
+15 people killed.
+
+1972, Eastern 401. Famous crash.
+
+Landing gear problem. They disenaged the auto pilot by accident. Causing 99 fatalities when they crashed into the Everglades.
+
+And then the big one. Tenerife airport disaster.
+
+27 March 1977.
+
+I have never heard properly the opening lines to Knowing me, knowing you before.
+
+They were number 1 at the time of the crash.
+
+It is 6 in the evening. We are at Los Rodeos Tenerife.
+
+The airport name is changed to Tenerife north.
+
+Flight numbers are tend to be put out of service.
+
+They did it with this airport as well. They built a new airport.
+
+This is a cascade failure. A chain of errors. Leading to a fatal disaster.
+
+It starts off with a bomb that explodes in Las Palmas.
+
+The airport in Gran Canaria. By seperatists, protesting against the Franco regime. Franco dies later that year.
+
+And there was another bomb warning given. Although there wasn't another bomb. They closed the airport and diverted all flights to Los Rodeos. It is relatively high altitude. 600 meters.
+
+It has a problem with dense low clouds.
+
+It had this at the time.
+
+They had an unusual amount of traffic. Normally they didn't see much. Now their airport is full.
+
+The 2 aircraft in question are the Klm flight 4805. With 248 people. And PanAm with 396 people.
+
+These both 747. Both flew international.
+
+So, and I pulled this diagram of Wikipedia.
+
+And adjusted it to fit.
+
+This is what happened. The Klm flight was first to take off.
+
+It was blocking all of the others.
+
+The apron where the aircraft park was jammed full with aircraft. They couldn't use the normal taxi way. That runs across the top.
+
+So the Klm flight is first to take off. It runs to the back of the entry, turns around.
+
+And the Pan Am follows quickly afterwards.
+
+With the intend to turn off.
+
+They are confused which taxi to use.
+
+They are told when asked for clarification to use the 3rd one.
+
+For whatever reason, you can see the Pan Am misses. It is clear they didn't know where they were on the runway.
+
+That's okay. The control tower knows they are on the runway.
+
+The Klm flight piloted by a very experienced captain. The chief instructor at the end. He gets lined up.
+
+We don't have clearance. Air traffic control clearance.
+
+So he says to go ahead and ask.
+
+And so they asked the tower, they give the clearance. Atc.
+
+They repeat the instructions back.
+
+Now what happens is something that is really quite seriously horrible.
+
+Because the tower responds with okay.
+
+And what you see there is the normal type is what both aircraft can hear.
+
+Due to radio interference only Pan Am can hear it.
+
+Klm hears: Okay.
+
+They don't hear: Stand by for take off, I will call you.
+
+They don't hear: No, uhm.
+
+They do both hear papa alpha one seven three six report the runway clear.
+
+I don't know if Klm thought it was clear. The tower was reporting runway clear.
+
+It never calls.
+
+It could be confusing.
+
+Either way, they push forward the engines.
+
+The flight engineer says, the American is clear.
+
+And gets a definite jawel from the captain.
+
+Jawel for those who don't speak Dutch: Absofuckinglutely.
+
+The flight engineer...
+
+They can't see eachother. Suddenly they start to see the lights.
+
+He says, there is.
+
+That goddam son of a bitch is coming. They turn it. Engines on full. Rather unusual manoeuvre. And tries to get into the exit 4.
+
+As they Klm flight rolls down they call V1.
+
+If you have been in an aircraft. You know where the aircraft can tip back, rotate.
+
+That's V1. They are V1 at that point.
+
+It means their nose is pointed up. They cannot see the runway if it is clear.
+
+The captain sees the Pan Am flight. And pulls back even harder. Where the rear of the aircraft strikes the runway. With a big hole.
+
+ He manages to get it airborn. But they are full of fuel. They cannot clear.
+
+You get this impact. This is what the transcript says.
+
+Explamation, expletive.
+
+That's actually the last that anyone will hear from the Klm flight.
+
+It impacts.
+
+More or less breaking apart. All the way down the runway.
+
+Everyone is killed on that. Instantly.
+
+The fact it is full of fuel, the fire is horrific.
+
+The fire crew immediately head to the Klm flight.
+
+They are not aware of 2 aircraft. They mistake Pan Am for another piece of wreckage.
+
+When they get there, 61 survivors have escaped by themselves.
+
+335 people are in the aircraft, waiting what to do.
+
+A top tip when you get in, listen to the safety briefing, plan your exit. It may come as a surprise you might need to use it.
+
+So, the airline industry started using crew resource management.
+
+Which is a doctrine where everyone in the crew maintains situational awareness. Knowing what is going on. Knowing there is another plane. All this information must be shared in the team.
+
+Planning decision making should be shared.
+
+Although you have a single leader who makes the decision. Every one is voiced their objections.
+
+Communication inside and outside the cockpit are vital. And inside and outside the team.
+
+And good teamwork. Everyone gets on with the tasks they need to. Rather than trying to get to do the same task.
+
+This isn't a leadership talk. This is a talk about a lot of people dying a hideous death.
+
+Leading people is just one person's job.
+
+And effective teamwork is everybody's job. The entire team needs to be involved.
+
+So, crew management is taken on by United in 1980, followed by talks by Nasa. In their Apollo program.
+
+It was thought this was going to help minimize crew problems, failures.
+
+ In the future.
+
+So, what happens if a crew faces what normally would be a non survivable incident?
+
+They have excellent crew resource management.
+
+So, this would be United 232.
+
+On 19 July 1989, at 3.15 in the afternoon.
+
+Near Sioux City, Iowa. A 3-engined airliner. Was flying from Denver to Chicago.
+
+296 souls.
+
+An unusual number was children.
+
+After 3.15, the rear central engine blew.
+
+They fan, main turbine disk shattered into several pieces. And the pieces went through the tailpipe assembly.
+
+What that left United 232 with was 2 problems.
+
+Firstly the aircraft had a tendency to turn to the right because of the damage.
+
+Left alone it would flip itself over completely.
+
+You don't want to do that.
+
+That is not a major problem. You have the aircraft controls to compensate. Move it back.
+
+This would be a problem if they lost all the hydrolics. Which they had.
+
+All 3 hydrolic systems were made inoperative. Each is driven by an engine.
+
+All of the hydrolic fluid drained out of the system.
+
+The flight engineer on the radio says, this is united 232. We blew nummer 2, we lost all hydraulics. We are only able to control with asymmetrical power settings.
+
+They had no rudders or speed breaks or even a little break on the wheels. Should they land.
+
+The maintenance then had a really interesting amusing conversation.
+
+You still have 1 and 3? No, you have 1 and 2?
+
+This was calculated as being a 10 to the 9th to 1 chance.
+
+The United have checklists for all, except this one.
+
+It is deemed impossible and unsurvivable.
+
+The captain said, we are trying to go straight. We're not having much luck.
+
+The crew sorted out the engine problem.
+
+Within 14 seconds.
+
+It was then that they realised the plane wasn't reacting. They started talking all 3 themselves.
+
+Every operation they were doing.
+
+Continue using the controls. In case it had effects.
+
+Everything they have to do is talk through as an entire team before they make a decision.
+
+Haynes: We didn't do this thing on my last performance check.
+
+Then something remarkable happens.
+
+This is real Hollywood moment.
+
+One of the passengers comes up to help.
+
+I'll introduce myself. The passenger introduces himself, Denny Fitch. He has been working for the last 3-4 weeks as United DC 10 flight instructor.
+
+He is the 1 person that you really want in the cockpit.
+
+This is in part. He is familiar with another crash. Japan Airlines 123.
+
+This is the most serious single incident air disaster after. 1985, 6.24.
+
+It is getting dark.
+
+The plane took off from Tokyo. A 747 short range which carries extra people.
+
+A tragedy in itself.
+
+As they flew upto altitude, a bad repair to a bulkhead causes decompression.
+
+I shall use my laserpointer.
+
+Can you see there?
+
+There is a bit missing.
+
+The vertical stabilizor has been blown off.
+
+That has taken out all of the hydraulics.
+
+They managed 35 minutes of flight time.
+
+In a very unstable aircraft.
+
+They were not only missing control service. They were missing large chunks of the aircraft. They crashed in a remote area.
+
+Initial reports suggested no survivors.
+
+One of the 4 survivors they found the next morning said that the heard the helicopter circling, see the lights and it flew off.
+
+All the moaning from the other survivors also faded to nothing.
+
+As you might guess. This is the other one that really freaks me out.
+
+Back to United 232.
+
+I'm looking shaky on time.
+
+- They are also running late.
+
+- All right. In that case, I'll take ages!
+
+United 232.
+
+Haynes is in no illusions.
+
+He is talking to the cabin crew.
+
+I can't remember the name.
+
+She is talking about whether or not they are going to evacuate.
+
+If we are at the front I'll tell you.
+
+He comments, won't this be a fun landing?
+
+The air crew talk about every decision.
+
+One of the decisions they talk about is how and whether to lower the landing gear.
+
+An aircraft can land without a landing gear. On a soft surface it is preferably.
+
+Otherwise it will cause more damage.
+
+They decided unanimously to lower it. There are 2 mechanisms.
+
+They decide to crank it down. Which will release some extra hydraulic fluid.
+
+So they get closer and closer to Sioux city airport. Under the very excellent guidance of Kevin. Who is a flight controller who moved to Sioux City because he was at a busier airport and didn't like the stress.
+
+You are cleared to land on any runway.
+
+Haynes: Typical humor.
+
+You want to be particular and make it a runway?
+
+They line up for runway 22, a closed runway.
+
+You cannot see the whole of the runway from the tower. It is also where they have all the emergency equipment parked.
+
+They moved it out of the way.
+
+As they are coming in to land, it is incredible as far as an airport.
+
+As they come in, a normal landing in a Dc 10 is 140 knots, 200 feet per minute.
+
+They are coming in at 215 knots, and increasing.
+
+And 1850 feet per minute.
+
+Nearly 10 times faster than they should be.
+
+Is that going to fail?
+
+See, I shouldn't have controlled it with Java script.
+
+Let's try it again. Sorry.
+
+This is a similar view than what you get from the tower.
+
+So, Kevin sees that from the tower.
+
+And in his own words, he went down the stairs and had a little cry.
+
+Amazingly, there were survivors. 112 were killed. There is a complication how you measure fatalities.
+
+Instantly 1 was killed.
+
+ 184 survived. Almost 2/3. There was a united captain, one of the very few survivers from First Class. You can't climb out of an aircraft window. Yes you can.
+
+It comes in, the right wing tips at the last minute.
+
+They couldn't control this. The right wing hits, spills fuel. The tail brakes off. The aircraft flips up. Loses the cockpit, starts breaking apart. It looks like a cartwheel. The whole thing is upside down.
+
+The passengers help the crew as much as the crew helped the passengers. They were unable to release themselves.
+
+1 passenger out of the hole of the side, went back in, because he heard a baby cry. It was thrown into the overhead luggage bins.
+
+What happened to the crew. The cockpit wreckage was found over half way.
+
+It goes down to there.
+
+This is a part of the plane that should be 10 feet high.
+
+They found it because the flight engineer had his arms stuck up through the wires.
+
+There were people inside. They found the entire flight crew alive, battered and injured, but all of them alive.
+
+Amazingly, all of the crew survived and returned to work. Most of them to work. Denny was sitting behind operating the throttles.
+
+He would never fly again. He managed to 11 months later. On DC 10's.
+
+- 30 seconds.
+
+- That's good.
+
+So, these quotes from a talk by Hanes. You can find it on Youtube.
+
+Up until 1980 we worked on the concept that the captain was the authority.
+
+And we had a 103 years of flying experience. There in the cockpit. Trying to get that airplane on the ground. Not one minute of which we had practiced. Any one of us.
+
+If I hadn't used Crm, it is a cinch we wouldn't have made it.
+
+The work we do for most of us, will never involve human lives, anything like that.
+
+But, nevertheless, you can learn a lot from how to do teamwork the aviation way. Thanks very much.
+
+(applause)
