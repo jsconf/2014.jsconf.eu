@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 207.49682337992377
   filename: "/speakers/images/raul-fraile.jpeg"
+video: wLx5OGxOYUc
+transcript: "transcripts/gzip.txt"
+slides: http://www.slideshare.net/raulfraile/how-gzip-compression-works-js-conf-eu-2014
 ---
 
 {% include speaker.md %}
