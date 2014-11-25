@@ -1,0 +1,461 @@
+Thank you very much. Can you hear me?
+
+Yes.
+
+Hi. Yes. I'm Ray.
+
+The room has emptied out a little bit, so I don't have to be so nervous.
+
+I will not show you much Javascript. If you want to see a lot of Javascript from Toyota, you should go to the next room.
+
+I'll start about something that we have been working on as a company for the last years.
+
+That is these things. The cars.
+
+This is the one example, which might impress Javascript developers.
+
+Most car companies, equipment manufacturers, most people in the manufacturing world think about this kind of thing.
+
+Which is a product. This product doesn't have anybody in it.
+
+If you can notice this. Most of the manufacturing brochures is without people.
+
+Most manufacturers really care about the product.
+
+Once it goes outside the factory it goes to a distribution network, other people deal with the people who drive the cars.
+
+We can see a nice lady in the car. That's good.
+
+Some people into cars. We know that is happening.
+
+In the dealership somewhere.
+
+But we don't really know much beyond that.
+
+Something about this picture you recognize.
+
+We have concentrated mostly on the steeringwheels and dashboards and engines and that stuff.
+
+Now we have these new things in the cars.
+
+Will allow us to serve the customer a lot better and track, understand what they are doing in a better way.
+
+This actually changes the game for car manufacturers.
+
+We have had an engine, steering wheels, cars on the road. We don't know what has been going on. Until recently. Like with the maps.
+
+We want to connect the vehicles to the customers driving the vehicles.
+
+This is the beginning actually of a culture shift that was mentioned earlier on.
+
+Because all of the systems inside Toyota, Ford, all of these manufacturers, are all geared around producing stuff. Not linking the people to the things that we produce.
+
+And, that's an opportunity for us.
+
+Because as architects we benefit from opportunities and crises.
+
+In this case we want to connect to the cloud, a lot of people out there.
+
+We can't control that. All of the on site technology that we have, that we have been used to. Where there is a kind of understood limit to how much activity can go on.
+
+ Suddenly becomes challenges. We have an opportunity to go to the cloud.
+
+In manufacturing companies. A split of things.
+
+We have R&D, manufacturing, distribution. Supply chain.
+
+I want to discuss the fact, from a software side, R&D looks like software development to me.
+
+That is not where all the lean manufacturing stuff comes. All the agile stuff comes from.
+
+That is undiscovered. Like most software development. It is hard stuff. That has to be done and is not repeatable. Not simple.
+
+So, that's where we are mostly on the left. Research and development.
+
+We have supply chains.
+
+For us, supply chains are things like, software as a service. Or software libraries. Like we use databases or commercial libraries. Open source frameworks.
+
+We have manufacturing. And manufacturing in software, in my opinion tends about the deployment.
+
+The datacenter is a thing under pressure.
+
+We want to potentially change that manufacturing from a local data center.
+
+The distribution is the internet or network.
+
+These guys do their exercises in the morning.
+
+They are not changing things here.
+
+What factories do is they repeat things.
+
+We have the ideas in the software world. And factories go through a process, manage it, make sure it is repeatable and make sure it works.
+
+That's good.
+
+One of the problems with this is, this doesn't work very well if it is not repeatable, scalable.
+
+If I have to go to the factory workers and explain how to build that car, it is not good.
+
+We were taking 2 days to deploy stuff in the existing system.
+
+I have drawings here. Some pictures on the lefthandside.
+
+This guy is making bricks by hand. That is find.
+
+Everyone is happy. He has a job.
+
+But I would like that... Perhaps controversially. Technologies on the righthandside.
+
+The stuff we were using before this.
+
+Very manual. Dot net. Xml. File systems.
+
+Management system.
+
+Everything was manually deployed. Not to test it.
+
+But deploy it into production.
+
+And then we use monitoring tools on a per server basis.
+
+We decided to change that.
+
+To a different stack. We wanted to, architect for the factory. Architect for something that is scalable. Which is automatible. Simple and visible to understand.
+
+What we did there was we moved everything. We didn't do competitions. Like.Net use this many Cpu cycles. This Java is more friendly.
+
+I have like the other guy a background in Java and non Java script stuff.
+
+I sat with Node, did development. I like to touch stuff and workable. And what do what they say.
+
+I have been with Node.
+
+I can write a few scripts.
+
+What I found with Node was interesting.
+
+You could run it, you know this, incredibly small environments.
+
+What you don't want to do is rely on a big fat operating system.
+
+If I want to have 10 Nodes, i don't want 10 instances of Windows. Or 10 instances of Linux either.
+
+We realise it is lightware. To spin up a lot of instances.
+
+We didn't want to go with something depending on high cost operating systems.
+
+And I think Windows is that. Microsoft realises that. They are getting involved in all kinds of Linux environments.
+
+But Windows is for us if we are going to get ready for the factory, I don't like to look at their factory. It is cluncy to start things up.
+
+We want to drop Windows.
+
+We were using Xml as part of the content management system. It was burning a lot of Cpu's.
+
+We didn't benchmark this. The Cpu's, on the existing websites were always at 100%.
+
+I don't need to benchmark that.
+
+It is terrible.
+
+It is easy for us to say, let's just stop parsing stuff.
+
+If we use Json.
+
+I didn't like to move from disk. We are getting disks full on weekly basis.
+
+It was an easy sell.
+
+Moving from subversion to Git was a headache. They didn't understand the benefits. But we worked with developers. Pull requests and the Ps system was a lot more powerful. Than the subversion they had at the time.
+
+And we went from manual deploy to automated deploy. We use a stack from Alasian. Some might know. They also have a built system called Bamboo and Stash.
+
+The Stash, because we are a big manufacturer and scared of secrets of the world. Then we have to have everything behind the firewall.
+
+Our code and built systems are behind the firewall at the moment.
+
+And we use that, the Bamboo and Stash to do that.
+
+Which is very nice. You get a lot of visibility in the code quality.
+
+Then we move from the individual systems out to things like New Relic. A lot of add ons to understand what is going on. We have eyes on the system that we didn't have before.
+
+That's being moved from that sluggy stuff to the more automated environment.
+
+Where do we build the factory?
+
+We build factories in the real world where there is a lot of water, energy. Available labor.
+
+Where do we build the factory on the cloud?
+
+Do we build it on the cloud?
+
+First question of course. A lot of people are thinking, let's take a stack and do it internally.
+
+The problem was that we wanted to say, we are going to go strategically. Unfortunately, or fortunately, with Toyota we have to build concensus. That's good. If you are doing things together you do things in a strong way.
+
+That means that, to do it on premise properly, it requires a lot of inquestment. Making an internal cloud is expensive. A lot of hardware. Invest in training people to run the cloud. Actually, it turns out from a timeline, we couldn't afford to do it for this project.
+
+Something we are considering for the future.
+
+An on premise cloud wasn't possible. We went off premise.
+
+We do need to be aware that Toyota is a global cooperation. Has relationships with a lot of different companies.
+
+We have relations with Microsoft and Amazon. We use Amazon all over the place.
+
+We wanted to do a comparison between those 3 big. Heroku, Azure, Amazon. Engine Yard, Openshift. The on site stuff.
+
+Mostly it was because we wanted a true platform as service that we could adopt easily.
+
+Build something that was unaware of its infrastructure.
+
+So, if we deployed it to Heroku, it would be unaware of the fact that it is going to Heroku. With Azure it is more aware. With Azure on Linux you don't get the platform as a service.
+
+Amazon has Beanstalk. Which can do Java and other things.
+
+But again, Amazon is infrastructuring company. Does it very well. Moved up to platform service there are gaps. It isn't as strong as around Azure or Heroku.
+
+Amazon's Api's. There are 1000 api's.
+
+From that sense it is good, if you are tool building.
+
+As Heroku it is fantastic. But as a kind of shop where we are outsource this activity. It would be an extra cost for us to manage that.
+
+The other thing we liked about it. There was a lot of ecosystem around Heroku.
+
+We could make add ons. Elastic search. Push a button. Start pushing.
+
+That's really nice.
+
+Heroku has platform api's. But it is quite small.
+
+We have a system for instance that uses Node to deploy applications from one to another environment.
+
+The other interesting thing about Heroku is that it is an open source platform.
+
+I don't know the code for Beanstalk or Azure. But I know the code for Heroku. I can see what they are doing. If I don't like it, we can change it.
+
+We built our own built pack to include some Google pagefeed functionality. That's really an advantage that we found of Heroku. If we didn't like, we changed them. We used a package but added others.
+
+We can deploy in Europe as well.
+
+Most of the guys can deploy in Europe. That's good.
+
+The fact helps regulations and helps people from being too scared of the Nsa looking at. The Nsa looking at websites is good, that's another hit.
+
+Another thing I liked about Heroku is that it has early insights into Linux containers.
+
+Everyone is happy about Docker. And Microsoft even and Google. They are all getting into Docker.
+
+But Heroku is already there. They are using these Linux containers. They have a nice document. A website which gives the architectural guidelines. That helps to prepare for the factory.
+
+The other thing that, again I don't know if you are from big enterprises.
+
+If you look at the smaller companies. It is a typical sell to say, I want to run it on a platform Engine Yard. And the executive says, what is Node? Is that where we scrap the vehicles?
+
+They don't understand. I can say, we want to deploy on Heroku. We have a global partnership with them. Okay. Move along.
+
+I could come in under the radar. It all worked out.
+
+I give an insight how we run the operations now.
+
+I can't... We can't go to Italy and deploy 2 applications. Or in Spain. With a helicopter.
+
+What we do is we have, I mentioned at the beginning. I think my friend there, the application on site. On site we have 1 app or cluster of apps that serves the whole of Europe.
+
+What we do now instead is we have an application which can clone and deploy out.
+
+On per market basis.
+
+It turned out to be really good for us.
+
+We can then go to places. We can try things out on markets like Portugal or Azerbaijan.
+
+We can make sure it works. We have dino's over there.
+
+Let's roll it out to Greece or Portugal.
+
+Or make a change on the French website. It is isolated only to the French market.
+
+That has helped us. In the past we have been stuck with disks fulls or out of memory.
+
+Or 60% of the capacity. With this system, we can say, okay, if there is a campaign going on in Poland or Russia or Finland, we can turn up the dino's for that market. Manually or through some automated system.
+
+That's what I call manufacturing these websites.
+
+So, we are going more and more towards that model.
+
+Having everything dedicated towards a particular marketplace. From the top to the bottom.
+
+The webserver. The middleware. The databases. All the way down the stack.
+
+We have some things on premise. Monolithic.
+
+We are breaking those out. Following the same model. That is a key thing for us. A lot of different clones of the same application in different markets.
+
+We know they are all going to behave pretty much the same way. We can configure them going forward.
+
+If the Italy guys want to integrate with the dealer management systems. Then we can have a special environment or addon that doesn't plug into the other markets.
+
+That's a powerful option for us.
+
+I have run out of steam.
+
+So, I would be happy if we could take a few questions?
+
+- Any questions?
+
+How is the workflow? For people at Toyota.
+
+I know for me, most of my work that I have done with Heroku has been hobbyist.
+
+For me it is, just go to Heroku.
+
+Had you had engineers experience with the platform?
+
+- We had no experience with the platform at all.
+
+It was, that's a good thing about it.
+
+Because, I did a discussion with the Cio.
+
+You need to log into these machines, need to get to the platform. You can't buy the platforms.
+
+You have to discover everything about it.
+
+It is great for you.
+
+But that is not true. You can't touch them.
+
+It is impossible to touch those things.
+
+We can't fiddle with them and know exactly what is going on.
+
+We can run up exact copies and diagnose things.
+
+We haven't had any experience of the deep platform.
+
+Actually the surface area is quite small from engineering perspective.
+
+And the workflow is simple.
+
+Heroku has an organisation. Which is a development organisation for the websites.
+
+Another organisation which is for production.
+
+That goes beyond the hobbyist.
+
+They have an enterprise package. Development.
+
+All can have their roles and activities and spin up their dino's. Whenever. We have one program that says, take your dino, your exact doc file or image. Out of that development environment.
+
+And put it into production. That's the workflow we have in terms of promotion.
+
+Development workflow is standard kind of do everything on your local machine.
+
+Whatever you want to do. Sublime text. And push it out to Heroku. Make sure it works. The users can check it out.
+
+- Not full control over the machine.
+
+The issues like where it was hard to install something?
+
+It was hard to detect. Or mitigate. That you hadn't had physical control?
+
+- This is often the question you get.
+
+You don't control this stuff.
+
+Actually, you don't want to control it. You really don't want to control it.
+
+As long as you can get your eyes on it.
+
+New Relic, log entries.
+
+You can start an exact copy of your dino.
+
+You can look into it, into the copy. If it is not doing the same as production, things are going south.
+
+We haven't had problems with that. A few with the api's. We had to talk with the Heroku guys. We made a deployment, but it doesn't seem to work. That's the only case. Twice in 3-4 months.
+
+- I have a question.
+
+- What's your question Tim?
+
+- You can also put your hands up.
+
+- What are some of the tools you are thinking in the future. What are you exciting to build?
+
+- Well, a few things.
+
+We want to build basically the tools are around release management.
+
+Not sure, I talked to some of the Heroku guys. They have plans. We have some ideas. And build them ourselves. It is about, I'd like to know which version of the app is in production at the moment.
+
+Across the entire organisation. We have to go into each app.
+
+A dashboard that could show the entire production environment.
+
+I would like to see, why is this one application different.
+
+If it was intentionally, it was great.
+
+If it is not intentionally, I want to know about it.
+
+- We have time for 1 more question before break.
+
+- I have got not a quite technical question.
+
+I'd like to ask how you plan the budgetting for your cloud infrastructure?
+
+You have to provide some figures.
+
+Is there a tool or something that helps you?
+
+- Can you repeat the question?
+
+- well, if you have to plan the budget for your cloud infrastructure. How you'd approach that?
+
+- We have to do that of course.
+
+What we did was, we said, okay.
+
+We did some benchmarks to price out the infrastructure.
+
+We took the existing website. What is the number of hits we get.
+
+Lets run up a basic version of Node. Run it on a local machine.
+
+See how many hits we can sustain. On Node.
+
+We have ran that on Amazon, on Heroku as well.
+
+There are add on tools for testing. You can get on the cloud. We had benchmarks.
+
+This instance of Node can handle for this country, Germany, we have got 2 node instances. It can handle this much traffic.
+
+Then we can say, Germany is one of the biggest markets.
+
+Everything else will match that.
+
+We can go to 2 dino's anywhere.
+
+And then we can say, if we have 30 countries, we cost out there.
+
+Then you are going to peer for add ons like MongoDb. They are priced up front.
+
+In fact it turns out to be relatively straightforward with Heroku.
+
+It is more complicated with Amazon.
+
+All the component pieces are difficult to see.
+
+I need this, that.
+
+So, I would say, from, it is possible to do it at Amazon. We use it for a number of things.
+
+It is more difficult to predict with Amazon than Heroku.
+
+It is not so simple.
