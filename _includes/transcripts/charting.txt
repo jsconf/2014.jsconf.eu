@@ -1,0 +1,475 @@
+Okay. So, suppose that you are reading hackernews.
+
+On monday you see someone post D3 based reusable chart library.
+
+And on Wednesday, Chartist.
+
+That is strange. On Sunday, somebody posts Dimple.Js. Easy and flexible D3 charter.
+
+What?!
+
+You google it. Okay. There is a Wikipedia comparing 30 javascript charters.
+
+And a blog post comparing 50.
+
+The blogpost is 2 years old. What?!
+
+There might be one explanation for it. Maybe all of these libraries are doing different things.
+
+We are not making the same charts over and over again.
+
+Look at the websites. And thinking feeling sets in. When you think, you are all doing the same thing. What?!
+
+Do we really like reinventing the piechart?
+
+So, if we are going to get to the bottom, we need to look at o a library D3. Most are based on D3. Most of the visualisations.
+
+Interestingly enough there is only 1 D3.
+
+Not 100 different versions. Something different is happening here.
+
+This timer is not working. Wave when I have 3 minutes.
+
+It turns D3 has a lot of examples. Here is a scatterplot. A line chart. Bar chart. Area chart.
+
+You might say, putting this together, D3 is a charting library.
+
+Which is weird. Why would you be building charting libraries out of charting libraries. There is cluster layout. Congressional influences. Who is killing whom in Game of Thrones.
+
+And is that Obama's budget dressed up as Jupiter?
+
+Something else is happening here. D3 is not just Charter library.
+
+Data visualisation.
+
+What does it mean in practice? What is it actually?
+
+It is a Dom manipulation library.
+
+It might seem random. When you think about it, it makes sense.
+
+What is unique is the data.
+
+And then you want to render the data in some way. You could start blank and invent internet technolnogy.
+
+You have these guys Html, Css and Svg. You know how to use them.
+
+Why reinvent the wheel. Let's get the data and have it come hang with the rest. That's what D3 does.
+
+Lets you take some data. You are going to create a correspondence between the data and Dom nodes. Maybe Svg circles.
+
+Since you have this mapping, you are going to use functions from the data into visual attributes.
+
+So, let's see it in action.
+
+We have this. Woops. This is very low level.
+
+You can do anything you imagine.
+
+But there is a trade off. That is that the D3 makes simple things hard.
+
+And to see this in action. You can see a scatterplot. It has some pieces, data, Svg, some scales. If you are not familiar with a scale. A correspendence between the data and the property.
+
+Some axes. We are going to have labels, the plot itself.
+
+A legend. All seems reasonable.
+
+Let's look at the code.
+
+For the data we are going to do some basic cleanup.
+
+For the Svg pixel math. The margins, we have to setup the Svg.
+
+Scales, we are going to get the scales D3 provides and configure them.
+
+Axes. The axis generating function
+
+We setup some part of the dom.
+
+Then labels. We have to do a lot more work. Pixel shifts. Svg properties.
+
+The plot is where things get interesting.
+
+You might imagine, since the plot is the biggest part of the chart and the part where all the action happens, there is a lot of code correspondingly.
+
+This code is neat. We will dig into it.
+
+We select a part of the Svg. We put our data into it.
+
+We are going to create a circle for every piece of data. A class, a radius, and for the exposition, we are going to use a property of the data and the X-scale. To determine where it goes.
+
+What you might notice is a few things.
+
+First every line of this code is purposeful and interesting.
+
+We correspond to what we want to do.
+
+And second, it is really fleysible. We made a scatterplot.
+
+We could have done anything with an approach this level.
+
+Unfortunately the legend is different story.
+
+It is 3 pieces of text, rectangles, it is straightforward.
+
+And it is not.
+
+Really what we have here is a mess.
+
+We put in the data. Create a bunch of G's. We are going to create rectangles. Text. Hard coded pixels. Text specification.
+
+And we are going to put in the actual text.
+
+This shows cases, the strength and weaknesses of D3.
+
+The strength being, when we want to just make something in our data it was incredible.
+
+When we want to make a legend or layout, it is a little bit like writing a website with the raw Dom api.
+
+It is not impossible, but a huge pain.
+
+We have understood the scatterplot. We can go through the other examples quickly.
+
+To understand what is going on.
+
+That is not a line chart!
+
+What are these otters doing in my presentation?
+
+You have your keynote attended for 3 minutes, and this happens.
+
+But Making 3D charts would be more like that.
+
+I'd use the time to hang out with my friends.
+
+So, Since those 30 seconds are not going back, let's not go through the charts.
+
+Here is a chart that C3.Js makes. It looks the same.
+
+When we look at the code, it fits all in 1 slide.
+
+And it is pretty straightforward.
+
+We create this json bag. And we pass it in.
+
+Properties like what are the x's. The data. It is a scattered chart.
+
+And you see this is readable, straightforward.
+
+There is Nvd3. A similar approach. The scatterchart model.
+
+So, okay. We found 2 good solutions. In both cases we didn't have to do weird text mocking. We got the chart we wanted. This is great. Maybe we can just go home.
+
+But, we haven't figured out this mystery. Why are we doing this over and over if it is so easy.
+
+Those libraries are good enough. Let's move on with our lives.
+
+What would be great if another library would go ahead and inaddition to making a new library, we know there are hundreds of libraries. Here is why we felt we had to make another.
+
+Chartist, does just that. You may think this is another java script charting library.
+
+It is made by a community that was disappointed with other charting libraries.
+
+There was always a tweak you wished for.
+
+This is really great if the chart you want to make happens to look like this one.
+
+Let's say we want to do something weird.
+
+Two subplots. And axes. One is a scatterplotn and an area plot.
+
+I looked in the Api. And there is no flag for turn on special chart.
+
+So, we are basically screwed.
+
+Unfortunately, what Chartist has done a good job of identifying the problem, they produced a api spec.
+
+They are going to run into the same issues.
+
+What we are seeing is not that they are idiots.
+
+They are smart developers.
+
+What is happening, every library offers a different mix of 12 features, nice to have.
+
+Every consumer has a different mix.
+
+For every person, no charting library is quite there.
+
+They see this. I know what to do. I'll make a new charting library and this will solve the problem.
+
+They have made the 102nd charting library.
+
+ J basically, it is a trap.
+
+This seems a good point as any to introduce myself.
+
+I'm Dan Mane. Here is a picture. That's me, Justin. There is a flying rose. And a giant cupcake. And inflatable dinosaur.
+
+We are not taking goofy pictures, we solve problems.
+
+Sometimes help areas recover. Drug discovery processes.
+
+Sometimes making sure supermarkets in Japan have their shelves packed.
+
+You have data. You want them to work with data.
+
+You want to make visualisations.
+
+In today's world that means Javascript charting libraries.
+
+When we were asked, how to make these visualisations across the company, we looked at the charting libraries.
+
+It was clear we had one feature that we wanted. Interactive zoom.
+
+We need a library.
+
+Second, we have a whole laboratory with designers. With ideas.
+
+If we go to them. Here are the 12 charts we are going to make for you. They will not be happy for you.
+
+We could use D3. It works. But we know from experience it means for ages to come, we will be forced to spend time, why is the axis off by 1 pixel.
+
+And they are not solving the problems we like to solve.
+
+The question was, can we find a sweet spot. That exposes the power of D3. Also some of the convenience of a charting library.
+
+ Spoiler alert, I think we did it. Plottable. Built on D3.
+
+It is written in TypeScript. Which is awesome.
+
+And hosted on Github. I can talk about the philosophy. Like Socrates. While you look away, fall asleep or bang your head in disgust.
+
+But instead, we'll show examples.
+
+Here is a D3. And the plottable.
+
+We compare.
+
+D3 we had to do data. We had to do a lot of Svg.
+
+Plottable is going to handle it for you.
+
+D3 we made the scales. Plottable, just makes the scale. Auto configure. You have all the same Api points if you want something themselves.
+
+The labels were weird.
+
+When we come to the plot. This is interesting.
+
+We loved what D3 was doing here.
+
+Plottable is just 1 line. We have fallen into the trap of no flexibility.
+
+It is almost exactly the same.
+
+All the api points are being revealed directly.
+
+The only hidden is setting up circles.
+
+And then of course the legend which was a mess. Becomes just 1 line.
+
+You may be asking oykay, well, I have been paying close attention.
+
+You never setup the layout of the chart.
+
+What's the deal? Is it magic? Do I have to ask it?
+
+No, it is just a layout engine.
+
+1 is that you can merge different pieces together.
+
+You can align them in a table.
+
+The table turns out to be convenient for representing charts.
+
+It represents the constraint, different pieces need to align.
+
+The axes need to be aligned.
+
+And easy to represent in code.
+
+So, we can see that we kept the strength of D3 that we liked. The power of the plot.
+
+And all these weaknesses are gone.
+
+You may say, it is great. We have seen that other libraries can make the exact same scatterplot. This is not showing flexibility.
+
+We'll have another example.
+
+Suppose you have a kind of annoying customer. Not that those exist. Whatever.
+
+You want a barchart that is going to show the amount of rain in 3 cities in California. That's straightforward.
+
+This barplot. I'll set it up.
+
+And you go and they say, you have misunderstood.
+
+We wanted 3 barplots vertically on top of eachother. We can see the difference from each.
+
+Luckily, that's just a table.
+
+We layout another table.
+
+And we have this crazy chart.
+
+Maybe they say, it is good.
+
+We want the Svg to be bigger, all the font sizes to be bigger. And all needs to be in comic sense.
+
+This is going to look terrible.
+
+You change the Css. And you get this ugly chart.
+
+But, let's not do that.
+
+ And maybe you want gridlines.
+
+Maybe they want to add animations. You can set animation. And you get the animations.
+
+It has default animator. For custom animations.
+
+Maybe you know they want to change to line plots. You can do that.
+
+Maybe they want time axis. Maybe they want to merge it together in 1 plot.
+
+You can do it.
+
+Change the grid lines. Sure.
+
+Add interactive pan and zoom.
+
+S why not.
+
+So, the result is. We were able to create this chart.
+
+And we weren't able to create it, but iterate quickly on different ideas.
+
+It's an order of magnitude faster than pure D3.
+
+If I would be given this a week ago, this would be the end.
+
+Why don't you build a charting abrary out of it.
+
+And a path back into plottable.
+
+I had this long plane ride to Berlin.
+
+And built chartographer.
+
+It is plottable and easy mode zozer Couple indications follow. Setting up the chart is 1 line.
+
+And then we configure some labels and render it in the other lines.
+
+It is supersimple to use.
+
+What is interesting to this.
+
+It only gives you these charts.
+
+And it has a path flexibility. Rather to be a charting library that does it all. You get Getcomponents.
+
+You can arap them, twittle with them.
+
+So, this enables a new workflow for developing charts.
+
+You can start with chartographer. 30 seconds and you have your chart.
+
+You want to change it.
+
+You can drop down into plottable. Every 5 minutes you can try out a new layout.
+
+You discover you want fancy data visualisation that we don't have.
+
+You can drop down to D3. Write a plugin and you have your chart.
+
+And hopefully you submit it back to us.
+
+So, now comes the moment in the presentation you didn't know you were waiting for.
+
+Which is internet spaceships.
+
+So, that was a clip from a videogame.
+
+Eve online.
+
+A mix of spaceships and spreadsheets.
+
+A spreadsheet means someone is crying out for data visualisation.
+
+It is kind of neat.
+
+We have here a chart that is showing a couple of things about plottable. That my design skills are not good to begin with.
+
+We are seeing that we can hide data. Each is a spaceship.
+
+Its color is what race.
+
+How many have played Eve?
+
+Okay.
+
+Every circle is a spaceship. The color is representing the fraction.
+
+It is stroke is showing what class identity it is.
+
+Its X and Y position how much shield and armor.
+
+So, the fact that all these are faction ships.
+
+More shields.
+
+And I got this data source from someone who did it by hand.
+
+I sall of these typo's. We are not fitting the pattern.
+
+It also has tool tips. This is not a feature in Plottable yet. It is just D3. You can use other libraries.
+
+It has this pan and zoom.
+
+The interesting thing about this chart.
+
+It is incomplete.
+
+I think we should have a legend that shows stroke, rather filling the bubble.
+
+And I think that we should have another legend that is showing different radius. This is where you come up.
+
+The idea is that it is very modular and easy to work with.
+
+Maybe one of you guys will head over to our github.
+
+And take a look at the code.
+
+You can write these legend pieces.
+
+Everybody will be able to use it.
+
+That is the path forward. Out of this mess of 105 charting libraries.
+
+We need to stop independently building separate things.
+
+We need to find 1 Api, that is expressive.
+
+And work together to build all the pieces. So, somebody can have a chart they want and get back to saving the world or hanging at the aquarium with otters.
+
+So, this is the end of my talk.
+
+Let's see if I have more slides.
+
+No.
+
+My name is Dan Mané.
+
+You can find me at@Danmane.
+
+You can find us at this website.
+
+Since I have 1.20minute. I take at least one question.
+
+If anyone wants to ask.
+
+I'll take that as a sign it was so conclusive. And you download it right away.
+
+All right. Thank you guys.
+
+(applause)
