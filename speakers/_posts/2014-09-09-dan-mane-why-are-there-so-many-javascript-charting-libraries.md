@@ -18,6 +18,9 @@ image:
   type: jpg
   heightSite: 268
   filename: "/speakers/images/dan-mane.jpg"
+video: _A_FdbTkp9c
+transcript: "transcripts/charting.txt"
+
 ---
 
 {% include speaker.md %}
