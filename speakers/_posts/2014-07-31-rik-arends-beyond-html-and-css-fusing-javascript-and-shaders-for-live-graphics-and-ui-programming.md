@@ -10,7 +10,10 @@ twitter: "https://twitter.com/rikarends"
 github: "https://github.com/rikarends"
 gplus: ""
 from: NL
-description: "What would the world look like when you can style UI with actual shader programs?\nThe web could be 60fps on mobile, and we can start to imagine what lies beyond HTML and CSS\n\nIn this talk i will present OneJS, an open source JS superset with shader GLSL and reactive programming syntax. OneJS exposes the power of programmable GPUs to UI designers and programmers in a very accessible way. \n\nNow the fixed functions encoded in CSS, Canvas or SVG are a thing of the past, and we can finally go beyond and explore."
+description: "GitHub project: [http://github.com/onejs/onejs](http://github.com/onejs/onejs)\n\nWhat would the world look like when you can style UI with actual shader programs?\nThe web could be 60fps on mobile, and we can start to imagine what lies beyond HTML and CSS\n\nIn this talk i will present OneJS, an open source JS superset with shader GLSL and reactive programming syntax. OneJS exposes the power of programmable GPUs to UI designers and programmers in a very accessible way. \n\nNow the fixed functions encoded in CSS, Canvas or SVG are a thing of the past, and we can finally go beyond and explore."
+video: X8xxz-YeWtk
+transcript: "transcripts/rik.txt"
+slides: "http://hello.onejs.io/"
 ---
 
 {% include speaker.md %}
