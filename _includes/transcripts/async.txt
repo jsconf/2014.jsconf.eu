@@ -1,0 +1,241 @@
+Welcome to my talk on Async and streaming JavaScript, are we doing it wrong. 
+
+Of course the answer is always going to be yes, otherwise why am I standing on stage here, what better picture than to know John McCarthy telling us we're exactly doing programming wrong. 
+
+So before I get started I actually want to thank the organizers very much, because, of course, this is my first time speaking here, but I've been coming here since 2010 and without a conference such as this things like no J S on windows might not have happened or might not have happened as quickly as it did. 
+
+It's with this very conference that it's really amazing stuff to me. 
+
+So, what I'm talking about Async or Async or vent‑based programs, I think to myself, I thought I had a problem, I know, I'll solve it with call backs and events. 
+
+Now have I problems, two I, yeah ... 
+
+crap! Yeah. 
+
+The con currency bugs, been bugging me since I started doing JavaScript. 
+
+What this talk will not be it will not be a Monad tutorial, no mention of category theory, it doesn't require you to know much about functional programming to really get started. 
+
+To learning new abstractions for asink nows programming. 
+
+So, ‑‑ Asyncous programming, no they're not like Burritos or any other way you can think of to describe Monads. 
+
+I'm a software engineer, self described Open Sourcerer, you can find me on Twitter and GitHub, using the same tag, I'm fairly unoriginal that way. 
+
+And I work for this small start up out of the Seattle Washington area. 
+
+ I don't know if you've heard of them they're called Microsoft. 
+
+And I like to think of myself as putting a little bit of metal back in Microsoft. 
+
+Add Umlauds to anything automatically turns it into metal. 
+
+ I worked on a project called the reactive extensions, I've been working on this since 120, the idea behind the reactive extensions is really to create a nice programming language agnostic way of dealing with Asyncous programming, and I am an Rx pusher. 
+
+Now, really what I want to get through first is that I want some quotes that will help us in our learnings today. 
+
+The first one is to be conscious that you are ignorant is a step towards knowledge. 
+
+The next one is ignorance never settles a question. 
+
+And the third one is the best way to become acquainted with a subject is to write a book about it. 
+
+Or in my case, get up here and give a talk about it. 
+
+And this was given by the Prime Minister of the UK back in the 19th century. 
+
+So, let's just face it, asynchronous programming as we know it today is annoying, because by themselves you have every library and every certain thing doing it's own thing, whether it's call backs and promises doing one thing where it's yielding a single value verse events where there's dealing with multiple values so each concept is covering it's own little piece of the story, not the whole piece. 
+
+So just to kind of give you an example here, you'd certainly wouldn't call a promise on an event that you expect for more than one of just as you wouldn't, you wouldn't normally need a collection to describe a single value. 
+
+But, even more than that, how about if I want to make a web request and then combine that with getting the key press event so that I can send my data over to that and then we need to make sure that we're not overloading the server. 
+
+How do we think about that when we're just talked about promises, call backs, timers, etc., how do we deal with that. 
+
+Is there a better way that we can think about asynchronous and event‑based programming?  Well, we had a very forward thinking president in the United States who the early '60s came to this very city and said. 
+
+ch Eii Berliner, we also said we chose to solve asynchronous programming not because it's easy but because they're hard ‑‑ citation needed ‑‑ damn it Wikipedia. 
+
+So call back hell is very much a real thing. 
+
+So, when you're dealing with call back hell you've got nested function after nested function where you're trying to accomplish something Lynn I can't recallly, so for example ‑‑ linearly. 
+
+So for here, I might want to play a movie, what that entails is making sure that the players initialized that I'm authorized to do so, then when I'm done it authorizes me with a movie ticket. 
+
+And what you end up with a cow's head. 
+
+All your code all it looks like is just a cow's head at that point, somewhere the logic gets lost. 
+
+And it's se evil. 
+
+So I don't know about you, when ever I write code like that, this usually happens. 
+
+And it's not easy to recover from getting bush burned like that. 
+
+And just as well, event‑based programming is just as annoying, say for example we want to create a drag event, a custom kind of event that we do on our own, so what we would need for that, we would need to say whether the mouse is down or not have some stay test to where the mouse is. 
+
+Then in the mouse down we would have to say, okay, spouse down, here's with we started, mouse move, we go, okay, mouse is down, let's do some calculations and on a mouse up, we say, everything's done, we're good to go. 
+
+And we have to, of course, not only add the event listeners, but we also have to remove them as well. 
+
+And that gets pretty darn annoying. 
+
+And so when you're dealing with that much state, once again you're juggling and you just can't hold it. 
+
+Especially when you're just trying to do something else ‑‑ add something new to your program, that's what you end up with. 
+
+So let's talk a little bit asynchronous programming landscape, the landscape in general. 
+
+Two accessese siss, one to describe synchronous and one to describe asynchronous behavior, one to describe a single value and one to say it's multiple. 
+
+For example, when you're dealing with a value you call a function or you assign it a value, that's a value, good. 
+
+An iterble is a collection so in JavaScript we have arrays, we have maps, sets, arguments, anything that's iterble here, and then we can apply higher order operation such as map, filter and for each. 
+
+But what about asynchronous single values, we have call backs but we also have promises, now promises are very interesting in the fact that now instead of the call back function, you have a first class object that you can pass around the people that describes what that value eventually will be. 
+
+And that's not something you can necessarily do with a call back, I can't hand you a call back and say this represents a value, doesn't work that way. 
+
+And then what I'll put in the fourth quadrant and final quadrant is observable, now observable as you will see is asynchronous in it's very nature so you can take the same stock data, you can filter it, map it, and you can four each it, no code changed at all in terms of what you're coding on the client, non, nothing, whatsoever. 
+
+That's very, very intentional about what we've done with the observable design, so if you know how to program against collections then you know how to program against observables. 
+
+What I like to say, a lot of the times is that your mouse is also a database, it's a database of coordinates you'll get eventually when the mouse moves, it should be as querible as an iterative sequence is. 
+
+So, the thing that I like about these abstractions is that they're first class. 
+
+And then what it means by first class is the fact that I can pass one of these objects whether it's an observable, or it's a promise to a function and I can also return it from a function. 
+
+And so what that gives us it gives us a lot of little flexibility when it comes to querying something or for testing for mocking whatever else it is, it's really nice for us to do that. 
+
+Now, promises, I'm sure you've heard a lot about, I hear already, I've seen it mentioned a good number of talks already. 
+
+Now promises are great because they're pretty much in every single library that are out there nowadays, and that have pretty much the same behavior outside of  jQuery, they have pretty much the same behavior so you can think about them pretty much the same, asynchronous handled, and once you're done, it's done, everyone gets the same answer, so we can take the previous thing that we talked about, the call back hell and distill it down to the player initialized authorizing the movie, if you're handling the log‑inner report, playing the movie saying you're unauthorized. 
+
+No more trying to finish and detecting whether this state is available or not. 
+
+But, there's some problems I have, at least, when it comes to promises, promises don't solve everything. 
+
+So, for example cancellation is not a part of the contract for promises in ES 6. 
+
+Why?  Because there are a good number of reasons you want most people to fall into the happy path and be pretty productive, but it's very much the case when you deal with a lot of things such as dealing with IO where cooperationlation is a normal part of what do you and what about situations with an auto complete that you just don't care about the value that comes back. 
+
+In this particular case here, how do I cancel that again?  I don't ‑‑ I'm not really interested in this anymore?  I I don't know so do I create a cancellation promise and I sub class the regular promise?  Do I mass a cancellation token?  Do I ‑‑ or do I just use a library like last from Donmick Dencola, all of those are perfectly optionble options. 
+
+When I talk about reactive programming, it's a very kind of fuzz city definition just like functional programming is. 
+
+Says functional programming, application of functions, not helpful. 
+
+So what we're trying to do is trying to figure out exactly what we could call reactive programming. 
+
+So, the dictionary says readily responds to a stimulus, well isn't that just normal programming?  What else is interesting about it?  Well, reacting to events is certainly one thing that reactive applications do, but they also react to load, so the fact is that you can spin up more instances to handle data, you can determine whether you need to drop data and so forth. 
+
+You can react to failure, so if at any point that you need to handle some errors and return it from cache, you can certainly do that. 
+
+But, to me, most importantly is reacting to your user. 
+
+The last thing you want to do is have your JavaScript page be unresponsive to a particular user. 
+
+And, what I'd like to say is, you know, the reactive extension stuff that I've done has played a little bit of a role, there's a lot of hype, obviously around there with Gartner and so forth with reactive programming, when I talk about reactive programming here, I'm just talking about observables, why don't we take the previous example of that mouse drag and kind of turn it inside out and turn it in to an observable solution, what would it look like?  Well, if we had this first class object of the mouse down, we can take that and combine ‑‑ and start to do a calculus so flat map will basically it will take a sequence and it will flatten it into a single value or a single stream of values rather. 
+
+We can calculate the offset of where we started for every mouse down. 
+
+Now, we can start to take the mouse moves by once again using functional programming things that we already know with using arrays, and the array extras we can say take the mouse move, which is also another first class object, map it so we can design to give the left and the top so the total differential between the two. 
+
+Okay. 
+
+Pretty good. 
+
+So, the problem is we'll be going like this and then forever it'll keep ongoing because it never responds to the mouse up. 
+
+But we can fix that by saying take until mouse up. 
+
+So mouse up, once again, a first class object, we can say when ever this fires stop the sequence, we're done. 
+
+And even holds a little bit more promise sufficient it to say when you're dealing with promises. 
+
+So, what if we want to take some input as it were, take the inputs value and then we're going to call ‑‑ make an auto complete scenario here, what we want to do is we don't want to overload the server because our Bandwidth is time and money, quite honestly, so what do we need to do to fix that, well, we have things such as throttle,throttle or debounce as most people know it where you can type, type, type, stop for half a second and suddenly it'll fire. 
+
+Excellent. 
+
+So, if ‑‑ when we're thinking about observables, we're thinking about once again back to the access there, we have the observable and we have the observable and the notion of acinous or time based we can get the value (Asynchronous did) we can call a service which might be a promise only getting the last one. 
+
+So one of the biggest problem problems with asynchronous programming is what?  Is that you are dealing with the fact that you could get out of order responses and this fixes and then you bind that to the UI and you're good to go. 
+
+Even more complex things, I'm not going to bother explaining all of this, even more complex things such as poling for more updates that's complicated by RX handles it just fine. 
+
+What we fled to know is everything's a stream. 
+
+It's a very zen like moment, you're like, yes, I got this. 
+
+This is not to be confused with FRP, FRP is a notion of continuous time, behaviors are objects with a continuous piece of time, and a continuous value, whereas events are different. 
+
+Events only have values when they fire. 
+
+And most of those ‑‑ what it is not, it is not just any old library that has map filter and reduce on observables, so most FRP libraries aren't. 
+
+So, what about generators. 
+
+So, I'm sure that a lot of people have seen what generator cans do, and so yield suspends the functiontion and resumes when you actually get the value back, and a number of libraries already support this. 
+
+Well, the library that I work on does it as well, as well as Q Co you can say retry three times here and you still get the benefit of observables, yet you get a very linear imperative style. 
+
+CSP, Eh, I'm okay, on it, it's interesting, but a lot of people seem to love CAR.Async, they seem to think that it's a good win. 
+
+Like I said, I'm not all that amused by it because it makes error handling very manual, it makes resource management very manual. 
+
+Not a far. 
+
+Asink await also is very worthwhile in terms of discovering what's new in JavaScript. 
+
+So what we have is we have Async await which has been approved for ES 7, at least the first stage. 
+
+We can now take some animations and we can start to await each one as it comes through. 
+
+That's pretty powerful. 
+
+So it makes it explicit that we're dealing with an asin crow next so we don't have to deal with function star and yield stuff, it makes it very, very obvious. 
+
+Now let's QUICly talk about stream processing. 
+
+Now, when you near node, I don't know how many people dealt with streams 1, but let's face it, it was awful. 
+
+The pause didn't, data didn't start meetly, can't consume a number of bytes, everything was just shoved at you. 
+
+Pause and resume was impossible. 
+
+It was basically this (Laughing) so, then we got streams 2 which land in the 0.9 and eventually the stable 0.10, supported object mode, instant now and everything was good, then we got readable/writable classes, which was good, duplex and pass throughs and streams 33 and a third when ever they decide to land and V 0.12 (Giggles) I'm sure that'll solve everything too. 
+
+Cork, uncork pretty cool stuff in terms of being able to deal with mass data rights. 
+
+Still, to me, it's too employment Kateed. 
+
+So, the whatWG streams, what they're trying to do is trying to standardize a lot of this for lower level APIs for what's going into the browsers, so come nick, who is here ‑‑ Domnik is here, he's working on that and it's working on lower level IO, and cast which means one person reads, one person writes (Uniany cast) can we take and generalize what we're trying to do here into a more general kind of thing where we're talking about like observables. 
+
+And the answer is yes, and the answer, unfortunately is dart. 
+
+Dart is doing those kind of things where asynchronous programming they do with futures and streams automatically, so futures, great, streams, unify.O and vents together. 
+
+So literally, your Oparin (Unify I/O) you can use the same API throughout all of them. 
+
+Now reactive streams is an effort that's going on because a lot of people in the observable world say, well you can't do back pressure, can you?  Because I mean come on you deal with a lot of people handling your data, we can't possibly ‑‑ we can't possibly know how to deal with this. 
+
+You know, a node and others have it very easy where you have one coming in, one going out that if you kind of crimp the hose, that's fine, no big deal. 
+
+But when you're dealing with a multi‑cast situation, it kind of is a big deal. 
+
+With observables we have notions of back pressure, they could be lassi, possible, sampling throttling, they could be lossless, so I could pauseble buffer, pause and resume, or control, so for example here, I can take my chatty observable, pauseble buffer it, then pause and resume, and anything that happened in between the pause and resume I still get. 
+
+And just as well while we're building it into the very core part each subscription will be able to say I want to request "N" number of items, so once again back pressure is something that we have definitely under our belt. 
+
+Now where do we go from here?  I think there's actually a lot of places we can go because of the fact that Async away ‑‑ all these things are pushing the envelope. 
+
+And that's really cool thing, but what if we could go even further?  So in:  Seven Jafar Husain a member of the ES 39 communication committee proposed Async generators in which we could take that very same mouse/drag and put it into the for/on kind of syntax so you could say let mouse donee down on element mouse down, that first class object, document.mouse move, first class object, taken till document.mouse ups, yield the mouse move. 
+
+Good. 
+
+So that to me is very, very interesting and I think there are a lot of places that we can go with these kinds of approaches. 
+
+So ... 
+
+I will be upstairs if anyone has any questions or if anyone wants an RX sticker come find me, I want to thank you very much for your time (Applause).

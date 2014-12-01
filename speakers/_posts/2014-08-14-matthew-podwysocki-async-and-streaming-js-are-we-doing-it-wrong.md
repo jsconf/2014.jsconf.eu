@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 300.46948356807513
   filename: "/speakers/images/matthew-podwysocki.jpg"
+video: "-vPFP-2Mkl8"
+transcript: "transcripts/async.txt"
+slides: "https://github.com/mattpodwysocki/jsconfeu-2014"
 ---
 
 {% include speaker.md %}
