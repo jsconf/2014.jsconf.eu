@@ -1,0 +1,311 @@
+Thank you for listening to my talk. It is my first time on the JS conf stage. I have a handful of friends who had.
+
+This is the title of my talk.
+
+Last year, some of you heard of Edward Snowden. And the revelations about Nsa. He didn't talk about malicious hackers. Some people might not worry about government surveillance. Being secure is important.
+
+We saw a rise in crypto currencies.
+
+About a year ago. The number of Bitcoin wallets were half a million.
+
+Now they are over 2.
+
+There are other crypto currencies. They are normal cryptography and security.
+
+Snowden said, the bottom line is that the crypto does work.
+
+They can't break the math out there.
+
+Strong crypto, we really need it. Secure file transfer. It is important. That is your money if you are into that.
+
+I am not a cryptographer as all.
+
+I'm a UI/UX designer.
+
+I have been working on Mailpile for the last year.
+
+A secure way to read, write and organize piles of email. When we started working about it, when the Snowden stuff started leaking.
+
+We need to focus on it a lot.
+
+We consulted with the security community. We are not going to do javascript cryptography.
+
+Maybe you hope to see that. The talks yesterdat were about that.
+
+I will go into it. And why we chose not to do it.
+
+One of the first aspects of cryptography and public private key cryptography is secure key generation. In order to sign and verify and send data.
+
+And here is an example that somebody made recently about Javascript cryptography.
+
+Using curves instead of prime numbers, we can generate faster keys zozer He will generate it here while the keybase Pgp.
+
+He was proud of how fast it is. It is awesome.
+
+Right about here he typed a command. Window.Crypto.
+
+Tim's talk focused on it. It is awesome, exciting Api.
+
+We are going to hopefully integrate. Once it stabalizes a bit more.
+
+When we looked into it a year ago. This was 2 days ago.
+
+Some of the Api's have stabilized. But Window.Crypto is not supported in a lot of browsers.
+
+Okay, why not choose an Html5 app?
+
+Or chrome or Firefox or Opera or IE app.
+
+You get the point.
+
+And in that case you are getting a browser that has the api's available and you run the cryptography in Javascript.
+
+Email, you are dealing with a large volumes.
+
+Browser specific shims. And that can be a nightbeir.
+
+Not really Smtp or Imap support from Browser app.
+
+Firefox OS is making progress.
+
+You can do it in Firefox Osh. The rest is not doable.
+
+Another big aspect is the code integrity.
+
+As js files get downloaded from the server. They can switch at any point. Hijacked. Your keys and communications can be compromised.
+
+We felt that Js is getting there but it is not there yet for our needs.
+
+However, there are some really solid Js crypto apps out there. Cryptocat and minilock by Na jdim.
+
+You should follow along with him and try out his apps.
+
+They are really great. He is making a ton of progress in that direction.
+
+Back to our approach of what we built.
+
+Browser based apps. It runs in a browser.
+
+We also have this idea of local browser based apps. Have patience here.
+
+Imagine running an app on a local host. The rest of the world is like what I don't understand it. It is not a viable solution.
+
+I use browser to go to the internet.
+
+What we are going for is this hybrid app.
+
+A python backend and Html5 frontend.
+
+That people interact with zozer Native installers from Mac Os and Windows. Zoz and Native integration like toolbar and tray.
+
+You can install it easily. It spins up a browser instance. When you are ready to access it.
+
+You might be shaking your heads. Okay. Wait, this guy, what are you talking about?
+
+There is a lot of good reasons we want to experiment with this.
+
+One thing is the larger talent pool.
+
+In web versus native revelopers is 68%. I'm getting the statistics from Github.
+
+And I realise it is not exact numbers. Some web apps are in Java. And some are in Python.
+
+The difference is why I'm saying it is a webapp.
+
+Not using a native. Like QT or something else.
+
+There is a lot of deployment options.
+
+ deploy to your local computer or the server. And access it over the network.
+
+As long is it is securely zozer You get a ton of benefits.
+
+Your interface can respond and adapt to whatever device.
+
+As developers of that. One real interface logic. We don't have to have multiple ones in different languages.
+
+Then the question is, where is the crypto going to happen?
+
+Why makes it secure?
+
+Imagine we have the Html frontend.
+
+Data interacts with the application.
+
+That gets send to a python backend.
+
+Or from templates.
+
+And it talks to a Binary and passes it back.
+
+The frontend code never really interacts with any of the mission critical crypto things like private keys.
+
+Which is a huge security gain. The Gnupg has been a long time. And a ton of eyes on it.
+
+It is not some sort of bleeding edge thing that is likely to expose somebody's safety.
+
+However, it does happen, even with these projects. The security committee feels, use things like that. And you are better off.
+
+Front-end developers.
+
+We never have to touch crypto code.
+
+You don't need to learn about it. And compromise your own privacy. You didn't understand the right place to pass. The right variable, whatever.
+
+That leaks your data of the key.
+
+Another benefit of building apps with this style is that your backend developers can access and interact with many other parts of the system.
+
+To do more secure anonimous requests zozer You couldn't do that in browser app.
+
+And Gpg tools is another desktop Pgp app.
+
+If you need power user features, the Api's will still hook and interact. You'll be able to share the same keys. As well as Gpg tools.
+
+There is this rising trend.
+
+That there are these local browser based apps.
+
+We are not the only ones doing this thing.
+
+Tagspaces is cool.
+
+How to describe it. To organize your files on your computer.
+
+It gives much more interesting power user way of sharing, archiving them.
+
+Novocut is a collaborative film.
+
+And Metapolator. I believe python.
+
+Novacut is phython.
+
+ And Tagspaces is in...
+
+They are interested in that. 2 of the 3 are written with backends.
+
+Javascript is perfect. Create amazingly usable frech interfaces. That's what Pgp needs.
+
+When I got involved with it. You are a de signer.
+
+Pgp is this drag into...
+
+Depend who you talk to. This is the problem. No, the fingerprint. It goes on and on on.
+
+I think, I have a theory why it is such a nightmare. I'll get to that in a few more slides.
+
+A year ago I created by first Pgp key.
+
+How many have you created a Pgp key key?
+
+How many use them?
+
+Okay.
+
+How many you feel confident you understand Pgp.
+
+Maybe 5 people that did the last round. That's good.
+
+The first key I created I can't use anymore. I delited the private one.
+
+One of my friends is a 1024. And Wait, like, that must be bad.
+
+Sure enough, one of my friends said, it is bad.
+
+The users should not be thinking about this.
+
+It is the culture of the people who have been building software for all these years.
+
+They don't think about it.
+
+And then there is actions. Send me your public key.
+
+You have this big block of text. You are supposed to email it.
+
+There is not a clear way of doing it. It gets sent wrong. Or you encrypt it.
+
+It leaves you feeling frustrated.
+
+Interfaces look like this.
+
+This is the view.
+
+They are awesome guys and collaborating with them. To share icons.
+
+And It is a unified user experience.
+
+Here is an example of a keychain. It is this really boring tabular list.
+
+Okay, I think I understand.
+
+And here is what we are going for.
+
+A social networking sort of experience of people.
+
+It is about people. We don't have, the keychain has dipsappeared.
+
+Being a frontend developer.
+
+What does it mean to a user?
+
+As a frontend person or persons in this room, it is the sort of thing we can bring to the old school applications in local context.
+
+There is more than crypto.
+
+Fixing older experiences from web development standpoint can be interesting.
+
+A rest Api. Standard issue you are used to interacting with.
+
+That enables us to do a lot of interesting things.
+
+Build plugins. These columns of emails. It is interesting and new and fresh.
+
+Here is another example. Using the 3D library.
+
+That's my sociograph.
+
+If I do Js I get a different sociograph.
+
+The next level is to build and interact with it.
+
+It is interesting. Instead of a traditional email list.
+
+We have a commandline interface. We are going to expose through pipes.
+
+How to interact with email data zozer One of the big things we care about is decentralizing the web. Instead of these large entities where everything is a webserver by a big company.
+
+Let's reexpose the local host and computer and have it accessible.
+
+Through Pagekite. Or Tor.
+
+I can expose my laptop and anybody could access it.
+
+When you do that, local becomes a server.
+
+Your email could live on your private computer.
+
+You could punch through the net. And access it from the nobile devices. And you don't have to trust third parties. That's what it was in the 90s.
+
+It went in the other direction.
+
+The tools are out there and we can work towards it.
+
+There is a demo online. If you find this project interesting.
+
+And you want to explore, what a new approach to email looks like.
+
+We have it in different languages.
+
+We released the beta. You are the first who know about it.
+
+We like you have it download it.
+
+Suggest dream features. Anything you want to improve.
+
+I'm Brennan Novak.
+
+My key is in that QR code. if you are into that.
+
+Thank you very much.
+
+(applause)

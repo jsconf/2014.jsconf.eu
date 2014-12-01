@@ -17,6 +17,8 @@ image:
   type: jpeg
   heightSite: 150
   filename: "/speakers/images/brennan-novak.jpeg"
+video: xSIt6h_yjH0
+transcript: "transcripts/brennan.txt"
 ---
 
 {% include speaker.md %}
