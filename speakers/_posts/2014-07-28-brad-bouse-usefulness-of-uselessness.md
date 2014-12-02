@@ -17,6 +17,9 @@ image:
   type: png
   heightSite: 200
   filename: "/speakers/images/brad-bouse.png"
+video: K7C7iUYntNs
+transcript: "transcripts/brad.txt"
+slides: http://www.wholepixel.com/jsconf/index.html
 ---
 
 {% include speaker.md %}
