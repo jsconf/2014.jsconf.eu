@@ -1,0 +1,336 @@
+Thank you, thank you. 
+
+Welcome everyone, it's great to be in Berlin, I like how this powerful the community is. 
+
+This is my second year, and it's not just a pleasure, it's a get honor to be on this side of the room as a speaker, and, well, it's amazing. 
+
+First of all, let me tell you that I have not watched inception. 
+
+You're thinking, what kind of person has not watched that movie and why is he using that title then. 
+
+It's just a coincidence, it's just that for this particular talk I like how JS inception sounded because this talk is about implementing things in script engine in I didn't want I wanted to use this very nice logo ‑‑ I wanted to use this very nice low go, that I wanted to use for a wile that is all CSS, that I have been tweaking a bit after CSS conference the other day. 
+
+So well, this is all HTML. 
+
+But, let me introduce myself, as you know, I'm Adrian, I'm from Spain, I live in Helsinki. 
+
+It's a bit strange, I enjoy the winter, it's cold. 
+
+ I love free software and getting into travel. 
+
+The first one, free software, Igalia a few years ago, and I working this still, and hopefully for years to come, and the second part is to build machines and Compilers, it's not the most useful thing for people to like, it's also a bit of low level for JSConf, no worries, we're not going to touch almost C + + code today. 
+
+Yeah, I said travel those ‑‑ can be quite complex. 
+
+And lastly the last year we have been collaborating with Bloomberg to bring ES features into JavaScript engine, also spider monkey, and also modern layout to CSS. 
+
+And if you have not watched it in CSS Conf, I would suggest you to look at the grid layout from Friday, it was very nice, and it was great to see all the positive responses on Twitter while the talk was going on. 
+
+That's very nice. 
+
+So, I'm going to explain what this inception is about, how do we get the JavaScript into our engine, V8, and we have time from the talk, we will keep trying to come up with a small implementation for feature of ES 6, try to add it in the 8 and refine it a bit as long as ‑‑ as much as the time allows. 
+
+So, there's going to be live coding, I hope nothing blows, because this is the endt kind of thing that can go wrong. 
+
+Well, to make things even clearer this is not about trance piling, this is not about changing JavaScript and trans piling it from ES 6‑ES 8 or current engine. 
+
+It's not about explaining other languages into JavaScript. 
+
+It is not about implementing a JavaScript engine in JavaScript itself, that can be done, it's surely a lot of fun, and, it's the kind of thing you do when you have a lot of time, but, we oar more interested in getting our things into actual process, and getting them in OGS, getting them in places where people could use them, established process, so, this is more about adding feature in the JavaScript engine, trying to touch less of C + + as possible. 
+
+Because, the thing is, once the basic built ‑‑ machine, the basics are impresented, there's not much to prevent using the language itself to implement things. 
+
+This is the same that happen was CRC + +, you is the C Compiler, the C Compiler you can use it to build a C library or C + + library and use that in our program, why couldn't we use JavaScript to impresent parts of JavaScript or parts of the standard library or at least as much as we can and then use then in our own engine?  Well, actually we can, and there's a good number of reasons to do that, I think we can all agree at JSConf we prefer to use JavaScript in C + +, it's easier, faster to develop, we don't have to go with all this code compiled real test check cycle, so that gets faster. 
+
+It makes us more productive, and very often the algorithms are more easily understandable and more maintainable if we just write it down in JavaScript, and any way there's another reason we oar not doing it. 
+
+ I can do it well, I can do it just because. 
+
+And this one or two not so obvious reasons, and one of them is that the modern jus in time Compilers are really really good at generating machine code, they're so good that they can't make faster code than our hand made ‑‑ they can make faster code than C + + code. 
+
+How is that possible?  It's amazing. 
+
+The thing is, the Runtime in C + + there's still going to be a moment in which the JavaScript code is going to have to call into the C + + Runtime
+'s two worlds, JavaScript world and C + + world, whatever you use in JavaScript world you have to convert to C + + values, arrange the tags, arrange other things, make sure you call into C + + with proper calling conventions, this takes time. 
+
+This layer of batter in the JavaScript world and C + + takes time. 
+
+If the functions are likely to be well implemented by the JavaScript engine, we'd rather implement them in JavaScript, we have all the jumping from JavaScript to C plus plus and that's what makes it faster. 
+
+Also, engines make very good guesses about types of things, so you can just ‑‑ most of the time, well, let's just generate perfect code for integrals, so, yeah, they make very good code, so there's no reason to not to say yeah, let's make it in C + + of because it's faster, it may with slower in C + +. 
+
+Then, any way again, just because and it's fun. 
+
+To give you an idea of how much JavaScript is using engines, this is from yesterday, I made the numbers yesterday, having checked with total count of lines of code, there's ‑‑ there's most of the JavaScript code is used in V8. 
+
+That's the spider monkey following very JavaScript code one kilo byte, maybe they're trying to make one of those one kilo byte JavaScript contest. 
+
+There's a reason for that, the JavaScript core can revert to an interpreter, so it doesn't always generate machine code in that case it's faster to use C + + Runtime that you have to call in to. 
+
+So it's my guess about why JavaScript core is not using more JavaScript. 
+
+Of course, these numbers are not counting test suites or tools, it's the Runtime or parts of time in JavaScript. 
+
+V8 looks like the perfect match for this kind of task, that's one of the reasons I use V8 for this demo today. 
+
+So, I was saying, implement ES 6 feature, so, I've been checking, until last week, which features from ES 6 are not just in V8 that also they can be implement in the JavaScript, also that nobody else is really trying to impresent them, to try to come up with something new, it's not done by anyone. 
+
+And, there's one thing that's not done and it's a lot of methods from type arrays. 
+
+Well, similar to the ones in normal arrays, but they just work with type arrays, this kind of Int array, Int 32 array. 
+
+That have continue use memory baking, for example those are used by ASMGS, etc.. 
+
+So, for today let's implement t Int array ‑‑ while it ease easy, if we were patching the poet type ourselves, there's one slide, small thing that is not handled by this function, so let's see a more spec compliant version. 
+
+And this is the second argument for each ‑‑ we can change the binding of these for call back that is called for each of the elements, this is actual lay version that we can go and implement now. 
+
+So, let's do that. 
+
+Of ‑‑ some music for this. 
+
+(Jazz lounge music) so you can see the SRC inside the 8, there's JavaScript file, there's one called type array that looks very good. 
+
+Will it's go there. 
+
+ ‑‑ let's go there. 
+
+Oh, JavaScript, surprise, great, well, several things that look a bit not so much like JavaScript, let's just go to the end and patch in our prototype. 
+
+So for each is the function we oar implementing, Coltbolt, function keyboard, that's important. 
+
+Well if this is undefined, then, ‑‑ not this, but this, the argument past is undefined, then spec says that these arguments should be implicit this, use of one for this function, so, it goes that way, let's make a loop. 
+
+This is like almost of the loops that go over arrays. 
+
+This is this length. 
+
+There. 
+
+So, we call the callback, we use this call function to change the binding of this, and, we pass data in the position there. 
+
+Can this really be this easy. 
+
+Let's check it. 
+
+Let's build it. 
+
+It's of course only generating some stuff, "building" including the JavaScript into V8, I'm going to talk in a moment about how the works ‑‑ Ooops, extension internal complylation error. 
+
+That doesn't look for good. 
+
+Maybe the JavaScript is not as JavaScriptty as expected. 
+
+Let's look at data view there. 
+
+More things here, let's see what it does. 
+
+Oh, that's a bit funny. 
+
+Oh, maybe ‑‑ ... 
+
+while we impresenting thing in the Runtime, maybe, maybe. 
+
+Let's see if there's any other ... 
+
+function. 
+
+Subtype array, maybe we should move our code here. 
+
+Well, install functions, that looks good. 
+
+But look at this, it acts as prototype here and uses global Hlmmm, probably some kind of module system thing work here, let's try the global in the front and make maybe it works. 
+
+Again the build phase is fast, let's see if it compiles this time. 
+
+Blah, blah, blah, this time it works. 
+
+That's great. 
+
+So, amazing. 
+
+We have just became V8 hackers, ten minutes, who wants a full CS degree on a Compilers master. 
+
+Let's just go fetch V8 now of start hacking V8 JavaScript in there and make the engine do what you want it to do. 
+
+I actually want to show that it works. 
+
+Oh rings it sounds a bit strange that duringing the compilation phase, splits the error, well, I compile the JavaScript, it actually is, because, it makes sure that it's not going to generate errors later at Runtime, and kind of compile version is included in the V8 library. 
+
+Ah, there it is. 
+
+Now, let's make an array. 
+
+Three elements for example. 
+
+And we have from each. 
+
+But, hey we have to see if it works, maybe it doesn't work. 
+
+For example we can change one of the elements, that's usual in semantics, for each function ‑‑ do for print. 
+
+Hey, it works. 
+
+Wow! So we have now V8 works implement in the JavaScript, it was previewed into machine code when building, what else can we ask for?  Well, there are a couple of things that we could improve here. 
+
+Let me stop the music. 
+
+There. 
+
+So, of just a couple of things that we'll be tempted to do now because there is not only INT 8 array, Int 32 array, all of those array that are type arrays, so we would be tempted to do this. 
+
+This would actually work. 
+
+We could patch all the prototypes. 
+
+A bit of work, we have to duplicate those lines in there. 
+
+But, of course we can do I but these, it's not necessarily a good idea, remember that the Compiler doesn't ‑‑ is not specialized in one version of the code for each function, so ited may fail its guess for the types, so what we want to do is rather have a copy of each of the function that is of ‑‑ the same code inside, but it's one of the arrays gets it's own version, when the Compiler makes an optimized version guessing the types, it can do a perfect version matching each one of the types. 
+
+And, now, this is a really starting to get a bit tedious and a bit boring to write all those. 
+
+So fortunately I was saying some strange things in the JavaScript code that V8 uses, they have a kind of macro expansion thing that we can use to, well, to make one implementation that generates one copy for each of the ‑‑ for each of the functions. 
+
+For each of the array types. 
+
+And this is going to be good because the co‑generator for each one of the versions once they get hot and have been used for a while and types having guessed. 
+
+The code will generate the best it can. 
+
+Let's see how we can use that. 
+
+I'm going to have the same music. 
+
+Okay, so let's go back. 
+
+Type in array ‑‑ type array thereupon, let's cutlet's go, up, up, up. 
+
+Macro type array,ID element size, it looks like it's generating copy of things, and this name thing here must be replaced. 
+
+For what?  Well, for name is 8 array, it can be in 16 array, let's move our version here. 
+
+So based ‑‑ let's be nice, so, instead of Int array, we write name, Hmm ... 
+
+is that enough?  It seems, so, well, now, it's version of type array supported by V8, automatically gets 4 H function had it's prototype, each one gets it's unique version. 
+
+So this should make it that in each one of the type array classes their prototype has of reach, that's super. 
+
+Let's see if any syntax errors or things. 
+
+Ooop, there's an error again. 
+
+This was not planned. 
+
+The other one was. 
+
+So what's the problem here?  Maybe it's not ‑‑ it's a little bit picky because the macro extension is not very smart, so times it will appear in places where one doesn't expect. 
+
+So let's see. 
+
+Now it seems to work. 
+
+Be sure to put colons and semi colons, you never know how the macro processor is working, I have not checked the code, it just works, sometimes makes thing ‑‑ things work again. 
+
+Oh, it's a lot of time. 
+
+If it sounds like elevator music, it's because it's almost elevator music. 
+
+ I have to make sure I have was picking something with clear rights and those kind of things. 
+
+V8 is already revealed, maybe I can just run the V8. 
+
+ ‑‑ harmony also. 
+
+Probably is not ... 
+
+that's a bit of a bummer. 
+
+If you want to hack in to Compilers get a fast machine for lots of memory for the linking. 
+
+There we go. 
+
+ I go on harmony this time
+we are. 
+
+Let's see N 16 array of prototype for each. 
+
+Oh, yeah, it's there. 
+
+Will it work this time, let's try again with Int for each. 
+
+Let's make another one. 
+
+This time Uint 32 array, two elements. 
+
+For example, B for each. 
+
+Let's try this argument handling works the second parameter. 
+
+To make it even nicer, let's make this an arrow function. 
+
+So let's print these plus X ‑‑ let's process stream for example. 
+
+Why not. 
+
+Hey, it works, wow! Amazing, and functions are starting to work. 
+
+So cool. 
+
+Don't rely on the scoping of arguments on this so far, but it works, and we got automatically from a simple ‑‑ just one implementation a copy of the function in each one of the prototypes of all the type of array classes. 
+
+We could make it a bit nicer, we could use install functions we saw over there, and then once it's nice enough we could send it for review and get it to V8. 
+
+We're just one step far from being a person that has a co‑meet in JavaScript engine, so, I hope after this talk you all go hacking your laptops to start implementing all those missing type array methods. 
+
+It will get a bit tough with the review process, but it's going to be nice, and you'll be also Compiler hackers. 
+
+There was those funny thing in the V8 code, this is not the type array, I can actually show this one. 
+
+This is from normal array ‑‑ (Chuckles ... 
+
+normal ray... 
+
+) we have the code for each're ‑‑ we have this things that are ruersble, to UINT 32, but what is this, JavaScript without types?  It's a Spec function. 
+
+Wow! Person sign get the follow ‑‑ percent sign get default receiver. 
+
+Those things are there for a reason
+are certain things that we should know about the V8 Runtime and similarly happens to spider monkey just that it's different. 
+
+There's a different approach to certain things because it's not as fast to do everything in JavaScript or it's not possible to do all, all of everything in JavaScript, because just as I was saying the initiallytion of the Runtime is done early during the initiallytion of the JavaScript engine ‑‑ so there are certain features that my not be available. 
+
+Also, to impresent certain parts of the JavaScript specification, we need more information, we may need to know if a function is anker report function or if ‑‑ an Error function or amore malfunction, we know if it's an Error function it will throw and normal one doesn't, but throwing ‑‑ is slow, slower than just checking a flag, actually the Runtime the "so‑called" not native functions which allow the introspect the Runtime and the JavaScript can manipulate and know more about internals of the Runtime. 
+
+So, of course, this is all implementation dependent, that's why it's different in V8 and different in spider monkey. 
+
+And the parser actually knows about this, there's a low native syntax flag, we can try nit the V8 interpreter, there's a lot of functions. 
+
+There's some helper functions done in JavaScript, ‑‑ wants to check, so these helper functions are ones that don't have the percent sign, and the functions correspond, roughly, to operations as specified in the language specification. 
+
+So, for example, in the specification there's other finishing of what ‑‑ is expected to do and the algorithms in the specification are written down using the reference those basic operations that are impresented as helpers here, so the algorithms that exist in V8, most of them try to mimic the algorithm if way it's written in the algorithm specification, it's easier to do, easier to correspond to the spec, but it makes it harder time me meant on JavaScript engines, I would recommend to check this navetives yes, Runtime yes, macro, V I, and there's alsod the C + + functionses like this, get the full receiver, this gets what would be the "this" target function, so it checks change and other things that we have known implicitly when we were doing the first implementation of forage, you can check those in Runtime C C and, there should be Runtime function ‑‑ there, Runtime function is declared with this macro, this gets scope count, it counts how many scope there is are. 
+
+You actually know ‑‑ the engine to go over those, but with a little time and checking code examples from the rest of V8 is not that difficult to get the use the same constructs as the engine ‑‑ so just check the code and the other GS files and try to follow the same style and check the specification. 
+
+The specification of JavaScript is quite big, it's something that may get into your way. 
+
+It may look like it's difficult to go over because it's not written in a very accessible language, looking for examples in the rest of the JavaScript code is better and of course, at some point you will need to check the spec to make sure things work as expected. 
+
+About V8 and how it's built, it took a bit. 
+
+Actually it picks all the GS code, puts it in to C + + file as bytes, that is linked into V8 node nap shot, it's a small utility that comes with V8 that is built with V8 base that doesn't include the Runtime, and what it does is it generates the code for it by loading those JavaScripts and running them. 
+
+And, dumps ‑‑ makes a dump of the JavaScript heap where the code is and variables and in a V8 ‑‑ Lib format that is snapshot and ‑‑ library, so it's much faster to load, so if you have ‑‑ your stand alone application that uses V8 you can modify the bootstrap.CC file and include other scripts of JavaScript that you have me loaded and precompiled that are always available as soon as the application starts. 
+
+So, that's something that is quite nice to have. 
+
+So, well, we're running out of time, but I tell have a couple of remarks:  As results of being here today with me, what I want you to be aware is that it's not only C + + and JavaScript engines, it's a way to start hacking engines speaking ‑‑ INT task that we may know better, like JavaScript, and you can pick your favorite engine and hack on them. 
+
+Don't be ‑‑ don't be squared of the spec. 
+
+Ask, go to the ES discuss mailing list, ask for clarifications, sometimes a spec is not clear, especially ES 6 parts that are still changing a bit. 
+
+Sometimes you ask for a clarification and goes, oh, this is not very well specified, let's give it another try. 
+
+So, well, I hope ‑‑ I hope you are now all encouraged to go hack on engines, we need more people like you to implement this. 
+
+So thank you for coming here, and thank you for becoming hackers (Applause)

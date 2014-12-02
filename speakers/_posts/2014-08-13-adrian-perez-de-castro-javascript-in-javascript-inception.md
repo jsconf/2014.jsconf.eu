@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200.25031289111388
   filename: "/speakers/images/adrian-perez-de-castro.jpg"
+video: F2cL4EOAztk
+transcript: "transcripts/adrian.txt"
+slides: "http://perezdecastro.org/jsinception/"
 ---
 
 {% include speaker.md %}
