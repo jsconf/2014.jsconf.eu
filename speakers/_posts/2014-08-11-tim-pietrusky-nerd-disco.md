@@ -17,6 +17,8 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/tim-pietrusky.jpg"
+video: tia6iP85Zuk
+slides: http://slides.com/timpietrusky/nerd-disco/
 ---
 
 {% include speaker.md %}
