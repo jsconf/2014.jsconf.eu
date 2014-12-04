@@ -88,31 +88,27 @@ If you notice, these tools are based on the closure compilor. An open source com
 
 Main thing is the ability to process type information and store it and use it at later time to do time checking and optimisations.
 
-If you are familiar with that you are familiar with this syntax.
+If you are familiar with that you are familiar with the type annotation syntax.
 
-But, the first template shows, what code should be matche. If you pass 100 source files it knows which statements are the ones you want to target.
+But, the first template shows, what code should be matched. If you pass 100 source files it knows which statements are the ones you want to target.
 
-And the second thing is when you have those matches. How do you acquire fix?
+And the second thing is that when you have those matches, how do you apply a fix? How do you transform the code? What should it look like?
 
-What should it look like?
-
-And in this case we want to match assignments.
+In this case we want to match any direct assignments to location.href and transform it to use the goog.dom.safe library.
 
 And so, looking at the matching code, it looks a little bit like this.
 
-And this will match the direct assignment. Where you have the window.Location.
+And this will match the direct assignment where you have the lefthand side window.Location.href equals some string.
 
 But also, match the alias, window.Location to local variable.
 
 And on the righthandside you have a function that returns. It still knows how to match.
 
-This is not of the correct type. This is where the type information comes into play.
-
-To differentiate between these cases.
+This is not of the correct type. This is where the type information comes into play because it knows how to differentiate between these cases.
 
 How does it do this?
 
-Well, the first thing it needs to do is build an Ast.
+Well, the first thing it needs to do is build an AST.
 
 An abstract syntex tree.
 
