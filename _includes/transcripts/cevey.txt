@@ -1,0 +1,224 @@
+Hello everyone, this is my first time at JSConf, I'm really excited to be here and talk to you about servicerless apps powered by web components, I just want to give a bit of context, I work for guardian as a senior engineer, and I work on editorialial tools, which is the main two being the new guard yawn CMS called composer and the new media service for managing images, these are all built as web apps, three tiered architecture, which is this one, that means you is a front end, at the front, which is the browser, and your code running in the browser, so typically we use Angular JS for that, then the back end, which is the code running of your servers, for that we usually use skyline, city natura, play, finally the data is store in the the database, we use elastic search, Mongo and other things, these are typically referred to as presentation ‑‑ let me turn that off, that's going to annoy me, people tweeting me. 
+
+Presentation, middle tier and data storage, this is what we're going to refer to in the rest of the presentation, keep that in mind. 
+
+The idea for this talk came in about a few months back when I started getting increasingly jealous of this information ‑‑ that my colleague built, the responsetive front end site shows a lot of information about the health of the server, key system metrics, KPIs, the deployment status, health service, and so on, so that's a really useful thing the too have at the end of your desk, compare to what we had on my team, yeah, it was a bit Meh, so why is it Meh, it's not just bauds it looks a bit shit, it's also complex, it's complex as a user, I had to be on the VPN oaccess it, you can't log in on the VPN on your phone, really tedious, it was also complex as a developer, sometimes you want to change these dashboards, if something goes bad, last week we needed to start monitoring a new cue, it was tedious to add new things to the dashboard, it was deployed somewhere and written in this horrible PHP. 
+
+The other side of that is it's also very rigid because you only pull data from one source, graphite, which is internal monitoring service, and, also, the configuration was very much mix in the with this horrible PHP that I mentioned which made it hard to edit and manipulate graphs the way I would like to be able to do. 
+
+When something's not good, you put nit the bin and you say, let's build a better one. 
+
+So, let's try and build a better one, going back to the architecture I presented earlier, we know that we have the data storage, this is what data is, it can be possibly in graphite, which is occurring, what we had for our more legacy systems, and more and more we're moving towards AWS, Amazon web services, which has it's own monitoring service called Cloud watch, that's what we're going focus on for the rest of the presentation, that's where services are moving, so that's where the data is, and we know that we want to have the presentation, layer display, the graph in your browser, that's what we've got, now, what about this middle tier thing. 
+
+What happens with it?  Do we need it?  Well, so, I really love sky dive, more I love not having to write any code or maintain servers that might go down, have to monitor the monitoring, it's boring can we get rid of it?  What do we actually need it for in the first place?  Traditionally, I think aver if Id three things that you do on the middle tier, the first one is Auth. 
+
+By that I mean authentication, which is know hog the person is, and then authorization, which is determining what their missions you is in the system. 
+
+Once you know that they can come in, okay, great, I can query the database on their behalf, and retrieve some data, and once I've got the data, I can just render it. 
+
+That's the simplest thing that the middle tier does, and that's what wow would do if you implement the any language. 
+
+Serverring the actual files, maybe caching, serving data, let's leave that on the side for now. 
+
+So, let's see, can we do all of that on the client instead. 
+
+Let's say we have an HTML page, and we write all of this in JavaScript. 
+
+So how do we Saturday?  We start with the Auth aspect. 
+
+Now, AWS gives us nice primitives for that, support this idea of cry didn'tbles that you can create, and then once you have these drew enables, which is a key and a secret, don't try and copy those, they're not real, and, the region, and once you've got that you can define the permissions that they have, so I'm going to define these credentials, all think can do is query Cloud watch, can't spin up new servers and so on, all they can do is read the metrics data. 
+
+Define them and put them in the page like, this I have my Auth sorted. 
+
+That's in JavaScript. 
+
+Now I have my Auth, I'm going to do a query with it. 
+
+So do that, I'm going to use the AWS JDK, it's Open Source, you can download it. 
+
+It lets you query the Aws services you yeeuate a new instance of the Cloud watch service with the cree credentials we've passed in earlier, then you can call the method to get method statistics and define what you're querying. 
+
+Here we're going to look at the request count, in a given load balance or given time, and sum it. 
+
+And when we do this, asin concurrent resolution nosily we get the response back, that's what we see at the bottom here, that's quite, it's AWS specific, so we might transform that, don't look at this code, basically you transform it into a time series, which a simple array of pairs, and in the pair you got the first item is the time, the event happened at and then the second item is the value. 
+
+Very simple data structure. 
+
+So we've got our day the, we have our metrics data, now we fled to render it. 
+
+I'm lacy, not go dog that myself, just load in Google chat, and write this. 
+
+It's actually quite, it's quite a lot of boilerplate here, that's what you have to do, that's from the example on the Docs, in the middle here we actually see that we add the rows in the middle of this big blob of JavaScript, and at the end we also say, okay, select this element and then inject the graph in the page. 
+
+And then we get our graph. 
+
+That's great, okay. 
+
+Job done, let's all go to the pub. 
+
+Not quite, so we fixed the first aspect, it's no longer complex, it's just static HTML page in the browser, there's no VPN crap anymore, no PHP anymore, that's sorted in terms of rigidity we're still pulling from only one data source, now reading from AWS that's still only one, and the configuration was mixed into all this spaghetti code I showed you earlier, that's not very nice, it's not veri' city change graphs quite rapidly. 
+
+So it's not better enough, so what can we do?  What we actually want, ideally is to not have any of this broiler plate, we want to say I want this graph of request, and, well, that's sounds very much like an element, right?  Can we do that with an element?  So, I'm sure hopefully you know where I'm going with this. 
+
+Web components who in the room has heard of web components?  Cool. 
+
+Who has tried web components?  Quite a lot, great. 
+
+So, quick primer, so, web component is this idea of custom element, so you can say there's this Google map element that will show a map of this Geo position, okay, if you put this in your browser it's not going to work magically, right, it's not going do anything. 
+
+How does it work?  The idea of web components you can teach the browser how to do ‑‑ what to do with this when you see in in the page, you can define the behavior when you see custom element and make it do anything you want. 
+
+All of this you program in JavaScript. 
+
+So, once you've defined ‑‑ once you've written the code for this, so that it's in the scope, this is like you import the style sheets to sort of change the presentation of your page, this is simply using the HTML import, once you have that, well, actually all of this, in fact it doesn't really, kind of using futuristic APIs, you need to use poly fills, I will use platform JS, live Google rewrite to port all the Google APIs to the current browser. 
+
+If HTML element is your classic Lggo blocks, this is like the Lego mind Storm, you can do anything. 
+
+We're going to use web components we're going to lay polymer on top of this, on top of platform J S, you don't have to use it to use web components you can use X tag from Mozilla if you prefer. 
+
+Let's use polymer it has a few niceties such as these elements scaffolding, the clarity of sin tack, we've seen this example we just import polymers, so we can use the polymers element to define new element called Margarita, it takes one attribute ‑‑ my greeter ‑‑ and we have a tag my greeter, tag many my name, as an attribute. 
+
+We see that the template that this is what the ‑‑ we're going to put in the shad come DOM, basically it's what's going to appear ton page instead of the my greeter element, and it's going to say hello and then my name, this is the day the binding syntax, so polymers supports data binding, which meanness that it's going to replace the name, sort of curly thing with the value of the at try bud, here Seb, and because it's bidirectional, you can also bind it to this input text, where it's going to give the initial value to the input text Seb, if you change it ill will change it everywhere for this variable. 
+
+That's powerful. 
+
+And we're going to use it throughout the rest of this presentation. 
+
+Okay, so, will's dive in. 
+
+Or not ... 
+
+oh, here we go. 
+
+So we've got this Aws con fig element. 
+
+We've created a few element AWS‑Config. 
+
+It takes three attributes, region key and secret. 
+
+We just pass in key values to the at try brute. 
+
+What do these elements do?  Nothing, not useful. 
+
+Nothing to display, it's just a configuration thing, what do we cowith it?  We add a new attribute, we call it Sync, an at try brute we're going to write out what sort of the out put of the element is as data here we're going to out put to AWS‑Co infig, which is what we had earlier in the JavaScript, so actually, if you go to the implementation it looks similar to what we did earlier. 
+
+We load in polymers, A W S‑Config with four attributes then I declare how this element works, I'm observing the first three attributes, the first three inputs, when ever any of it changes I'm going to update. 
+
+I'm also going to update when the element is ready, it's been put in the page. 
+
+What does update do?  It just checks that the three inputs are there, if they R. 
+
+create a new object and write it ‑‑ sort of assign it to the same property which will basically set it to this variable that we day bound. 
+
+So, I have this element, by the way, all of this is Open Source, it's GitHub, so you can play with this, you can just make your own. 
+
+So we've got our credentials now as a variable, so we can pass it in to this Cloud watch element, extract same JavaScript element we had earlier, which, does the querying using the SDK, not going show you the code for that, basically we have this element that takes the con give as input, it's going to have it's own sing attribute that will write asin concurrent resolution nosily when the day the comes back, write the into the variable, that's going to contain time series, you mass AWS dimension, just the same way you do like an option inside a select for instance. 
+
+So we have our data and it looks very much like what we had before. 
+
+Of ‑‑ is this thing working?  It looks like what we had before, which is this time series data, we can pass it in to the render element. 
+
+Now, actually, because I'm super Lazy, I'm not going to write it, I'll steal it from Google, Google wrote their own chart element testimony wraps their Google chat library there's a lot less of this horrible boilerplate than before, that's already a nice win. 
+
+Just passing in my data, define how it's going to look, and, there we go, we've got our chart, so that's cool. 
+
+And, weave got all of this through web components, so what does it look likened to end, end to end we have ‑‑ weave got our three‑string attributes that we pass into the AWS config element, that will write it to a new variable, we pass that to Cloud watch alongside parameters, do the Ajax request, we can write that into another variable and pass to Google chart and boom chart appears, great, what does this look like in code, very similar in fact, we load in platform JS at the top, which is the poly fill, we import our three elements, we use them in our auto binding context that gives us the data binding thing, that's it, this is three elements, that works for single chart. 
+
+If we end up having more chart, more request charts you can already tell that it's going to take quite a lot of courage. 
+
+Went up with a something like this, a lot of code application, adopt repeat yourself, not clean to pop I paste code if you're doing it, you're doing it wrong probably. 
+
+How do you abstract this?  When typical programming you paramettize it as a function, right, then bits that change you make them parameters of the function and abstracted it way way. 
+
+You're going to use an element instead, maybee make the two input, the config, and load banner which is the only thing that change in the code, question abstract it to an Aws element and just pass in the load balance, and then we can use it and it's done what we want it, with have the Aws element, and request a draft for the load ‑‑ great, we've done it for requests, we can show latent say, you can show like bucketed numbers of accounts, you can do anything you want. 
+
+And because weave based that on small awe Tommic modules you can replace some of the piece of the puzzle. 
+
+You can say, let's fetch the data from another source, let's fetch day from graphite instead of AWS Cloud watch, it's a completely different server, but, because we out put this in the same data format ‑‑ interesting. 
+
+(Laughing) that's how impressive web components are (Laughing) because we use the same data form mat we can pass it into the Google chat and it works just the same. 
+
+So, a small confession weave actually cheated all along, everywhere we pass in the the exact sort of string values for the time, well, that's a bit stupid, that means we're also watching a given sort of time range, time interval for all our data, that's not a very useful graph. 
+
+So what can we do instead?  So, what we ‑‑ what do we want, we want to say just the last hour of data, so how do we do that?  Well, the last hour of data means that the time interval, ends now. 
+
+So, we're just going to create new variables with the now time, where does now come from, there's an element for that, just create the new time element, that's going to export the time, when it Eastern initialized and the time, the now variable will store a date time that is passed into the Cloud watch element that's great, except that it's just ‑‑ it doesn't update. 
+
+We can make it update, we can pass this a refresh attribute that says update every minute. 
+
+That means that actually the nice thing here is that of when now updates after a minute, the now value changes and because Cloud watches also observing these inputs is going to update, is going to do another request to fetch the updated data, and because the charting elementals watches its inputs, it's going to update the graph. 
+
+It's like functional reactive programming where you define the data flow and then everything updates without having to explicitly listen for special vents, nobody knows about the other things happening, it's just day the bound. 
+
+We're not quite done yet because the start time is still hard coded, so what we said we wanted to have a ‑‑ time interval of one hour, so, let's do that, let's define a time range, el. 
+
+That says one hour and then we bind the end to now, which means that the start is going to be an output, which will be ‑‑ can attach to Cloud watch element. 
+
+We've got now our time range of one hour, that's enforced, when it start changes, except we're still not done the number of hours is fixed, what do we want?  We probably want a custom number of hours what if your service died a horrible death an hour and half ago, we want to do change.time range. 
+
+So if you said the user needs to do it, we need offI element, I'm Lazy, I'm not going to write my own, steel this one from gage Google that's what they're for, we take the paper  ment, and that's going to export a simple integer value that we're going to bind as ours, when I change the value here as you see in the give, that changes the number of hours, the same way as when now changes, that cascades down, changes the data and renders again. 
+
+If you change the number of hours as a user, it just cascades down and changes what you see in the graph automatically .
+so that's pretty neat. 
+
+This is what the code looks like, you can review this later. 
+
+Another thing we did, which we cheated a bit on is we've hard coded secret in the page. 
+
+Now if you are security expert even if you're not, this is not a good thing to do, you don't want to put secrets in the page if someone sees that page, that means they can access your ‑‑ well, they can query how slow your service are, not souper dangerous, still not a nice thing to do, probably don't want do that. 
+
+How do you do that, you need to awe then the Kate with your servers. 
+
+Well, what we can do is we can use this magical thing with the AWS web identity federation, this is provide by the AWS, and it lets you acquire a talk with a third party or with a provider like Google, Facebook, or Amazon, and then you said that token for temporary set of cry didn'tbles that you can define permissions for this is what I've done here, weave written a new AWS I deputy element that wraps the Google element that Google provided they had to writ for me, so that's nice. 
+
+That expose the same AWS config object as the previous element did, you can substitute the hard coded con fig we had previously with this one that does it in a safer way and without revoling any secrets, so, that's nice. 
+
+So let's do live Demo. 
+
+(Laughing) maybe. 
+
+Okay. 
+
+So, let's see if it still works this is a demo ready to have made. 
+
+You see on the right there is tag API metrics, they appear here, they fetch from graphite is simply I P based I have to be on the VPN for this. 
+
+And other thing we see is these weird rounded colored dots and these represent deploy either proproduction or preproduction environment where whether they succeeded or failed. 
+
+This is day that's live from today, from now. 
+
+And, so, as said, we're going to use AWS identity element to do the Auth so this is the Google sign in element, in is what it looks like, this is the button for it. 
+
+I'm just going to need Auth with Google, and that creates a tocken, trades it with Amazon and gets a set of credential, everything is data bound, the data appears here magically so we can see things like this, you the latency, request, and ‑‑ this is a static page, this is just a Python server, static HTML file ‑‑ and this' all using web components. 
+
+(applause) you can change that, you can change what time window, it automatically updates just through the magic of data binding, that's also neat, you don't have to write complex logic to update. 
+
+That's the demo. 
+
+So does that mean we can all say Fuck server I'm just going to write JavaScript code if now on and don't need to do anymore server, I'm just going to talk today that base from the end of times no?  Not quite partly because well, it's ‑‑ well, if you use the web components the support is still fairly limited, it doesn't support all browsers, especially all the browsers, and you might want to support that. 
+
+The other thing is, as we saw, querying the database directly from the browser that doesn't really scale very well, so for things with low traffic like something that develops use or internal users use, thattest a fine you can use that, but I wouldn't put that on the front of the Guardian web site, I don't think Patrick would like that much. 
+
+That would not scale very well. 
+
+The other thing is we want to have a system for authentication, especially if you're doing read/write, even reading sensitive data like this. 
+
+For this the only sort of component you can rely on is the back end, you can't rely on the front end for that, anyone can write it. 
+
+So, you need support from your back end services, and you can do that with IP restrictions or do with that things like AWS policies, but the policies are quite course grain, you can only say ‑‑ this column in this database, so there's limitations that make it a bit harder to use for write services, you can still do it for things like this, and quite a lot of other cases. 
+
+6 in the future I think there's more things we want to do with the dashboard, this is the beginning, showing deploy lines on graphs, like how many immanages I add every day, surfacing JavaScript, we use the century service to coupe them, great to see when there's a spike after deploy. 
+
+And see the server hayseed, a lot particular things you can add to the servers carrying on the same pattern. 
+
+What have we learned so far?  I think we've seen that it's possible to remove this middle tier, that makes the whole system a lot simpler to maintain to edit. 
+
+It works in a variety of cases. 
+
+The other Inc. 
+
+this we've learn is that you can use web components as atomic programmable blocks like Lego blocks, then you can combine them using data binding or composition or events and that lets you create quite a complex system out of very simple blocks that you can then substitute. 
+
+So that's what I've got, and as said, all of this is Open Source, you can check it out, so I recommend you go and play with it, find bug reports and everything and play with it at home, it's safe that's all. 
+
+Thank you very much (Applause)

@@ -18,6 +18,9 @@ image:
   type: jpeg
   heightSite: 200
   filename: "/speakers/images/sebastien-cevey.jpeg"
+video: MdcD1rNkNLE
+transcript: "transcripts/cevey.txt"
+slides: http://slides.com/theefer/serverless-web-components-jsconf
 ---
 
 {% include speaker.md %}
