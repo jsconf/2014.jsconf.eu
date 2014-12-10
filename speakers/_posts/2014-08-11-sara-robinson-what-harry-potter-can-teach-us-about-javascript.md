@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 200
   filename: "/speakers/images/sara-robinson.jpg"
+video: osQbwqq7ZR4
+transcript: "transcripts/sara.txt"
+slides: "https://sarajrobinson.com/jsconfeu/"
 ---
 
 {% include speaker.md %}

@@ -1,0 +1,229 @@
+Thank you. 
+
+Hi everyone. 
+
+There we go. 
+
+I'm going to tell you today what Harry potter can teach us about JavaScript, name Sara, live San Francisco, you can find me on Twitter at@Srobtwets. 
+
+I'm a Harry potter enthusiast and I'm a developer advocate at fire base. 
+
+You're probably all wondering what Harry Potter has anything to did with JavaScript. 
+
+I want to start by asking you a question, how many of you have read all of the Harry Potter books?  Okay, quite a few of you. 
+
+How many you have written JavaScript, I think that's almost everyone. 
+
+My presentation today is going to be in three parts. 
+
+I want to start out with a short history of the mid '90s specifically focusing on the introduction of JavaScript, and moves of my talk is going to discuss how the global Harry Potter fan following can inform internationalization inside JavaScript. 
+
+Finally we'll see some JavaScript internationalization in action using a demo App built. 
+
+I want to start by framing the problem, client‑side internationalization is difficult. 
+
+There's a lot of tools to do internationalization on the server, as we write more and more client side applications, internationalization is something we need to take into account . 
+
+As we see in a minute, Harry potter was successful in achieving global appeal through local adaptation. 
+
+It's recognizable by almost anyone in the world, but it may mean different things in different location. 
+
+In my talk I'll use Harry Potter how we can use him as an analogy for internationalization in JavaScript.
+as most of you probably know 1995 wren Dan Eich introduced the first version of JavaScript, in 1995 JK Rowling completed the first print of Harry Potter and philosopher's stone. 
+
+In 1996, JavaScript was taken to ECMA, and Harry Potter was accepted to be publish bid Bloomsbury in the UK after it was rejected by 8 different publishers, finally if 1997, JavaScript was standardized, and Harry Potter was publish in the the Uk, the same year Scholastic gave J K rollings an oftener to publish in the US T two things happen at the same time, still don't see how they're related and inform each other
+was something else going on in the mid‑90s as well. 
+
+More and more households had access to the internet. 
+
+People could connect with others around the globe nearly instantly and the internet was responsible for fueling the initial spread of the Harry Potter phenomenon, when it was publish in the 1997 in the UK it was promoted on an AOL welcome page. 
+
+So a link was posted there, and what people noticed is that the link went variable even after it was taken down, which was something that wasn't common for links posted on AOL, Scholastic noticed this, that the link was being passed around and they decided to take a chance and offered J K rolling an advance of 105,000‑dollars to publish the book in the US, which is a huge amount of money for someone who was at the time an entirely unknown author. 
+
+So we have what started out as a book published just in British English, then publish in the the US, and today Harry Potter has sold over 500 million copies worldwide, more than any other book in history with the exception of the Bibles and Ma willza Dong little red book which could argue were not technically sold. 
+
+It really helped the book tread internationally was rolling's literal approach to translation, she didn't place any limits on how much translators could change aspects of the books to better fit their local culture T only thing she and her publishers needed to approve in order for the book to be published was the cover art so we quickly have over 70 translations of Harry Potter published all over the world. 
+
+Something interesting that happened is there's usually a couple months of delay from the English version being published and a trackslated version was then released. 
+
+So in countries where a lot of people spoke English they would often read the English version first to find out what happened then read the translated version. 
+
+In France, actually Harry Potter 5 was the first English book to ever make the French best seller list. 
+
+So, I believe that the internet really made Harry Potter the disstint global phenomenon that it was before the internet we had similar phenomenon like Star Trek and lord of the rings, but in those cases fans were limited by Geography. 
+
+This means they could only interact with other fans face to face, maybe they would travel to a convention if they were a super fan, but still only engaging with others face to face. 
+
+With Harry Potter we saw a proliferation of fan web‑base in the different language, fans writing their own fan fiction, really a huge scope that no other phenomenon before had experienced. 
+
+So, I'm going to use this as we saw the global Harry Potter phenomenon to talk about how it can inform internationalization in JavaScript. 
+
+And I want to start out by defining internationalization this is a definition from Wikipedia, it says adapting software to different languages, regional differences and technical requirements of a target market. 
+
+So, looking at each part of this, languages refers to changing the text on a page, regional differences means taking things into account, like, the way that dates and times and currency are formatted. 
+
+And then technical requirements of a target market means going a little bit deeper thinking about how each local is going to use your site differently. 
+
+ I don't believe that internationalization is necessarily a black and white concept, it's not like your site can either have it or not I've seen kind of a spectrum of how sites adopt internationalization. 
+
+So, I'm going to talk about little bit about that spectrum, we have machine translation, this is tools that will translate word for word everything your Honor site, and it'll get the meaning across, but there may be some knew answers that aren't picked up in the machine translation. 
+
+In the middle of the spectrum we have replacement, this means relaying things like the way dates and times are formatted. 
+
+Then on the far end of the spectrum, we have full adaptation, this means take bog account, differences in the way that people in each local are going to be using your site. 
+
+So, now I'm going to talk about how different Harry Potter translations fall along the spectrum then we'll see some examples on the internet then we'll talk about how we Kim me meant internationalization in JavaScript using some pretty cool libraries. 
+
+There are a couple of things that made translating hairy propertier difficult, a lot of cultural knew answers and a lot of quirk in the books, I want to talk about those, we have made up words like Muggle. 
+
+Acronyms like Ordinary Wizarding Levels where the abbreviations spells OWLS, which is difficult to translate into a different language, then we have a name like rid, which is an anagram spells I am lord Voldemort, which comes up several times, we have Diago in ally, the name is mean to sound like the word diagonally. 
+
+Then we have things like Haggard's accent, which is particularly difficult to translate, it's meant to convey that he comes from a lower social class, and then finally JK Rowling put a lot of thought in the character names the dumb testimony is based on an oldening rich word for bumblebee. 
+
+They had to decide if they wanted to trance litter rate the name or change them to convey the same meaning in their own language I'll talk about three different translations that fall at the different end of the internationalization spectrum. 
+
+On the machine spectrum translation side, we have the Chinese chancelation, this was translated by a group of translators, they decided to preserve all the British elements of the book, didn't change much, translated word for word. 
+
+What they did to explain foreign concept was use extensive footnotes on nearly every page of the book we have footnotes explaining things about British culture that Chinese readers may not understand. 
+
+In the middle, with replacement we have the Hebrew translation, that translator thought there were some references that would be better understood by their readers if they were changed. 
+
+In the third brook, ‑‑ a Hanna coo song instead of a Christmas song. 
+
+Instead of replacement there a place where Albus Dumbledor is described as carrying around a lemon Sherbot, she thought that fact that the wise old man is carrying around a children's candy is important in conveying something about the character, she changed this to a Krembo a chocolate covered candy that all children in Israel are familiar with. 
+
+The English version changed this to lemon drop. 
+
+There are a lot of instances where the translator chose to make changes like that. 
+
+On the adaptation side of the spectrum we have the French translation. 
+
+The Fran of translator chose to adapt the story to better fit with aspects of French culture. 
+
+Emphasizing educational aspects of the story. 
+
+Most of you know that Hermi Nebraska is a bookworm, and he really puts a lot of emphasis on her character there, are moments where hairy and Ron make references to skipping class, he completory removes those from the story. 
+
+Another example of the educational emphasis is the translation of the first title, so the first title the original British English version is Harry Potter and the Philosopher's Stone. 
+
+When translated literally, Harry Potter at the school of wizards, you see the educational emphasis here. 
+
+Another example is the French translator removes any references to class differences, so in the British version we see Hagred's accent denotes he's from a lower social class, we know Ron's family has less money, the French trancelator chose to remove the class differences aspect of the story. 
+
+So we see the spectrum play out in Harry Potter and I see the same spectrum on the web, so I want to talk about a couple of example. 
+
+We have machine translation tools like Google translate. 
+
+We have the German web site Spiegel, I can use the Google translator to translate it. 
+
+I can get the gist, the grammar of the head line doesn't really chance late that well here, but I still know what the article is about. 
+
+(Translate that well) in the middle of the spectrum we have sites like Facebook, this is my Facebook page translated into German. 
+
+What Facebook did they crowd sourced the translation for common text across the site. 
+
+Works at, studies at, anybody could apply to be translator and help translate the words to make sure they produce the best possible translation. 
+
+Despite this anybody that's look at Facebook, no matter what language or country is going to have the same experience across the site. 
+
+And then on the end of the spectrum, we have Wikipedia aavailable in 285 different languages, and an article that exists in multiple languages varies greatly between each language. 
+
+They encourage translators not to adhere to file or content of the original article they're translate, they encourage them to take out parts that don't make sense, further explain cop Septembers that might not be familiar the readers, and they have a list of articles that need to be translated. 
+
+One thing I found interesting, they posted about internationalization, that believe machine translation of an article is worse than no article at all. 
+
+They encourage people to take into account local differences when they're translating. 
+
+So I want to go back quickly to the problem that I presented at the beginning. 
+
+We want to improve internationalization inside client‑side JavaScript. 
+
+There are learning of Harry Potter's global appeal. 
+
+Talk about how we can implement internationalization by building a Harry Potter bookstore App. 
+
+It will display the first three books, translate those depending on which local our users are in, these are some of the features it'll have, support six different locals, mainly in Europe, since we're in Germany right now, translate the book's titles and format the date and cost correctly depending on where you are when you visit the App. 
+
+Of so now I want to look at some JavaScript internationalization libraries that can helptous do. 
+
+To translate strings ton site, I'll use a library called message format JS, local specific strings, launched at JSCON of theEU a couple years ago, and within those directory, you just need create JSON file was the correct translation using the same structure for each language. 
+
+Here I have the English word for bookstore and the German word for bookstore, which will not aat the present time to pronounce, you compile these and then what it does when you compile them it turns these into methods, so I'll have a bookstore object that has a section method and when I call the text method on that it will return to correct translation depending on where may user is located, which makes it realli' city add it your HTML templates, supports lurelization and gender, not going to use nit the demo, but I recommend checking it out ( ‑‑ check out the day, library moment JS, it has robust internationalization support. 
+
+I have the time stamp of the date the first Harry potter book was published, pass it it to moment along with an X that tells it's a time stamp and LS long date format. 
+
+June 25, 1997. 
+
+What if I want to for mat in a different language, change moments global local, moment supports over 70 different locals, I've changed it to German just using the language code for German, which is DE, and the same thing will out put the date correctly formated in German, moment also has other data for each local, so if I call ‑‑.month it will return an array of all of the months in German. 
+
+And then finally I want to format the currency on this application, so I want to do this usinguate internationalization API, it's relatively new it was introduce in the 2012, supported by most browsers, so here I have a cost variable, set to 25, and then I can use this tool local string method passing the language code and then a couple of properties, for example the style here is currency, and the currency is just the currency code, which is EUR for Euro, and that will format it correctly. 
+
+ I can do the same for English and it'll be formated correctly in US dollars. 
+
+It won't convert the currency, but it will format it correctly. 
+
+Some other things that the internationalization API lets you did is date formatting and string quolation, ordering strings correctly depending on the rules for a specific language, I recommend checking out those features too. 
+
+So, I've shown you some code snippets, you probably want to see the App in action. 
+
+I want to open up my terminal here. 
+
+Start up a server to serve up these static files. 
+
+And now we can see what the App looks like, I'm walk through the code in a minute, we have a Harry potter bookstore here, if I click on the different flags, it'll change it, it'll change the language of the header, the pictures and the title, date and currency, since we're in Berlin, it supports German, French, British English, American English, Spanish and Swedish. 
+
+You can see that changing these will change all the content on the page. 
+
+So now what I want to do is go back and look at the code for this application. 
+
+So, the first thing that note is the directory structure here I've got six different directories for each of the six locals that the App supports and within each directory I have the same JSON files, the bookstore don't J severalON has the word for bookstore in German. 
+
+Cost has some data on the cost for books. 
+
+Of covers has the CSS file path for the books. 
+
+And then titles has the correct titles in that language, these there same in every directory, when I compile these it generates internationalization JS file which turns all these into methods, now I have this bookstore method and I can call.store and that will return the correct string. 
+
+So now I want to take a look at my template here I've included a couple JavaScript libraries, I have Jquery, moment, local.min cloth JS, and what this is doing here, it's desect tenthsing the language the user has indicated, loading the internationalization.js file for that local, defaults to British English, because the books were originally published in British English, then I have basic style sheet here, there's barely any HTML, it's all been generated dynamically, I have the word hairy potter in the header, content Div, these are each of the flag button for the local preference, then I have a GitHub link. 
+
+Let's take a look at JavaScript to see what's going on here, the first thing I'm doing is setting a local store variable to selected language, whatever language the user has selected, I'm changing that line variable, then I'm ray loading the page so I'm reloading only the necessary.internationalization for that JS file, and then setting a global language variable to that same thing, and then I'm setting moments global local to the user speed language. 
+
+The next thing I'm do ‑‑ specified language. 
+
+The next thing is the date object for each of the dates the Harry Potter books were published. 
+
+The first thing I'm doing is adding the correct translation for the bookstore for header, I'm using message format, I have the global bookstore, I'm adding.store to add recollect store for heard, then time using message format again to get the correct cost and currency day far that book, and then I'm using the internationalization API to format it correctly, I can call to local string method on that number, passing it the correct currency code and it will format it correctly. 
+
+Finally, what I'm doing here is looping through each book and adding the necessary data to the page, so, I've create add book Div using J query, getting the title of the book, adding it to the page and doing the same for the pile path for the cover. 
+
+And I also add the cover to the page here. 
+
+And then here I use moment to format the date, so I pass moment the correct date, I tell it that it's a time stamp, and I want it in the long format, and the last thing I'm doing is just appending the date and the cost to the DOM, so in less than 70 lines of JavaScript I have an internationalized application that supports six different locals, which is pretty cool, but there's one last thing that we have left to do. 
+
+Right now the App is just running locally on my computer and I want all of you to be able to see it too. 
+
+So we've created local specific content for our users we want to make sure we can deliver the content to our users quickly wherever they are, I'm going to use fire base hosting since I work there to deploy the application. 
+
+Fire base in addition to being a real‑time data pass has a static hosting service, that lets you host your static service from the command line, it's CDM back and secured over secure SSL connection. 
+
+If I stop the process, because I've already initialized firebase in the directory, I need run the command firebase deploy, I need to enter my password. 
+
+It's now deploying the current directory. 
+
+Now it's available at this URL, Harry potter.firebase.com. 
+
+It'll open that URL in my browser, now you all can go to this URL, Harry potter.firebase.com. 
+
+Maybe you want to submit a pull request to add support for your language if it's not on here. 
+
+Now I'll go back to my presentation. 
+
+Many and I want to wrap up by tieing this back to the beginning, what can Harry Potter teach us about JavaScript?  We saw that through local adaptation, Harry Potter became a global phenomenon, it's recognizable all over the world, but it means different things to people in different locations, we saw it was especially successful because the translators had so much freedom in adapting it to different cultures. 
+
+And I believe that as JavaScript developers, we can do the same, we can take these considerations into account when we're building applications and really think about how each user is going to be using our applications differently depending on where they are. 
+
+That's all I have for today. 
+
+I want to say thank you to JSConf 2014 for having me and organizing an awesome conference, I also want to thank Norberd Lindenb erg an internationalization expert that gave me format and ‑‑ for the library I use in the the demo, here's the link to the code for the demo App, available on my personal GitHub, I'm happy to answer any questions in the hall way track or over e‑mail or Twitter. 
+
+Thank you (Applause)
