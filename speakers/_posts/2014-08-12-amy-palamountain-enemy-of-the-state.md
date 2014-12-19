@@ -17,6 +17,9 @@ image:
   type: jpg
   heightSite: 173.75
   filename: "/speakers/images/amy-palamountain.jpg"
+video: fAoSidif1gs
+transcript: "transcripts/enemy.txt"
+slides: http://amy.palamounta.in/blog/2014/04/13/enemy-of-the-state/
 ---
 
 {% include speaker.md %}
