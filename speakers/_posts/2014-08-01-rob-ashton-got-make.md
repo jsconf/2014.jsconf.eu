@@ -6,7 +6,7 @@ permalink: "/speakers/rob-ashton-got-make.html"
 speaker: Rob Ashton
 talk: "Got Make?"
 website: "http://codeofrob.com"
-twitter: "https://twitter.com/robaston"
+twitter: "https://twitter.com/RobAshton"
 github: "https://github.com/robashton"
 gplus: ""
 from: London
