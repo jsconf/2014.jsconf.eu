@@ -13,7 +13,7 @@
 <h1>Videos</h1>
 
 <p>
-  We just got started releasing videos. Check back often or subscribe to our <a href="http://www.youtube.com/jsconfeu" target="_blank">YouTube channel.</a>
+  Subscribe to our <a href="http://www.youtube.com/jsconfeu" target="_blank">YouTube channel.</a>
 </p>
 
 {% for post in speakers %}
