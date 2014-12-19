@@ -17,6 +17,9 @@ image:
   type: jpeg
   heightSite: 105.078125
   filename: "/speakers/images/rob-ashton.jpeg"
+transcript: "transcripts/rob.txt"
+video: sS5EByZm1EI
+slides: http://slides.com/robashton/got-make
 ---
 
 {% include speaker.md %}

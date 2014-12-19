@@ -1,0 +1,298 @@
+There's quite a lot of you to come and here about make. 
+
+So, it's going to be one‑on‑one talk, quite basic, I'm going go through the steps of building up a decent make file, if you already know make, and you're an expert, I apologize, please do go next door. 
+
+I'm Rob Ashton, if you tried following me on Twitter from the page on site it's not spelled like that, I'm not him, don't send abuse to him on Twitter, he'll be very confused, send it to me here, these are things I don't like, quite a lot of things, quite a lot of things, these are things do like, needles to say I don't like very much. 
+
+Some context, I work in a team of predominantly airline developers, beard wearing E Mac users, a lot of C, a lot of bash and a lot of make, our C and airline are Polished diamonds and wrapped up in duck take and that's bash and make, because of this it made sense to use make for our JavaScript, it may not make sense for you. 
+
+I'm not Evanial rising, yet I kind of am though I haven't seen a nice tidy grump file. 
+
+ I found this picture on a make web site, I quite like it. 
+
+Apparently it's afully Gnu, however you say it, looks like it was drawn by a three‑year‑old, drawn by a thirty‑year‑old, make, as old as the hills, it solved all the problems and solved all the problems in weird wacky ways which makes it super fun, I always have established that if you're using cowboys language like JavaScript, and it is, and mind as well use cowboy tuning around it. 
+
+Try to keep professional ‑‑ like grump or gulp, and arrange everything in a tiny nice streams, it's all very fun, but it's not as fun as wading through obscure symbols and traversing where to ‑‑ I really enjoy this find it entertaining, so yes, that's why make, I'm going to jump right into what make is, and do some demos because it's more E. 
+
+siting. 
+
+And more importantly, what make is not, so over here if this directory, I've got some stuff, I haven't got any cool music, to play. 
+
+You hum or whatever, do a dance. 
+
+Use your imagination now. 
+
+I have a recursor file to make something in it. 
+
+ I just want to demonstrate that make is not procedural. 
+
+So, here I have a variable and signs whatever the value of 2 is, like another variable and assign it to where there's all there $3 is, 3 is equal to hello world, down here in the all target, make that bigger, you can all see it. 
+
+That look good in the back ?
+yeah, yeah, we're good, okay, cool. 
+
+I'm going to echo out, do whatever is in the value of 3. 
+
+And if I run this. 
+
+So, over here we get hello world printed out which is quite interesting if you read that top down, all these variables are lacy, value of a point of actual use them, it's called variable expansion, these are recuresively, actually, I got that wrong, these are meant to be ‑‑ O Oop, whatever. 
+
+Forget everything I just said. 
+
+ I, if I go into supervise over here, you also have these ones, semi colon in there instead, these are actually evaluated at the point of time, which means in my all over here if I echo out the value of one p ... 
+
+t Ooops, I should not have worked, ‑‑ that should not have worked, I did everything wrong. 
+
+I'm doomed to fail already. 
+
+Ooops, meant to do that, quite, so, any way, because of the semicolon, because of this channel over here, these are values of execution, value of one over here is nothing, this is kind of important, make is all about expanding expressions, whether those expressions are simple variable assignment, function calls to get list of crap, not really important. 
+
+ What we have a very non‑procedural language, recursive variables are lacy, simple expanded variables are not (Laze city) so whatever, I'm going to use recursive variables everywhere in these demos what is the structure of a make file, what does it look like?  Well, it's separated out into these things called targets, prerecs, and recipes, I try ouse the terminology on the side I call it a big pile of make and get on with life. 
+
+That's not to everyone's taste. 
+
+I have a very simple set up in a directory, very simple copy. 
+
+Okay, we have a make file and we have an in directory, in our in directory we have a file called Pinki file, rainbow dash is not best pony if you don't know this, you do now. 
+
+It's a truism. 
+
+ ‑‑ we have a make file, right. 
+
+I'm going to copy and paste from down here rather than try to write things, I think I'm in demo fail mood today this is preparation, it is, right, so what I'm going to do over here, I'm going to define a target, it's a directory called out, we have Pinkie text, and it has independency on Pinki.text. 
+
+And also dependency on out, which is nice, copy and paste. 
+
+The press pee is found underneath this. 
+
+So here I have in Pinkie text and out Pinkie text. 
+
+And here we have a target called out, which is directory, and we simply say, please make the directory called out. 
+
+Over here we're just echoing Dev null ‑‑ if I run this, so I go to simple copy and say, hey, please make that, you'll see here it copied over my Pinkie and rain by, if I run it again, it doesn't anything at all. 
+
+Make is quite clever when you have targets and dependents set up, it looks at files and times stamps and only dose things when something is different than expected. 
+
+If I go to Pinkie text and say Pinkie pie is the best pony it will only copy Pinkie.text. 
+
+If you set up a decent dependency graph, it will be clever about what it runs and doesn't run. 
+
+This is the best thing about make. 
+
+I believe that was the only point I wanted to make here, really, we can go copying of Gumpf. 
+
+We have a target,list of prerequisites and they execute from right to left. 
+
+Got that, of course we did, excellent. 
+
+What we learned here are targets that are actual physical outputs on the disk, prerequisites can be files or other targets you're executing and recipes are scripts that execute to make the targets appear from the dependencies. 
+
+Nothing too exciting. 
+
+Of course, that make file was awfully crap, I can't sit there and write a make file for every single file for my input and out put directories because this would take me all day, so we have patterns, rules. 
+
+Let's do a demo of that. 
+
+So, let's go to my patent directory. 
+
+So, here I have the exact same make fail, I just made before. 
+
+That's wrong keyboard short cut, I'm normally a Linux usually, I just closed it instead of VM, I'm going to present that happened. 
+
+ I don't know my keyboard short cuts on Mac OS, I'm afraid, I make mistakes all the time. 
+
+Okay, Kayry on. 
+
+So here we have really crap make file because we're copying files independently all the time, we can use pattern rules do this, actually if we have a, if we call a target where it's any pattern matching out/something.text. 
+
+Then, actually, dependency will be in something.text,and, down here, we can actually take the value, which we've got from above, which will be ‑‑ is it a ... 
+
+it's an angle wrack et, of course it is the incantations are important. 
+
+I want a copy from here, wrong keyboard short cut again and I'm getting confused on Mac OS that the control key is in the wrong place, it always gets me. 
+
+So, isn't that exciting, with can say, this is a magic automatic variable given to us by make that says whatever the target is, please put it in dollar open angle bracket and the other one dollar at whatever our first prerequisite was. 
+
+We still have up here all out slash Pinkie and rainbow text and they will part earn match on the target over here and they'll both work so if I go and run that, I say, make, that actually works and expands to Pinkie and rainbow and works like it did before. 
+
+Which is super awesome and nice, we saw here something really nice, which is we have pattern rules where we have substitutions with that lovely percent symbol, automatic variables are exposed to recipes from the targets and prewe can we sits we have a magic list of incantations that will get things out of the list. 
+
+You start memorizing the incantations, I've forgotten them because I'm on stage and panicking. 
+
+There are dozens of them, it makes it clear to read, when cru near a can have fee shop and peek looking over your shoulder they think you're dead clever. 
+
+Make has a Maureen Bunyan of of built in functions. 
+
+The thing with make file, I don't really like is that over here I'm having to do out/pin I can and out slash rainbow as my actual targets, well, that's kind of crap because I don't want to write out all of my targets manually in my make file, it's rubbish, I can call functions instead. 
+
+I'm going to do that over here, inputs, I can generate a list of inputs over here, and say, actually if I call this function wild card and match on anything in the in directory, asterisk, and ‑‑ please put it in a variable called inputs thank you very much. 
+
+Well, that's not very useful, because, of course, I want to replace out/Pinkie and out/rainbow over here, so I can call more ‑‑ I can call more function on my inputs. 
+
+6 Ooops, and Ooops again. 
+
+There we go. 
+
+And I Kayk say, actually can you do a pattern substitute on in/whatever and replace that whatever without/whatever on all the inputs. 
+
+And now I have a list of out puts. 
+
+ I can actually print out this list, going to hide this entire line now, so, of I say, I'm going to echo out my output. 
+
+And for good measure, inputs as well. 
+
+Of that's no good. 
+
+Of did I mention I don't know my keyboard short cuts on Mac OS, I'm hitting all the wrong keys, so if I run this make file, you'll see over here my output list contain out/rainbow of and out/Pinkie, and the include list ‑‑ I've general herb rated a list of file and replaced the expressions with something else. 
+
+My inputs and out puts. 
+
+ I can feed these outputs into my of target over here as a dependency. 
+
+And that will mash past this out/and I'll execute this against everything, these inputs over here aren't actually used but to build out puts collections, another exam   you might chose to did that, so I'm going to echo to Den null, I don't like to print out, so I run this now, actually executed, so I copy over my Pinkie to my output directory, because if I cat out/Pinkie, and cat out/rainbow we see that Pinki pie still best pony and dash is not best pony. 
+
+We can generate list of inputs using wild cards and we can generate a list of outputs by pat ton producing on that list, that is cool when combine that with pat enrules, you go and scan your fold erstructure, which is known for the structure for all the files you were to input into various command line tools and generate the outputs you want out of that and generate big part targets out of that and run all your code and hopefully you end up with come peopling an application which is super cool this is why Pinkie pie is best pony because she plays all the instruments. 
+
+I'm going to build something that's roughly equatable to a real world example. 
+
+It's not going to be a real world example because I adopt want to play with barrels of fire and MPM and reactor fire that I would use in a java application, I'm going to go incompared my vanilla, that this is not how I do things in the real world too much. 
+
+ I didn't want to start throwing in all sorts of crazy concepts. 
+
+Over here I have a similar widgets directory, in my simple widgets directory, never mind ‑‑ I have a widgets folder in that widgets folder we have three wig its, once one's called Celestia, Pink Ie, and rainbow, each have a style sheet, have an index file, and they have some images too, so pictures of Celest aye as a child and groan up. 
+
+ I don't want to know what they're composed of, but I have a convention in any project that all widgets have some kind of index enindustry point and some kind of style sheet, and I want to copy all that across so this index file will actually work, I'm referencing budgets.CSS and J S, and they magically appear over here, in here in the real world I would use browser five, this is a nice simple example. 
+
+ I have two outputs here at least, and wig its.CSS and I have widgets in these folders, and copy them as welt. 
+
+Real project you might want to put them in image map, we're not going to do that today. 
+
+Thankfully I have it all down here before, copy and paste everything again. 
+
+Absolutely wonderful. 
+
+The first thing I always do when making a mu make file is figure out my nut output files and work my way up. 
+
+It's clear I have two outputs over here. 
+
+And these outputs are going to have to be ‑‑ they're completely wrong, got the wrong file open. 
+
+There we go. 
+
+Of wow. 
+
+Okay, good. 
+
+So hereby I want to make a widget.JS and clearly I'm going to need some JavaScript files and I'm going to need some CS file to point over there. 
+
+So how am I going to get those, let's go to the top of the file over hering let's go and get some expansions. 
+
+So ... 
+
+if I have some coffee files in each wig it, over here, I'm going to wild card against one it/against whatever the wig it is and anything that's coffee in the directory, and generate a list of output files from that, placing all the coffee with J Ses, obviously as you do, going do the same with stylus files, I want to take take all the stylus files,/whatever,/whatever file, success files are going to look like that, the file replaced by CSS, make sense so far?  Of course it does, nothing complicated here at all. 
+
+ I hope not any way. 
+
+So, cool, I'm going to if he cuss on CSS and such for now, what I need to do is I need to somehow convert all my JavaScript files ‑‑ my coffee files to JavaScript files before calf Nateing them. 
+
+To do that we need to compile them. 
+
+That's the coffee script Compiler, if I gather up all of my . 
+
+If I gather up all of my coffee files over here as dependencies, one it/whatever coffee, and we have widget/whatever JS, coffee script Compiler against the target I want generated. 
+
+Which will work perfectly fine. 
+
+It's quite clear that if I want to generate a pile of one it of CSS, I can do the same thing. 
+
+Take the files, general ate some outputs. 
+
+If I want to execute these rules I'm going to have to say, well, actually let's make two place holder rules over here, we have style and we have coffee. 
+
+The style and coffee by the way go intinesically hand in hand, if you haven't got coffee, you haven't got style. 
+
+Out put CSS files goes to/site ‑‑ success and output files ‑‑ nothing over there. 
+
+Of soft here if I call coffee, it's going to match against this rule for every single JS file and look at the coffee spiel, look at coffee script against any file that hasn't been change in the recent times, which is nice. 
+
+So, if I go over here, and I want to generate my code, I can say over here, well, if I want to do the code, I want to execute the coffee script Compiler, and I want to make the wig it. 
+
+JS file, so over here offul I'm confusing myself, I hope you're following. 
+
+We take all the J S output files and we cut them all together in really horrible way, so I hope semi colon in the file, there will be semi colon, because we're using coffee script, if there wasn't semi colons then this wouldn't work. 
+
+Friends don't let friends use semi colons. 
+
+I'm going to make a clean directory over here because it's polite. 
+
+It's good to be polite. 
+
+Let's love the images for now though. 
+
+Cool. 
+
+I'm going to save say my all depends on my code and my style. 
+
+I'm going to echo this down to receive/Nul. 
+
+Cool, so what we've (Dev/Null ‑‑ we generated targets for them which are JavaScript and another target a JavaScript target file and we have a nice pipeline of individual files to individual files to one big file. 
+
+Which is super cool. 
+
+And because I don't trust my copy and paste, I'm going to copy and paste all this over here. 
+
+Let's pretend I live code all of this. 
+
+So, I'm going to copy all of my CSS across into one file, my JavaScript file, I run this. 
+
+Over here. 
+
+And we see here, around my JavaScript Compiler, I did everything like that, run, fine, fine, if I run page again, nothing at all, nothing needs to be done, because nothing's changed, which is super cool, I'ming going to make clean. 
+
+One of the great things about make, once you have all the targets set up and doing things on a file by file basis, this is important, it's very easy to parallelize, using make/J parallelizes all of that and super quick, you get this for free if you build a sensible composed make file comprised of lots of small targets and small files that's granular you can get a fast build process out of the grate by parallelizing it for free. 
+
+The site made, there's my Http servers if I go to Safari or Chrome. 
+
+Pinkie Pie and Celestia. 
+
+These are my wig it, they you click on them and they do things. 
+
+It's cool. 
+
+Okay, cool. 
+
+Of so, we'll see here that we is av a wig it CSS and image directory of everything copied across, I have a make file ‑‑ in a nice granular way, now the thing is, this is kind of cool, you have a make file which opens and compos very well, place holder files, time stamps and we have automatic parallelism, clearly if you're on windows it doesn't works, but I don't really care about that. 
+
+This make file is not perfect, obviousfully a real world, it's probably browserfy against JavaScript files, we probably reexecute make on a per one it basis you can do more explicit pattern matching Andrea have a widgets folder that we pattern match on the module folder that's I do at my workplace, I load modules contain all the JavaScript, all of the CSS, all images, pattern match against a module derricktory, we can build image maps out put CSS and paralyze and it's super fast only things that change get copies across, which is awesome. 
+
+Quite a lot of stream based pipelines forego that, and put them through a stream and complicated and hard to understand, come collated but also incredibly simple. 
+
+Reuse, I've spent all this time making an amazing make file, it this case it wasn't amazing, it was simple, but my work one is probably 500 lines of make, I want to reuse across all my lines of projects, they have a similar structure all of my projects, how do I do that .
+let's look at that. 
+
+Shall we. 
+
+What I've done is on to GitHub I've pushed this reproand there's an assets folder over here where I have common.Merk, nothing's changed, except for over here we have a conditional assignment of widget to widgets, so widget had been specified by the caller of this make file, we'll actually not sign this variable, so in my current project I want to call widgets gadgets or baubles or something, I don't know. 
+
+And the thing over here, I have the default goals, I will always call goal unless I specify a goal myself. 
+
+What I can then do is inside my ‑‑ inside a make file on an actual project, that's empty because I he want it to be empty, of course
+we go, clef er. 
+
+Of we can export some configuration for that, you can say export widget port equals baubles, the make files to that we invoked at this point, set a target at common.America, if we haven't got a common.Mk, go and get it ‑‑ comment.mk, this is what our make files look at work, which downloads a latest version of our make and goes and gets it, are if I run this right now, hopefully on the WiFi, it sound loaded the make file into common.Mk,and executed against bauble directory and gave me a site, so, there we go, baubles, CSS, and Html, it's exactly the same as before, just ponies. 
+
+ I say just ponies, I'm very fond of ponies, no such thing as ponies, they're awesome. 
+
+Boot strapping our make files, we can export variables which is super cool, you can set default goals, which is useful. 
+
+And, if you have a set of conventions across your projects you can use your make files across all things and get much joy and happiness from your life. 
+
+Especially as your make files look very pretty. 
+
+Here's a friendly warning of something not to do. 
+
+This is what I see quite a lot with Mk files, I see this a lot GitHub ‑‑ we have targets call build JS and they invoke some command line against an entire directory of JavaScript, and then we have pony directives down there, these are not real output these execute these every single time and make is being used as a task runner, I see this a lot not in node projects but this airline projects as well, but the common ‑‑ airline is a glorified bash script made in make, it's really slow, it's not doing any additional compilation, it's just compiling every single bean file inset of asking if it's out of date. 
+
+Build systems are not task runners, and vice versa, not true, one of the mistakes I see, one of the problems I see all the time that grunt and GitHub being used as a combination of these things that's why t's confusing, if you just want a task runner, that's what NPM scripts are for ‑‑ in my workplace it's a bash scripts calling a bunch of bash scripts we're a bunch of coy boys that's what we like do ‑‑ cowboys ‑‑ these two things go together very well, close tools wisely, that's it and I am running out of time, I was right about having to rush myself a little bit. 
+
+If you want to come and tell me how awful it was, do so outside over coffee or breed do not to the wrong Robb Ashton ‑‑ thank you very much, that was make (Applause)
