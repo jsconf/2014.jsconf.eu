@@ -1,0 +1,355 @@
+Okay. I am going to lay my cards on the table. Building Javascript applications is hot.
+
+A part of it is that is state and events.
+
+I would take a step back and take a look at some of the patterns applied in JS applications and handling state and events at scalable and maintainable fashion.
+
+And some of the tactics to build on that.
+
+Thanks for the introduction.
+
+I'd introduce myself. I am not a Lama and I come from New Zealand. It was a long flight. It is my first time here.
+
+It has been fun.
+
+If you are over in New Zealand, you can look at me on Twitter. And everywhere else. on Internet.
+
+I work at GitHub.
+
+Before I get started, roll into this. I have 2 confessions to make. My job has this, nothing to do with JS.
+
+Don't leave just yet.
+
+I spend my days on the native applications. I do GitHub for Mac and Windows.
+
+My second confession is, I'm a Windows developer. Hear me out! Before I was at GitHub I was working a lot with JS.
+
+In terms of architecture. The JS and the browser have a lot in common with the applications on the desktop. It is the amount of state.
+
+Models. The state of the all of the different views displayed on a screen at any point of time.
+
+And in the browser, the state.
+
+It is a truckload of state we keep track of.
+
+On its own, state isn't that interesting. What makes an application interesting is that we are able to interact. Force new states. Force state transitions. They are going to occur via events. Data into the form. Click the save botton. And transition into a new state. Maybe an invalid one.
+
+We have a lot of ways that we can make interesting things happen.
+
+A lot of ways we can fire events. Dom events, model events. On the channels.
+
+We have a lot of state. And we have a lot of events.
+
+And it all needs to be managed.
+
+As the complexity in the application grows, the amount of code, the features we need to support, the amount of people we have on the team, all of that grows, becomes harder to keep track of all of the state and events.
+
+How many times you have seen code that has conflated ideas. state and views. State and events.
+
+Without a way to separate thie data from the views and the state from events, it gets intertwined. We cann't maintain it and can't change it.
+
+On top of all of that we are feeling shitty about it.
+
+Without the architectural plan, it is a headache.
+
+So, what do we do? We take the inspiration from other places.
+
+Design patterns. Which have proven to be problems like spaghetti code.
+
+We are able to do this. We can take things that have been applied in 1 context and apply that in an entirely new one. Because we can do that. Take inspiration. Design patterns tend to evolve in an organic fashion. From one place to another and stick. They are funny. Or they contrain a solution to a tricky problem.
+
+If you take the MV stuff. This is no exception to that. Presentation patterns actually originated out of the client. Applications were built for the desktop. The Smalltalk days.
+
+Over time, Web server programming became popular. We applied it here too. We are building rich applications in the browser.
+
+We have frameworks. And then we have JS frameworks, also implementations of Mvc. What gives?
+
+Well, I'm not here to turn this into a conversation who is doing Mvc by the book. That's boring.
+
+What is interesting is to take a look at each of the flavours of MV. And see how they are giving state and events in each of the cases.
+
+To see which ideas can stick and which ones are causing too much pain.
+
+Let's start out by looking at how Mvc would place out on the server. This is a reminder to you guys.
+
+Actually, can I see hands of people who are comfortable talking about Mvc?
+
+Great.
+
+Most of you. Few hands who didn't go up. I'll be quick and going through the basics.
+
+We have our models. They are the applications. Where the things happen. The views, presentations of those models. It is in the form of a Json document. Representations of models current state.
+
+We have the controllers. Sending commands to the model. Transitioning the model state and returning a new snapshot of that current state.
+
+Routes don't really fit into the traditional definition. On the server they are key part of the architecture. Response from matching the requests and delegating it off to a controller and action.
+
+The point that I want to make here, how this pertains to state is managed on the server. It is not. We don't have state on ther server. We might, but we probably don't. We build stateless applications. We scale out.
+
+We achieve this by persisting to datastore of some kind.
+
+Which has the question. If we want to be stateless, how are we going to make interesting things to the data. How we transition into a new state?
+
+We address state. Http. Get me a list.
+
+If we want to delete a list of books. I don't know why.
+
+If you did, Http, delete. What we have done here, we have simulated a state transition. We have simulated an event.
+
+In this world, state and all state transitions are via Http.
+
+The controller has an action invoked. The model look up and maybe a state transition. And a snapshot returned.
+
+An architecture that is linear.
+
+Requests come in and a snapshot is returned.
+
+We go down the stack and back up.
+
+How does it all relate to how the implementation's playout on the client?
+
+The key difference is, on the client, we are no longer to be stateless.
+
+We have all of the state in memory. We can do great things. We can build a much richer state of interactions.
+
+We keep a bunch of things in memory. To help us form this. A very non linear state space.
+
+We have our models. They are coupled with the snapshot from the server.
+
+We add complexity on top of that. Validation, security,, a lot of other kinds of behaviors. We have an enormous amount of possible states that the model could be in.
+
+On the screen at any point, we have a lot of views. Each presenting models state.
+
+And together all of those views are going to define the overall view state of the application.
+
+What's being presented in the sidebar? The contact view. What is in the main region. All of this is adding complexity to the state space.
+
+And then we have the overall state of the application. Questions like, which modules are invoked? Which no longer being used? Can I clean it up?
+
+And then, as an added bonus, we no longer have to emulate those state transitions across boundary. They occur in the same context. That's empowering.
+
+ We move around that state space in a non linear fashion. It should be reflected in the code we write.
+
+In the simplest way possible. We need to test and predict how the application is going to behave. We need to have a plan. Apply come ideas, patterns to help us.
+
+On the server, we bring over those presentation patterns.
+
+Models, views, controllers.
+
+And then we add routes to the equation.
+
+Now, I mentioned, traditional implementations don't...
+
+On the desktop that is true.
+
+This is one place where the architecture differs.
+
+Coming from the desktop I felt weird about it. Why do we need routes? How do they fit? How do I put them into my architecture?
+
+It all felt weird until I remember, we have the addressbar. We need to be able to copy a link. and they should arrive at the same state.
+
+Addressability is still a key for single page applications.
+
+So what I want to do now is explore and question how we commonly see routes applied in JS apps. Look at some of the ways we would structure the code.
+
+I'll give the example in Backbone. It might be different in each of the frameworks. You might not see the steps.
+
+But the series of events is going to be the same.
+
+So, here we are dealing with a party of animals.
+
+Party animals are pretty great.
+
+We have got an animal model and a list of animals.
+
+We have a view. And then we have a router.
+
+Interesting fact about backbone routers. When they came out, it was cold a controller.
+
+It led to confusion.
+
+We have this router. It defines 2 routes. Party and uninvite.
+
+The party one behaves liks a git. And the uninvite like Http delete.
+
+If we get it on the addressbar. We invoke this function.
+
+What it does is it looks in the collection, find the model in question, destroys it or transitions its state and then it moves around into the dom. To update the state there.
+
+So why is this bad? We are breaking encapsulation to push everything to the top of the code.
+
+We have a view that is responsible for doing some iinitial rendering. It has a reference. The first thing we do is an active lookup of that model and then we transition the state inside the router. Then even crazier, we reach behind the view into the dom to update the view state. Which feels a little weird. We are breaking encapsulation. We took those flavours that we saw on the server and tried to apply the linear approach to the client.
+
+We broke encapsulation. To have the design around the native support.
+
+We started to treat state and events, that gives the rich experience, treat them like second class citizens.
+
+We don't need to be manipulating the models. Like rows in a database. They can be rich and interactive.
+
+We don't need to be pushing everything up to the routes. And relying on routes to drive state transitions.
+
+When routes become architectural driver, it is hard to know who is responsible for what.
+
+In my mind, routes are a feature, not a driver.
+
+The question is, are routes the enemy of the state? They are not the enemy.
+
+We really need routes like I said earlier. It is an important consideration.
+
+The thing that is causing pain here with managing state is only using routes as the driving part of architecture.
+
+We have emulated the designs that worked well for the stateless server.
+
+The cracks start to show.
+
+So, thankfully we can find a happy medium. We can embrace the need for routes. Without relying to drive state transitions.
+
+First is address that example.
+
+And drop the need to address state transitions. We have our models like we had before.
+
+Now our view is going to have an event hash. This is nothing new. Backbone has supported this long time.
+
+All it is going to do. Takes a click, invoke the function on the view itself.
+
+It is going to grab the model it has a reference to. Transition the state. And remove itself from the Dom.
+
+We don't have to do any of those unnecessary lookups.
+
+And the view is in charge of itself.
+
+In charge of the model. And in charge of collapsing itself from the view.
+
+If we don't want to address transitions and we still need to support the http get case, how do we do it in a clear way?
+
+I'll show you some ideas.
+
+We are going to take the models, take the views, which render a template. And a response from the interaction between the dom and the model.
+
+We are going to give it to a controller object. It might keep track of a few models. Of related functionality.
+
+We are going to slide that into a module. A singgle component. And we are going to do this for a bunch of reasons. Stability, composability. It is sensible.
+
+I love this quote. It describes the idea behind modular thinking.
+
+It says, the whole world is trying to build these large applications. We should get off that bus right now. It sucks, it is going nowhere.
+
+We should start building smaller apps and testing those individually and bring them all together to compose them in a larger application after the fact.
+
+I really like that. Modules are defined by functionality. Within that module there is any view. And keep track of its own internal state.
+
+ There are several options for implementing.
+
+If you google. It is a well discussed and understood topic.
+
+We have modules, there are a lot of ways.
+
+But for me, the golden rule about modules is while modules are free to present their view, they are never free to place them in the dom.
+
+That responsibility needs to go toanother object.
+
+We don't want to couple our modules to the state of the dom.
+
+We need to be able to remove one from one page and put it somewhere else and it should function.
+
+The other component responsible for making this choice. I'm going to call it a layout composer.
+
+Its responsibility is obvious. To compose the UI. A toplevel view like a shell. With the regions that the modules are able to present themselves.
+
+The composer is responsible for swapping the views in and out.
+
+An example. If you heard of Marionette.
+
+The way it solves this problem, it has a regionmanager. You can register a foo and tie it to a bar.
+
+Or you can do the shorthand and define them all at once.
+
+And the nice thing is, you can say, maincontent.Show and give it a view.
+
+Internally what it is going to do is give the element maincontent to the view and render itself in that place.
+
+But I think we can go further.
+
+We can take the composer. Add regions.
+
+But what we should be giving it is the module.
+
+And in the module has a reference to the element. And it is view to present the views.
+
+Until the layout composer decides it no longer can.
+
+It is l going to look like this. A bunch of modules.
+
+And a lay out compuser. That we have running at one time.
+
+How does this placement occur? How does it work?
+
+The thing that is going to be responsible for giving modules is a dispatcher.
+
+It is going to listen to events. It is time to load a new module.
+
+On such events it is going to load the module and create an instance. And then hand it over to the composer to play it.
+
+And one way we can know it is time to load a new module is a routing event.
+
+In this event the router is going to be responsible for 1 thing only.
+
+It is going to listen and observe url changes.
+
+When it hears those it is going to look up which modules need to be loaded on the screen.
+
+And raise an event to the dispatcher.
+
+I have taken this code from a library. Chaplan.Js.
+
+Another library I would recommend you. It has great patterns. One of the things is a dispatcher.
+
+It describes a previous routes, current modules and current route.
+
+Subscribes to Route:match. It is going to load th e modules.
+
+It is taking the modules. Look them up. Make sure they are running.
+
+And then hand them off to the layout manager.
+
+So we take on the dispatcher, responsible for creating modules. And managing the lifetime.
+
+Interesting here is, the dispatcher knows this module A is no longer in use.
+
+It is more responsible for managing the lifetime and responsible for passing those modules over to the layout composer who is going to place them in pthe overall UI.
+
+One way the dispatcher knows time to load a new module is a an event occurs.
+
+It is not the driver of the architecture.
+
+It can be entirely driven by the events.
+
+So we have split up some of the concerns that we had around state and events.
+
+And the views we were displaying.
+
+The state of the addressbar. We have a composable design.
+
+Into new states and in a non linear fashion.
+
+If it was all too long and you didn't read it. This conference is pretty great. I'm not surprised if your brains are full.
+
+The management gets hard when we don't separate the concerns zozer On the client, we should use routes to address states. But never transitions.
+
+We should be taking ideas from one context to another. That's awesome. This is what programming fun.
+
+We can take inspiration from the server how to include routes.
+
+It is not a rulebook. We need to be able to note these ideas. To support requirement.
+
+And embrace events within the same execution context.
+
+We don't need to bake everything into the router. It is not scalable long term.
+
+If I have to sum up. Don't architect the clintside code like it is a webserver. Because it is not.
+
+Don't build servers on the client.
+
+Thank you.
+
+(applause)
