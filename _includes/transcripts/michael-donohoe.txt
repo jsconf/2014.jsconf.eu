@@ -140,9 +140,7 @@ If you change anything in the middle.
 
 It will still pair against the correct key.
 
-You don't have to do anything on the backend.
-
-You don't add overhead to the page.
+You don't have to do anything on the backend, you can do everything on the front end. Essentially, you don't add overhead to the page.
 
 Unless it found something in the Url.
 
@@ -150,17 +148,17 @@ That's a recap.
 
 The flow would be, if you hit the page you provide a link with this key in it.
 
-At that point, it inspects the page, generates keys. Looks for the match. And do I match this or this and what is the level of difference.
+At that point, then it inspects the page, generates keys. Looks for the match, by splitting the key and saying, "do I match this or this and what is the level of difference?"
 
 We can this for several hundred articles.
 
 With 10-20 paragraphs.
 
-We found 2 cases where there was a false positive.
+We only found 2 cases where there was a false positive, where two keys were similar enough. 
 
-An all the cases the first key was the correct one.
+An all the cases the first key was the correct one, so the tolerance was pretty high.
 
-You could extend this to images for example, you want to restrict it to something.
+You could extend this to images for example, you want to restrict it to something within the HREF value or something like that.
 
 This is the fun part.
 
@@ -307,7 +305,7 @@ What they are doing that is different from the times. This is heavily tied into 
 We used WordPress.
 
 essentially, we do try to sync.
-
+sti
 The difference in engineering required was high.
 
 In comparison when there was just me and another person.
