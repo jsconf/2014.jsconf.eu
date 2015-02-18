@@ -272,7 +272,7 @@ But if it's not, then maybe it's not actually worth the weight it's adding, mayb
 Now let's talk about the DOM.
 There are apparently 25 methods to work with attributes alone, you can also access attributes through properties.
 
-> ##### -jQuery-
+> ##### ~~jQuery~~
 
 
 That's still no reason to use a jQuery, the browser inconsistencies could be poly filled and the rest is just basically adding some sugar.
@@ -331,7 +331,7 @@ You can build an incredibly complex App like this, we did and up until this poin
 But nothing is free.
 So what are we giving up?
 
-> ##### -Implicitness-
+> ##### ~~Implicitness~~
 
 
 Implicitness.
