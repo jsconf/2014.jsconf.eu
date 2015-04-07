@@ -46,6 +46,22 @@ Similarly, in 2004 Nintendo's DSTouch was a big hit. Early developers for the pl
 
 Then in 2007, Apple's iPod Touch was also a big hit. Apple is clearly responsible for the fact that nobody younger than me even knows how to use a screen that you can't touch and drag things on. But even though Apple is responsible for making it ubiquitous, touch was really pioneered in the games industry.
 
-Do any of you remember Moon Patrol? Really? All right! Congratulations, because I was one year old when this game came out, so I don't remember Moon Patrol. But according to Wikipedia it was the game that pioneered parallax. As you moved the backgrounds scrolled at different speeds relative to each other to give you the illusion of depth.
+Do any of you remember Moon Patrol? Really? All right! Congratulations, because I was one year old when this game came out, so I don't remember Moon Patrol. But according to Wikipedia it was the game that pioneered parallax. As you moved, the backgrounds scrolled at different speeds relative to each other to give you the illusion of depth.
 
-6:43
+This was the first game -- at least according to Wikipedia -- to use that, and now you can't go anywhere without seeing parallax on some website. You can't throw a stone without hitting somebody who stuck parallax on their site. Sometimes for good, sometimes for bad... You know who you are.
+
+I think it's incredible that something that became prevalent decades ago in games is just now gaining popularity in the web. And this is a trend that we see over and over and over: that games lead all other technologies and push boundaries that we then come in and get to fill, once it's easier to do.
+
+Today's game experience leads to tomorrow's app experience. And this is important, because if you want to know how to build the apps of tomorrow, you should be looking at what games of today are doing, and how they're working. What kinds of technologies they're employing and how they're training users to expect user interfaces to behave.
+
+You can see a lot of other examples. I've given several. But every time you use Google Docs, you're now sharing an interactive, virtual environment with other users, and this is something games have been doing for decades. Now document services are starting to do it, and it's a big deal. It's important for everybody to learn.
+
+I'm not the first person to realize that we can learn a lot from game developers. If any of you have been getting spammed by Famo.us like I have, you know all about it. It's basically a game engine that allows you to run apps on top of it. They just chucked all the regular MVC framework stuff out the window and said "We're going to build a..." I think they called it a "crappy game engine". And that's what people are running really interesting, interactive apps on top of with great success.
+
+This is my favorite example of how games and apps are colliding, at least in JS. This is the architecture for Doom 3.
+
+The important part is actually the 2nd and 3rd step. The 2nd step is where Doom actually builds a description of the scene. It figures out what you're looking at, what you can see, what's in the frame, what's local to your character. And then the 4th step is where it actually renders it. And this is the expensive step: rendering something in 3D costs a lot. The operation order and which operations you choose to render are actually really, really important. They can make your frame rate fast or they can make it slow. So in Doom 3, they figured out exactly which operations they needed to pass to the renderer before they rendered anything, to make the application run as quickly as possible.
+
+And this is what I think is really fun and cool. React.js -- the library that you guys might have seen from Facebook -- works exactly the same way. The architecture is identical. Instead of OpenGL, their bottleneck is the DOM. So they build sort of a scene -- like a full scene-builder -- before they write to the DOM. That way their scene-builder can compute exactly which DOM operations would be fastest to render. So they're pulling ideas straight out of the world of game development.
+
+9:44
