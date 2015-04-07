@@ -1,186 +1,31 @@
-Good morning. 
+Guten morgen.
 
-So I'm here with good news because we will all be game programmers very soon. 
+I am here with good news, because we will all be game programmers very soon.
 
-So, I'm sure a lot of you like myself got into programming in the first place because you wanted to build the next Mario N the decade it turns out I build a lot more banking apps than Mario. 
+I'm sure a lot of you -- like myself -- kind of got into programming in the first place because you wanted to build the next Mario. In the decade since then it turns out I build a lot more banking apps than Mario, but I'm excited that JavaScript is heading in a direction where we're all going to be able to integrate a couple of things from video games into all of our apps very soon.
 
-I'm glad it's head bog a dire where we can integrate elements from video games into our apps soon. 
+Not only do I think these techniques that we can get from game development patterns are useful, I actually think they're inevitable. No matter what you do, you're going to end up integrating at least a few of these things in the next couple of years.
 
-Not only do I think these techniques are useful that we can get from game development patterns, you'll integrate a few of these thing in the next couple of years. 
+This might make a little more sense if I explain my double life. During the day, I'm "the Node Guy" at Heroku. Whenever any of you file a Node ticket at Heroku, it goes to me. And whenever the build pack doesn't work, I get yelled at. And whenever people are confused about the Dev Center documentation, that's also my fault. So I'm sorry.
 
-This might make a little bit more sense if I explain my double life. 
+This is my serious work. This is the work that I do that people's livelihoods depend on. So it's the scary, slow development work that I do nine-to-five. But it's also really interesting, because it's the first role that I've had where there are literally thousands of production apps that people are earning a living with that I can look at and I can compare. Like how people are following different patterns and how some companies are successful while some aren't.
 
-During the day I'm the no guy at Heroku, when ever any you file a note ticket, when ever the build pack doesn't work I get yelled at, when people are confused at the Dev documentation, that's my fault,i'm sorry this is my serious work, this is the work that I do that people's livelihood depend on. 
+There's actually a really interesting talk later today about how Toyota Europe is running right now on Heroku. That's by Ray McDermott: you should check it out.
 
-And so it's kind of a scary, slow development work that I do I do from 9‑5
-are literally thousands of production apps that people are earning a living with that I can look at and compare, how people are following different patterns, how some companies are successful, while some aren't. 
+I've gotten a unique insight into how people are building JavaScript apps these days, because I see so many of them every day.
 
-There's an interesting talk later how Toyota Europe is going to ‑‑ is running right now on Heroku, that's by ray Mcdermit, you should check it out. 
+And that's my day job.
 
-I have a unique insight on how people are building Java apps these days because I see so many of them every day. 
+At night, I work in a less-serious way. I work on something I like to call "Playful JS". It's JS that doesn't really have a purpose or a point. It's JS techniques that aren't going to help you pass questions when you're interviewing for a job. It's nothing people teach at a university.
 
-That's my day job, at night I work in a less serious way, I work on playful Java script, it doesn't have a purpose or point, it's JavaScript techniques that aren't going to help you pass questions when you're interviewing for a job, nothing that people teach at university. 
+But it's stuff I've been interested since I was a kid: games, graphics, audio... I play with stuff like procedural generation. I play with stuff like old-school 3D rendering techniques.
 
-It's stuff I've been interested in since I was a kid,games, graphics, audio, I play with things like procedural generation, I play with stuff like old school 3 D rendering techniques,right, and then, occasionally, very occasionally, some crazy company will pay me to build a game in HTML five, this is a bigger and bigger thing a couple of years ago this wouldn't happen. 
+And very occasionally, some crazy company will pay me to build a game in HTML5.
 
-Nobody would say, hey you build me a game in JavaScript. 
+This is becoming a bigger and bigger thing. A couple years ago this would never have happened. Nobody would ever reach and say "Hey, can you build me a game in JavaScript?"
 
-I'm excited about this, I think it will keep on exceller rating, this is the basis for the talk. 
+I'm really excited about this and I think this is going to keep on accelerating.
 
-And, I'm not an E. 
+I wanted to highlight that because this is the basis for the talk, and I'm not an expert. I just play with things at night. I am an expert at Node and running production Node apps, but this is my hobby. I'm not a game developer by trade, but I love this stuff and I think more of us are going to become game developers by trade over the next few years. And even if not, it's fun to learn and it's something I think everybody should try at least once.
 
-pert, right, so I play with things at night, I am an expert at note and running note apps, this is just my hobby, time not a game developer by trade, I love this stuff, and I think more of us are going to become developers by trade over the next couple of years, even if not, it's fun to learn, right, and something I think everybody should try at least once .
-so, first, why should JavaScript developers, even care what game developers do?  It seems like we're worlds a part, they write thing in C plus plus while we write in interpretative language, we're writing on bare metal, and we oar trap in the a browser and they're concerned with players while we're concerned with users, doesn't seem like there's a whole lot of overlap here. 
-
-To answer that question, let me take you way, way back to 2008, when J query was still new and popular with everybody. 
-
-And this is Google maps, in 2008 as usual, pushing I limits of JavaScript this was a cutting edge App, from our current perspective, you can see it was a little bit better than map quest, 2 dimensional, not a lot of interactivity here. 
-
-Now, here's 2008's grand theft auto, same year, but different piece of software, instead 206 D top down camera, you is 3‑D moving cam remarks full textures and shadows, tabbed geometric detail on building is incredible. 
-
-It's a far cry from the Google maps of the same era. 
-
-Okay. 
-
-The four years later Google released an update to Google maps, in this new version, you have the 3 D textures geometric details and dynamic shadows, that bringe brings me to the question if you had to put some money on which one of these three apps is most similar, twoe which two have the most similar architecture in my money would be on these two. 
-
-So even though it's the same App, the Google maps of 2013 is a lot closer to a video game grand theft auto of 2008 than to it's predecessor, similar anyely in 2004, anyone den do touch was a big hit. 
-
-Pioneered what touch can do as a core interaction element. 
-
-And then in 2007, the iPod touch was also a big hit. 
-
-And apple is clearly responsible for the fact that nobody younger than me even knows how to use a screen that you can't touch and drag things on. 
-
-But even though apple is responsible for making it ubiquitous, touch was really pioneer in the the games industry. 
-
-And, do any of you remember moon patrol?  Really,?!
->> Great.
->> Because I was one‑year‑old when this came out, so I don't remember moon patrol, according to Wikipedia, it was the game that pioneered Paralax, as you move the background scrolled at different speeds to give you an illusion of depth. 
-
-Now you can't go anywhere without seeing Parallax, you can't hit a stone without hitting somebody that put Parallax on their site, sometimes for guide and sometimes for bad,you know you R decades ago something that became prevalent if games is now becoming popular in the web, this is something you see over and over that games lead all other technologies and push boundaries that we then come in and get to fill, once it's easier to do. 
-
-Today's game experience leads to tomorrow experience. 
-
-If you want to see what apps of tomorrow is going on you should look at games today. 
-
-How they're using to expect interfaces to behave. 
-
-So ... 
-
-you can see a lot of other examples, I've given several, every time you use Google docks, you're now sharing virtual environment, this is what games have been doing for decades, now document services are starting to it to, and it's like a big deal. 
-
-So it's important for everybody to learn, of course, I'm not the first person to realize we can learn a lot from game developer, getting spammed by Fam.us, it's a gum engine that allows you the run apps on top of it. 
-
-Chucked the MVC framework and said we're going to build a crappy game engine, that's what people are running interesting interactive apps with great success. 
-
-This is my favorite example of how games and Annes are colliding at least in scheme, this is the architecture for doom 3, the important part is the second and third step, the second step, the scene IR, it builds the description of the seen, what you're look at, what you can see, what's in the frame, what's local your character, and fourth step is where it renders it, reverending something in 3 D costs a lot, which operations you chose to render are actually really important, they can make your frame rate faster or slow, in doom 3, they actually figure out exactly which operations they need to pass to the reverend before they render anything to make the application run as quickly as possible this is what I think is really Fucking school, reactjs works the same way, the architecture is identical, so instead of opening jail though the bottle next is the DOM, they build a scene, they do a full scene builder before they run to the DOM that way the scene builder can compute which DOM is faster to render, they're pulling ideas straight out of the world of game development. 
-
-So it's inevitable. 
-
-You're probably already using some of this stuff today, if you're not, I guarantee you will be, I think this is a great opportunity to become familiar with patterns that game developers have been using for decades, when you build your next App you can have them in your tool set that's the argument for using game techniques inside of apps, the other reason you might want to know about game Dev you might want to build a game, I have great news, there's never been a better time to build games with JavaScript, we have all the basic primitives we need in the form of web APIs to start competing toe to toe with real native experiences the gap thee between JavaScript is closing rapidly. 
-
-I'm really excited about this, so this begs the question:  Why isn't everybody doing this?  Some people are trying, some early pioneers, this is a gum called poly craft, really Polished 3 D game belt in JavaScript, you've probably seen cut the rope, probably one of the most well known HTML 5 game to date. 
-
-And the reason that there aren't many successful story s is that we lack familiarity, tooling and marketplace. 
-
-Game develops have a huge tool sets have familiarity with how game are built, and marketplace,e to ship things, we don't have any of these things, I can't address all of these, I'll provide a little familiarity to a group of JavaScripters who might be interested in build ago game one day. 
-
-We'll look at a couple of web game development techniques, we're going to look at it specifically in JavaScript, all of these techniques can be applied to apps, it takes a little bit more creativity to did that, they can push things forward. 
-
-So,the first part earn to look at when ever you're ‑‑ pattern to look at is the game loop this is basic core fundamental behind any game since video games were a thing. 
-
-This is sort of code that you probably would not get through code review at most shops, right, it's a wild loop that never stops, has some conditionals in it, and you're just doing everything in this waterfall pattern, but this is what's powering every game you've ever used. 
-
-And the reason for that is because it makes time explicit,right, the issue with traditional event‑based architecture that we're using in games now, you have an event, a click event, it triggers some kind of re"A," you closed a window or moved to the next screen, the time is implicit in that, an event happened and then you give a response, you know the response happened after the vent, you never elevate time to a first class citizen, you never measure time to the point where you can put so it a variable, and that's what a game loop gives you, it lets you measure time between different iter rations of the loop and store time into a variable. 
-
-The other thing that it lets you the is keep moving without user input, you're just responding strengths, you're deopinion didn't entirely on the user to push your game forward and push any elements on the game forward and with the game loop you can respond to time and send it to user so you don't just have are too have aen an action and reaction pattern, I have two demos that will illustrate this. 
-
-So let's go here. 
-
-So, this is a version of a small simple game I hope it doesn't blow anybody's Ears. 
-
-So this is a game that only runs, there's no loop here, just listening to my input and responding to the input. 
-
-If I start pressing keys, it will start dog things, and I can move and and I can jump and whatever. 
-
-But then, as soon as I stop, nothing happens, I could be in the middle of a jump, and it's just there, so trying to build a game, using MVC, if we try to use backbone, this is basically what would happen, this is ‑‑ you're entirely dependent on the user for everything in this environment, right, so as soon as the user ... 
-
-stops doing anything, your game is sort of pointless, right, and this is not just true with games, this is true with anything that requires physics and motions beyond something that you're responding to, when you see a bounce effect or nice physical scroll, flick an icon, it has the same problem so that's without an vent loop F you go with an vent loop, this is exactly the same game, but it's just going to keep running no matter what, I can stop doing anything and everything still works, I'll still fall, the environment is still going to be alive, right, this is one hundred percent due to the vent loop, there's no other difference between the two games, I copied and pasted it. 
-
-That's how important an vent loop is to rich interactive dynamic applications. 
-
-So, let me kill that so the music stops. 
-
-And then ... 
-
-cool. 
-
-So once you've got a game loop you quickly run into a problem, the problem is you're starting to pack all the log bog the one game. 
-
-Once you have more than one or two different entities you're trying up to date with time, they start to get conflated, you have enormous thousand line loop and you don't know where anything is. 
-
-In almost every game that's ever been created, there's an update pattern, this is where you make your game entities or even just your graphical entities autonomous, you teach them how to handle their own changes through time. 
-
-Right, and you can see here, it's just an anywheretional pattern, not doing anything differently, organizing it in a sane way. 
-
-And this is important because that way your player can know how to walk and how far he needs to walk depending on how much time has passed. 
-
-Clouds can move with the wind and when you flicke flick an icon, it knowtion how to keep sliding across the screen without any sort of direction from the main game loop. 
-
-We all know the decoupling is a good idea, this is one of the primary ways that decouping is done in games that have to do with time and not just the user. 
-
-The other cool thing is like a light form of deopinion den say injection, you don't have to pass time to these things, you can pass other arguments they may depend on. 
-
-And the final thing that you need to know if you're going to ship a game tomorrow, you need to understand what a time buffer is, a time buffer is an extension to the traditional game loop and update cycles and what it does is instead of treating time in each loop as an individual entity what you respond, to every time you get a new instance to a loop, add time to a buffer, keep packing into a buffer, when the buffer over flows a certain amount, which is your frame time, you render a frame, keep adding to the buffer, when ever the buffer is bigger than a certain set amount that you decided on initially you reverend a frame and clear that time out of the buffer. 
-
-This sounds like you might be overcomplicating things, you a game loop that will let you process time, this is important for a couple key reason, it keeps physic models stable, most physical integration methods like the one when you see on your iPhone to 3 D video game will start the feel weird and woning I can, reverending at different time intervals, sometimes you're not moving it far enough. 
-
-Important for anything that has physics involved, it decoupings, simulating and reverending, this is critical you want the use request animation frame, anything that you want to be responsive on the web,with the request animation frame,you know browsers are ready to rerender the DOM, that might happen at 30 frames per second on one machine and 60 on another, you want them to simulate the exact same thing at the exact same speed A time buffer will let you do that, the same amount of time, over and over and over and the output, the result of both machines will be the same, even if they render different number of frames, this is kind of hard to explain, so, I've put together a little demo of it. 
-
-One of the projects I worked on is called Newton, it's a physic engine no one should use because I wrote it to learn how it works. 
-
-You replicate time‑based behavior that's what a time buffer allows you the do, no matter how p times I rerun the same simulation it will happen the exact same way every time, you can run automated tests, this is important when you want to use game technique s is an App, you want to use automated tests in an App. 
-
-Let me open up this example this is Newton, it's a little embarrassing because what I was try dog in this particular version of Newton was just to make a stable box, like that was the whole goal. 
-
-Literally make a box that doesn't implode on itself, this was version 500 of that attempt because I really suck at math what kind of sucks but what's also cool is that when it first starts the box seems to be able, then something happens it to, favorite bug I ever created in any software ever. 
-
-Here we go I'm going to refresh it if the interin the works. 
-
-(Laughing) I couldn't build this if you asked me to, right. 
-
-(Anews) that's the crazy part, it becomes a abortion, it stabilize, it will never do that again. 
-
-Trust me, I've tried, it'll keep on bouncing back and forth, back and forth. 
-
-What's really cool about, this because it's using a time buffer, I can refresh this as many times as I want and every single time it will behave exactly same way. 
-
-No different, right, you can compare the different frames they would be identical. 
-
-And it doesn't matter what computer, you can put it on an iPhone, and put next to a computer, it will run at exact same speed, this is a combination of the game loop ‑‑ it allows me to reproduce a bug, I love this bug. 
-
-So I don't want to group too long, let's put a little bit of this together. 
-
-The game I put together, the one that looks like a Shiy version of mine craft, this is an vent loop, I copied and pasted it. 
-
-Not come plait, full published game, you can finish it, it has music, audio, upgrades, but like this is the full vent loop. 
-
-So, it can keep things like tight and simple, one of the nicest things I think about an vent loop is after building all sorts of backbones, spaghetti apps over the years, I love that an event loop, lexically encode shows you what you're doing over and over and over, it really highlights the hot spots in your code for you, if something is goening wrong or slow, it's because of something deep inside of your vent loop. 
-
-You can see the game loop, the time buffer, and update method working together. 
-
-The whole function is the loop, this frame is called over and over and over with a request animation frame. 
-
-That time buffer is just a bit at the top, a clock system that they just impresents a time buffer, does what it says, adds time to it, over flows a certain amount, extracts that amount out, over and over and over, nothing special. 
-
-You see a bunch of update method, updating the control, the player, it's updating the music. 
-
-And, like, that's the whole thing, that's all you really need make a game. 
-
-And so, where do you go next?  I obviously just showed you the very basics of building a game, I hope some of you guys will go home and join one of the 48 hour competition and try throwing something together . 
-
-These are some really good resources if I was going to put a game together with JavaScript, they're simple, short, mature, fun, well documented, right, that you can rely on the build things like 2 D graphics, 3 D graphics, physics you can use my Heroku, to build some really awesome multiplayer stuff. 
-
-If you want to talk about any of this Nerdy stuff,  Hunter at Heroku.com, thank you (applause) from
->> If you have questions, it'll be at our booth where every one was having breakfast,
+(through 3:45)
