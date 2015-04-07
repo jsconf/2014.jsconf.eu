@@ -78,4 +78,30 @@ Certainly I can't address all of these today. What I'm going to try to do is pro
 
 So with that, we're going to start looking at a couple of very basic game dev techniques. These are things that you're going to use any time you're going to build a game in any language. We're going to look at it specifically in JS. All of these techniques can also be applied to apps these days, which is really neat. It usually takes a little more creativity to do that, but they can push things forward.
 
-11:40
+The first pattern to look at whenever you're getting into game development is the game loop. This is the basic, fundamental, core idea behind any game that's ever been written since videogames were a thing.
+
+This is the sort of code that you probably wouldn't get through code review at most shops. It's just while loop that never stops and it's got some conditionals in it and you're doing everything in a waterfall pattern. But this is what's powering every game that you've ever used.
+
+The reason for that is because it makes time explicit. The issue with traditional, event-based architectures that we're all using in our apps now, where you have an event like a click event and that event triggers some sort of reaction like maybe you close a window or you move to the next screen, is that time is implicit in that. An event happened, and then you gave a response.
+
+So you know that the response happened after the event, but you never elevate time to a first-class citizen. You never measure time to the point where you could put it into a variable. That's what a game loop gives you. It lets you measure time between different iterations of your loop and store time into a variable.
+
+The other thing that it lets you do is keep moving without user input. If you don't have a game loop, if you're just responding to events, then you're dependent entirely on the user to push your game forward and to push any elements on the screen forward.
+
+With a game loop, you can respond to time instead of to the user. You don't just have to have and action-and-reaction sort of pattern. I have two demos that I hope will work to illustrate this.
+
+This is a version of a small, simple game -- and I hope it doesn't blow anybody's ears, let's go a little quieter -- a small, simple game without an event loop. This is a game that only runs -- there's no loop here -- it's just listening to my input and it's responding to the input. So if I start pressing keys, then it'll start doing things. I can move around and I can jump and whatever. But then as soon as I stop, nothing happens.
+
+So I could be in the middle of a jump and it's just there. If you tried to build a game using MVC -- if you tried to use Backbone to build a game -- this is basically what would happen. You're entirely dependent on the user for everything in this environment. So as soon as the user stops doing anything, your game is sort of pointless.
+
+This is not just true with games. This is also true with anything that requires physics and motion beyond something that you're responding to. Anytime you see a bounce effect or a nice physical scroller. When you flick an icon and it moves with momentum. It's got the same problem.
+
+That's without an event loop.
+
+If you go with an event loop -- this is the exact same game -- it's going to keep running no matter what. I can stop doing anything and everything still works. I'll still fall, everything still behaves, the environment's still going to be alive. And this is 100% due to the event loop: there is literally no other difference between these two games. I copied and pasted.
+
+That's how important an event loop is to rich, interactive, dynamic applications.
+
+Let me kill that so the music stops...
+
+15:27
