@@ -28,4 +28,24 @@ I'm really excited about this and I think this is going to keep on accelerating.
 
 I wanted to highlight that because this is the basis for the talk, and I'm not an expert. I just play with things at night. I am an expert at Node and running production Node apps, but this is my hobby. I'm not a game developer by trade, but I love this stuff and I think more of us are going to become game developers by trade over the next few years. And even if not, it's fun to learn and it's something I think everybody should try at least once.
 
-(through 3:45)
+So first, why should JS developers even care about what game developers do? It seems like we're worlds apart. They write things in C++ while we write in an interpreted language, they're writing on bare metal while we're trapped in a browsers, they're concerned with "players" while we're concerned with "users", so it doesn't seem like there's a whole lot of overlap here.
+
+To answer that question, let me take you way, way back to 2008. That was when jQuery was also still new and popular with everybody.
+
+And this is Google Maps in 2008. As usual, Google was pushing the limits of JS, so this was a cutting-edge app. But from our current perspective you can see that it was just a little bit better than MapQuest. It's still two-dimensional, it's still very simple, there's not a lot of interactivity here.
+
+Now here's 2008's Grand Theft Auto. It's the exact same year, but a very different piece of software. Instead of a 2D, top-down camera, you got a 3D moving camera, you have full textures and full shadows and even the geometric detail on the buildings is sort of incredible. It's a far cry from the Google Maps of the same era.
+
+But 4 years later, Google released an update to Google Maps. In this new version, you have the 3D textures, the geometric details, the dynamic shadows.
+
+And that brings me to the questions: if you had to put money on which of these three apps is most similar -- which two of them have the most-similar architectures -- which would you bet on? My money would be on [the last] two.
+
+Even thought it's the same app, the Google Maps of 2013 is a lot closer to the video game Grand Theft Auto of 2008 than it is to its predecessor.
+
+Similarly, in 2004 Nintendo's DSTouch was a big hit. Early developers for the platform pioneered what touch could do on as a core interaction element.
+
+Then in 2007, Apple's iPod Touch was also a big hit. Apple is clearly responsible for the fact that nobody younger than me even knows how to use a screen that you can't touch and drag things on. But even though Apple is responsible for making it ubiquitous, touch was really pioneered in the games industry.
+
+Do any of you remember Moon Patrol? Really? All right! Congratulations, because I was one year old when this game came out, so I don't remember Moon Patrol. But according to Wikipedia it was the game that pioneered parallax. As you moved the backgrounds scrolled at different speeds relative to each other to give you the illusion of depth.
+
+6:43
