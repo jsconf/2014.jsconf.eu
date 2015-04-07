@@ -14,7 +14,7 @@ There's actually a really interesting talk later today about how Toyota Europe i
 
 I've gotten a unique insight into how people are building JavaScript apps these days, because I see so many of them every day.
 
-And that's my day job.
+That's my day job.
 
 At night, I work in a less-serious way. I work on something I like to call "Playful JS". It's JS that doesn't really have a purpose or a point. It's JS techniques that aren't going to help you pass questions when you're interviewing for a job. It's nothing people teach at a university.
 
@@ -28,17 +28,17 @@ I'm really excited about this and I think this is going to keep on accelerating.
 
 I wanted to highlight that because this is the basis for the talk, and I'm not an expert. I just play with things at night. I am an expert at Node and running production Node apps, but this is my hobby. I'm not a game developer by trade, but I love this stuff and I think more of us are going to become game developers by trade over the next few years. And even if not, it's fun to learn and it's something I think everybody should try at least once.
 
-So first, why should JS developers even care about what game developers do? It seems like we're worlds apart. They write things in C++ while we write in an interpreted language, they're writing on bare metal while we're trapped in a browsers, they're concerned with "players" while we're concerned with "users", so it doesn't seem like there's a whole lot of overlap here.
+So first, why should JS developers even care about what game developers do? It seems like we're worlds apart. They write things in C++ while we write in an interpreted language, they're writing on bare metal while we're trapped in a browser, they're concerned with "players" while we're concerned with "users", so it doesn't seem like there's a whole lot of overlap here.
 
 To answer that question, let me take you way, way back to 2008. That was when jQuery was also still new and popular with everybody.
 
 And this is Google Maps in 2008. As usual, Google was pushing the limits of JS, so this was a cutting-edge app. But from our current perspective you can see that it was just a little bit better than MapQuest. It's still two-dimensional, it's still very simple, there's not a lot of interactivity here.
 
-Now here's 2008's Grand Theft Auto. It's the exact same year, but a very different piece of software. Instead of a 2D, top-down camera, you got a 3D moving camera, you have full textures and full shadows and even the geometric detail on the buildings is sort of incredible. It's a far cry from the Google Maps of the same era.
+Now here's 2008's Grand Theft Auto. It's the exact same year, but a very different piece of software. Instead of a 2D, top-down camera, you've got a 3D moving camera, you have full textures and full shadows and even the geometric detail on the buildings is sort of incredible. It's a far cry from the Google Maps of the same era.
 
 But 4 years later, Google released an update to Google Maps. In this new version, you have the 3D textures, the geometric details, the dynamic shadows.
 
-And that brings me to the questions: if you had to put money on which of these three apps is most similar -- which two of them have the most-similar architectures -- which would you bet on? My money would be on [the last] two.
+And that brings me to the question: if you had to put money on which of these three apps are most similar -- which two of them have the most-similar architectures -- which would you bet on? My money would be on [the last] two.
 
 Even thought it's the same app, the Google Maps of 2013 is a lot closer to the video game Grand Theft Auto of 2008 than it is to its predecessor.
 
@@ -50,13 +50,13 @@ Do any of you remember Moon Patrol? Really? All right! Congratulations, because 
 
 This was the first game -- at least according to Wikipedia -- to use that, and now you can't go anywhere without seeing parallax on some website. You can't throw a stone without hitting somebody who stuck parallax on their site. Sometimes for good, sometimes for bad... You know who you are.
 
-I think it's incredible that something that became prevalent decades ago in games is just now gaining popularity in the web. And this is a trend that we see over and over and over: that games lead all other technologies and push boundaries that we then come in and get to fill, once it's easier to do.
+I think it's incredible that something that became prevalent decades ago in games is just now gaining popularity in the web. And this is a trend that we see over and over and over: games lead all other technologies and push boundaries that we then come in and get to fill, once it's easier to do.
 
 Today's game experience leads to tomorrow's app experience. And this is important, because if you want to know how to build the apps of tomorrow, you should be looking at what games of today are doing, and how they're working. What kinds of technologies they're employing and how they're training users to expect user interfaces to behave.
 
-You can see a lot of other examples. I've given several. But every time you use Google Docs, you're now sharing an interactive, virtual environment with other users, and this is something games have been doing for decades. Now document services are starting to do it, and it's a big deal. It's important for everybody to learn.
+You can see a lot of other examples. I've given several. But every time you use Google Docs, you're now sharing an interactive, virtual environment with other users, and this is something games have been doing for decades. Now document services are starting to do it and it's a big deal. It's important for everybody to learn.
 
-I'm not the first person to realize that we can learn a lot from game developers. If any of you have been getting spammed by Famo.us like I have, you know all about it. It's basically a game engine that allows you to run apps on top of it. They just chucked all the regular MVC framework stuff out the window and said "We're going to build a..." I think they called it a "crappy game engine". And that's what people are running really interesting, interactive apps on top of with great success.
+I'm not the first person to realize that we can learn a lot from game developers. If any of you have been getting spammed by Famo.us like I have, you know all about it. It's basically a game engine that allows you to run apps on top of it. They just chucked all the regular MVC framework stuff out the window and said "We're going to build a--" I think they called it a "crappy game engine". And that's what people are running really interesting, interactive apps on top of with great success.
 
 This is my favorite example of how games and apps are colliding, at least in JS. This is the architecture for Doom 3.
 
@@ -64,7 +64,7 @@ The important part is actually the 2nd and 3rd step. The 2nd step is where Doom 
 
 And this is what I think is really fun and cool. React.js -- the library that you guys might have seen from Facebook -- works exactly the same way. The architecture is identical. Instead of OpenGL, their bottleneck is the DOM. So they build sort of a scene -- like a full scene-builder -- before they write to the DOM. That way their scene-builder can compute exactly which DOM operations would be fastest to render. So they're pulling ideas straight out of the world of game development.
 
-So it's inevitable. You're probably already using some of this stuff today, and if you're not then I guarantee you will be. So I think that this is a great opportunity to become familiar with some of the patterns that game developers have been using for decades. When you're building your next app, you can at least have them in your toolset.
+It's inevitable. You're probably already using some of this stuff today, and if you're not then I guarantee you will be. So I think that this is a great opportunity to become familiar with some of the patterns that game developers have been using for decades. When you're building your next app, you can at least have them in your toolset.
 
 That's the argument for using game techniques inside of apps, but of course the other reason you might want to know about game dev is because you just want to build a game in JS. And I've got great news for you: there's never been a better time to build games with JS. Finally we have all the basic primitives we need in the form of web APIs in order to start competing toe-to-toe with real native experiences. The gap between JS and native capabilities is closing rapidly. I'm really excited by this.
 
@@ -80,21 +80,21 @@ So with that, we're going to start looking at a couple of very basic game dev te
 
 The first pattern to look at whenever you're getting into game development is the game loop. This is the basic, fundamental, core idea behind any game that's ever been written since videogames were a thing.
 
-This is the sort of code that you probably wouldn't get through code review at most shops. It's just while loop that never stops and it's got some conditionals in it and you're doing everything in a waterfall pattern. But this is what's powering every game that you've ever used.
+This is the sort of code that you probably wouldn't get through code review at most shops. It's just a while loop that never stops and it's got some conditionals in it and you're doing everything in a waterfall pattern. But this is what's powering every game that you've ever used.
 
-The reason for that is because it makes time explicit. The issue with traditional, event-based architectures that we're all using in our apps now, where you have an event like a click event and that event triggers some sort of reaction like maybe you close a window or you move to the next screen, is that time is implicit in that. An event happened, and then you gave a response.
+The reason for that is because it makes time explicit. The issue with traditional, event-based architectures that we're all using in our apps now, where you have an event like a click event and that event triggers some sort of reaction like maybe you close a window or you move to the next screen, is that time is implicit in that. An event happened, then you gave a response.
 
-So you know that the response happened after the event, but you never elevate time to a first-class citizen. You never measure time to the point where you could put it into a variable. That's what a game loop gives you. It lets you measure time between different iterations of your loop and store time into a variable.
+So you know that the response happened after the event, but you never elevate time to a first-class citizen. You never measure time to the point where you could put it into a variable. That's what a game loop gives you. It lets you measure time between different iterations of your loop and store time in a variable.
 
 The other thing that it lets you do is keep moving without user input. If you don't have a game loop, if you're just responding to events, then you're dependent entirely on the user to push your game forward and to push any elements on the screen forward.
 
-With a game loop, you can respond to time instead of to the user. You don't just have to have and action-and-reaction sort of pattern. I have two demos that I hope will work to illustrate this.
+With a game loop, you can respond to time instead of to the user. You don't just have to have an action-and-reaction sort of pattern. I have two demos that I hope will work to illustrate this.
 
 This is a version of a small, simple game -- and I hope it doesn't blow anybody's ears, let's go a little quieter -- a small, simple game without an event loop. This is a game that only runs -- there's no loop here -- it's just listening to my input and it's responding to the input. So if I start pressing keys, then it'll start doing things. I can move around and I can jump and whatever. But then as soon as I stop, nothing happens.
 
 So I could be in the middle of a jump and it's just there. If you tried to build a game using MVC -- if you tried to use Backbone to build a game -- this is basically what would happen. You're entirely dependent on the user for everything in this environment. So as soon as the user stops doing anything, your game is sort of pointless.
 
-This is not just true with games. This is also true with anything that requires physics and motion beyond something that you're responding to. Anytime you see a bounce effect or a nice physical scroller. When you flick an icon and it moves with momentum. It's got the same problem.
+This is not just true with games. This is also true with anything that requires physics and motion beyond something that you're responding to: anytime you see a bounce effect or a nice physical scroller. When you flick an icon and it moves with momentum, it's got the same problem.
 
 That's without an event loop.
 
@@ -146,4 +146,28 @@ That's the crazy part. It becomes a box. It stabilizes. It will never do that ag
 
 What's really cool about this is the because it's using a time buffer I can refresh this as many times as I want and every single time it will behave exactly the same way. There will be no difference. You can compare the different frames and they would be identical.
 
-21:01
+It doesn't matter what computer I ran it on. You can run this on an iPhone and you can put it beside a computer and it'll run at the exact same speed. This is due to the combination of game loop and the time buffer.
+
+In this case it lets me reproduce a bug, but it does other more useful things. I just love this bug.
+
+Let's put a little of this together. That game that I showed you earlier -- the one that looks like a really shitty version of Minecraft -- this is the event loop for that game. I copied and pasted it straight out. It's not complicated. That's a full, published game. You can finish it, it has music and audio and upgrades and everything, but this is the full event loop.
+
+It can keep things tight and simple. One of the nicest things about an event loop is after building all sorts of Backbone spaghetti apps over the years, I love that an event loop lexically in code shows you what you're doing over and over and over. It really highlights the hotspots in your code for you. Usually if something's going wrong or going slow it's because of something deep inside of your event loop.
+
+Here you can see the game loop, the time buffer and the update method all working together. The whole function is the loop. This frame is just called over and over and over with a requestAnimationFrame.
+
+That time buffer is the bit at the top. I wrote a little clock system that implements a time buffer and does what I said: adds time to it, and whenever it overflows a certain amount, it extracts that amount out, over and over and over. Nothing special.
+
+Then you see a bunch of update methods. It's updating controls, it's updating the player, it's updating the music.
+
+That's the whole thing! That all you really need to make a game.
+
+Where do you go next? I showed you the very, very basics of building a game, but I hope some of you guys will go home and join one of these 48-hour competitions and try throwing something together.
+
+These are some really good resources. If I was going to put together any game right now with JS, these are the things that are simple, short, mature, fun, well-documented that you can rely on to build 2D graphics, 3D graphics and physics.
+
+You can use my company -- Heroku -- and the ws module in Node to build really awesome multi-player stuff.
+
+If you ever want to talk about any of this nerdy videogame stuff with me, I'm @hunterloftis on Twitter, I'm hunter@heroku.com and I really appreciate everybody getting up this morning to come listen to all this game-nerd stuff.
+
+Thank you.
