@@ -64,4 +64,18 @@ The important part is actually the 2nd and 3rd step. The 2nd step is where Doom 
 
 And this is what I think is really fun and cool. React.js -- the library that you guys might have seen from Facebook -- works exactly the same way. The architecture is identical. Instead of OpenGL, their bottleneck is the DOM. So they build sort of a scene -- like a full scene-builder -- before they write to the DOM. That way their scene-builder can compute exactly which DOM operations would be fastest to render. So they're pulling ideas straight out of the world of game development.
 
-9:44
+So it's inevitable. You're probably already using some of this stuff today, and if you're not then I guarantee you will be. So I think that this is a great opportunity to become familiar with some of the patterns that game developers have been using for decades. When you're building your next app, you can at least have them in your toolset.
+
+That's the argument for using game techniques inside of apps, but of course the other reason you might want to know about game dev is because you just want to build a game in JS. And I've got great news for you: there's never been a better time to build games with JS. Finally we have all the basic primitives we need in the form of web APIs in order to start competing toe-to-toe with real native experiences. The gap between JS and native capabilities is closing rapidly. I'm really excited by this.
+
+So that begs the question: why isn't everybody doing this?
+
+Some people are trying. Some early pioneers are getting out there. This is a game called Polycraft. It's a really polished, 3D game built in JS. And you've probably seen Cut the Rope, which is probably the most well-known HTML5 game to date. There's not a whole lot of examples and there's not a whole lot of success stories. The reason is that we lack familiarity, tooling and a marketplace.
+
+Game developers have a huge toolset and they have a familiarity with how games are built. They also have marketplaces with which to ship games. We don't have any of these things.
+
+Certainly I can't address all of these today. What I'm going to try to do is provide a little bit of familiarity to JS developers that might be interested in building a game someday.
+
+So with that, we're going to start looking at a couple of very basic game dev techniques. These are things that you're going to use any time you're going to build a game in any language. We're going to look at it specifically in JS. All of these techniques can also be applied to apps these days, which is really neat. It usually takes a little more creativity to do that, but they can push things forward.
+
+11:40
