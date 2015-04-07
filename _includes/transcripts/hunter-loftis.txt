@@ -102,6 +102,48 @@ If you go with an event loop -- this is the exact same game -- it's going to kee
 
 That's how important an event loop is to rich, interactive, dynamic applications.
 
-Let me kill that so the music stops...
+Let me kill that so the music stops... Cool.
 
-15:27
+Once you've got a game loop, you quickly run into a problem. You're starting to pack all the logic for your game into this one loop. You can imagine how that gets really hairy. Once you have more than one or two entities that you're trying to update with time, they start to get conflated. You've got this enormous, thousand-line loop and you don't know where anything is.
+
+In almost every game that's ever been created, there's an update pattern. This is where you make your game entities -- or even just your graphical entities -- autonomous. You teach them how to handle their own changes through time.
+
+You can see it's just an organizational pattern. You're not really doing anything differently, you're just organizing it in a sane way.
+
+This is important because that way your player can know how to walk and how far he needs to walk depending on how much time needs to pass. Your clouds can move with the wind. When you flick an icon, that icon knows how to keep sliding across the screen without any sort of direction from the main game loop.
+
+We all know that decoupling is a good idea, and this is one of the primary ways decoupling is done in games that have to respond to time and not just to the user.
+
+The other cool thing about it is that it's sort of a light form of dependency injection because you don't have to just pass time to these things, you can also pass other arguments that they may depend on.
+
+The final thing that you need to know if you're going to ship a game tomorrow is you need to understand what a time buffer is. A time buffer is an extension to the traditional game loop and update cycles. Instead of treating time in each loop as an individual entity that you respond to, every time you get a new instance of the loop you add time to a buffer. Whenever that buffer overflows by a certain amount -- which is your frame time -- you render a frame. You keep on adding to the buffer and whenever the buffer's bigger than a certain set amount that you decided on initially, you render a frame and you clear that time out of the buffer.
+
+This sounds like you might be over-complicating things, because you've already got a game loop that will let you process time. But this is important for a couple key reasons.
+
+The first is that it keeps physics models stable. If you don't do this, most physical integration methods -- from the ones you see on your iPhone when you pull down the drawer to the ones that you see in a 3D video game -- will start to feel weird and wonky because they're rendering at different time intervals. Sometimes you're moving a character really far and sometimes you're not moving it far enough. It's really important for anything that has physics involved.
+
+It's also important because it decouples simulating and rendering. This is critical for JS developers, because you're going to want to use requestAnimationFrame any time you're building anything you want to be responsive on the web. With requestAnimationFrame, you know that the browser's ready to re-render the DOM, but that might happen at 30 frames per second on one machine and 60 on another. You want those machines to simulate the exact same thing at the exact same speed. A time buffer will allow you to do this. A time buffer will make sure that both of those machines call the update method with the same amount of time, over and over and over. The output of both machines will be the same, even if they render a different number of frames.
+
+This is kind of hard to explain, so I've put together a little demo of it.
+
+One of the stupid side-projects I work on is called "Newton" and it's a physics engine that noone should ever use, because I wrote it to learn how physics engines work. One of the things that I discovered was that it's really cool when you can replicate time-based behavior. That's what a time buffer allows you to do. No matter how many times I re-run the same physical simulation, it'll happen the exact same way every time, so you can write automated tests about it. This is really important when you're trying to use game techniques in an app, because you obviously want to write automated tests for your app.
+
+Let me open up this example...
+
+This is Newton. It's a little embarrassing, because what I was trying to do in this particular version was just to make a stable box. That was the whole goal. Literally just make a box that doesn't implode on itself. This was like version 500 of that attempt because I really suck at math.
+
+What sucks but is also cool is that when it first starts, the box seems to be stable, but then something happens to it. It's my favorite bug that I've ever created in any software ever.
+
+Here we go. I'm going to refresh it and you'll see what happens. If the Internet works. OK, watch...
+
+[audience laughter]
+
+I'm in a cafe thinking "what the hell?" I couldn't build this if you asked me to.
+
+[applause]
+
+That's the crazy part. It becomes a box. It stabilizes. It will never do that again, ever. You can run it as long as you want: trust me, I've tried. Back and forth, back and forth.
+
+What's really cool about this is the because it's using a time buffer I can refresh this as many times as I want and every single time it will behave exactly the same way. There will be no difference. You can compare the different frames and they would be identical.
+
+21:01
