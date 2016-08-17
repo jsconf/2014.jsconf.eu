@@ -84,13 +84,13 @@ So, I attended this wonderful conference and was back to my unemployed life. I h
 
 After that everything went downhill. I don't know how much you have tried to do completely on your own, but it is not easy. After that it became a big struggle.
 
-Luckily at the same time I met another guy, named Franks, who also quit his job. We had these really symbiotic interests, where he was interested in learning more about teaching, I was interested in learning more about programming and those were both our respective careers, so we teamed up.
+Luckily at the same time I met another guy, named Fronx, who also quit his job. We had these really symbiotic interests, where he was interested in learning more about teaching, I was interested in learning more about programming and those were both our respective careers, so we teamed up.
 
 He became a real huge mentor for me. He would hang out with me and pair program. He would whip up a gist and explain a concept if I was getting trouble getting it and we weren't together.
 
 He wrote homework assignments for me. He really pushed my learning forward and helped me to have somebody to rely on. Somebody I could trust and ask questions and help me improve and expand my knowledge.
 
-Soon after this -- because relying on Franks wouldn't have been enough -- I found about a program that was being piloted in Berlin called Hackership.
+Soon after this -- because relying on Fronx wouldn't have been enough -- I found about a program that was being piloted in Berlin called Hackership.
 
 It's based on the Hackerschool in New York, if you're familiar with that. It is a full time learning program for programmers of all levels of experience.
 
