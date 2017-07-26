@@ -3,7 +3,7 @@ layout: default
 tags: speaker
 title: Linino.IO - A Whole New Take – Federico Musto
 permalink: "/speakers/federico-musto-linino-io-a-whole-new-take.html"
-speaker: Federico Musto, Ph.D.
+speaker: Federico Musto
 talk: Linino.IO - A Whole New Take
 website: ""
 twitter: ""
