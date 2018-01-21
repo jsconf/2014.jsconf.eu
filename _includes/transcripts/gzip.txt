@@ -22,7 +22,7 @@ In some cases like logic compression it may be interesting to lose some informat
 
 For example in images, sounds, movies, they are more suitable to of use logic compression. 
 
-On the other hand text is usually compressed using a lossless method like him HTML file ‑‑ it's not magic, we have tools to determine how far we can go in come pressing data without loosing information or quantify much information is in a given message. 
+On the other hand text is usually compressed using a lossless method like him HTML file ‑‑ it's not magic, we have tools to determine how far we can go in compressing data without loosing information or quantify much information is in a given message. 
 
 And this is with information theory introduce by Claud etiane nonin 1948 in mathematical theory of communication ‑‑ his famous paper. 
 
@@ -51,7 +51,7 @@ While in the Desert of Arizona only 17 days, which is six percent.
 
 So information theory Entropy is closely related to probabilities, as you can see in the formula. 
 
-And while this is mostly theoretical our brains are already designed to come press data, we do it all the time. 
+And while this is mostly theoretical our brains are already designed to compress data, we do it all the time. 
 
 For example, we use multiconstruct to express complex information like feelings with just a couple of characters we can communicate that we're happy, we're sad, we are mocking you. 
 
@@ -75,11 +75,11 @@ For example in the English language, the Morse code character ‑‑ the most u
 
 So, what about data compression in web sites?  Okay, this is the normal flow, okay, the browser sends AEC request to a server to get the file for example index.HTML letting the server know that accept the zip content. 
 
-The sever then reads the file, come presses on the fly, usually, and sends it to the browser, okay, unless we con fight your the server to ‑‑ content, it does it on the fly. 
+The sever then reads the file, compresses on the fly, usually, and sends it to the browser, okay, unless we con fight your the server to ‑‑ content, it does it on the fly. 
 
 Finally, the browser deCOM presses the file also on the fly, again and gives the reader content. 
 
-We will see later having to compress and the compress on the fly requires to have a compressional algorithm that ise is fast to come press and fast to decompress in both direction. 
+We will see later having to compress and the compress on the fly requires to have a compressional algorithm that ise is fast to compress and fast to decompress in both direction. 
 
 Let's see how GZIP works internally. 
 
@@ -93,7 +93,7 @@ So, deplait is a combination of two algorithms, LZ 77 and Hufpmann coding.
 
 Let's see how they work. 
 
-LZ 77 is a losse lossless data compression, we get the original data once come pressed. 
+LZ 77 is a losse lossless data compression, we get the original data once compressed. 
 
 Which is a compression by replacing repeated occurrence of data with references, okay. 
 
@@ -111,7 +111,7 @@ To find matches, the algorithm keeps track of recently read data, of 232 kilobyt
 
 We refer sometimes LZ 77 as a sliding Al gosh rhythm. 
 
-Once come pressed we have three times of data in the compressed stream. 
+Once compressed we have three times of data in the compressed stream. 
 
 We have literals, which would be the characters that have not been replaced by references, we have lengths, the length of the match, and distances, the jump. 
 
@@ -137,7 +137,7 @@ So, we could do this and only use 19 bits instead of 33 to represent the message
 
 Okay, but there is a problem. 
 
-The come pressed stream is ambiguous. 
+The compressed stream is ambiguous. 
 
 These four bits could be, for example, HE, which is correct, A H which is 00 and E which is 01, but it could also be LHO, L 0, H 00 and of O 1. 
 
@@ -155,13 +155,13 @@ So, Huffman code is used using the compressed output we got from LC 77.
 
 One for literals and length and the second for distances. 
 
-So if we go out now to the GZIP file, not the algorithm, the format file, it come presses an input data in blocks, okay, each block is compressed separately. 
+So if we go out now to the GZIP file, not the algorithm, the format file, it compresses an input data in blocks, okay, each block is compressed separately. 
 
 And there are three modes of compression. 
 
 In mode one there is no compression at all. 
 
-It is just useful for data that is already come pressed or data that is totally random that cannot be come pressed. 
+It is just useful for data that is already compressed or data that is totally random that cannot be compressed. 
 
 Mode two uses some already generated Huffman codes using some statistical analysis which fits good enough for most data, and mode three generate those code tables taking into account the data of the block. 
 
@@ -181,19 +181,19 @@ In general 7 zip gets better compression ratio than GNU GZIP, for example Zopfli
 
 Okay, around five percent. 
 
-This is really useful if we want to come press, for example our JavaScript files or CSS files before deploying, okay, in the deployment process. 
+This is really useful if we want to compress, for example our JavaScript files or CSS files before deploying, okay, in the deployment process. 
 
-And then serve those the zip files instead of come pressing on the fly. 
+And then serve those the zip files instead of compressing on the fly. 
 
-As a general rule, more time, using more time, you get better compression ratios, so you need the find a trade off between doing it off line and up load the come pressed files or doing it on the fly. 
+As a general rule, more time, using more time, you get better compression ratios, so you need the find a trade off between doing it off line and up load the compressed files or doing it on the fly. 
 
 Why GZIP, it is the best compression method?  The answer is no. 
 
 There are many compression algorithms with better compression ratios than GZIP, so why are we still using GZIP?  Most of the time in computer science, there are trade offs. 
 
-GZIP provides good enough compression ratio between 2.5 and 3 for text and it is fast, it is fast to come press data and it is fast to deCOM press it. 
+GZIP provides good enough compression ratio between 2.5 and 3 for text and it is fast, it is fast to compress data and it is fast to deCOM press it. 
 
-As we usually can figure out come press responses on the fly, this is something to take into account. 
+As we usually can figure out compress responses on the fly, this is something to take into account. 
 
 In addition, even in the worse case, for example if the data is already compressed, expands the data just a little bit by only five bites by 32‑kilo bytes. 
 
