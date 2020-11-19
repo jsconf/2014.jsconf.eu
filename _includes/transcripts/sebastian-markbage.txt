@@ -3,7 +3,7 @@
 
 I'm Sebastian, that thing there is my last name.
 
-I live in California now, but, um, it's actually really nice to be back in Europe where Umlauds and accents are normal occurrences.
+I live in California now, but, um, it's actually really nice to be back in Europe where Umlauts and accents are normal occurrences.
 Sorry about voice, I think I'm allergic for bad APIs, that's why I'm like this.
 So I work for Facebook now, the React team. I'm not an evangelist, I just code stuff, I'm just some dude.
  I also represent Facebook on TC 39 on standards committee on ECMAScript.
@@ -15,7 +15,7 @@ Don't worry, the bad parts are not mine, they're someone else's.
 I guess a lot of people here have a favorite library.
 You there, what's your favorite library? nothing? React? that's a good call.
 (Laughing) do you guys use libraries for everything, like the same library, like utility library, like underscore in how many people use underscore?  Cool.
-JQuery?  Something like Angular High Level YUI?  Oooo ...
+jQuery?  Something like Angular High Level YUI?  Oooo ...
 sorry, guys (Laughing)
 
 Well, this is the great part about JavaScript, our community, if you look platforms like iOS, or Android or .Net that are proprietary, basically everyone tells you to do whatever the platform owner tells you that's right to do.
@@ -28,7 +28,7 @@ But do we really need this many ways to itterate on an Array?
 
 How many ways do we need to access DOM attributes.
 Do you even know all the concepts in Angular?
-You know all the APIs in Ember data (I dont'), do you know how many ways to filter an array just in underscore?
+You know all the APIs in Ember data (I don't), do you know how many ways to filter an array just in underscore?
 Is it same in lodash? I think it's the same in lodash depending on which version you use and what you opt in to.
 Do you even know all APIs in the standard JavaScript library?  What about ES6? 
 Job recruiters and job descriptions are looking for experience with specific libraries, and if you know the same concept under different name, you're actually not good enough, because like you're not going to get ramped up quick enough before the company pivots, right.
@@ -43,7 +43,7 @@ How streamlined?
 >   working with JS is hard
 
 JavaScript these days is really hard to learn.
-Imagine this is like the first day and you get dropped into the code based complicated weapon App, in the middle of the web App, first day you have no idea how it works how many calls in to JavaScript libraries do you see that you've never seen before.
+Imagine this is like the first day and you get dropped into the code based complicated web app, in the middle of the web app, first day you have no idea how it works how many calls in to JavaScript libraries do you see that you've never seen before.
 Imagine this is the life of thousands of your colleagues.
 
 > ##### _.each([], fn)
@@ -136,7 +136,7 @@ And by introducing divergence in the library community, we're actually undermini
 
 > ##### ES6 Polyfills and transpilers
 
-So back at Facebook we started building source trance filers for ES6 features, we invested a lot in ES6, we became very early adopters of the class syntax throughout our entire code base, we joined TC 39 to start working on ES7.
+So back at Facebook we started building source transpilers for ES6 features, we invested a lot in ES6, we became very early adopters of the class syntax throughout our entire code base, we joined TC 39 to start working on ES7.
 
 > ##### Slow and inconsistent native implementations
 > ##### :(
@@ -147,7 +147,7 @@ There are some problems with this technique though, there's some native function
 >   It's what makes JavaScript upgradable
 
 It's easy to solve, just monkey patch it, just ovewrite a native version with one that's faster, this is actually one of the strengths of JavaScript that you can actually do this.
-Sometimes, don't tell anyone, but you can actually use Shams as well that are not quite compatible just to get the extra little performance boost, just make sure you're continuously try to follow the standards as it's moving along and also try to not expose dependencies on non‑standard behavior.
+Sometimes, don't tell anyone, but you can actually use shims as well that are not quite compatible just to get the extra little performance boost, just make sure you're continuously try to follow the standards as it's moving along and also try to not expose dependencies on non‑standard behavior.
 
 > ##### Polyfilling compatibility problems
 
@@ -200,7 +200,7 @@ This can be really annoying to have all this repetitive code that looks ugly whe
 >      - Mark Slee
 
 Except, this process fundamentally has no end, ever.
-We're simply never going to realize state of software nirvana where everything is supremely satisfying.
+We're simply never going to realize a state of software nirvana where everything is supremely satisfying.
 And that's an important emotional realization.
 This was an early quote from an early Facebooker, but to put it another way, you're not going to find a perfect library API, you have good looking code now will look bad in a year, and you or someone else will have to go upgrade it.
 You might not remember what abstraction you found that was cool, today.
@@ -275,7 +275,7 @@ There are apparently 25 methods to work with attributes alone, you can also acce
 > ##### ~~jQuery~~
 
 
-That's still no reason to use a jQuery, the browser inconsistencies could be poly filled and the rest is just basically adding some sugar.
+That's still no reason to use a jQuery, the browser inconsistencies could be polyfilled and the rest is just basically adding some sugar.
 It's not solving the actual structural problem and the complexities of managing a DOM, the living DOM, and that thing is the think that leads to bugs.
 
 > ##### Angular and Ember
