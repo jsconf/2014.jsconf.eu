@@ -351,7 +351,7 @@ If but it speaks to the idea that saving a little bit of typing is actually not 
 > ##### Implicit -> Explicit
 > #####      is hard
 
-It's much easier to recover from an explicit API by adding some sugar than to undo an explicit API.
+It's much easier to recover from an explicit API by adding some sugar than to undo an existing implicit API.
 And we take new abstractions in React very, very seriously, while you have to live with a little bit of boilerplate in certain cases, you know that you and your archetecture will probably understand and be able torefactor your code in the future much easier.
 
 > ##### React.createClass
