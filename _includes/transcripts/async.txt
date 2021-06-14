@@ -1,12 +1,12 @@
-Welcome to my talk on Async and streaming JavaScript, are we doing it wrong. 
+Welcome to my talk on Async and streaming JavaScript, are we doing it wrong?
 
-Of course the answer is always going to be yes, otherwise why am I standing on stage here, what better picture than to know John McCarthy telling us we're exactly doing programming wrong. 
+Of course the answer is always going to be "yes", otherwise why am I standing on stage here, what better picture than to know John McCarthy telling us we're exactly doing programming wrong. 
 
-So before I get started I actually want to thank the organizers very much, because, of course, this is my first time speaking here, but I've been coming here since 2010 and without a conference such as this things like no J S on windows might not have happened or might not have happened as quickly as it did. 
+So before I get started I actually want to thank the organizers very much, because, of course, this is my first time speaking here, but I've been coming here since 2010 and without a conference such as this things like Node JS on windows might not have happened or might not have happened as quickly as it did. 
 
 It's with this very conference that it's really amazing stuff to me. 
 
-So, what I'm talking about Async or Async or vent‑based programs, I think to myself, I thought I had a problem, I know, I'll solve it with call backs and events. 
+So, what I'm talking about async or async or event‑based programs, I think to myself, I thought I had a problem, I know, I'll solve it with call backs and events. 
 
 Now have I problems, two I, yeah ... 
 
@@ -14,11 +14,11 @@ crap! Yeah.
 
 The con currency bugs, been bugging me since I started doing JavaScript. 
 
-What this talk will not be it will not be a Monad tutorial, no mention of category theory, it doesn't require you to know much about functional programming to really get started. 
+What this talk will not be it will not be a monad tutorial, no mention of category theory, it doesn't require you to know much about functional programming to really get started. 
 
-To learning new abstractions for asink nows programming. 
+To learning new abstractions for asynchronous programming. 
 
-So, ‑‑ Asyncous programming, no they're not like Burritos or any other way you can think of to describe Monads. 
+So, asynchronous programming, no they're not like Burritos or any other way you can think of to describe Monads. 
 
 I'm a software engineer, self described Open Sourcerer, you can find me on Twitter and GitHub, using the same tag, I'm fairly unoriginal that way. 
 
@@ -28,9 +28,9 @@ And I work for this small start up out of the Seattle Washington area.
 
 And I like to think of myself as putting a little bit of metal back in Microsoft. 
 
-Add Umlauds to anything automatically turns it into metal. 
+Add umlauts to anything automatically turns it into metal. 
 
- I worked on a project called the reactive extensions, I've been working on this since 120, the idea behind the reactive extensions is really to create a nice programming language agnostic way of dealing with Asyncous programming, and I am an Rx pusher. 
+ I worked on a project called the reactive extensions, I've been working on this since 2010, the idea behind the reactive extensions is really to create a nice programming-language-agnostic way of dealing with asynchronous programming, and I Matthew Podwysocki am an Rx pusher. 
 
 Now, really what I want to get through first is that I want some quotes that will help us in our learnings today. 
 
@@ -52,29 +52,29 @@ But, even more than that, how about if I want to make a web request and then com
 
 How do we think about that when we're just talked about promises, call backs, timers, etc., how do we deal with that. 
 
-Is there a better way that we can think about asynchronous and event‑based programming?  Well, we had a very forward thinking president in the United States who the early '60s came to this very city and said. 
+Is there a better way that we can think about asynchronous and event‑based programming?  Well, we had a very forward-thinking president in the United States who the early '60s came to this very city and said. 
 
-ch Eii Berliner, we also said we chose to solve asynchronous programming not because it's easy but because they're hard ‑‑ citation needed ‑‑ damn it Wikipedia. 
+Ich bin ein Berliner, he also said we chose to solve asynchronous programming not because it's easy but because they're hard ‑‑ citation needed ‑‑ damn it Wikipedia. 
 
 So call back hell is very much a real thing. 
 
-So, when you're dealing with call back hell you've got nested function after nested function where you're trying to accomplish something Lynn I can't recallly, so for example ‑‑ linearly. 
+So, when you're dealing with callback hell you've got nested function after nested function where you're trying to accomplish something linearly, so for example ‑‑ linearly. 
 
-So for here, I might want to play a movie, what that entails is making sure that the players initialized that I'm authorized to do so, then when I'm done it authorizes me with a movie ticket. 
+So for here, I might want to play a movie, what that entails is making sure that the player is initialized that I'm authorized to do so, then when I'm done it authorizes me with a movie ticket. 
 
 And what you end up with a cow's head. 
 
 All your code all it looks like is just a cow's head at that point, somewhere the logic gets lost. 
 
-And it's se evil. 
+And it's evil. 
 
 So I don't know about you, when ever I write code like that, this usually happens. 
 
-And it's not easy to recover from getting bush burned like that. 
+And it's not easy to recover from getting burned like that. 
 
 And just as well, event‑based programming is just as annoying, say for example we want to create a drag event, a custom kind of event that we do on our own, so what we would need for that, we would need to say whether the mouse is down or not have some stay test to where the mouse is. 
 
-Then in the mouse down we would have to say, okay, spouse down, here's with we started, mouse move, we go, okay, mouse is down, let's do some calculations and on a mouse up, we say, everything's done, we're good to go. 
+Then in the mouse down we would have to say, okay, here's where we started, mouse move, we go, okay, mouse is down, let's do some calculations and on a mouse up, we say, everything's done, we're good to go. 
 
 And we have to, of course, not only add the event listeners, but we also have to remove them as well. 
 
@@ -96,11 +96,11 @@ But what about asynchronous single values, we have call backs but we also have p
 
 And that's not something you can necessarily do with a call back, I can't hand you a call back and say this represents a value, doesn't work that way. 
 
-And then what I'll put in the fourth quadrant and final quadrant is observable, now observable as you will see is asynchronous in it's very nature so you can take the same stock data, you can filter it, map it, and you can four each it, no code changed at all in terms of what you're coding on the client, non, nothing, whatsoever. 
+And then what I'll put in the fourth quadrant and final quadrant is observable, now observable as you will see is asynchronous in it's very nature so you can take the same stock data, you can filter it, map it, and you can foreach it, no code changed at all in terms of what you're coding on the client, none, nothing, whatsoever. 
 
 That's very, very intentional about what we've done with the observable design, so if you know how to program against collections then you know how to program against observables. 
 
-What I like to say, a lot of the times is that your mouse is also a database, it's a database of coordinates you'll get eventually when the mouse moves, it should be as querible as an iterative sequence is. 
+What I like to say, a lot of the times is that your mouse is also a database, it's a database of coordinates you'll get eventually when the mouse moves, it should be as queryable as an iterative sequence is. 
 
 So, the thing that I like about these abstractions is that they're first class. 
 
