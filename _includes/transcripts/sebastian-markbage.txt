@@ -3,8 +3,8 @@
 
 I'm Sebastian, that thing there is my last name.
 
-I live in California now, but, um, it's actually really nice to be back in Europe where Umlauds and accents are normal occurrences.
-Sorry about voice, I think I'm allergic for bad APIs, that's why I'm like this.
+I live in California now, but, um, it's actually really nice to be back in Europe where umlauts and accents are normal occurrences.
+Sorry about my voice, I think I'm allergic to bad APIs, that's why I'm like this.
 So I work for Facebook now, the React team. I'm not an evangelist, I just code stuff, I'm just some dude.
  I also represent Facebook on TC 39 on standards committee on ECMAScript.
 Don't worry, the bad parts are not mine, they're someone else's.
@@ -14,7 +14,7 @@ Don't worry, the bad parts are not mine, they're someone else's.
 
 I guess a lot of people here have a favorite library.
 You there, what's your favorite library? nothing? React? that's a good call.
-(Laughing) do you guys use libraries for everything, like the same library, like utility library, like underscore in how many people use underscore?  Cool.
+(Laughing) do you guys use libraries for everything, like the same library, like utility library, like underscore? how many people use underscore?  Cool.
 JQuery?  Something like Angular High Level YUI?  Oooo ...
 sorry, guys (Laughing)
 
@@ -28,7 +28,7 @@ But do we really need this many ways to itterate on an Array?
 
 How many ways do we need to access DOM attributes.
 Do you even know all the concepts in Angular?
-You know all the APIs in Ember data (I dont'), do you know how many ways to filter an array just in underscore?
+You know all the APIs in Ember data (I don't), do you know how many ways to filter an array just in underscore?
 Is it same in lodash? I think it's the same in lodash depending on which version you use and what you opt in to.
 Do you even know all APIs in the standard JavaScript library?  What about ES6? 
 Job recruiters and job descriptions are looking for experience with specific libraries, and if you know the same concept under different name, you're actually not good enough, because like you're not going to get ramped up quick enough before the company pivots, right.
@@ -43,7 +43,7 @@ How streamlined?
 >   working with JS is hard
 
 JavaScript these days is really hard to learn.
-Imagine this is like the first day and you get dropped into the code based complicated weapon App, in the middle of the web App, first day you have no idea how it works how many calls in to JavaScript libraries do you see that you've never seen before.
+Imagine this is like the first day and you get dropped into the codebase of a complicated web app, and you're in the middle of the web app, first day you have no idea how things work. How many calls in to JavaScript libraries do you see that you've never seen before?
 Imagine this is the life of thousands of your colleagues.
 
 > ##### _.each([], fn)
@@ -52,7 +52,7 @@ Imagine this is the life of thousands of your colleagues.
 > #####      ?
 
 We had our own core libraries at Facebook as well.
-One of the most common questions we had was so which Facebook specific module corresponds to this underscore or JQue arey function? 
+One of the most common questions we had was so which Facebook specific module corresponds to this Underscore or JQuery function? 
 
 > ##### Your Library is Fat
 >   The accumulated surface area is too wide.
@@ -88,39 +88,39 @@ Let me get back to that a little bit later.
 
 First, some history.
 This is back to 2005, late 2005.
-It was an interesting era for the web, it was before Internet Explorer 7, JavaScript update for 6 years, ES4 was being drafted, it was going to go into failure.
-But minimal JavaScript, the line of library we had, the community had enough, we started to take things into our own hands, and this was an era where all the libraries started to see proliferation.
+It was an interesting era for the web, it was before Internet Explorer 7, JavaScript hadn't seen an update for 6 years, ES4 was being drafted, it was going to go into failure.
+But minimal JavaScript with the library we had was not enough, and the the community had enough. We started to take things into our own hands, and this was an era where all the libraries started to see proliferation.
 
 > ##### Function.prototype.bind
 
-A lot of them were like prototype, based JS, those two heavily inspired Moo tools, which I kind of worked on a little bit.
+A lot of them were like Prototype, Base.js, those two heavily inspired Mootools, which I kind of worked on a little bit.
 A lot of those bad things were my fault.
 
 > ##### $.ajax
 > ##### _.each
 
-But, of course libraries couldn't agree on a standard way of extending prototypes and having global name space so the best practice became like jQuery and underscore because they had their owne own separate name space.
+But, of course libraries couldn't agree on a standard way of extending prototypes and having this global namespace, so the best practice became things like jQuery and underscore because they had their own separate namespace.
 
 > ##### Function.prototype.bind (again)
 
-Then ES5 came along and it became popular to patch prototypes again, this time it's called polyfills.
-A lot of those polyfills naturally replaced prototype and Moo tools because they were sharing the same name space.
-But, the library in their own namespace, like underscore and jQuery lived on, and [are still/instill?] best practice.
+Then ES5 came along and it became popular to patch prototypes again, but this time it's called polyfills.
+A lot of those polyfills naturally replaced Prototype and Mootools because they were sharing the same namespace.
+But, the libraries in their own namespace, like Underscore and jQuery, lived on and were still the best practice.
 
 > ##### Abstraction Layers Are Empowering
 
 They actually had better APIs at the time because they were better documented and it was easier to learn because there was no standard that you can rely on.
-And the rational that they still live on it's empowering to have an abstraction on top of the native features, because you can tweak performance, fix things in the specs which are a little annoying, without relying on a standards body to fix it for you.
-Even TC 39 for JavaScript would even argue if you're not quite happy with this, you should just use your own standards library and build something on top of the standards.
+And the rationale that they still live on is that it's empowering to have an abstraction on top of the native features, because you can tweak performance, you can fix things in the specs which are a little annoying, without relying on a standards body to fix it for you.
+Even TC39 for JavaScript would even argue if you're not quite happy with this, you should just use your own standard library and build something on top of the standards.
 
 > ##### But... which one?
 
-But which one do we use?  There's at least two ways to do it now, there's the standard way, and the library way, and there's multiple libraries, we asked ourselves because we got this question a lot, should we adopt an API of a popular library like underscore or maybe lodash, but which one of them, and which version and is this going to be maintained. Do we even control the source?  Is it community driven, or is it controlled by one person?  Do we require this library from all of our source, or do we decouple it with some other dependency.
+But which one do we use?  There's at least two ways to do this now, there's the standard way, and the library way, and there's multiple libraries. We asked ourselves because we got this question a lot, should we adopt an API of a popular library like underscore or maybe lodash, but which one of them, and which version, and is this going to be maintained? Do we even control the source?  Is it community driven, or is it controlled by one person?  Do we require this library from all of our source, or do we decouple it with some other dependency.
 
 > ##### Why JavaScript [7:36]
 
 So, let's take a minute to look at why we actually use JavaScript to begin with.
-It's not best language in the world, whatever your favorite style is, there's at least one better language out there that will compile down to JavaScript.
+It's not the best language in the world. Whatever your favorite style is, there's at least one better language out there that will compile down to JavaScript.
 We can just use that instead, right?
 
 
@@ -136,7 +136,7 @@ And by introducing divergence in the library community, we're actually undermini
 
 > ##### ES6 Polyfills and transpilers
 
-So back at Facebook we started building source trance filers for ES6 features, we invested a lot in ES6, we became very early adopters of the class syntax throughout our entire code base, we joined TC 39 to start working on ES7.
+So back at Facebook we started building source transpilers for ES6 features, we invested a lot in ES6, we became very early adopters of the class syntax throughout our entire code base, we joined TC39 to start working on ES7.
 
 > ##### Slow and inconsistent native implementations
 > ##### :(
@@ -146,23 +146,23 @@ There are some problems with this technique though, there's some native function
 > ##### Just monkey patch it
 >   It's what makes JavaScript upgradable
 
-It's easy to solve, just monkey patch it, just ovewrite a native version with one that's faster, this is actually one of the strengths of JavaScript that you can actually do this.
-Sometimes, don't tell anyone, but you can actually use Shams as well that are not quite compatible just to get the extra little performance boost, just make sure you're continuously try to follow the standards as it's moving along and also try to not expose dependencies on non‑standard behavior.
+It's easy to solve, just monkey patch it, just ovewrite a native version with one that's faster. This is actually one of the strengths of JavaScript that you can actually do this.
+Sometimes, don't tell anyone, but you can actually use shams as well that are not quite compatible just to get the extra little performance boost, just make sure you continuously try to follow the standards as it's moving along and also try to not expose dependencies on non‑standard behavior.
 
 > ##### Polyfilling compatibility problems
 
 There's a lot of compatibility problems with just relying on polyfills.
 In the early days of a spec, the spec changes a lot, you basically have to live with it as a library rather than a final draft of a spec, you continuously upgrade, you can really only have one version in one realm at a time, we have a lot of solutions to solve this, another problem is that you might have to load like a huge polyfill on an initial page load instead of doing the modular loading.
 
-And all of this stuff is really difficult to get right, but we, and a lot of our people are trying to build Open Source tooling, to support your environment or stack to actually enable you do this.
+And all of this stuff is really difficult to get right, but we and a lot of our people are trying to build Open Source tooling, to support your environment or stack to actually enable you do this.
 
 > ##### One JavaScript
 >   No Bikeshedding
 
-And this is all hard work, but it allows us to have a very simple story, at Facebook, we use JavaScript's standards library.
+And this is all hard work, but it allows us to have a very simple story: at Facebook, we use JavaScript's standard library.
 There's one way to do things, and it's the standard way.
-And it's it avoids a very simple problem.
-It avoids bike shedding, bike shedding is the biggest waste of time of all.
+And it avoids a very simple problem.
+It avoids bikeshedding. Bikeshedding is the biggest waste of time of all.
 We leave that to standard mailing lists.
 
 >   "Authority is best applied on the simplest and least important decisions."
@@ -172,7 +172,7 @@ We leave that to standard mailing lists.
 >           - me
 
 It reminds me the least intuitive lessons I learned from a large organization: top‑down authority is best used on the very least important decisions, not the most important decisions.
-For example I really recommend you enforce a strict and comprehensive style guide just because it avoids this discussion on every of pull request or every diff, which style you're going to use and every person isn't going to have to fight to get their style.
+For example I really recommend you enforce a strict and comprehensive style guide just because it avoids this discussion on every pull request or every diff, which style you're going to use, and every new person isn't going to have to fight to get their style.
 
 > ##### I needs my pluck(arr, 'name')!
 
@@ -185,9 +185,9 @@ Well, often the answer is just write some more boilerplate code.
 > ##### Make your own stupid filter function
 >   Why libraries are stupid
 
-It'll take you a few seconds longer, you don't take on dependency.
-The person coming to fix your code does haven't to know about your obscure function and to pointing out their version with the same or different names that someone else thought was better, and better looking.
-This can be really annoying to have all this repetitive code that looks ugly when we all want beautiful code, right.
+It'll take you a few seconds longer, you don't take on a dependency.
+The person coming to fix your code doesn't have to know about your obscure function and twenty other versions with the same or different names that someone else thought was better, and better looking.
+This can be really annoying to have all this repetitive code that looks ugly when we all want beautiful code, right?
 
 >   "This process fundamentally has no end, ever.
 >
@@ -202,8 +202,8 @@ This can be really annoying to have all this repetitive code that looks ugly whe
 Except, this process fundamentally has no end, ever.
 We're simply never going to realize state of software nirvana where everything is supremely satisfying.
 And that's an important emotional realization.
-This was an early quote from an early Facebooker, but to put it another way, you're not going to find a perfect library API, you have good looking code now will look bad in a year, and you or someone else will have to go upgrade it.
-You might not remember what abstraction you found that was cool, today.
+This was an early quote from an early Facebooker, but to put it another way, you're not going to find a perfect library API, your good-looking code now will look bad in a year, and you or someone else will have to go upgrade it.
+You might not even remember what abstraction you found you thought was cool, today.
 
 
 > ##### Patterns Instead of Frameworks [12:17]
@@ -222,8 +222,8 @@ And this is the most important lesson I've learned at Facebook:
 
 It's much easier to recover from no abstraction than the wrong abstraction.
 
-So, this kind of says a spaghetti code can be beter than a structured code, this is very counterintuitive, to a lot of modern programmers at least.
-It's that the structure abstraction adds overhead to what every new coder needs to learn just to get up to speed with your code base.
+So, this kind of says that spaghetti code can be beter than a structured code, this is very counterintuitive, to a lot of modern programmers at least.
+It's that the structure abstraction adds overhead to what every new coder needs to learn just to get up to speed with your codebase.
 But, you know, like, one little abstraction can't hurt...
 
 > ##### Abstractions Spread
@@ -256,14 +256,14 @@ Abstraction comes with a significant cost and significant risk, so it's better t
 It might look ugly but it's not hurting anyone.
 Try to generalize it, and you only risk adding bugs in the generalization.
 It only adds surface area to [for] everyone.
-But once it starts causing bugs then it becomes a problem because it's repetition and some algorithms can be difficult to get right and then it starts causing bugs then you generalize.
+But once it starts causing bugs then it becomes a problem because it's repetition and some algorithms can be difficult to get right and then it starts causing bugs – then you generalize.
 
 > ##### Generalize
 >   Make it worth it's weight
 
-You create an abstraction, but make sure the abstraction can be used for wide variety of use cases because it has to make it worth it's weight.
-It might even be subject for standardtion if it's general enough.
-And this is where a slow moving standards org can actually help you.
+You create an abstraction, but make sure the abstraction can be used for wide variety of use cases because it has to make it worth its weight.
+It might even be subject for standardizaton if it's general enough.
+And this is where a slow-moving standards org can actually help you.
 If it's general enough, and useful enough, it will be accepted as a standard, maybe it will be accepted as a draft and you can sort of continue from that.
 But if it's not, then maybe it's not actually worth the weight it's adding, maybe you need to rethink or prove its value.
 
@@ -285,7 +285,7 @@ It's not solving the actual structural problem and the complexities of managing 
 Now Angular and Ember, they tried to address this by adding change tracking and data binding libraries on top of the DOM.
 Now you don't have to manage the DOM directly and this actually solves bugs.
 This is a legitimate use-case for abstraction.
-In theory web components and similar efforts can actually work on standardizing these patterns and then there's one thing you have to learn and it's this data mining, web components world.
+In theory web components and similar efforts can actually work on standardizing these patterns and then there's one thing you have to learn and it's this data binding, web components world.
 
 > ##### Remove As Much Complexity As You Add [17:30]
 >   Reclaim surface area for the next problem
@@ -311,10 +311,10 @@ So we invented a library called React.
 We are not trying to diverge from standards like web components with this, we just think that the functional approach taken by React means we can drop so much more of the surface area.
 And all we're trying to do is make it a lot easier for you to reason about code, without you having to think about a lot of surface area, because the remaining surface area is things that you can spend time thinking about around your domain specific world.
 
-So this is the API of React .
+So this is the API of React.
 You expose a function that gets the initial state of component, a render function that you can read from the states.
 And a call back that sets state.
-You'll notice that the set state is actually the only API in to React.
+You'll notice that the setState is actually the only API into React in this.
 This is really the only API you have to understand in React.
 We also have this syntax sugar, basically because braces are difficult to read.
 It looks like templates, but it's not really templates, there's no repeaters.
@@ -327,7 +327,7 @@ But the surface area that you have to face as a developer to know and understand
 > ##### Enough with the sales pitch, Sebastian
 >   What's the downside?
 
-You can build an incredibly complex App like this, we did and up until this point it sounds pretty good, right.
+You can build an incredibly complex app like this. I mean, we did. And up until this point it sounds pretty good, right?
 But nothing is free.
 So what are we giving up?
 
@@ -335,13 +335,13 @@ So what are we giving up?
 
 
 Implicitness.
-React favors explicit APIs, and for you to write out your code as explicitly as possible over built‑in Magic.
-For example in many cases we get request for implicit bubbling of events because it's tedious to pass a call back around or some extra properties around, well, turns out this is a terrible idea.
+React favors explicit APIs, and for you to write out your code as explicitly as possible over built‑in magic.
+For example in many cases we get requests for implicit bubbling of events because it's tedious to pass a callback around or some extra properties around, well, turns out this is a terrible idea.
 
 > ##### Cool abstraction, bro
 >   Are you sure it solves more problems than it causes?
 
-It's really difficult to follow code that depends on implicit bubbling of events, because it means that if either side ever disappears, you don't know where it disappeared, let's say one caller disappears from your stack and later we realize that actually that led to a bug that we didn't anticipate, how do you find that?
+It's really difficult to follow code that depends on implicit bubbling of events, because it means that if either side ever disappears, you don't know where it disappeared. Let's say one caller disappears from your stack and later we realize that actually that led to a bug that we didn't anticipate, how do you find that?
 Do you have to go through I have component and the history of every component or abstraction along the way to find where that happened?
 And this is just one example.
 If but it speaks to the idea that saving a little bit of typing is actually not a good reason enough for an abstraction.
@@ -352,24 +352,24 @@ If but it speaks to the idea that saving a little bit of typing is actually not 
 > #####      is hard
 
 It's much easier to recover from an explicit API by adding some sugar than to undo an existing implicit API.
-And we take new abstractions in React very, very seriously, while you have to live with a little bit of boilerplate in certain cases, you know that you and your archetecture will probably understand and be able torefactor your code in the future much easier.
+And we take new abstractions in React very, very seriously, while you have to live with a little bit of boilerplate in certain cases, you know that you and your archetecture will probably understand and be able to refactor your code in the future much easier.
 
 > ##### React.createClass
->   Oops
+>   Oops.
 
 We make mistakes too, of course.
 
-Um, if you're used to React you might have noticed that's not actually how you write React right now because we built our own class extraction.
+Um, if you're used to React you might have noticed that's not actually how you write React right now because we built our own class abstraction.
 It was very tempting and convenient. We could add special [???] to it.
 But in the next version of React we're deprecate that and going all in on the ES6 classes.
 
 > ##### Standard Features are decoupling between libraries
 
-It's not an extended verse of ES6 classes just ES6 classes, because it's not a one to one mapping it means a little bit more boilerplate in some cases but it means that since we're removing proprietary features from the library, you can use whatever abstraction you want.
+It's not an extended version of ES6 classes; it's just ES6 classes. Because it's not a one-to-one mapping it means a little bit more boilerplate in some cases, but it means that since we're removing proprietary features from the library, you can use whatever abstraction you want.
 
-Preferably we'll just use standard JavaScripts so we don't add extra weight to our industry.
-But, if you railly do want to use a third party library, since we provide the standard class system it means that we can accept any kind of third party class system as well.
-Because the standard represents an intermediate representation that can be shared across libraries, this causes de‑couping as a side effect.
+Preferably we'll just use standard JavaScript's, so we don't add extra weight to our industry.
+But, if you really do want to use a third party library, since we provide the standard class system it means that we can accept any kind of third-party class system as well.
+Because the standard represents an intermediate representation that can be shared across libraries, this causes decoupling as a side effect.
 
 > ##### Remove Features
 >   When there are any alternatives
