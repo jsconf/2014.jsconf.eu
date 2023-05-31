@@ -15,17 +15,6 @@ Tiffany Conroy, Berlin [@theophani](http://https:/twitter.com/theophani)
 
 --
 
-SinnerSchrader Deutschland GmbH  
-Voelckersstrasse 38  
-22765 Hamburg, Germany  
-
-[info@sinnerschrader.de](mailto:&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x73;&#x69;&#x6E;&#x6E;&#x65;&#x72;&#x73;&#x63;&#x68;&#x72;&#x61;&#x64;&#x65;&#x72;&#x2E;&#x64;&#x65;)
-
-Management  
-Matthias Schrader (Speaker), Holger Blank, Thomas Dyckhoff, Dr. Lars Finke, Martin Gassner, Nils Wollny
-
-Trade register  
-Local Court Hamburg  
-HRB 63663  
-
-Sales Tax Identification Number according to §27a Sales Tax Law: DE 812160091
+<p>
+  Neighbourhoodie Software GmbH<br>Lausitzer Str. 10<br>12047 Berlin, Germany<br>Phone: +49 (0) 30 4397262-0<br><a href=mailto:hi@neighbourhood.ie>hi@neighbourhood.ie</a></p><h2 id=management>Management</h2><p>Simone Haas (CEO), Jan Lehnardt (CEO)</p><h2 id=court-of-registry>Court of Registry</h2><p>Amtsgericht Charlottenburg Registration Number – HRB 157851 B<br>Sales Tax Identification Number: DE 2945 12169
+</p>
